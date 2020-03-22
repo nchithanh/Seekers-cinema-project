@@ -1,0 +1,1345 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+body{
+    margin: 0;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'FontAwesome';
+    font-weight: 400;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.warp{
+    position: relative;
+}
+header{
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+
+header .logo{
+    width: 40%;
+    position: absolute;
+    height: 100px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1px;
+}
+header .logo .gif{
+    width: 50%;
+    height: 120%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: -1;
+}
+ .logo h2{
+    color: #ED4C67;
+}
+ .logo span:nth-child(1){
+    color: #FFC312;
+}
+ .logo span:nth-child(2){
+    color: #C4E538;
+}
+ .logo span:nth-child(3){
+    color: #12CBC4;
+}
+ .logo span:nth-child(4){
+    color: #FDA7DF;
+}
+ .logo span:nth-child(5){
+    color: #0652DD;
+}
+ .logo span:nth-child(6){
+    color: #833471;
+}
+
+header .timkiem{
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    
+    left: 35%;
+}
+header .timkiem form{
+    position: absolute;
+    top: 30%;
+    height: 40%;
+    width: 100%;
+   
+}
+header .timkiem form .tim{
+    height: 80%;
+    width: 30%;
+    border: none;
+    background: #ED4C67;
+    color: white;
+}
+header .timkiem form .text{
+    height: 70%;
+    width: 0%;
+    border: none;
+    border-bottom: solid 1px #ED4C67;
+    text-align: center;
+    color: #ED4C67;
+    transition: all .3s;
+}
+input:focus{
+    outline: none;
+}
+header .timkiem form:hover .text{
+    width: 65%;
+}
+
+
+ header .tranglogin{
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    right: 1%;
+    top: 5%;
+    line-height: 100px;
+    
+}
+header a{
+    color: gray;
+}
+header .tranglogin a:nth-child(1){
+    border-right: solid 2px gray;
+    margin-right: 5px;
+}
+header .tranglogin a:hover{
+    color: orangered;
+}
+
+
+header .thanhdatve{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 60px;
+    background: #FF346A;
+    z-index: 999;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes ra{
+    0%{left: 0;}
+    100%{left: 100%;}
+}
+@keyframes vao{
+    0%{left: 100%;}
+    100%{left: 0%;}
+}
+header .thanhdatve form{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+}
+header .thanhdatve form select{
+    width: 25%;
+    height: 80%;
+    margin-top: 5px;
+    margin-right: 1%;
+    border: none;
+}
+header .thanhdatve form input{
+    width: 10%;
+    height: 80%;
+    background: rgb(0, 0, 0);
+    border: none;
+    color: rgb(255, 255, 255);
+}
+
+
+header nav{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    bottom: 0;
+    background: black;
+}
+header nav ul{
+    width: 80%;
+    margin: auto;
+    line-height: 50px;
+    height: 100%;
+  
+}
+header nav ul li{
+    float: left;
+    list-style: none;
+    width: 14%;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    transition: all .3s;
+}
+header nav ul li:hover .box_phim{
+    transform: scaleY(1);
+}
+header nav ul li .box_phim{
+    transform: scaleY(0);
+    transform-origin: top;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 670%;
+    height: 550px;
+    background: rgb(0, 0, 0);
+    z-index: 8811;
+    transition: all .3s;
+}
+header nav li .box_phim .phimdangchieu1{
+    width: 95%;
+    margin-left: 2.5%;
+    height: 50%;
+   
+}header nav li .box_phim .phimsapchieu1{
+    width: 95%;
+    margin-left: 2.5%;
+    height: 50%;
+    
+}
+header nav li .box_phim .tieude{
+    width: 100%;
+    height: 20%;
+    color: white;
+    text-align: left;
+    position: relative;
+}
+header nav li .box_phim .tieude::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: 70%;
+    border-bottom:solid 1.5px #ED4C67;
+}
+header nav li .box_phim .phim{
+    width: 24%;
+    height: 80%;
+    
+    float: left;
+    margin-right: 1%;
+}
+header nav li .box_phim .phim .anhphim{
+    width: 100%;
+    height: 85%;
+    position: relative;
+}
+header nav li .box_phim .phim .anhphim .muave{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: rgba(237, 76, 103, 0.63);
+    left: 0;
+    top: 0;
+    transform: scaleY(0);
+    transition: all .3s;
+}
+header nav li .box_phim .phim .anhphim .muave a{
+    padding: 10px 20px;
+    color: white;
+    line-height: 200px;
+    position: static;
+    border: solid 1.5px white;
+    transition: all .3s;
+}
+header nav li .box_phim .phim .anhphim:hover .muave{
+    transform: scaleY(1);
+}
+header nav li .box_phim .phim .anhphim .muave a:hover{
+    background: orange;
+}
+header nav li .box_phim .phim .tenphim{
+    width: 100%;
+    height: 15%;
+    font-size: 13px;
+    color: white;
+    line-height: 18px;
+    text-align: left;
+}
+header nav ul li a{
+    
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+}
+header nav ul li a::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 3%;
+    background: white;
+    transition: all .3s;
+}
+header nav ul li a::before{
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2%;
+    background: white;
+    transition: all .3s;
+}
+
+header nav ul li:hover a{
+    color: white;
+    
+}
+header nav ul li:hover a::after{
+    width: 100%;
+}
+header nav ul li:hover a::before{
+    width: 100%;
+}
+
+.warp{
+   
+}
+.banner{
+    width: 100%;
+    height: 500px;
+    background: rgb(114, 114, 114);
+    position: relative;
+}
+.banner .live{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.banner .listbanner{
+    position: absolute;
+    width: 10%;
+    height: 50px;
+    bottom: 0;
+    left: 47%;
+}
+.banner .listbanner span{
+    width: 5%;
+    height: 15%;
+    border-radius: 50%;
+    border: solid 1px white;
+    float: left;
+    margin-left: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.maubanner{
+    background: orangered;
+    border: solid 1px orangered;
+}
+.banner .datve{
+    position: absolute;
+    right: 10%;
+    top: 0;
+    width: 25%;
+    height: 500px;
+   
+    z-index: 99;
+}
+.banner .datve form{
+    width: 100%;
+    height: 80%;
+    margin-top: 10%;
+    background: rgba(0, 0, 0, 0.664);
+    position: relative;
+}
+.banner .datve form::after{
+    position: absolute;
+    content: 'MUA VÉ NHANH';
+    width: 50%;
+    height: 50px;
+    left: 0;
+    top: 0;
+    background: #ED4C67;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 17px;
+}
+.banner .datve form select:nth-child(1){
+    width: 90%;
+    margin-top: 70px;
+}
+.banner .datve form select{
+    width: 90%;
+    margin-left: 5%;
+    height: 50px;
+    margin-bottom: 20px;
+    background: gray;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+.banner .datve form input{
+    width: 50%;
+    height: 50px;
+    background: #ED4C67;
+    color: white;
+    border: none;
+    margin-left: 190px;
+    transition: all .3s;
+}
+.banner .datve form input:hover{
+    background: rgb(238, 127, 63);
+}
+
+
+
+section{
+    margin-top: 50px;
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+section .tieude{
+    position: absolute;
+    left: 10%;
+    width: 50%;
+    height: 50px;
+    border-bottom: solid 1px rgb(167, 167, 167);
+    line-height: 50px;
+}
+section .tieude span{
+    font-size: 20px;
+    margin-right: 10px;
+    padding: 14px 10px;
+}
+.mautieude{
+    border-bottom: solid 2px orangered;
+}
+section .listphim{
+    width: 80%;
+    height: 720px;
+    position: absolute;
+    bottom: -100%;
+    left: 10%;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes len{
+    0%{bottom: -100%;}
+    100%{bottom: 0;}
+}
+.soc{
+    position: absolute;
+    width: .5%;
+    height: 100%;
+    background: #FF346A;
+    right: 0;
+    top: 0;
+    transform: scaleY(0);
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    z-index: -2;
+}
+@keyframes soc{
+    0%{transform: scaleY(0);}
+    100%{transform: scaleY(1);}
+}
+
+
+section .listphim .phimdangchieu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 110%;
+   
+}
+section .listphim .phimsapchieu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 110%;
+    display: none;
+}
+section .listphim .more{
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    width: 20%;
+    height: 50px;
+    border: solid 1px #f26b38;
+    text-align: center;
+    color: #f26b38;
+    line-height: 50px;
+    transition: all .3s;
+}
+section .listphim .more::after{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    left: -1%;
+    top: 0;
+    background: #f26b38;
+    transition: all .3s;
+}
+section .listphim .more:hover{
+    color: white;
+}
+section .listphim .more:hover::after{
+    width: 102%;
+    z-index: -1;
+}
+section .listphim .phim{
+    width: 32%;
+    height: 350px;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 10px;
+    position: relative;
+    transition: all .3s;
+}
+section .listphim .phim .hinhphim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    transition: all .3s;
+}
+section .listphim .phim .tenphim{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    font-size: 17px;
+    line-height: 70px;
+    color: #43464b;
+}
+section .listphim .phim .hinhphim:hover .muave{
+    transform: scaley(1);
+}
+section .listphim .phim .muave{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.685);
+    text-align: center;
+    line-height: 300px;
+    transform: scaley(0);
+    transition: all .3s;
+}
+section .listphim .phim .muave a{
+    border: solid 1px rgb(148, 148, 148);
+    color: white;
+    padding: 15px 30px;
+    transition: all .3s;
+}
+section .listphim .phim .muave a:hover{
+    background: orangered;
+    border: solid 1px orangered;
+    color: white;
+    padding: 15px 30px;
+}
+
+.tinkhuyenmai{
+    margin-top: 100px;
+    height: 800px;
+    margin-bottom: 200px;
+}
+.tinkhuyenmai .texthide{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(128, 128, 128, 0.144);
+    font-size: 250px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 900px;
+}
+.tinkhuyenmai .boxkhuyenmai{
+    width: 80%;
+    height: 850px;
+    position: absolute;
+    bottom: -115%;
+    left: 10%;
+    animation-name: len1;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes len1{
+    0%{bottom: -115%;}
+    100%{bottom: -15%;}
+}
+.tinkhuyenmai .boxkhuyenmai .khuyenmai{
+    width: 23%;
+    height: 47%;
+    float: left;
+    margin-right: 2%;
+    margin-top: 2%;
+    position: relative;
+}
+.tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.76);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    transform: scaleY(0);
+    transition: all .3s;
+}
+.tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai p{
+    margin-top: 150px;
+}
+.tinkhuyenmai .boxkhuyenmai .khuyenmai:hover .tenkhuyenmai{
+    transform: scaleY(1);
+}
+
+
+.thongtin{
+    width: 80%;
+    height: 850px;
+    position: absolute;
+    bottom: -15%;
+    left: 10%;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+footer{
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+/*login*/
+.login{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    margin-top:100px;
+}
+.logain:hover .formlogin{
+    transition: all .5s ease;transform: rotateY(180deg);
+}
+.login .formlogin{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    left: 10%;
+    top: 0;
+    transform-style: preserve-3d;
+    transition: all .5s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes dangky{
+    0%{}
+    100%{transform: perspective(600px) rotateY(-180deg);}
+}
+@keyframes dangnhap{
+    0%{transform: rotateY(180deg);}
+    100%{transform: rotateY(0deg);}
+    
+}
+.login .frmlogin:hover{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.login .formlogin .dangnhap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    color: wheat;
+    transition: all .5s;
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 0px 10px black;
+    background: #FF346A;
+    overflow: hidden;
+}
+.login .formlogin .dangnhap .left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #FF346A;
+    text-align: center;
+    border-bottom-right-radius: 400px;
+}
+
+.login .formlogin .dangnhap .left .noidung{
+   
+    margin-top: 140px;
+    font-size: 35px;
+    color: white;
+    
+}
+
+.login .formlogin .dangnhap .left .noidung .button{
+    width: 50%;
+    height: 30px;
+    border: none;
+    background: rgb(255, 255, 255);
+    color: #FF346A;
+    border-radius: 50px;
+    
+}
+.login .formlogin .dangnhap .right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    
+}
+.login .formlogin .dangnhap .right form{
+    position: absolute;
+    right: 20%;
+    top: 25%;
+    width: 60%;
+    height: 60%;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+}
+.login .formlogin .dangnhap .right form input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+.login .formlogin .dangnhap .right form p{
+    font-size: 20px;
+    height: 0;
+}
+.login .formlogin .dangnhap .right form .button{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 0px;
+    clear: both;
+    width: 65%;
+    height: 35px;
+    border: none;
+    background-image: linear-gradient( 135deg, #FF346A,rgb(142, 68, 173),#FF346A);
+    background-size: 200%;
+    color: white;
+    border-radius: 50px;
+    transition: all .5s;
+}
+.login .formlogin .dangnhap .right form .button:hover{
+    background-position: right;
+}
+
+.login .formlogin .dangky{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    color: rgb(0, 0, 0);
+    transition: all .5s;
+    transform: perspective(600px) rotateY(180deg);
+    box-shadow: 0px 0px 10px black;
+    background: white;
+}
+  
+
+.login .formlogin .dangky .left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #FF346A;
+    border-bottom-right-radius: 400px;
+    border-top-right-radius: 300px;
+    text-align: center;
+}
+.login .formlogin .dangky .right .noidung{
+   text-align: center;
+    margin-top: 150px;
+    font-size: 35px;
+    color: black;
+    
+}
+.login .formlogin .dangky .right .noidung .button{
+    width: 50%;
+    height: 40px;
+    border: none;
+    background-image: linear-gradient( 135deg, #FF346A,rgb(142, 68, 173),#FF346A);
+    background-size: 200%;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    transition: all .5s;
+}
+.login .formlogin .dangky .right .noidung .button:hover{
+    background-position: right;
+}
+.login .formlogin .dangky .right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+}
+.login .formlogin .dangky .left form{
+    position: absolute;
+    right: 20%;
+    top: 27%;
+    width: 60%;
+    height: 60%;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    
+}
+.login .formlogin .dangky .left form input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    text-align: center;
+    border: none;
+    
+}
+.login .formlogin .dangky .left form p{
+    font-size: 20px;
+    height: 0;
+}
+.login .formlogin .dangky .left form .button{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 0px;
+    clear: both;
+    width: 50%;
+    height: 30px;
+    border: none;
+    background: white;
+    color: #FF346A;
+    border-radius: 50px;
+}
+.login .formlogin .dangky .left form .button::after{
+    width: 0;
+}
+.login .formlogin .dangky .left form .button::before{
+    width: 0;
+}
+.animation_dangky{
+    animation-name: dangky;
+}
+.animation_dangnhap{
+    animation-name: dangnhap;
+}
+.backhome{
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 15%;
+    height: 50px;
+    z-index: 99;
+}
+
+/*detail*/
+article{
+    width: 55%;
+    height: 1000px;
+    
+    margin-left: 9%;
+    float: left;
+    margin-top: 80px;
+}
+aside{
+    width: 25%;
+    margin-top:80px;
+    
+    float: left;
+}
+aside .tieude{
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+aside .tieude span{
+    border-bottom: solid 1.5px orangered;
+    padding-bottom: 10px ;
+    font-size: 20px;
+}
+aside .phim{
+    width: 100%;
+    height: 350px;
+   
+}
+aside .hinhphim{
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+aside .hinhphim .muave{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.582);
+    z-index: 99;
+    text-align: center;
+    line-height: 300px;
+    transform: scaleY(0);
+    transition: all .3s;
+}
+aside .hinhphim .muave a{
+    padding: 15px 40px;
+    border: solid 1px white;
+    color: white;
+    transition: all .3s;
+}
+aside .hinhphim:hover .muave{
+    transform: scaleY(1);
+}
+aside .hinhphim .muave a:hover{
+    background: #FF346A;
+    border: solid 1px #FF346A;
+}
+aside .tenphim{
+    width: 100%;
+    color: rgb(0, 0, 0);
+    line-height: 30px;
+}
+aside .more{
+    width: 30%;
+    text-align: center;
+    padding: 15px 20px;
+    margin-left: 220px;
+    border: solid 1px #FF346A;
+    color: #FF346A;
+    margin-bottom: 10px;
+    transition: all .3s;
+    position: relative;
+}
+aside .more::after{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #FF346A;
+    left: -1%;
+    top: 0;
+    transition: all .3s;
+    z-index: -1;
+}
+aside .more:hover::after{
+    width: 101%;
+}
+aside .more:hover{
+    color: white;
+}
+
+article .anhphim{
+    width: 35%;
+    height: 400px;
+    float: left;
+}
+article .thongtinphim{
+    width: 45%;
+    height: 400px;
+    margin-left: 30px;
+    float: left;
+    line-height: 35px;
+    font-size: 17px;
+}
+article .thongtinphim span{
+    color: gray;
+}
+article .thongtinphim .tenphim{
+    font-size: 30px;
+}
+article{
+   
+}
+article .noidungphim{
+    margin-top: 50px;
+    width: 90%;
+    height: 200px;
+   
+    float: left;
+}
+article .noidungphim .tieude{
+    font-size: 20px;
+    width: 20%;
+    height: 30px;
+    border-bottom: solid 1.5px #FF346A;
+}
+article .noidungphim p{
+    line-height: 20px;
+}
+article .tieude2{
+    width: 50%;
+    height: 50px;
+    border-bottom: solid 1px gray;
+    float: left;
+    margin-bottom: 50px;
+    line-height: 50px;
+}
+article .tieude2 span{
+    margin-right: 50px;
+    font-size: 20px;
+    padding-bottom: 14px;
+}
+article .binhluan{
+    width: 90%;
+    
+    float: left;
+    position: relative;
+    display: none;
+}
+article .binhluan form{
+    width: 100%;
+    height: 100px;
+    border-bottom: solid 2px orangered;
+    position: relative;
+}
+article .binhluan form input{
+    width: 100%;
+    height: 50px;
+    background: rgb(255, 255, 255);
+    border: solid 1px rgb(194, 194, 194);
+}
+article .binhluan form input:nth-child(2){
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    width: 20%;
+    height: 30px;
+    background: #ED4C67;
+    color: white;
+    border: none;
+}
+article .binhluan .hienbinhluan{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    
+}
+article .binhluan .hienbinhluan .tenbinhluan{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: orangered;
+}
+article .binhluan .hienbinhluan .tenbinhluan::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background: none;
+    border-bottom: solid 1px orangered;
+}
+article .binhluan .hienbinhluan p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: rgb(59, 59, 59);
+}
+article .datve{
+   
+    width: 70%;
+    height: 400px;
+    margin-left: 50px;
+    float: left;
+    position: relative;
+    
+}
+article .datve::after{
+    position: absolute;
+    content: 'MUA VÉ NHANH';
+    width: 40%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background: #FF346A;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 17px;
+}
+article .datve form{
+    width: 80%;
+    margin-left: 10%;
+    height: 300px;
+   
+    margin-top: 50px;
+}
+article .datve form select{
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+   background: gray;
+   border: none;
+   margin-top: 30px;
+   color: white;
+}
+article .datve form select option{
+    text-align: center;
+    color: black;
+    background: white;
+}
+article .datve form input{
+    position: absolute;
+   
+    width: 40%;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    background: #FF346A;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 17px;
+    border: none;
+}
+
+
+/*datve*/
+.phongchieu{
+    width: 100%;
+    height: 500px;
+   
+    margin-top: 50px;
+}
+.phongchieu .chuthich{
+    width: 10%;
+    height: 70%;
+    margin-top: 20px;
+    float: left;
+    margin-left: 10%;
+   
+}
+.phongchieu .chuthich form{
+    width: 100%;
+    height: 50px;
+   
+    margin-top: 50px;
+}
+.phongchieu .chuthich form input{
+    width: 100%;
+    height: 100%;
+    background: #ED4C67;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.phongchieu .chuthich .giaithich{
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+   
+    line-height: 50px;
+}
+.phongchieu .chuthich .box1{
+    width: 50px;height: 50px;
+    background: #ED4C67;
+    float: left;
+    margin-right: 4px;
+}
+.phongchieu .chuthich .box2{
+    width: 50px;height: 50px;
+    background: wheat;
+    float: left;
+    margin-right: 4px;
+}
+.phongchieu form{
+   
+    
+}
+.phongchieu .chongoi{
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    position: relative;
+    box-shadow: 0 0 10px black;
+}
+.phongchieu .chongoi .manhinh{
+    width: 80%;
+    margin-left: 10%;
+    height: 10%;
+    background: black;
+}
+.phongchieu .chongoi .ghengoi{
+    position: absolute;
+    bottom: 5%;
+    width: 90%;
+    left: 5%;
+    height: 70%;
+  
+}
+.phongchieu .chongoi .ghengoi .hangghe1{
+    width: 10%;
+    height: 100%;
+  
+}
+.hangghe1{
+    position: absolute;
+    left: 0;
+}
+.hangghe2{
+    width: 10%;
+    height: 100%;
+    
+    position: absolute;
+    right: 0;
+}
+.ghengoi .ghe{
+    margin-top: 2px;
+    width: 100%;
+    height: 30px;
+    background: yellow;
+    text-align: center;
+    line-height: 30px;
+}
+.ghengoi .vitri{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+   
+}
+.ghengoi .vitri .hang{
+    margin: auto;
+    height: 30px;
+    
+    margin-top: 2px;
+}
+.ghengoi .vitri .hang .box{
+    margin-left: 1.2%;
+    width: 5%;
+    height: 30px;
+    background: wheat;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+}
+.ghengoi .vitri .hang .box:hover{
+    background: orange;
+    color: white;
+}
+#hetcho{
+    background: #ED4C67;
+    color: white;
+}
+
+
+
+/*danh sach phim*/
+.danhsachphim{
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    background: red;
+}
+.danhsachphim .tieude{
+    position: absolute;
+    top: 0;
+    width: 80%;
+    left: 10%;
+    height: 50px;
+    border-bottom: solid 1px gray;
+    line-height: 50px;
+}
+.danhsachphim .tieude span{
+    font-size: 20px;
+    padding-bottom: 15px;
+    margin-right: 30px;
+}
+.danhsachphim .listphim{
+    width: 80%;
+    position: absolute;
+    top: 100px;
+    left: 10%;
+  
+}
+.danhsachphim .listphim .phimsapchieu{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+   
+}
+.danhsachphim .listphim .phimdangchieu{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+   
+}
+.danhsachphim .listphim .phim{
+    width: 23%;
+    margin-bottom: 20px;
+    height: 450px;
+    
+    float: left;
+    margin-right: 20px;
+}
+.danhsachphim .listphim .anhphim{
+    width: 100%;
+    height: 90%;
+}
+.danhsachphim .listphim .noidungphim{
+    width: 100%;
+    height: 10%;
+    line-height: 20px;
+}
