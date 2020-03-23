@@ -162,19 +162,14 @@
                             <?//day la phim dang chieu//?>
                             <div class="phimdangchieu1">
                                 <div class="tieude">PHIM ĐANG CHIẾU</div>
-                                <?//day la cho foreach xong echo//?>
-
                                 <?php
-                    	
-                                    foreach ($loadphimsc as $phim){
-                                        
+                                    foreach ($loadphimsc as $phim){ 
                                         $name=$phim['tenphim'];
-                                        $img="img/".$phim['banner'];
-                                    
+                                        $img="img/".$phim['banner']; 
                                         echo ' <div class="phim">
                                         <div class="anhphim"><img src="'.$img.'" alt="">
                                             <div class="muave">
-                                                <a href="">
+                                                <a href="index.php?contro=detail&idphim='.$phim['id'].'">
                                                     MUA NGAY
                                                 </a>
                                             </div>
@@ -182,111 +177,28 @@
                                         <div class="tenphim">'.$name.'</div>
                                     </div>';
                                     }
-				
                              ?>
-                                <!-- <div class="phim">
-                                    <div class="anhphim"><img src="img/phim1.jpg" alt="">
-                                        <div class="muave">
-                                            <a href="">
-                                                MUA NGAY
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="tenphim">ONWARD TRUY TÌM PHÉP THUẬT</div>
-                                </div>
-                                <?//day la cho foreach xong echo//?>
-                                <div class="phim">
-                                    <div class="anhphim"><img src="img/phim2.jpg" alt="">
-                                        <div class="muave">
-                                            <a href="">
-                                                MUA NGAY
-                                            </a>
-                                        </div></div>
-                                    <div class="tenphim">NẮNG 3: LỜI HỨA CỦA CHA</div>
-                                </div>
-                                <div class="phim">
-                                    <div class="anhphim"><img src="img/phim3.jpg" alt="">
-                                        <div class="muave">
-                                            <a href="">
-                                                MUA NGAY
-                                            </a>
-                                        </div></div>
-                                    <div class="tenphim">BLOODSHOT</div>
-                                </div>
-                                <div class="phim">
-                                    <div class="anhphim"><img src="img/phim4.jpg" alt="">
-                                        <div class="muave">
-                                            <a href="">
-                                                MUA NGAY
-                                            </a>
-                                        </div></div>
-                                    <div class="tenphim">THE DUSTWALKER : SA MẠC CHẾT</div>
-                                </div> -->
-                            </div>
-                            <?//day la phim sap chieu//?>
+                             </div>
                             <div class="phimsapchieu1">
                                 <div class="tieude">PHIM ĐANG CHIẾU</div>
-                                <?//day la cho foreach xong echo//?>
-                                <?php
-                    	
-                        foreach ($loadphimdc as $phim){
-                            
+                                <?php                  	
+                        foreach ($loadphimdc as $phim){                            
                             $name=$phim['tenphim'];
-                            $img="img/".$phim['banner'];
-                        
+                            $img="img/".$phim['banner'];                        
                             echo ' <div class="phim">
                             <div class="anhphim"><img src="'.$img.'" alt="">
                                 <div class="muave">
-                                    <a href="">
+                                    <a href="index.php?contro=detail&idphim='.$phim['id'].'">
                                         MUA NGAY
                                     </a>
                                 </div>
                             </div>
                             <div class="tenphim">'.$name.'</div>
                         </div>';
-                        }
-    
-                 ?>
-                                <!-- <div class="phim">
-                                    <div class="anhphim"><img src="img/phim7.jpg" alt="">
-                                        <div class="muave">
-                                            <a href="">
-                                                MUA NGAY
-                                            </a>
-                                        </div></div>
-                                    <div class="tenphim">BLACK WIDOW : GÓA PHỤ ĐEN</div>
-                                </div>
-                                <?//day la cho foreach xong echo//?>
-                                <div class="phim">
-                                    <div class="anhphim"><img src="img/phim8.png" alt="">
-                                        <div class="muave">
-                                            <a href="">
-                                                MUA NGAY
-                                            </a>
-                                        </div></div>
-                                    <div class="tenphim">WONDER WOMAN 1984</div>
-                                </div>
-                                <div class="phim">
-                                    <div class="anhphim"><img src="img/phim9.png" alt="">
-                                        <div class="muave">
-                                            <a href="">
-                                                MUA NGAY
-                                            </a>
-                                        </div></div>
-                                    <div class="tenphim">LẬT MẶT: 48H</div>
-                                </div>
-                                <div class="phim">
-                                    <div class="anhphim"><img src="img/phim10.jpg" alt="">
-                                        <div class="muave">
-                                            <a href="">
-                                                MUA NGAY
-                                            </a>
-                                        </div></div>
-                                    <div class="tenphim">VÔ DIỆN SÁT NHÂN</div>
-                                </div> -->
+                        }   
+                 ?>                             
                             </div>
-                        </div>
-                
+                        </div>            
                     </li>
                     <li><a href="">góc điện ảnh</a></li>
                     <li><a href="">su kiện</a></li>
