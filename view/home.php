@@ -54,76 +54,30 @@
                         </div>
                     </a>
                     <?//foreach echo phan nay ra//?>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim7.jpg" alt="">
+                    <?php
+                    	
+						foreach ($loadphimsc as $phim){
+                            
+                            $name=$phim['tenphim'];
+							$img="img/".$phim['banner'];
+						
+							echo '<div class="phim">
+                            <div class="hinhphim">
+                                <img src="'.$img.'" alt="">
+                                <div class="muave">
+                                    <a href="">MUA VÉ</a>
+                                </div>
+                            </div>
+                            <div class="tenphim">
+                            '.$name.'
+                            </div>
                             <div class="muave">
                                 <a href="">MUA VÉ</a>
                             </div>
-                        </div>
-                        <div class="tenphim">
-                            BLACK WIDOW : GÓA PHỤ ĐEN
-                        </div>
-                        <div class="muave">
-                            <a href="">MUA VÉ</a>
-                        </div>
-                    </div>
-                    <?//foreach echo phan nay ra//?>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim8.png" alt="">
-                            <div class="muave">
-                                <a href="">MUA VÉ</a>
-                            </div>
-                        </div>
-                        <div class="tenphim">
-                            WONDER WOMAN 1984
-                        </div>
-                    </div>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim9.png" alt="">
-                            <div class="muave">
-                                <a href="">MUA VÉ</a>
-                            </div>
-                        </div>
-                        <div class="tenphim">
-                            LẬT MẶT: 48H
-                        </div>
-                    </div>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim10.jpg" alt="">
-                            <div class="muave">
-                                <a href="">MUA VÉ</a>
-                            </div>
-                        </div>
-                        <div class="tenphim">
-                            VÔ DIỆN SÁT NHÂN
-                        </div>
-                    </div>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim11.jpg" alt="">
-                            <div class="muave">
-                                <a href="">MUA VÉ</a>
-                            </div>
-                        </div>
-                        <div class="tenphim">
-                            THE KING'S MAN KINGSMAN: KHỞI NGUỒN
-                        </div>
-                    </div>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim12.jpg" alt="">
-                            <div class="muave">
-                                <a href="">MUA VÉ</a>
-                            </div>
-                        </div>
-                        <div class="tenphim">
-                            MINIONS: SỰ TRỖI DẬY CỦA GRU
-                        </div>
-                    </div>
+                        </div>';
+						}
+				
+                    ?>
                 </div>
                 <?//cho nay la phim sap chieu//?>
                 <?//cho nay la phim dang chieu//?>
@@ -133,76 +87,30 @@
                             XEM THÊM
                         </div>
                     </a>
-                    <?//foreach echo phan nay ra//?>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim1.jpg" alt="">
-                            <div class="muave">
-                                <a href="index.php?contro=detail">MUA VÉ</a>
+                    <?php
+                    	
+						foreach ($loadphimdc as $phim){
+                            
+                            $name=$phim['tenphim'];
+							$img="img/".$phim['banner'];
+						
+							echo '<div class="phim">
+                            <div class="hinhphim">
+                                <img src="'.$img.'" alt="">
+                                <div class="muave">
+                                    <a href="">MUA VÉ</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tenphim">
-                            ONWARD TRUY TÌM PHÉP THUẬT
-                        </div>
-                    </div>
-                    <?//foreach echo phan nay ra//?>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim2.jpg" alt="">
-                            <div class="muave">
-                                <a href="">MUA VÉ</a>
+                            <div class="tenphim">
+                            '.$name.'
                             </div>
-                        </div>
-                        <div class="tenphim">
-                            NẮNG 3: LỜI HỨA CỦA CHA
-                        </div>
-                    </div>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim4.jpg" alt="">
                             <div class="muave">
                                 <a href="">MUA VÉ</a>
                             </div>
-                        </div>
-                        <div class="tenphim">
-                            THE DUSTWALKER : SA MẠC CHẾT
-                        </div>
-                    </div>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim5.jpg" alt="">
-                            <div class="muave">
-                                <a href="">MUA VÉ</a>
-                            </div>
-                        </div>
-                        <div class="tenphim">
-                            HONEST CANDIDATE BÀ HOÀNG NÓI DỐ
-                        </div>
-                    </div>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim6.jpg" alt="">
-                            <div class="muave">
-                                <a href="">MUA VÉ</a>
-                            </div>
-                        </div>
-                        <div class="tenphim">
-                            COMA KẺ ĐÀO TẨU GIẤC MƠ
-                        </div>
-                    </div>
-                    <div class="phim">
-                        <div class="hinhphim">
-                            <img src="img/phim3.jpg" alt="">
-                            <div class="muave">
-                                <a href="">MUA VÉ</a>
-                            </div>
-                        </div>
-                        <div class="tenphim">
-                            BLOODSHOT
-                        </div>
-                    </div>
-                </div>
-                <?//cho nay la phim dang chieu//?>
+                        </div>';
+						}
+				
+                    ?>
             </div>
         </section>
         <section class="tinkhuyenmai">

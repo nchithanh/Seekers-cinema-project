@@ -14,7 +14,7 @@
             //incluce controller xu ly banner home
             include "controller/home/banner_home.php";
             //incluce controller xu ly listphim (phim dang chieu,phim sap chieu)
-
+            include "controller/home/listphim_home.php";
             //incluce controller xu ly khuyen mai
             include "view/home.php";
             break;
