@@ -185,13 +185,17 @@
                                 <div class="tieude">PHIM ĐANG CHIẾU</div>
                                 <?php
                                     foreach ($loadphimdc as $phim){
-                                        
+                                        if(isset($_SESSION["user"])){
+                                            $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>';
+                                        }else{
+                                            $link='<a href="index.php?contro=login">MUA VÉ</a>';
+                                        }
                                         $name=$phim['tenphim'];
                                         $img="img/".$phim['banner']; 
                                         echo ' <div class="phim">
                                         <div class="anhphim"><img src="'.$img.'" alt="">
                                             <div class="muave">
-                                                <a href="index.php?contro=detail&idphim='.$phim['id'].'">
+                                            '.$link.'
                                                     MUA NGAY
                                                 </a>
                                             </div>
@@ -208,14 +212,18 @@
                                 <div class="tieude">PHIM SAP CHIẾU</div>
                                 <?php
                                     foreach ($loadphimsc as $phim){
-                                        
+                                        if(isset($_SESSION["user"])){
+                                            $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>';
+                                        }else{
+                                            $link='<a href="index.php?contro=login">MUA VÉ</a>';
+                                        }
                                         $name=$phim['tenphim'];
                                         $img="img/".$phim['banner'];
                                     
                                         echo ' <div class="phim">
                                         <div class="anhphim"><img src="'.$img.'" alt="">
                                             <div class="muave">
-                                                <a href="index.php?contro=detail&idphim='.$phim['id'].'">
+                                            '.$link.'
                                                     MUA NGAY
                                                 </a>
                                             </div>

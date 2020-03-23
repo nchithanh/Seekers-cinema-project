@@ -55,7 +55,11 @@
                     </a>
                     <?php	
 						foreach ($loadphimsc as $phim){
-                            
+                            if(isset($_SESSION["user"])){
+                                $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>';
+                            }else{
+                                $link='<a href="index.php?contro=login">MUA VÉ</a>';
+                            }
                             $name=$phim['tenphim'];
 							$img="img/".$phim['banner'];
 						
@@ -63,7 +67,7 @@
                             <div class="hinhphim">
                                 <img src="'.$img.'" alt="">
                                 <div class="muave">
-                                    <a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>
+                                '.$link.'
                                 </div>
                             </div>
                             <div class="tenphim">
@@ -87,7 +91,11 @@
                     <?php
                     	
 						foreach ($loadphimdc as $phim){
-                            
+                            if(isset($_SESSION["user"])){
+                                $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>';
+                            }else{
+                                $link='<a href="index.php?contro=login">MUA VÉ</a>';
+                            }
                             $name=$phim['tenphim'];
 							$img="img/".$phim['banner'];
 						
@@ -95,7 +103,7 @@
                             <div class="hinhphim">
                                 <img src="'.$img.'" alt="">
                                 <div class="muave">
-                                    <a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>
+                              '.$link.'
                                 </div>
                             </div>
                             <div class="tenphim">
