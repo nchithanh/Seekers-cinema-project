@@ -171,7 +171,7 @@
                                         $name=$phim['tenphim'];
                                         $img="img/".$phim['banner'];
                                     
-                                        echo '<!-- <div class="phim">
+                                        echo ' <div class="phim">
                                         <div class="anhphim"><img src="'.$img.'" alt="">
                                             <div class="muave">
                                                 <a href="">
@@ -227,6 +227,26 @@
                             <div class="phimsapchieu1">
                                 <div class="tieude">PHIM ĐANG CHIẾU</div>
                                 <?//day la cho foreach xong echo//?>
+                                <?php
+                    	
+                        foreach ($loadphimdc as $phim){
+                            
+                            $name=$phim['tenphim'];
+                            $img="img/".$phim['banner'];
+                        
+                            echo ' <div class="phim">
+                            <div class="anhphim"><img src="'.$img.'" alt="">
+                                <div class="muave">
+                                    <a href="">
+                                        MUA NGAY
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tenphim">'.$name.'</div>
+                        </div>';
+                        }
+    
+                 ?>
                                 <!-- <div class="phim">
                                     <div class="anhphim"><img src="img/phim7.jpg" alt="">
                                         <div class="muave">
