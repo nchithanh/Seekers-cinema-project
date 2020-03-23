@@ -166,12 +166,11 @@
                                     foreach ($loadphimsc as $phim){
                                         
                                         $name=$phim['tenphim'];
-                                        $img="img/".$phim['banner'];
-                                    
+                                        $img="img/".$phim['banner']; 
                                         echo ' <div class="phim">
                                         <div class="anhphim"><img src="'.$img.'" alt="">
                                             <div class="muave">
-                                                <a href="">
+                                                <a href="index.php?contro=detail&idphim='.$phim['id'].'">
                                                     MUA NGAY
                                                 </a>
                                             </div>
@@ -207,8 +206,7 @@
                                  ?>
                              
                             </div>
-                        </div>
-                
+                        </div>            
                     </li>
                     <li><a href="">góc điện ảnh</a></li>
                     <li><a href="">su kiện</a></li>
