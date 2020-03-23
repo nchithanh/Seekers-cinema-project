@@ -17,6 +17,7 @@
             //incluce controller xu ly listphim (phim dang chieu,phim sap chieu)
             include "controller/home/listphim_home.php";
             //incluce controller xu ly khuyen mai
+            include "controller/home/khuyenmai_home.php";
             include "view/home.php";
             break;
         case 'danhsachphim':
