@@ -6,8 +6,7 @@
             </div>
             <div class="listphim">
             <?//day la phim sap chieu//?>
-                <div class="phimsapchieu">
-
+                <div class="phimsapchieu" style="display:none;">
                 <?php
 						foreach ($loadphimsc as $phim){
                             
@@ -22,33 +21,26 @@
                             '.$name.'
                             </div>
                           </div>';
-						}
-				
-                    ?>
-                   
-
+						}	
+                    ?>     
                 </div>
             <?//day la phan dang chieu//?>
                 <div class="phimdangchieu">
                 <?php
-						foreach ($loadphimdc as $phim){
-                            
+						foreach ($loadphimdc as $phim){          
                             $name=$phim['tenphim'];
 							$img="img/".$phim['anhphim'];
 						
 							echo '<div class="phim">
                             <div class="anhphim">
-                            <a href=""><img src="'.$img.'" alt=""></a>
-                             
+                            <a href=""><img src="'.$img.'" alt=""></a>       
                             </div>
                             <div class="noidungphim">
                             '.$name.'
                             </div>
                           </div>';
 						}
-				
                     ?>
-               
                 </div>
             </div>
         </div>
