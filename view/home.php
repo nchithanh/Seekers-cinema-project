@@ -122,6 +122,7 @@
                     <img src="img/km1.jpg" alt="">
                     <div class="tenkhuyenmai">
                         <p>Bắt Kịp Thời Đại 4.0: Bye Bye Thẻ Thành Viên Nhựa</p>
+                        <a href="">detail</a>
                     </div>
                 </div>
                 <?//foreach echo phan nay ra//?>
@@ -129,36 +130,42 @@
                     <img src="img/km2.jpg" alt="">
                     <div class="tenkhuyenmai">
                         <p>TƯNG BỪNG HÁI "SAO" – NHẬN ƯU ĐÃI KHỦNG</p>
+                        <a href="">detail</a>
                     </div>
                 </div>
                 <div class="khuyenmai">
                     <img src="img/km3.jpg" alt="">
                     <div class="tenkhuyenmai">
                         <p>Thứ Năm Kì Diệu Với JCB</p>
+                        <a href="">detail</a>
                     </div>
                 </div>
                 <div class="khuyenmai">
                     <img src="img/km4.jpg" alt="">
                     <div class="tenkhuyenmai">
                         <p>Ngày Tri Ân Của Galaxy Cinema - Ngày Thứ Hai ĐẦU TIÊN Mỗi Tháng</p>
+                        <a href="">detail</a>
                     </div>
                 </div>
                 <div class="khuyenmai">
                     <img src="img/km5.jpg" alt="">
                     <div class="tenkhuyenmai">
                         <p>Xem Siêu Phẩm Điện Ảnh - “Măm” Cực Phẩm Bắp Xào</p>
+                        <a href="">detail</a>
                     </div>
                 </div>
                 <div class="khuyenmai">
                     <img src="img/km6.jpg" alt="">
                     <div class="tenkhuyenmai">
                         <p>Đặt Vé Online - Không Lo Trễ Nải</p>
+                        <a href="">detail</a>
                     </div>
                 </div>
                 <div class="khuyenmai">
                     <img src="img/km7.jpg" alt="">
                     <div class="tenkhuyenmai">
                         <p>Uống Milo Cực Đã – Xem Phim Hot Cực Hay</p>
+                        <a href="">detail</a>
                     </div>
                 </div>
             </div>

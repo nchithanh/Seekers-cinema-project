@@ -611,6 +611,15 @@ section .listphim .phim .muave a:hover{
     transform: scaleY(0);
     transition: all .3s;
 }
+.tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai a{
+    padding: 10px 25px;
+    border: solid 1px orangered;
+    font-size: 15px;
+}
+.tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai a:hover{
+    background: orangered;
+    font-size: 15px;
+}
 .tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai p{
     margin-top: 150px;
 }
