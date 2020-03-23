@@ -38,6 +38,12 @@
             //incluce controller xu ly mua ve 
             include "view/detail.php";
             break;
+        case 'tim kiem':
+
+            //incluce controller xu ly kiem kiem 
+    
+            include "view/detail.php";
+            break;
     }
     
     

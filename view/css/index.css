@@ -1343,3 +1343,61 @@ article .datve form input{
     height: 10%;
     line-height: 20px;
 }
+
+/*trang tiem kiem*/
+.trangtimkiem{
+    width: 100%;
+    background: black;
+    margin-top: 50px;
+    position: relative;
+}
+.trangtimkiem .khungketqua{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 0;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px;
+}
+.trangtimkiem .khungketqua .ketqua{
+    width: 22%;
+    height: 400px;
+    float: left;
+    margin-left: 2.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.trangtimkiem .khungketqua .ketqua .hinhphim{
+    width: 100%;
+    height: 90%;
+    position: relative;
+    transition: all .3s;
+}
+.trangtimkiem .khungketqua .ketqua .tenphim{
+    width: 100%;
+    height: 10%;
+    line-height: 20px;
+}
+.trangtimkiem .khungketqua .ketqua .hinhphim .chitiet{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.753);
+    transform: scaley(0);
+    transition: all .3s;
+}
+.trangtimkiem .khungketqua .ketqua .hinhphim .chitiet a{
+    line-height: 350px;
+    padding: 15px 30px;
+    border: solid 1px orangered;
+    margin-left: 30%;
+    transition: all .3s;
+}
+.trangtimkiem .khungketqua .ketqua .hinhphim .chitiet a:hover{
+    background: orangered;
+}
+.trangtimkiem .khungketqua .ketqua .hinhphim:hover .chitiet{
+    transform: scaley(1);
+}
