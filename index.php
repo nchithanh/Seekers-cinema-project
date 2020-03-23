@@ -12,7 +12,7 @@
     switch($controller){
         case 'home':
             //incluce controller xu ly banner home
-
+            include "controller/home/banner_home.php";
             //incluce controller xu ly listphim (phim dang chieu,phim sap chieu)
 
             //incluce controller xu ly khuyen mai

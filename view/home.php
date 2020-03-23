@@ -24,10 +24,13 @@
                 </form>
             </div>
             <?php//banner//?>
-            <div class="live" id="banner1"><img src="img/banner3.png" alt=""></div>
-            <div class="live" id="banner2"><img src="img/banner2.jpg" alt=""></div>
-            <div class="live" id="banner3"><img src="img/banner1.jpg" alt=""></div>
-            <div class="live" id="banner4"><img src="img/banner.jpg" alt=""></div>
+            <?php
+                $i=0;
+                foreach ($loadbanner as $banner){
+                    $i++;
+                    echo '<div class="live" id="banner'.$i.'"><img src="img/'.$banner['img'].'" alt=""></div>';
+                }
+            ?>
             <?php//banner//?>
             <div class="listbanner">
                 <span class="list" id="listbanner1"></span>
