@@ -21,7 +21,8 @@
             break;
         case 'danhsachphim':
             //incluce controller xu ly listphim (phim dang chieu,phim sap chieu) 
-            
+            include "controller/danhsachphim/listphim_phim.php";
+
             include "view/danhsachphim.php";
             break;
         case 'login':

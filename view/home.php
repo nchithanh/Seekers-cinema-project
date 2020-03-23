@@ -53,9 +53,7 @@
                             XEM THÊM
                         </div>
                     </a>
-                    <?//foreach echo phan nay ra//?>
-                    <?php
-                    	
+                    <?php	
 						foreach ($loadphimsc as $phim){
                             
                             $name=$phim['tenphim'];
@@ -77,9 +75,8 @@
                         </div>';
 						}
 				
-                    ?>
+                     ?>
                 </div>
-                <?//cho nay la phim sap chieu//?>
                 <?//cho nay la phim dang chieu//?>
                 <div class="phimdangchieu">
                     <a href="">
