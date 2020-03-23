@@ -1,8 +1,9 @@
 <?php
     include "model/connect.php";
     //incluce controller xu ly listphim  trong phim tren thanh menu
+    include "controller/header/listphim_header.php";
     include "view/header.php";
-
+   
     //incluce controller xu ly sreach  tren header
     
     $controller="home";

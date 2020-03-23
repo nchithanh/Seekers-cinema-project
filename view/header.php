@@ -163,7 +163,28 @@
                             <div class="phimdangchieu1">
                                 <div class="tieude">PHIM ĐANG CHIẾU</div>
                                 <?//day la cho foreach xong echo//?>
-                                <div class="phim">
+
+                                <?php
+                    	
+                                    foreach ($loadphimsc as $phim){
+                                        
+                                        $name=$phim['tenphim'];
+                                        $img="img/".$phim['banner'];
+                                    
+                                        echo '<!-- <div class="phim">
+                                        <div class="anhphim"><img src="'.$img.'" alt="">
+                                            <div class="muave">
+                                                <a href="">
+                                                    MUA NGAY
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="tenphim">'.$name.'</div>
+                                    </div>';
+                                    }
+				
+                             ?>
+                                <!-- <div class="phim">
                                     <div class="anhphim"><img src="img/phim1.jpg" alt="">
                                         <div class="muave">
                                             <a href="">
@@ -200,13 +221,13 @@
                                             </a>
                                         </div></div>
                                     <div class="tenphim">THE DUSTWALKER : SA MẠC CHẾT</div>
-                                </div>
+                                </div> -->
                             </div>
                             <?//day la phim sap chieu//?>
                             <div class="phimsapchieu1">
                                 <div class="tieude">PHIM ĐANG CHIẾU</div>
                                 <?//day la cho foreach xong echo//?>
-                                <div class="phim">
+                                <!-- <div class="phim">
                                     <div class="anhphim"><img src="img/phim7.jpg" alt="">
                                         <div class="muave">
                                             <a href="">
@@ -242,7 +263,7 @@
                                             </a>
                                         </div></div>
                                     <div class="tenphim">VÔ DIỆN SÁT NHÂN</div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                 
