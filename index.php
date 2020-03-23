@@ -33,7 +33,7 @@
             //incluce controller xu ly thong tin phim 
 
             //incluce controller xu ly sidebar (phim dang chieu,phim sap chieu)
-
+            include "controller/detail/listphim_detail.php";
 
             //incluce controller xu ly chuc nang binh luan 
 

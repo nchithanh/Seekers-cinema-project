@@ -13,5 +13,13 @@ function loadphim($limit,$trangthai){
     return $result;
 
 }
-
+    function showdetail($id){
+        global $conn;
+        $sql="select * from phim where id = ".$id."";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $result = $stmt->fetch();
+        return $result;
+    }
 ?>

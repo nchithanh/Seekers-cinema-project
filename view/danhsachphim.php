@@ -16,7 +16,7 @@
 						
 							echo '<div class="phim">
                             <div class="anhphim">
-                                <img src="'.$img.'" alt="">
+                            <a href=""><img src="'.$img.'" alt=""></a>
                             </div>
                             <div class="noidungphim">
                             '.$name.'
@@ -38,7 +38,8 @@
 						
 							echo '<div class="phim">
                             <div class="anhphim">
-                                <img src="'.$img.'" alt="">
+                            <a href=""><img src="'.$img.'" alt=""></a>
+                             
                             </div>
                             <div class="noidungphim">
                             '.$name.'

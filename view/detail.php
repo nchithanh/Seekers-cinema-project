@@ -2,28 +2,38 @@
 
         <article>
             <div class="anhphim">
-                <img src="img/anhphim1.jpg" alt="">
+            <?php
+					$img="img/".$detail['anhphim'];
+				?>
+                <img src="<?=$img?>" alt="">
             </div>
             <div class="thongtinphim">
                 <?//day la thong tin phim//?>
-                <div class="tenphim">BLOODSHOT</div>
+                <div class="tenphim"><?php echo $detail["tenphim"];  ?></div>
                 <div><i style="color: yellow;" class="fa fa-star"></i> 9.2<span>/10</span></div>
-                <div><span><i class="fa fa-hourglass"></i> :</span> 110 phút</div>
-                <div><span>Thể loại:</span> Hành Động</div>
-                <div><span>Quốc gia:</span> Mỹ</div>
-                <div><span>Diễn viên:</span> Vin Diesel, Eiza González</div>
-                <div><span>Đạo diễn:</span> Dave Wilson</div>
-                <div><span>Ngày:</span> 11/3/2020</div>
-                <div><img style="width: 10%;" src="img/c18.png" alt=""></div>
+                <div><span><i class="fa fa-hourglass"></i> :</span> <?php echo $detail["thoiluong"];  ?> phút</div>
+                <div><span>Thể loại:</span> <?php echo $detail["theloai"];  ?></div>
+                <div><span>Quốc gia:</span> <?php echo $detail["quocgia"];  ?></div>
+                <div><span>Diễn viên:</span> <?php echo $detail["dienvien"];  ?></div>
+                <div><span>Đạo diễn:</span> <?php echo $detail["daodien"];  ?></div>
+                <div><span>Ngày:</span> <?php echo $detail["ngaychieu"];  ?></div>
+                <?php
+                    switch ($detail["tuoi"]){
+                        case '16':
+                            echo '<div><img style="width: 10%;" src="img/c16.png" alt=""></div>';
+                            break;
+                        case '18':
+                                echo '<div><img style="width: 10%;" src="img/c18.png" alt=""></div>';
+                            break;
+                            default:
+                            echo'';
+                    }
+                ?>
+
             </div>
             <div class="noidungphim">
                 <div class="tieude">Nội dung phim</div>
-                <p> Ray Garrison là một sĩ quan cấp cao đã hy sinh trong một trận chiến. Thế nhưng, anh được tái sinh
-                    bằng công nghệ cao, giúp Ray sở hữu sức mạnh siêu nhiên và khả năng phục hồi nhanh chóng. Vận dụng
-                    những kỹ năng mới, anh săn lùng gã đàn ông đã giết vợ mình. Thế nhưng, khi sự thật dần hé mở, Ray
-                    nhận ra rằng không phải mọi thứ đều đáng tin. Ngay cả chính bản thân anh. Phim mới Bloodshot khởi
-                    chiếu 13.03.2020 tại các rạp chiếu phim trên toàn quốc Xem thêm tại:
-                    https://www.galaxycine.vn/dat-ve/bloodshot</p>
+                <p> <?php echo $detail["noidung"];  ?></p>
             </div>
             <?//day la thong tin phim//?>
             <div class="tieude2">
@@ -84,35 +94,27 @@
                 <span>PHIM ĐANG CHIẾU</span>
             </div>
             <?//day la phan list phim//?>
-            <div class="phim">
-                <div class="hinhphim">
-                    <img src="img/phim1.jpg" alt="">
-                    <div class="muave">
-                        <a href="">MUA VÉ</a>
-                    </div>
-                </div>
-                <div class="tenphim">ONWARD TRUY TÌM PHÉP THUẬT</div>
-            </div>
-            <div class="phim">
-                <div class="hinhphim">
-                    <img src="img/phim2.jpg" alt="">
-                    <div class="muave">
-                        <a href="">MUA VÉ</a>
-                    </div>
-                </div>
-                <div class="tenphim">ONWARD TRUY TÌM PHÉP THUẬT</div>
-            </div>
-            <div class="phim">
-                <div class="hinhphim">
-                    <img src="img/phim3.jpg" alt="">
-                    <div class="muave">
-                        <a href="">MUA VÉ</a>
-                    </div>
-                </div>
-                <div class="tenphim">ONWARD TRUY TÌM PHÉP THUẬT</div>
-            </div>
+            <?php
+						foreach ($loadphimdc as $phim){
+                            
+                            $name=$phim['tenphim'];
+							$img="img/".$phim['banner'];
+						
+							echo '<div class="phim">
+                            <div class="hinhphim">
+                                <img src="'.$img.'" alt="">
+                                <div class="muave">
+                                    <a href="">MUA VÉ</a>
+                                </div>
+                            </div>
+                            <div class="tenphim">'.$name.'</div>
+                        </div>';
+						}
+				
+                    ?>
+            
             <?//day la phan list phim//?>
-            <a href="">
+            <a href="index.php?contro=danhsachphim">
                 <div class="more">XEM THÊM</div>
             </a>
         </aside>
