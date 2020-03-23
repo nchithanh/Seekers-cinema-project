@@ -13,12 +13,18 @@
                         </div>
                     </div>
                     <div class="right">
-                        <form action="index.php?act=login" method="post">
+                        <form action="index.php?contro=login" method="post">
                             Sign in
-                            <input type="text" required placeholder="Username" name="username">
-                            <input type="password" required placeholder="Userpassword" name="userpass">
+                            <input type="text" required placeholder="Username" name="user">
+                            <input type="password" required placeholder="Userpassword" name="pass">
+                            <?php
+                            if(isset($_GET['loidangnhap'])){
+                                echo '<p style="color:red;">Sai Mật Khẩu hoặc tài khoản</p>';
+                            }
+                            ?>
+                            
                             <p>Forgot your password?</p>
-                            <input class="button" type="submit" name="dangnhap" value="Đăng nhập">
+                            <input class="button" type="submit" name="login" value="Đăng nhập">
                         </form>
                     </div>
                 </div>

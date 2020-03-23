@@ -145,13 +145,34 @@
                 </form>
             </div>
             <div class="tranglogin">
-                <a href="index.php?contro=login">
+            <?php
+											if(isset($_SESSION['user'])){
+												echo'
+                                                <a href="">
+                                                <i class="fa fa-user-secret"></i>
+                                                '.$_SESSION['user'].'
+                                            </a>
+                                            <a href="index.php?contro=logout">
+                                                Đăng Xuất
+                                            </a>
+                                                ';
+											}else{
+												echo' <a href="index.php?contro=login">
+                                                <i class="fa fa-user-secret"></i>
+                                                Đăng nhập
+                                                  </a>
+                                                 <a href="index.php?contro=login">
+                                                Đăng ký
+                                            </a>';
+											}
+										?>
+                <!-- <a href="index.php?contro=login">
                     <i class="fa fa-user-secret"></i>
                     Đăng nhập
                 </a>
                 <a href="index.php?contro=login">
                     Đăng ký
-                </a>
+                </a> -->
             </div>
             <nav>
                 <ul>

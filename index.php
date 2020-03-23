@@ -1,4 +1,6 @@
 <?php
+session_start();
+ob_start();
     include "model/connect.php";
     //incluce controller xu ly listphim  trong phim tren thanh menu
     include "controller/header/listphim_header.php";
@@ -27,7 +29,12 @@
 
             include "view/danhsachphim.php";
             break;
+        case 'logout':
+            include "controller/login/logout.php";
         case 'login':
+
+            include "controller/login/login.php";
+
             include "view/login.php";
             break;
         case 'detail':
