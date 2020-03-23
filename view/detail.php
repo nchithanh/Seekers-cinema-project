@@ -104,7 +104,7 @@
                             <div class="hinhphim">
                                 <img src="'.$img.'" alt="">
                                 <div class="muave">
-                                    <a href="">MUA VÉ</a>
+                                    <a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>
                                 </div>
                             </div>
                             <div class="tenphim">'.$name.'</div>
