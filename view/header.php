@@ -139,9 +139,9 @@
                 </div>
             </div></a>
             <div class="timkiem">
-                <form action="">
-                    <input class="tim" type="submit" value="search">
-                    <input class="text" type="text" placeholder="Tên phim">
+                <form action="index.php?contro=timkiem" method="post" enctype="multipart/form-data">    
+                    <input class="tim" type="submit" value="search" name="tim">
+                    <input class="text" type="text" placeholder="Tên phim" name="noidung">
                 </form>
             </div>
             <div class="tranglogin">

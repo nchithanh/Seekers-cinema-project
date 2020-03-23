@@ -5,7 +5,8 @@
     include "view/header.php";
    
     //incluce controller xu ly sreach  tren header
-    
+    include "controller/header/timkiem_head.php";
+
     $controller="home";
     if(isset($_GET['contro'])){
         $controller=$_GET['contro'];
