@@ -41,28 +41,28 @@
             </div>
             <div class="binhluan" id="binhluanbox">
             <?//day la form binh luan//?>
-                <form action="">
-                    <input type="text" placeholder="Thêm bình luận">
-                    <input type="submit" value="Send">
+                <form action="index.php?contro=detail&idphim=<?=$id_phim?>" method="POST">
+                    <input type="text" placeholder="Thêm bình luận" name="danhgia">
+                    <input type="submit" value="Send" name="submit">
                 </form>
             <?//day la form binh luan//?>
             <?//day la show binh luan//?>
-                <div class="hienbinhluan">
-                    <div class="tenbinhluan">nguyen van a</div>
-                    <p>phim nhu cc achvsahvcsacvhsac</p>
-                </div>
-                <div class="hienbinhluan">
-                    <div class="tenbinhluan">nguyen van a</div>
-                    <p>phim nhu cc achvsahvcsacvhsac</p>
-                </div>
-                <div class="hienbinhluan">
-                    <div class="tenbinhluan">nguyen van a</div>
-                    <p>phim nhu cc achvsahvcsacvhsac</p>
-                </div>
-                <div class="hienbinhluan">
-                    <div class="tenbinhluan">nguyen van a</div>
-                    <p>phim nhu cc achvsahvcsacvhsac</p>
-                </div>
+            <?php 
+                
+                foreach ($dscmt as $cmt) {
+                    $tennguoidanhgia = $cmt['tennguoidanhgia'];
+                    $danhgia  = $cmt['danhgia'];
+
+                    echo '
+
+                    <div class="hienbinhluan">
+                        <div class="tenbinhluan">'.$tennguoidanhgia.'</div>
+                        <p>'.$danhgia.'</p>
+                    </div>
+
+                    ';
+                }
+            ?>
             <?//day la show binh luan//?>    
             </div>
             <div class="datve" id="datve">

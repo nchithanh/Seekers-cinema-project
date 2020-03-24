@@ -2,6 +2,7 @@
 session_start();
 ob_start();
     include "model/connect.php";
+    include "model/user.php";
     //incluce controller xu ly listphim  trong phim tren thanh menu
     include "controller/header/listphim_header.php";
     include "view/header.php";
@@ -38,14 +39,15 @@ ob_start();
             include "view/login.php";
             break;
         case 'detail':
-
+            
             //incluce controller xu ly thong tin phim 
 
             //incluce controller xu ly sidebar (phim dang chieu,phim sap chieu)
             include "controller/detail/listphim_detail.php";
 
             //incluce controller xu ly chuc nang binh luan 
-
+            
+            include "controller/detail/binhluan_detail.php";
             //incluce controller xu ly mua ve 
             include "view/detail.php";
             break;

@@ -47,4 +47,22 @@ function checkuser($user,$pass){
     return $result;
     
 }
+
+function load_cmt($idphim){
+    global $conn;
+    $sql= "select * from danhgiaphim where idphim = $idphim ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+
+}
+
+function add_cmt($tennguoidanhgia, $danhgia, $idphim){
+    global $conn;
+    $sql= "INSERT INTO danhgiaphim (tennguoidanhgia,danhgia,idphim) VALUES ('$tennguoidanhgia','$danhgia','$idphim')";
+    $conn->exec($sql);
+}
+
 ?>
