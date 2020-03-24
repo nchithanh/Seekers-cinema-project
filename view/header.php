@@ -195,8 +195,7 @@
                                         echo ' <div class="phim">
                                         <div class="anhphim"><img src="'.$img.'" alt="">
                                             <div class="muave">
-                                            '.$link.'
-                                                    MUA NGAY
+                                            '.$link.'                                              
                                                 </a>
                                             </div>
                                         </div>
@@ -224,7 +223,6 @@
                                         <div class="anhphim"><img src="'.$img.'" alt="">
                                             <div class="muave">
                                             '.$link.'
-                                                    MUA NGAY
                                                 </a>
                                             </div>
                                         </div>
