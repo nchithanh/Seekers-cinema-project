@@ -41,6 +41,20 @@
         }
 
         $(document).ready(function () {
+
+            $("#phim").change(function(){
+                var idphim = $("#phim").val();
+                $.post("view/ajax.php", {idphim:idphim}, function(data){
+                   $("#rap").html(data);
+                });
+            });
+            $("#rap").change(function(){
+                var idrap = $("#rap").val();
+                $.post("view/ajax1.php", {idrap:idrap}, function(data){
+                   $("#suatchieu").html(data);
+                });
+            });
+
             $(".list").click(function () {
                 $(".list").removeClass("maubanner");
                 $(this).addClass("maubanner");

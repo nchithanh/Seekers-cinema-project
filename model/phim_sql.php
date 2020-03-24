@@ -13,6 +13,16 @@ function loadphim($limit,$trangthai){
     return $result;
 
 }
+function loadphimall(){
+    global $conn;
+    $sql= "select * from phim where 1 order by id desc";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+
+}
     function showdetail($id){
         global $conn;
         $sql="select * from phim where id = ".$id."";

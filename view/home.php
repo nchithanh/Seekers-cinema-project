@@ -2,23 +2,23 @@
         <div class="banner">
             <div class="datve">
                 <form action="index.php?contro=detail" method="post">
-                    <select name="phim" id="">
-                        <option value="">chon phim</option>
-                        <option value="">phim1</option>
-                        <option value="">phim2</option>
-                        <option value="">phim3</option>
+                    <select name="phim" id="phim">
+                    <option value="">chon phim</option>
+                        <?php
+                            foreach ($loadphimall as $phim){
+                                echo '<option value="'.$phim['id'].'">'.$phim['tenphim'].'</option>';
+                            }
+                        ?>
+                       
+                     
                     </select>
-                    <select name="rap" id="">
+                    <select name="rap" id="rap">
                         <option value="">chon rap</option>
-                        <option value="">phim1</option>
-                        <option value="">phim2</option>
-                        <option value="">phim3</option>
+                        
                     </select>
-                    <select name="suatchieu" id="">
+                    <select name="suatchieu" id="suatchieu">
                         <option value="">chon suat</option>
-                        <option value="">phim1</option>
-                        <option value="">phim2</option>
-                        <option value="">phim3</option>
+                        
                     </select>
                     <input type="submit" value="MUA VÉ">
                 </form>
