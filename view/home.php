@@ -1,7 +1,7 @@
 
         <div class="banner">
             <div class="datve">
-                <form action="index.php?contro=detail" method="post">
+                <form action="index.php?contro=datve" method="post">
                     <select name="phim" id="phim">
                     <option value="">chon phim</option>
                         <?php
@@ -9,16 +9,14 @@
                                 echo '<option value="'.$phim['id'].'">'.$phim['tenphim'].'</option>';
                             }
                         ?>
-                       
-                     
                     </select>
-                    <select name="rap" id="rap">
-                        <option value="">chon rap</option>
-                        
+                    <select id="rap">
+                        <option value="">chon rap</option>  
+                    </select>
+                    <select name="rap" id="rap_giatri" style="display:none" >               
                     </select>
                     <select name="suatchieu" id="suatchieu">
                         <option value="">chon suat</option>
-                        
                     </select>
                     <input type="submit" value="MUA VÉ">
                 </form>

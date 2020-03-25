@@ -5,4 +5,5 @@ include "model/connect.php";
 include_once "model/phim_sql.php";
 $loadphimdc=loadphim(4,0);
 $loadphimsc=loadphim(4,1);
+$loadphimall=loadphimall();
 ?>

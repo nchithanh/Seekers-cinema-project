@@ -11,4 +11,6 @@ if(isset($_GET['idphim'])){
 $loadphimdc=loadphim(3,0);
 $loadphimsc=loadphim(3,1);
 $detail=showdetail($id);
+//xy ly dat ve nhanh
+
 ?>

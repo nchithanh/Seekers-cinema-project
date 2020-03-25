@@ -66,24 +66,22 @@
             <?//day la show binh luan//?>    
             </div>
             <div class="datve" id="datve">
-                <form action="">
-                    <select name="phim" id="">
-                        <option value="">chon phim</option>
-                        <option value="">phim1</option>
-                        <option value="">phim2</option>
-                        <option value="">phim3</option>
+            <form action="index.php?contro=datve" method="post">
+                    <select name="phim" id="phim">
+                    <option value="">chon phim</option>
+                        <?php
+                            foreach ($loadphimall as $phim){
+                                echo '<option value="'.$phim['id'].'">'.$phim['tenphim'].'</option>';
+                            }
+                        ?>
                     </select>
-                    <select name="rap" id="">
-                        <option value="">chon rap</option>
-                        <option value="">phim1</option>
-                        <option value="">phim2</option>
-                        <option value="">phim3</option>
+                    <select id="rap">
+                        <option value="">chon rap</option>  
                     </select>
-                    <select name="suatchieu" id="">
+                    <select name="rap" id="rap_giatri" style="display:none" >               
+                    </select>
+                    <select name="suatchieu" id="suatchieu">
                         <option value="">chon suat</option>
-                        <option value="">phim1</option>
-                        <option value="">phim2</option>
-                        <option value="">phim3</option>
                     </select>
                     <input type="submit" value="MUA VÉ">
                 </form>

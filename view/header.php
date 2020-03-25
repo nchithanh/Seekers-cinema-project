@@ -50,8 +50,32 @@
             });
             $("#rap").change(function(){
                 var idrap = $("#rap").val();
+                $.post("view/ajax2.php", {idrap:idrap}, function(data){
+                   $("#rap_giatri").html(data);
+                });
+            });
+            $("#rap").change(function(){
+                var idrap = $("#rap").val();
                 $.post("view/ajax1.php", {idrap:idrap}, function(data){
                    $("#suatchieu").html(data);
+                });
+            });
+            $("#phimhead").change(function(){
+                var idphim = $("#phimhead").val();
+                $.post("view/ajax.php", {idphim:idphim}, function(data){
+                   $("#raphead").html(data);
+                });
+            });
+            $("#raphead").change(function(){
+                var idrap = $("#raphead").val();
+                $.post("view/ajax1.php", {idrap:idrap}, function(data){
+                   $("#suatchieuhead").html(data);
+                });
+            });
+            $("#raphead").change(function(){
+                var idrap = $("#raphead").val();
+                $.post("view/ajax2.php", {idrap:idrap}, function(data){
+                   $("#raphead_giatri").html(data);
                 });
             });
 
@@ -124,24 +148,24 @@
     <div class="warp">
         <header>
             <div id="thanhdatve" class="thanhdatve">
-                <form action="">
-                    <select name="phim" id="">
+                <form action="index.php?contro=datve" method="post">
+                    <select name="phim" id="phimhead">
                         <option value="">chon phim</option>
-                        <option value="">phim1</option>
-                        <option value="">phim2</option>
-                        <option value="">phim3</option>
+                        <?php
+                            foreach ($loadphimall as $phim){
+                                echo '<option value="'.$phim['id'].'">'.$phim['tenphim'].'</option>';
+                            }
+                        ?>
                     </select>
-                    <select name="rap" id="">
+                    <select  id="raphead">
                         <option value="">chon rap</option>
-                        <option value="">phim1</option>
-                        <option value="">phim2</option>
-                        <option value="">phim3</option>
+                       
                     </select>
-                    <select name="suatchieu" id="">
+                    <select name="rap" id="raphead_giatri" style="display:none" >               
+                    </select>
+                    <select name="suatchieu" id="suatchieuhead">
                         <option value="">chon suat</option>
-                        <option value="">phim1</option>
-                        <option value="">phim2</option>
-                        <option value="">phim3</option>
+                       
                     </select>
                     <input type="submit" value="MUA VÉ">
                 </form>

@@ -1,8 +1,9 @@
+<option value="">chon suat chieu</option>
 <?php
     include "../model/connect.php";
     function loadsuatchieu($idrap){
         global $conn;
-        $sql="select * from suatchieu where idrap = ".$idrap." order by id desc";
+        $sql="SELECT * FROM suatchieu where idphim_rap = ".$idrap."";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $resul = $stmt->setFetchMode(PDO::FETCH_ASSOC);
