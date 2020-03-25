@@ -15,7 +15,10 @@
 						
 							echo '<div class="phim">
                             <div class="anhphim">
-                            <a href=""><img src="'.$img.'" alt=""></a>
+                            <img src="'.$img.'" alt="">
+                            <div class="chitiet">
+                                <a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VE</a>
+                            </div>
                             </div>
                             <div class="noidungphim">
                             '.$name.'
@@ -33,7 +36,10 @@
 						
 							echo '<div class="phim">
                             <div class="anhphim">
-                            <a href=""><img src="'.$img.'" alt=""></a>       
+                            <img src="'.$img.'" alt="">
+                            <div class="chitiet">
+                            <a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VE</a>
+                            </div>     
                             </div>
                             <div class="noidungphim">
                             '.$name.'

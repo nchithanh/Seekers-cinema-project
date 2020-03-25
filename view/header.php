@@ -167,7 +167,7 @@
                         <option value="">chon suat</option>
                        
                     </select>
-                    <input type="submit" value="MUA VÉ">
+                    <input type="submit" name="muave" value="MUA VÉ">
                 </form>
             </div>
             <a href="index.php?contro=home"><div class="logo">

@@ -58,8 +58,7 @@ ob_start();
             include "view/timkiem.php";
             break;
         case 'datve':
-
-        
+            include "controller/datve/datve.php";
             include "view/datve.php";
              break;
     }   

@@ -1347,6 +1347,37 @@ article .datve form input{
     width: 100%;
     height: 90%;
 }
+.danhsachphim .listphim .anhphim .chitiet{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.651);
+    z-index: 99;
+    text-align: center;
+    line-height: 400px;
+}.danhsachphim .listphim .anhphim .chitiet a{
+    padding: 15px 20px;
+    border: solid 1px #ED4C67;
+    position: relative;
+    color: white;
+}
+.danhsachphim .listphim .anhphim .chitiet a::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ED4C67;
+    transform: scale(0);
+    transition: all .3s;
+    z-index: -1;
+}
+.danhsachphim .listphim .anhphim .chitiet a:hover::after{
+    transform: scale(1);
+}
 .danhsachphim .listphim .noidungphim{
     width: 100%;
     height: 10%;

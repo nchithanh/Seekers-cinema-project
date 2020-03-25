@@ -18,7 +18,25 @@
                     <select name="suatchieu" id="suatchieu">
                         <option value="">chon suat</option>
                     </select>
-                    <input type="submit" value="MUA VÉ">
+                    
+                    <?php
+                        if(isset($_SESSION['user'])){
+                            echo '<input name="muave" type="submit" value="MUA VÉ">';
+                        }else{
+                            echo ' <a style="
+                            position: absolute;
+                            bottom:0;
+                            right:0;
+                            padding:20px 40px;
+                            background: #ED4C67;
+                            color: white;
+                            border: none;
+                            margin-left: 250px;
+                            
+                            transition: all .3s;" href="index.php?contro=login">MUA VÉ</a>';
+                        }
+                    ?>
+                   
                 </form>
             </div>
             <?php//banner//?>
