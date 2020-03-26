@@ -38,7 +38,7 @@
                         <div class="hang">
                             <?php
                                 foreach ($ghe1 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                            
@@ -48,70 +48,70 @@
                         <div class="hang">
                         <?php
                                 foreach ($ghe2 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                         </div>
                         <div class="hang">
                         <?php
                                 foreach ($ghe3 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                         </div>
                         <div class="hang">
                         <?php
                                 foreach ($ghe4 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                         </div>
                         <div class="hang">
                         <?php
                                 foreach ($ghe5 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                         </div>
                         <div class="hang">
                         <?php
                                 foreach ($ghe6 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                         </div>
                         <div class="hang">
                         <?php
                                 foreach ($ghe7 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                         </div>
                         <div class="hang">
                         <?php
                                 foreach ($ghe8 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                         </div>
                         <div class="hang">
                         <?php
                                 foreach ($ghe9 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                         </div>
                         <div class="hang">
                         <?php
                                 foreach ($ghe10 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                         </div>
                         <div class="hang">
                         <?php
                                 foreach ($ghe11 as $g){
-                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">1</div></a>';
+                                    echo '<a href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'idghe='.$g['id'].'"><div id="hetcho" class="box">'.$g['ghe'].'</div></a>';
                                 }
                             ?>
                         </div>

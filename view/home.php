@@ -28,7 +28,7 @@
                             bottom:0;
                             right:0;
                             padding:20px 40px;
-                            background: #ED4C67;
+                            background: rgb(240, 98, 146);
                             color: white;
                             border: none;
                             margin-left: 250px;
