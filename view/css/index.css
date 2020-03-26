@@ -1458,3 +1458,100 @@ article .datve form input{
 .trangtimkiem .khungketqua .ketqua .hinhphim:hover .chitiet{
     transform: scaley(1);
 }
+
+
+/* tranf thanh toan*/
+.form_thanhtoan{
+    width: 100%;
+    height: 550px;
+    position: relative;
+    margin-top: 50px;
+}
+.form_thanhtoan form{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 35%;
+    box-shadow:0 0 10px rgba(240, 98, 146,1.0);
+}
+.form_thanhtoan form .row{
+    width: 90%;
+    height: 10%;
+    margin-left: 5%;
+    margin-top: 5%;
+    position: relative;
+    
+}
+.form_thanhtoan form .row label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    color: gray;
+}
+.form_thanhtoan form .row input{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 48%;
+    width: 100%;
+    z-index: -1;
+    box-shadow: 1px 1px 2px rgba(240, 98, 146,1.0);
+    border: none;
+    font-size: 13px;
+    text-align: center;
+}
+.form_thanhtoan form .row input::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+.form_thanhtoan form .submit{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 15px;
+    height: 40px;
+    background: rgba(240, 98, 146,1.0);
+    border: solid 1px rgba(240, 98, 146,1.0);
+    color: white;
+}
+.chuckhach{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 60px;
+   
+    z-index: 999;
+    text-align: center;
+}
+.chuckhach .box{
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    left: 25%;
+    
+}
+.chuckhach .box p{
+    font-size: 35px;
+    text-align: center;
+}
+.chuckhach .box i{
+    font-size: 100px;
+    text-align: center;
+    color: rgba(240, 98, 146,1.0);
+    
+}
+.chuckhach .box a{
+    padding: 15px 20px;
+    background: rgba(240, 98, 146,1.0);
+    transition: all .3s;
+}
+.chuckhach .box a:hover{
+    background: orangered;
+}

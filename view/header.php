@@ -142,6 +142,14 @@
             });
         });
     </script>
+    <style>
+        .block{
+            display:block;
+        }
+        .none{
+            display:none;
+        }
+    </style>
 </head>
 
 <body>

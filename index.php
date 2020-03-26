@@ -61,6 +61,10 @@ ob_start();
             include "controller/datve/datve.php";
             include "view/datve.php";
              break;
+        case 'thanhtoan':
+            include "controller/datve/thanhtoan.php";
+            include "view/thanhtoan.php";
+            break;
     }   
     
     
