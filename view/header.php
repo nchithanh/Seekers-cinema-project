@@ -146,6 +146,16 @@
 
 <body>
     <div class="warp">
+        <div class="gif" style=" position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:url(img/mua.gif);
+    background-size: contant;
+    z-index: -1;">
+       
+        </div>
         <header>
             <div id="thanhdatve" class="thanhdatve">
                 <form action="index.php?contro=datve" method="post">
@@ -167,11 +177,18 @@
                         <option value="">chon suat</option>
                        
                     </select>
-                    <input type="submit" name="muave" value="MUA VÉ">
+                    <?php
+                        if(isset($_SESSION['user'])){
+                            echo ' <input type="submit" name="muave" value="MUA VÉ">';
+                        }
+                        else{
+                            echo '<a style="background:black;color:white;padding:15px 30px;" href="index.php?contro=login">MUA VÉ</a>';
+                        }
+                    ?>
                 </form>
             </div>
             <a href="index.php?contro=home"><div class="logo">
-                <h2><span>c</span><span>o</span><span>r</span><span>o</span><span>n</span><span>a</span> virus</h2>
+                <h2><span>S</span><span>e</span><span>e</span><span>k</span><span>e</span><span>r</span>s<span></span> cinema</h2>
                 <div class="gif">
                     <img src="img/nhen2.gif" alt="">
                 </div>

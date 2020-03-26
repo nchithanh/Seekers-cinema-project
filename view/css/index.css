@@ -40,7 +40,7 @@ header .logo .gif{
     z-index: -1;
 }
  .logo h2{
-    color: #ED4C67;
+    color: rgba(240, 98, 146,1.0);
 }
  .logo span:nth-child(1){
     color: #FFC312;
@@ -79,16 +79,16 @@ header .timkiem form .tim{
     height: 80%;
     width: 30%;
     border: none;
-    background: #ED4C67;
+    background: rgba(240, 98, 146,1.0);
     color: white;
 }
 header .timkiem form .text{
     height: 70%;
     width: 0%;
     border: none;
-    border-bottom: solid 1px #ED4C67;
+    border-bottom: solid 1px rgba(240, 98, 146,1.0);
     text-align: center;
-    color: #ED4C67;
+    color: rgba(240, 98, 146,1.0);
     transition: all .3s;
 }
 input:focus{
@@ -116,7 +116,7 @@ header .tranglogin a:nth-child(1){
     margin-right: 5px;
 }
 header .tranglogin a:hover{
-    color: orangered;
+    color: rgba(240, 98, 146,1.0);
 }
 
 
@@ -126,7 +126,7 @@ header .thanhdatve{
     left: 100%;
     width: 100%;
     height: 60px;
-    background: #FF346A;
+    background: rgba(240, 98, 146,1.0);
     z-index: 999;
     animation-duration: .5s;
     animation-fill-mode: forwards;
@@ -183,14 +183,17 @@ header nav ul li{
     width: 14%;
     text-transform: uppercase;
     text-align: center;
+    transition: all .3s;
     position: relative;
     transition: all .3s;
+    
 }
 header nav ul li:hover .box_phim{
-    transform: scaleY(1);
+    transform: scaley(1);
+    transition: all .3s;
 }
 header nav ul li .box_phim{
-    transform: scaleY(0);
+    transform: scaley(0);
     transform-origin: top;
     position: absolute;
     left: 0;
@@ -226,7 +229,7 @@ header nav li .box_phim .tieude::after{
     top: 0;
     width: 10%;
     height: 70%;
-    border-bottom:solid 1.5px #ED4C67;
+    border-bottom:solid 1.5px rgba(240, 98, 145, 0.658);
 }
 header nav li .box_phim .phim{
     width: 24%;
@@ -244,7 +247,7 @@ header nav li .box_phim .phim .anhphim .muave{
     width: 100%;
     position: absolute;
     height: 100%;
-    background: rgba(237, 76, 103, 0.63);
+    background: rgba(240, 98, 145, 0.616);
     left: 0;
     top: 0;
     transform: scaleY(0);
@@ -262,7 +265,7 @@ header nav li .box_phim .phim .anhphim:hover .muave{
     transform: scaleY(1);
 }
 header nav li .box_phim .phim .anhphim .muave a:hover{
-    background: orange;
+    background: rgba(240, 98, 146,1.0);
 }
 header nav li .box_phim .phim .tenphim{
     width: 100%;
@@ -318,6 +321,7 @@ header nav ul li:hover a::before{
     height: 500px;
     background: rgb(114, 114, 114);
     position: relative;
+    
 }
 .banner .live{
     position: absolute;
@@ -325,6 +329,7 @@ header nav ul li:hover a::before{
     top: 0;
     width: 100%;
     height: 100%;
+    
 }
 .banner .listbanner{
     position: absolute;
@@ -344,8 +349,8 @@ header nav ul li:hover a::before{
     cursor: pointer;
 }
 .maubanner{
-    background: orangered;
-    border: solid 1px orangered;
+    background: rgba(240, 98, 146,1.0);
+    border: solid 1px rgba(240, 98, 146,1.0);
 }
 .banner .datve{
     position: absolute;
@@ -370,7 +375,7 @@ header nav ul li:hover a::before{
     height: 50px;
     left: 0;
     top: 0;
-    background: #ED4C67;
+    background: rgba(240, 98, 146,1.0);
     color: white;
     text-align: center;
     line-height: 50px;
@@ -393,7 +398,7 @@ header nav ul li:hover a::before{
 .banner .datve form input{
     width: 50%;
     height: 50px;
-    background: #ED4C67;
+    background: rgba(240, 98, 146,1.0);
     color: white;
     border: none;
     margin-left: 190px;
@@ -425,7 +430,7 @@ section .tieude span{
     padding: 14px 10px;
 }
 .mautieude{
-    border-bottom: solid 2px orangered;
+    border-bottom: solid 2px rgba(240, 98, 146,1.0);
 }
 section .listphim{
     width: 80%;
@@ -446,7 +451,7 @@ section .listphim{
     position: absolute;
     width: .5%;
     height: 100%;
-    background: #FF346A;
+    background: rgba(240, 98, 146,1.0);
     right: 0;
     top: 0;
     transform: scaleY(0);
@@ -482,9 +487,9 @@ section .listphim .more{
     right: 2%;
     width: 20%;
     height: 50px;
-    border: solid 1px #f26b38;
+    border: solid 1px rgba(240, 98, 146,1.0);
     text-align: center;
-    color: #f26b38;
+    color: rgba(240, 98, 146,1.0);
     line-height: 50px;
     transition: all .3s;
 }
@@ -495,7 +500,7 @@ section .listphim .more::after{
     height: 100%;
     left: -1%;
     top: 0;
-    background: #f26b38;
+    background: rgba(240, 98, 146,1.0);
     transition: all .3s;
 }
 section .listphim .more:hover{
@@ -554,8 +559,8 @@ section .listphim .phim .muave a{
     transition: all .3s;
 }
 section .listphim .phim .muave a:hover{
-    background: orangered;
-    border: solid 1px orangered;
+    background: rgba(240, 98, 146,1.0);
+    border: solid 1px rgba(240, 98, 146,1.0);
     color: white;
     padding: 15px 30px;
 }
@@ -613,11 +618,11 @@ section .listphim .phim .muave a:hover{
 }
 .tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai a{
     padding: 10px 25px;
-    border: solid 1px orangered;
+    border: solid 1px rgba(240, 98, 146,1.0);
     font-size: 15px;
 }
 .tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai a:hover{
-    background: orangered;
+    background: rgba(240, 98, 146,1.0);
     font-size: 15px;
 }
 .tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai p{
@@ -698,7 +703,7 @@ footer{
     transition: all .5s;
     transform: perspective(600px) rotateY(0deg);
     box-shadow: 0px 0px 10px black;
-    background: #FF346A;
+    background: rgba(240, 98, 146,1.0);
     overflow: hidden;
 }
 .login .formlogin .dangnhap .left{
@@ -707,7 +712,7 @@ footer{
     top: 0;
     width: 50%;
     height: 100%;
-    background: #FF346A;
+    background: rgba(240, 98, 146,1.0);
     text-align: center;
     border-bottom-right-radius: 400px;
 }
@@ -725,7 +730,7 @@ footer{
     height: 30px;
     border: none;
     background: rgb(255, 255, 255);
-    color: #FF346A;
+    color: rgba(240, 98, 146,1.0);
     border-radius: 50px;
     
 }
@@ -769,7 +774,7 @@ footer{
     width: 65%;
     height: 35px;
     border: none;
-    background-image: linear-gradient( 135deg, #FF346A,rgb(142, 68, 173),#FF346A);
+    background-image: linear-gradient( 135deg, rgba(240, 98, 146,1.0),rgb(142, 68, 173),rgba(240, 98, 146,1.0));
     background-size: 200%;
     color: white;
     border-radius: 50px;
@@ -800,7 +805,7 @@ footer{
     top: 0;
     width: 50%;
     height: 100%;
-    background: #FF346A;
+    background: rgba(240, 98, 146,1.0);
     border-bottom-right-radius: 400px;
     border-top-right-radius: 300px;
     text-align: center;
@@ -816,7 +821,7 @@ footer{
     width: 50%;
     height: 40px;
     border: none;
-    background-image: linear-gradient( 135deg, #FF346A,rgb(142, 68, 173),#FF346A);
+    background-image: linear-gradient( 135deg, rgba(240, 98, 146,1.0),rgb(142, 68, 173),rgba(240, 98, 146,1.0));
     background-size: 200%;
     color: rgb(255, 255, 255);
     border-radius: 50px;
@@ -865,7 +870,7 @@ footer{
     height: 30px;
     border: none;
     background: white;
-    color: #FF346A;
+    color: rgba(240, 98, 146,1.0);
     border-radius: 50px;
 }
 .login .formlogin .dangky .left form .button::after{
@@ -912,7 +917,7 @@ aside .tieude{
     margin-bottom: 10px;
 }
 aside .tieude span{
-    border-bottom: solid 1.5px orangered;
+    border-bottom: solid 1.5px rgba(240, 98, 146,1.0);
     padding-bottom: 10px ;
     font-size: 20px;
 }
@@ -949,8 +954,8 @@ aside .hinhphim:hover .muave{
     transform: scaleY(1);
 }
 aside .hinhphim .muave a:hover{
-    background: #FF346A;
-    border: solid 1px #FF346A;
+    background: rgba(240, 98, 146,1.0);
+    border: solid 1px rgba(240, 98, 146,1.0);
 }
 aside .tenphim{
     width: 100%;
@@ -962,8 +967,8 @@ aside .more{
     text-align: center;
     padding: 15px 20px;
     margin-left: 220px;
-    border: solid 1px #FF346A;
-    color: #FF346A;
+    border: solid 1px rgba(240, 98, 146,1.0);
+    color: rgba(240, 98, 146,1.0);
     margin-bottom: 10px;
     transition: all .3s;
     position: relative;
@@ -973,7 +978,7 @@ aside .more::after{
     content: '';
     width: 0%;
     height: 100%;
-    background: #FF346A;
+    background: rgba(240, 98, 146,1.0);
     left: -1%;
     top: 0;
     transition: all .3s;
@@ -1019,7 +1024,7 @@ article .noidungphim .tieude{
     font-size: 20px;
     width: 20%;
     height: 30px;
-    border-bottom: solid 1.5px #FF346A;
+    border-bottom: solid 1.5px rgba(240, 98, 146,1.0);
 }
 article .noidungphim p{
     line-height: 20px;
@@ -1047,7 +1052,7 @@ article .binhluan{
 article .binhluan form{
     width: 100%;
     height: 100px;
-    border-bottom: solid 2px orangered;
+    border-bottom: solid 2px rgba(240, 98, 146,1.0);
     position: relative;
 }
 article .binhluan form input{
@@ -1062,7 +1067,7 @@ article .binhluan form input:nth-child(2){
     right: 0;
     width: 20%;
     height: 30px;
-    background: #ED4C67;
+    background: rgba(240, 98, 146,1.0);
     color: white;
     border: none;
 }
@@ -1080,7 +1085,7 @@ article .binhluan .hienbinhluan .tenbinhluan{
     width: 100%;
     height: 30px;
     line-height: 30px;
-    color: orangered;
+    color: rgba(240, 98, 146,1.0);
 }
 article .binhluan .hienbinhluan .tenbinhluan::after{
     position: absolute;
@@ -1090,7 +1095,7 @@ article .binhluan .hienbinhluan .tenbinhluan::after{
     width: 20%;
     height: 100%;
     background: none;
-    border-bottom: solid 1px orangered;
+    border-bottom: solid 1px rgba(240, 98, 146,1.0);
 }
 article .binhluan .hienbinhluan p{
     position: absolute;
@@ -1117,7 +1122,7 @@ article .datve::after{
     height: 50px;
     top: 0;
     left: 0;
-    background: #FF346A;
+    background: rgba(240, 98, 146,1.0);
     color: white;
     text-align: center;
     line-height: 50px;
@@ -1151,7 +1156,7 @@ article .datve form input{
     height: 50px;
     bottom: 0;
     right: 0;
-    background: #FF346A;
+    background: rgba(240, 98, 146,1.0);
     color: white;
     text-align: center;
     line-height: 50px;
@@ -1184,7 +1189,7 @@ article .datve form input{
 .phongchieu .chuthich form input{
     width: 100%;
     height: 100%;
-    background: #ED4C67;
+    background: rgba(240, 98, 146,1.0);
     border: none;
     color: white;
     cursor: pointer;
@@ -1198,7 +1203,7 @@ article .datve form input{
 }
 .phongchieu .chuthich .box1{
     width: 50px;height: 50px;
-    background: #ED4C67;
+    background: rgba(240, 98, 146,1.0);
     float: left;
     margin-right: 4px;
 }
@@ -1283,11 +1288,11 @@ article .datve form input{
     color: black;
 }
 .ghengoi .vitri .hang .box:hover{
-    background: orange;
+    background: rgba(240, 98, 146,1.0);
     color: white;
 }
 #hetcho{
-    background: #ED4C67;
+    background: rgba(240, 98, 146,1.0);
     color: white;
 }
 
@@ -1346,7 +1351,10 @@ article .datve form input{
 .danhsachphim .listphim .anhphim{
     width: 100%;
     height: 90%;
+    position: relative;
+    transition: all .3s;
 }
+
 .danhsachphim .listphim .anhphim .chitiet{
     position: absolute;
     left: 0;
@@ -1357,9 +1365,16 @@ article .datve form input{
     z-index: 99;
     text-align: center;
     line-height: 400px;
-}.danhsachphim .listphim .anhphim .chitiet a{
+    transform: scalex(0);
+    transition: all .3s;
+}
+.danhsachphim .listphim .anhphim:hover .chitiet{
+    transform: scalex(1);
+    transition: all .3s;
+}
+.danhsachphim .listphim .anhphim .chitiet a{
     padding: 15px 20px;
-    border: solid 1px #ED4C67;
+    border: solid 1px rgba(240, 98, 146,1.0);
     position: relative;
     color: white;
 }
@@ -1370,10 +1385,11 @@ article .datve form input{
     top: 0;
     width: 100%;
     height: 100%;
-    background: #ED4C67;
+    background: rgba(240, 98, 146,1.0);
     transform: scale(0);
     transition: all .3s;
     z-index: -1;
+    
 }
 .danhsachphim .listphim .anhphim .chitiet a:hover::after{
     transform: scale(1);
@@ -1383,6 +1399,7 @@ article .datve form input{
     height: 10%;
     line-height: 20px;
 }
+
 
 /*trang tiem kiem*/
 .trangtimkiem{
@@ -1431,12 +1448,12 @@ article .datve form input{
 .trangtimkiem .khungketqua .ketqua .hinhphim .chitiet a{
     line-height: 350px;
     padding: 15px 30px;
-    border: solid 1px orangered;
+    border: solid 1px rgba(240, 98, 146,1.0);
     margin-left: 30%;
     transition: all .3s;
 }
 .trangtimkiem .khungketqua .ketqua .hinhphim .chitiet a:hover{
-    background: orangered;
+    background: rgba(240, 98, 146,1.0);
 }
 .trangtimkiem .khungketqua .ketqua .hinhphim:hover .chitiet{
     transform: scaley(1);
