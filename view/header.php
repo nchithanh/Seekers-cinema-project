@@ -211,7 +211,7 @@
             <?php
 											if(isset($_SESSION['user'])){
 												echo'
-                                                <a href="">
+                                                <a style="color:rgba(240, 98, 146,1.0);" href="">
                                                 <i class="fa fa-user-secret"></i>
                                                 '.$_SESSION['user'].'
                                             </a>
@@ -220,7 +220,7 @@
                                             </a>
                                                 ';
 											}else{
-												echo' <a href="index.php?contro=login">
+												echo' <a style="color:rgba(240, 98, 146,1.0);" href="index.php?contro=login">
                                                 <i class="fa fa-user-secret"></i>
                                                 Đăng nhập
                                                   </a>
