@@ -9,9 +9,9 @@ function loaduser(){
     return $result;
 
 }
-function add_user($name,$user,$pass,$email){
+function add_user($user,$pass,$email){
     global $conn;
-    $sql= "INSERT INTO user (name,user,pass,email) VALUES ('$name','$user','$pass','$email')";
+    $sql= "INSERT INTO user (user,pass,email) VALUES ('$user','$pass','$email')";
     $conn->exec($sql);
 }
 function del_user($id){

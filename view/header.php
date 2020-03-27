@@ -254,7 +254,7 @@
                                             $link='<a href="index.php?contro=login">MUA VÉ</a>';
                                         }
                                         $name=$phim['tenphim'];
-                                        $img="img/".$phim['banner']; 
+                                        $img="view/img/".$phim['banner']; 
                                         echo ' <div class="phim">
                                         <div class="anhphim"><img src="'.$img.'" alt="">
                                             <div class="muave">
@@ -280,7 +280,7 @@
                                             $link='<a href="index.php?contro=login">MUA VÉ</a>';
                                         }
                                         $name=$phim['tenphim'];
-                                        $img="img/".$phim['banner'];
+                                        $img="view/img/".$phim['banner'];
                                     
                                         echo ' <div class="phim">
                                         <div class="anhphim"><img src="'.$img.'" alt="">
