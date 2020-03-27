@@ -9,6 +9,10 @@
                     <div class="box2"></div>
                     <span>Còn chỗ</span>
                 </div>
+                <div class="giaithich">
+                    <div class="box2"></div>
+                    <span><?php echo $phongchieu['tenphong']; ?></span>
+                </div>
                 <form action="" method="post">
                     <input type="number" name="iduser" value="<?php echo ''.$_SESSION['id'].''; ?>" style="display: none;">
                     <input type="submit" name="chonlai" value="Chọn lại phim">

@@ -44,7 +44,7 @@
                 $i=0;
                 foreach ($loadbanner as $banner){
                     $i++;
-                    echo '<div class="live" id="banner'.$i.'"><img src="img/'.$banner['img'].'" alt=""></div>';
+                    echo '<div class="live" id="banner'.$i.'"><img src="view/img/'.$banner['img'].'" alt=""></div>';
                 }
             ?>
             <?php//banner//?>
@@ -64,7 +64,7 @@
                 <div id="soc" class="soc"></div>
                 <?//cho nay la phim sap chieu//?>
                 <div class="phimsapchieu">
-                    <a href="">
+                    <a href="index.php?contro=danhsachphim">
                         <div class="more">
                             XEM THÊM
                         </div>
@@ -77,7 +77,7 @@
                                 $link='<a href="index.php?contro=login">MUA VÉ</a>';
                             }
                             $name=$phim['tenphim'];
-							$img="img/".$phim['banner'];
+							$img="view/img/".$phim['banner'];
 						
 							echo '<div class="phim">
                             <div class="hinhphim">
@@ -99,7 +99,7 @@
                 </div>
                 <?//cho nay la phim dang chieu//?>
                 <div class="phimdangchieu">
-                    <a href="">
+                    <a href="index.php?contro=danhsachphim">
                         <div class="more">
                             XEM THÊM
                         </div>
@@ -113,7 +113,7 @@
                                 $link='<a href="index.php?contro=login">MUA VÉ</a>';
                             }
                             $name=$phim['tenphim'];
-							$img="img/".$phim['banner'];
+							$img="view/img/".$phim['banner'];
 						
 							echo '<div class="phim">
                             <div class="hinhphim">
@@ -150,7 +150,7 @@
 						foreach ($loadkm as $khuyenmai){
                             
                             $name=$khuyenmai['tenkhuyenmai'];
-							$img="img/".$khuyenmai['img'];
+							$img="view/img/".$khuyenmai['img'];
 						
 							echo '<div class="khuyenmai">
                             <img src="'.$img.'" alt="">

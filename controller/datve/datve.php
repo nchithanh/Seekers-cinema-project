@@ -8,7 +8,6 @@
         $idphongchieu=loadidphongchieu($idsuatchieu);
         $phongchieu=loadphongchieu($idphongchieu['idphongchieu']);
         addthanhtoan($idphim,$idrap,$idsuatchieu,$_SESSION['id'],$phongchieu['id'],$phongchieu['tenphong']);
-        
         $loadhangghe=loadhangghetheophong($idphongchieu['idphongchieu']);
     }
     if(isset($_POST['chonlai'])&&$_POST['chonlai']){
@@ -18,15 +17,15 @@
     }
     $loadthanhtoan=loadthanhtoan($_SESSION['id']);
 
-    $ghe1=loadghetheohangghe(1);
-    $ghe2=loadghetheohangghe(2);
-    $ghe3=loadghetheohangghe(3);
-    $ghe4=loadghetheohangghe(4);
-    $ghe5=loadghetheohangghe(5);
-    $ghe6=loadghetheohangghe(6);
-    $ghe7=loadghetheohangghe(7);
-    $ghe8=loadghetheohangghe(8);
-    $ghe9=loadghetheohangghe(9);
-    $ghe10=loadghetheohangghe(10);
-    $ghe11=loadghetheohangghe(11);
+    $ghe1=loadghetheohangghe(1,$idsuatchieu);
+    $ghe2=loadghetheohangghe(2,$idsuatchieu);
+    $ghe3=loadghetheohangghe(3,$idsuatchieu);
+    $ghe4=loadghetheohangghe(4,$idsuatchieu);
+    $ghe5=loadghetheohangghe(5,$idsuatchieu);
+    $ghe6=loadghetheohangghe(6,$idsuatchieu);
+    $ghe7=loadghetheohangghe(7,$idsuatchieu);
+    $ghe8=loadghetheohangghe(8,$idsuatchieu);
+    $ghe9=loadghetheohangghe(9,$idsuatchieu);
+    $ghe10=loadghetheohangghe(10,$idsuatchieu);
+    $ghe11=loadghetheohangghe(11,$idsuatchieu);
 ?>

@@ -11,7 +11,7 @@
                     }
                     echo '<div class="ketqua">
                     <div class="hinhphim">
-                        <img src="img/'.$tk['anhphim'].'" alt="">
+                        <img src="view/img/'.$tk['anhphim'].'" alt="">
                         <div class="chitiet">
                            '.$link.'
                         </div>

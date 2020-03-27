@@ -11,7 +11,7 @@
 						foreach ($loadphimsc as $phim){
                             
                             $name=$phim['tenphim'];
-							$img="img/".$phim['anhphim'];
+							$img="view/img/".$phim['anhphim'];
 						
 							echo '<div class="phim">
                             <div class="anhphim">
@@ -32,7 +32,7 @@
                 <?php
 						foreach ($loadphimdc as $phim){          
                             $name=$phim['tenphim'];
-							$img="img/".$phim['anhphim'];
+							$img="view/img/".$phim['anhphim'];
 						
 							echo '<div class="phim">
                             <div class="anhphim">

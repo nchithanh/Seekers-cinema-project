@@ -50,9 +50,9 @@ function loadhangghetheophong($idphong){
     $resul = $stmt->fetchALL();
     return $resul;    
 }
-function loadghetheohangghe($idhangghe){
+function loadghetheohangghe($idhangghe,$idsuatchieu){
     global $conn;
-    $sql="select * from ghe where idhangghe = ".$idhangghe." order by id asc";
+    $sql="select * from ghe where idhangghe = ".$idhangghe." and idsuatchieu = ".$idsuatchieu." order by id asc";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $resul = $stmt->setFetchMode(PDO::FETCH_ASSOC);

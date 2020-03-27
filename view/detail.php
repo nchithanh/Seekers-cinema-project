@@ -3,7 +3,7 @@
         <article>
             <div class="anhphim">
             <?php
-					$img="img/".$detail['anhphim'];
+					$img="view/img/".$detail['anhphim'];
 				?>
                 <img src="<?=$img?>" alt="">
             </div>
@@ -20,10 +20,10 @@
                 <?php
                     switch ($detail["tuoi"]){
                         case '16':
-                            echo '<div><img style="width: 10%;" src="img/c16.png" alt=""></div>';
+                            echo '<div><img style="width: 10%;" src="view/img/c16.png" alt=""></div>';
                             break;
                         case '18':
-                                echo '<div><img style="width: 10%;" src="img/c18.png" alt=""></div>';
+                                echo '<div><img style="width: 10%;" src="view/img/c18.png" alt=""></div>';
                             break;
                             default:
                             echo'';
