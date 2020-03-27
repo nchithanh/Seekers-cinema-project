@@ -41,14 +41,15 @@
                         <div class="backhome">
                             <a href="index.php?contro=home"><< go home</a>
                         </div>
-                        <form action="index.php?act=login" method="post">
+                        <form action="index.php?contro=login" method="post" >
                             Create Account
-                            <input type="email" required placeholder="email (mail của goggle)" name="email">
-                            <input type="text" required placeholder="Username" name="username">
-                            <input type="password" required placeholder="Userpassword" name="userpass">
+                            <input type="text" required placeholder="Nhập Tài Khoản" name="user">
+                            <input type="password" required placeholder="Nhập Password" name="pass">
+                            <input type="email" required placeholder="Nhập Email (mail của goggle)" name="email">
                             <input type="number" name="role" value="1" style="display:none">
+                           
                             <p>Forgot your password?</p>
-                            <input  onclick="myFunction1()" class="button" type="submit" name="dangky" value="Đăng ký">
+                            <input  onclick="myFunction1()" class="button" type="submit" name="adduser" value="Đăng ký">
                         </form>
                     </div>
                 </div>

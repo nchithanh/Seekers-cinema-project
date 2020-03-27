@@ -35,9 +35,10 @@ ob_start();
         case 'login':
 
             include "controller/login/login.php";
-
+            include "controller/login/signin.php";
             include "view/login.php";
             break;
+
         case 'detail':
             
             //incluce controller xu ly thong tin phim 

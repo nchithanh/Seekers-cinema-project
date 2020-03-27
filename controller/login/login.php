@@ -4,8 +4,8 @@
 include "model/connect.php";
 include_once "model/user.php";
 if(isset($_POST["login"])&&$_POST["login"]){
-    $user=$_POST['user'];
-    $pass=$_POST['pass'];
+    $user=htmlspecialchars($_POST['user'],ENT_QUOTES);
+    $pass=htmlspecialchars($_POST['pass'],ENT_QUOTES);
     $checkinfo=checkuser($user,$pass);
   
         $_SESSION['id']=$checkinfo['id'];
