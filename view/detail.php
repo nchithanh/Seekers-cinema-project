@@ -67,7 +67,7 @@
             </div>
             <div class="datve" id="datve">
             <form action="index.php?contro=datve" method="post">
-                    <select name="phim" id="phim">
+                    <select required name="phim" id="phim">
                     <option value="">chon phim</option>
                         <?php
                             foreach ($loadphimall as $phim){
@@ -75,13 +75,13 @@
                             }
                         ?>
                     </select>
-                    <select id="rap">
-                        <option value="">chon rap</option>  
+                    <select required id="rap">
+                        <option value="">chọn rạp</option>  
                     </select>
-                    <select name="rap" id="rap_giatri" style="display:none" >               
+                    <select required name="rap" id="rap_giatri" style="display:none" >               
                     </select>
-                    <select name="suatchieu" id="suatchieu">
-                        <option value="">chon suat</option>
+                    <select required name="suatchieu" id="suatchieu">
+                        <option value="">chọn suất chiếu</option>
                     </select>
                     <input type="submit" name="muave" value="MUA VÉ">
                 </form>
@@ -96,7 +96,7 @@
 						foreach ($loadphimdc as $phim){
                             
                             $name=$phim['tenphim'];
-							$img="img/".$phim['banner'];
+							$img="view/img/".$phim['banner'];
 						
 							echo '<div class="phim">
                             <div class="hinhphim">

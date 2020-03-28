@@ -3,7 +3,7 @@
             <div class="datve">
                 <form action="index.php?contro=datve" method="post">
                     <select name="phim" id="phim">
-                    <option value="">chon phim</option>
+                    <option value="">chọn phim</option>
                         <?php
                             foreach ($loadphimall as $phim){
                                 echo '<option value="'.$phim['id'].'">'.$phim['tenphim'].'</option>';
@@ -11,12 +11,12 @@
                         ?>
                     </select>
                     <select id="rap">
-                        <option value="">chon rap</option>  
+                        <option value="">chọn rạp</option>  
                     </select>
-                    <select name="rap" id="rap_giatri" style="display:none" >               
+                    <select name="rap" required id="rap_giatri" style="display:none" >               
                     </select>
-                    <select name="suatchieu" id="suatchieu">
-                        <option value="">chon suat</option>
+                    <select name="suatchieu" required id="suatchieu">
+                        <option value="">chọn suất chiếu</option>
                     </select>
                     
                     <?php
@@ -28,7 +28,7 @@
                             bottom:0;
                             right:0;
                             padding:20px 40px;
-                            background: rgb(240, 98, 146);
+                            background: #1cadeb;
                             color: white;
                             border: none;
                             margin-left: 250px;

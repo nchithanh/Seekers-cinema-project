@@ -167,22 +167,22 @@
         <header>
             <div id="thanhdatve" class="thanhdatve">
                 <form action="index.php?contro=datve" method="post">
-                    <select name="phim" id="phimhead">
-                        <option value="">chon phim</option>
+                    <select required name="phim" id="phimhead">
+                        <option value="">chọn phim</option>
                         <?php
                             foreach ($loadphimall as $phim){
                                 echo '<option value="'.$phim['id'].'">'.$phim['tenphim'].'</option>';
                             }
                         ?>
                     </select>
-                    <select  id="raphead">
-                        <option value="">chon rap</option>
+                    <select required  id="raphead">
+                        <option value="">chọn rạp</option>
                        
                     </select>
-                    <select name="rap" id="raphead_giatri" style="display:none" >               
+                    <select required name="rap" id="raphead_giatri" style="display:none" >               
                     </select>
-                    <select name="suatchieu" id="suatchieuhead">
-                        <option value="">chon suat</option>
+                    <select required name="suatchieu" id="suatchieuhead">
+                        <option value="">chọn suất chiếu</option>
                        
                     </select>
                     <?php
@@ -198,7 +198,7 @@
             <a href="index.php?contro=home"><div class="logo">
                 <h2><span>S</span><span>e</span><span>e</span><span>k</span><span>e</span><span>r</span>s<span></span> cinema</h2>
                 <div class="gif">
-                    <img src="img/nhen2.gif" alt="">
+                    <img src="view/img/nhen2.gif" alt="">
                 </div>
             </div></a>
             <div class="timkiem">
@@ -211,7 +211,7 @@
             <?php
 											if(isset($_SESSION['user'])){
 												echo'
-                                                <a style="color:rgba(240, 98, 146,1.0);" href="">
+                                                <a style="color:#1cadeb;" href="">
                                                 <i class="fa fa-user-secret"></i>
                                                 '.$_SESSION['user'].'
                                             </a>
@@ -220,7 +220,7 @@
                                             </a>
                                                 ';
 											}else{
-												echo' <a style="color:rgba(240, 98, 146,1.0);" href="index.php?contro=login">
+												echo' <a style="color:#1cadeb;" href="index.php?contro=login">
                                                 <i class="fa fa-user-secret"></i>
                                                 Đăng nhập
                                                   </a>
