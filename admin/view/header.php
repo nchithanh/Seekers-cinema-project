@@ -31,9 +31,11 @@
                     <div class="tieude">
                         welcom admin
                     </div>
+                    <li><a href="../index.php">Trang chủ</a></li>
                     <li><a href="index.php?contro=quanlyphim">quản lý phim</a></li>
                     <li><a href="">sắp xếp lịch chiếu</a></li>
                     <li><a href="">quản lý phòng chiếu</a></li>
                     <li><a href="">quản lý rạp</a></li>
                     <li><a href="">hủy suất chiếu</a></li>
+                    <li><a href="admin.php?contro=logout&ad=1">Đăng Xuất</a></li>
                 </div>

@@ -1,6 +1,9 @@
 <?php
 session_start();
 ob_start();
+if($_SESSION['role']!=2){
+    header('location: ../index.php');
+}
     include "../model/connect.php";
     include "view/header.php";
    
@@ -18,6 +21,10 @@ ob_start();
             
             include "view/detail_phim.php";
             break;
+            case 'logout':
+    
+                include "controller/logout.php";
+                break;
     }   
     include "view/footer.php";
     
