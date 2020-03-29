@@ -21,10 +21,14 @@ if($_SESSION['role']!=2){
             
             include "view/detail_phim.php";
             break;
-            case 'logout':
+        case 'suatchieu':
+            
+            include "view/suatchieu.html";
+            break;
+        case 'logout':
     
-                include "controller/logout.php";
-                break;
+            include "controller/logout.php";
+            break;
     }   
     include "view/footer.php";
     
