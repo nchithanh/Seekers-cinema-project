@@ -14,12 +14,14 @@ if($_SESSION['role']!=2){
     }
     switch($controller){
         case 'quanlyphim':
-            
+            include "controller/quanliphim/phimql_ql.php";
             include "view/quanlyphim.php";
             break;
-        case 'chitietphim':
-            
-            include "view/detail_phim.php";
+        case 'detail':
+
+
+            include "controller/quanliphim/phimdetail_ql.php";
+            include "view/detail.php";
             break;
         case 'suatchieu':
             
