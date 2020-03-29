@@ -1,0 +1,167 @@
+section{
+    width: 100%;
+    position: relative;
+    height: 700px;
+    margin-top: 30px;
+}
+section article{
+    position: absolute;
+    width: 95%;
+    height: 90%;
+    left: 2.5%;
+    top: 5%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 5px #1cadeb;
+}
+section article .menu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    background: #1cadeb;
+}
+    .tieude{
+    width: 100%;
+    height: 50px;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-bottom: solid 2px whitesmoke;
+    background: #1cadeb;
+}
+article .menu li{
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: solid 1px whitesmoke;
+}
+.menu li:hover{
+    background: white;
+    color: #1cadeb;
+}
+.menu li:hover a{
+    color: #1cadeb;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+section article aside{
+    position: absolute;
+    width: 77%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+.luachon{
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-bottom: solid 2px whitesmoke;
+    border-bottom: solid 2px gray
+}
+.luachon p{
+    float: left;
+    margin-top: 0;
+    margin-right: 20px;
+    font-size: 17px;
+}
+.mau{
+    border-bottom: solid 2px #1cadeb;
+}
+.phimdangchieu{
+    position: relative;
+    width: 100%;
+    height: 520px;
+}
+.phimsapchieu{
+    position: relative;
+    width: 100%;
+    height: 520px;
+    display: none;
+}
+.phimdangchieu table{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.phimsapchieu table{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+table td{
+    border: solid 1px #1cadeb;
+    text-align: center;
+    overflow: hidden;
+}
+td a{
+    background: red;
+    color: #ffffff;
+    padding: 15px 20px;
+}
+td a:nth-child(2){
+    background: rgb(123, 255, 0);
+    color: #ffffff;
+    padding: 15px 20px;
+}
+td a:hover{
+    background: #1cadeb;
+    color: white;
+    padding: 15px 20px;
+}
+
+
+/*tranf chitiet*/
+.chitietphim{
+    position: relative;
+    width: 100%;
+    height: 550px;
+   
+}
+.chitietphim form{
+    width: 50%;
+    height: 100%;
+   
+    position: absolute;
+    right: 15%;
+    top: 0;
+}
+.chitietphim form .thongtin{
+    position: relative;
+    width: 90%;
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+.chitietphim form label{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.chitietphim form input{
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    left: 20%;
+    top: 0;
+    list-style: 30px;
+    background: none;
+    border: none;
+    box-shadow: 0 0 5px #1cadeb;
+    text-align: center;
+}

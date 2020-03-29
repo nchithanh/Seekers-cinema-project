@@ -37,7 +37,7 @@ function thanhtoan_phongchieu($idphim){
 }
 function thanhtoan_ghe($idphim){
     global $conn;
-    $sql= "select id, ghe, idhangghe from ghe where id = ".$idphim."";
+    $sql= "select id, ghe, idhangghe from trangthai_ghe where id = ".$idphim."";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -61,7 +61,7 @@ function add_ve($tenphim,$tenrap,$tenphongchieu,$suatchieu,$ghe,$iduser){
 }
 function updateghe($id,$trangthai){
     global $conn;
-    $sql="update ghe set trangthai = ".$trangthai." where id = ".$id."";
+    $sql="update trangthai_ghe set trangthai = ".$trangthai." where id = ".$id."";
     $conn->exec($sql);
 }
 ?>

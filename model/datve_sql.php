@@ -52,7 +52,7 @@ function loadhangghetheophong($idphong){
 }
 function loadghetheohangghe($idhangghe,$idsuatchieu){
     global $conn;
-    $sql="select * from ghe where idhangghe = ".$idhangghe." and idsuatchieu = ".$idsuatchieu." order by id asc";
+    $sql="select * from trangthai_ghe where idhangghe = ".$idhangghe." and idsuatchieu = ".$idsuatchieu." order by id asc";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $resul = $stmt->setFetchMode(PDO::FETCH_ASSOC);
