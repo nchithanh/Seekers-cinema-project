@@ -23,7 +23,7 @@ if($_SESSION['role']!=2){
             break;
         case 'suatchieu':
             
-            include "view/suatchieu.html";
+            include "view/suatchieu.php";
             break;
         case 'logout':
     
