@@ -28,8 +28,8 @@
                         <td>'.$name.'</td>
                         <td>'.$date.'</td>
                         <td>
-                            <a href="">xoa phim</a>
-                            <a href="admin.php?contro=detail&idphim='.$id.'" method="POST">chitiet</a>
+                            <a href="index.php?contro=xoaphim&quanliphim='.$id.'">xoa phim</a>
+                            <a href="admin.php?contro=detail&idphim='.$id.'">chitiet</a>
                         </td>
                     </tr>';
                     }
@@ -50,13 +50,13 @@
                     foreach ($quanliphimdc as $phim){
                         $name=$phim['tenphim'];
                         $date=$phim['ngaychieu'];
+                        $id=$phim['id'];
 
                         echo '<tr>
                         <td>'.$name.'</td>
                         <td>'.$date.'</td>
                         <td>
-                            <a href="">xoa phim</a>
-                            <a href="admin.php?contro=detail&idphim='.$id.'" method="POST">chitiet</a>
+                            <a href="admin.php?contro=detail&idphim='.$id.'">chitiet</a>
                         </td>
                     </tr>';
                     }

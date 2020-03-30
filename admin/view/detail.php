@@ -54,7 +54,7 @@
                                 <input type="text" value="<?php echo $phim['noidung']; ?>">
                             </div>
                             <div style="top: 10px;" class="thongtin">
-                                <input type="submit" value="update">
+                                <input type="submit" name="updatephim" value="update">
                             </div>
                         </form>
                     </div>
