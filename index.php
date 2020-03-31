@@ -32,12 +32,18 @@ ob_start();
             break;
         case 'logout':
             include "controller/login/logout.php";
+            break;
         case 'login':
-
+            
             include "controller/login/login.php";
             include "controller/login/signin.php";
             include "view/login.php";
             break;
+        
+        case 'signin':
+            include "controller/login/signin.php";
+            include "view/login.php";
+        break;
 
         case 'detail':
             

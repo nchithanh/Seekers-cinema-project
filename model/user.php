@@ -48,6 +48,16 @@ function checkuser($user,$pass){
     
 }
 
+function checkUserTrung($user){
+    global $conn;
+    $sql="select * from user where user = '".$user."' ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result['user'];
+}
+
 function load_cmt($idphim){
     global $conn;
     $sql= "select * from danhgiaphim where idphim = $idphim ";

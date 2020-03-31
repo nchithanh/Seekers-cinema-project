@@ -8,6 +8,14 @@
                     <div class="left" id="tieude">
                         <div class="noidung">
                             <h2>Hello, Friend!</h2>
+                            <?php 
+                            if(isset($_SESSION['trung']) > 0) {
+                                echo '<h6>Tên User bạn vừa khai báo nó đã có người đăng kí</h6>';
+                            
+                            } 
+                            
+                            
+                            ?>
                             <p>Enter your personal details and start journey with us</p>
                             <button class="button" id="dangky">Đăng ký</button>
                         </div>
@@ -15,6 +23,7 @@
                     <div class="right">
                         <form action="index.php?contro=login" method="post">
                             Sign in
+                            
                             <input type="text" required placeholder="Username" name="user">
                             <input type="password" required placeholder="Userpassword" name="pass">
                             <?php
@@ -41,7 +50,7 @@
                         <div class="backhome">
                             <a href="index.php?contro=home"><< go home</a>
                         </div>
-                        <form action="index.php?contro=login" method="post" >
+                        <form action="index.php?contro=signin" method="post" >
                             Create Account
                             <input type="text" required placeholder="Nhập Tài Khoản" name="user">
                             <input type="password" required placeholder="Nhập Password" name="pass">
