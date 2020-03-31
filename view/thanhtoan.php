@@ -11,29 +11,29 @@
             <form action="index.php?contro=thanhtoan&thanhcong=1" method="post">
                 <div class="row">
                     <label>phim :</label>
-                    <input type="text" name="phim" value="<?php echo $loadphim['tenphim']; ?>">
+                    <input type="text" name="phim" value="<?php echo $loadphim['tenphim']; ?>" readonly>
                 </div>
                 <div class="row">
                     <label>rap :</label>
-                    <input type="text" name="rap" value="<?php echo $loadrap['tenrap']; ?>">
+                    <input type="text" name="rap" value="<?php echo $loadrap['tenrap']; ?>" readonly>
                 </div>
                 <div class="row">
                     <label>suat chieu :</label>
-                    <input type="text" name="suatchieu" value="<?php echo $loadsuatchieu['thoigian']; ?>">
+                    <input type="text" name="suatchieu" value="<?php echo $loadsuatchieu['thoigian']; ?>" readonly>
                 </div>
                 <div class="row">
                     <label>phong chieu :</label>
-                    <input type="text" name="phongchieu" value="<?php echo $loadphongchieu['tenphong']; ?>">
+                    <input type="text" name="phongchieu" value="<?php echo $loadphongchieu['tenphong']; ?>" readonly>
                 </div>
                 <div class="row">
                     <label>ghe ngoi :</label>
-                    <input type="text" name="ghe" value="<?php echo $loadhangghe['tenhangghe']; ?><?php echo $loadghe['ghe']; ?>">
+                    <input type="text" name="ghe" value="<?php echo $loadhangghe['tenhangghe']; ?><?php echo $loadghe['ghe']; ?>" readonly>
                 </div>
                 <div class="row">
                     <label>gia ve :</label>
-                    <input type="text" name="gia" value="85 nghin VND">
+                    <input type="text" name="gia" value="85 nghin VND" readonly>
                 </div>
-                <input type="text" name="idghe" value="<?php echo $loadghe['id']; ?>" style="display: none;">
+                <input type="text" name="idghe" value="<?php echo $loadghe['id']; ?>" style="display: none;" readonly>
                 <input type="text" name="trangthaighe" value="1" style="display: none;">
                 <input class="submit" name="thanhtoan" type="submit" value="dat ve">
             </form>

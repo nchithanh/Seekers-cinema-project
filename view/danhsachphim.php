@@ -17,11 +17,16 @@
                             <div class="anhphim">
                             <img src="'.$img.'" alt="">
                             <div class="chitiet">
-                                <a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VE</a>
-                            </div>
-                            </div>
+                            <a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VE</a>
+                            </div>  
                             <div class="noidungphim">
-                            '.$name.'
+                            <p>'.$name.'</p>
+                            <p>'.$phim['daodien'].'</p>
+                            <p>'.$phim['dienvien'].'</p>
+                            </div> 
+                            <div class="ngaychieu">
+                                '.$phim['ngaychieu'].'
+                            </div>  
                             </div>
                           </div>';
 						}	
@@ -39,10 +44,15 @@
                             <img src="'.$img.'" alt="">
                             <div class="chitiet">
                             <a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VE</a>
-                            </div>     
-                            </div>
+                            </div>  
                             <div class="noidungphim">
-                            '.$name.'
+                            <p>'.$name.'</p>
+                            <p>'.$phim['daodien'].'</p>
+                            <p>'.$phim['dienvien'].'</p>
+                            </div> 
+                            <div class="ngaychieu">
+                                '.$phim['ngaychieu'].'
+                            </div>  
                             </div>
                           </div>';
 						}

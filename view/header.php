@@ -12,12 +12,6 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                document.getElementById("thanhdatve").style.animationName = "vao";
-            }
-            else {
-                document.getElementById("thanhdatve").style.animationName = "ra";
-            }
             if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
                 document.getElementById("listphim").style.animationName = "len";
             }
@@ -60,24 +54,7 @@
                    $("#suatchieu").html(data);
                 });
             });
-            $("#phimhead").change(function(){
-                var idphim = $("#phimhead").val();
-                $.post("view/ajax.php", {idphim:idphim}, function(data){
-                   $("#raphead").html(data);
-                });
-            });
-            $("#raphead").change(function(){
-                var idrap = $("#raphead").val();
-                $.post("view/ajax1.php", {idrap:idrap}, function(data){
-                   $("#suatchieuhead").html(data);
-                });
-            });
-            $("#raphead").change(function(){
-                var idrap = $("#raphead").val();
-                $.post("view/ajax2.php", {idrap:idrap}, function(data){
-                   $("#raphead_giatri").html(data);
-                });
-            });
+            
 
             $(".list").click(function () {
                 $(".list").removeClass("maubanner");
@@ -141,6 +118,12 @@
                 $("#formlogin").addClass("animation_dangnhap");
             });
         });
+
+        $(window).on('load', function(event) {
+   $('body').removeClass('loading');
+      // $('.load').delay(1000).fadeOut('fast');
+   $('.loading').delay(500).fadeOut('fast');
+});
     </script>
     <style>
         .block{
@@ -154,52 +137,10 @@
 
 <body>
     <div class="warp">
-        <div class="gif" style=" position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background:url(img/mua.gif);
-    background-size: contant;
-    z-index: -1;">
        
-        </div>
         <header>
-            <div id="thanhdatve" class="thanhdatve">
-                <form action="index.php?contro=datve" method="post">
-                    <select required name="phim" id="phimhead">
-                        <option value="">chọn phim</option>
-                        <?php
-                            foreach ($loadphimall as $phim){
-                                echo '<option value="'.$phim['id'].'">'.$phim['tenphim'].'</option>';
-                            }
-                        ?>
-                    </select>
-                    <select required  id="raphead">
-                        <option value="">chọn rạp</option>
-                       
-                    </select>
-                    <select required name="rap" id="raphead_giatri" style="display:none" >               
-                    </select>
-                    <select required name="suatchieu" id="suatchieuhead">
-                        <option value="">chọn suất chiếu</option>
-                       
-                    </select>
-                    <?php
-                        if(isset($_SESSION['user'])){
-                            echo ' <input type="submit" name="muave" value="MUA VÉ">';
-                        }
-                        else{
-                            echo '<a style="background:black;color:white;padding:15px 30px;" href="index.php?contro=login">MUA VÉ</a>';
-                        }
-                    ?>
-                </form>
-            </div>
             <a href="index.php?contro=home"><div class="logo">
                 <h2><span>S</span><span>e</span><span>e</span><span>k</span><span>e</span><span>r</span>s<span></span> cinema</h2>
-                <div class="gif">
-                    <img src="view/img/nhen2.gif" alt="">
-                </div>
             </div></a>
             <div class="timkiem">
                 <form action="index.php?contro=timkiem" method="post" enctype="multipart/form-data">    
@@ -229,18 +170,11 @@
                                             </a>';
 											}
 										?>
-                <!-- <a href="index.php?contro=login">
-                    <i class="fa fa-user-secret"></i>
-                    Đăng nhập
-                </a>
-                <a href="index.php?contro=login">
-                    Đăng ký
-                </a> -->
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.php?contro=muave">mua vé</a></li>
-                    <li style="position: relative;"><a href="index.php?contro=danhsachphim">phim</a>
+
+                    <li style="position: relative;"><a href="index.php?contro=danhsachphim">Phim</a>
                     <?//cho nay la phan list phim dang chieu vs sap chieu//?>
                     <div class="box_phim">
                             <?//day la phim dang chieu//?>
@@ -271,7 +205,7 @@
                             </div>
                             <?//day la phim sap chieu//?>
                             <div class="phimsapchieu1">
-                                <div class="tieude">PHIM SAP CHIẾU</div>
+                                <div class="tieude">PHIM SẮP CHIẾU</div>
                                 <?php
                                     foreach ($loadphimsc as $phim){
                                         if(isset($_SESSION["user"])){
@@ -298,11 +232,11 @@
                             </div>
                         </div>            
                     </li>
-                    <li><a href="">góc điện ảnh</a></li>
-                    <li><a href="">su kiện</a></li>
-                    <li><a href="">rạp/giá vé</a></li>
-                    <li><a href="">hỗ trọ</a></li>
-                    <li><a href="">thành viên</a></li>
+                    <li><a href="">Góc điện ảnh</a></li>
+                    <li><a href="">Su kiện</a></li>
+                    <li><a href="">Rạp/giá vé</a></li>
+                    <li><a href="">Hỗ trọ</a></li>
+                    <li><a href="">Thành viên</a></li>
                 </ul>
             </nav>
         </header>

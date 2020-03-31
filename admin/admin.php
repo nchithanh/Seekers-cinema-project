@@ -18,7 +18,6 @@ if($_SESSION['role']!=2){
             include "view/quanlyphim.php";
             break;
         case 'detail':
-            include "controller/quanliphim/updatephim.php";
             include "controller/quanliphim/phimdetail_ql.php";
             include "view/detail.php";
             break;

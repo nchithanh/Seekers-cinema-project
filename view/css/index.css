@@ -3,6 +3,15 @@
 body{
     margin: 0;
     position: relative;
+    background: #333545;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, #1cadeb);
+    background-size: 200%;
+    border-radius: 6px;
 }
 a{
     text-decoration: none;
@@ -16,67 +25,48 @@ option:focus{
 img{
     width: 100%;
     height: 100%;
+    transition: all .5s;
 }
 .warp{
     position: relative;
+    
 }
 header{
+    top: 0;
     width: 100%;
-    height: 150px;
-    position: relative;
+    height: 50px;
+    position: fixed;
+    background: white;
+    z-index: 999999;
+    box-shadow: 0 0 10px black;
 }
 
 header .logo{
-    width: 40%;
+    width: 15%;
     position: absolute;
-    height: 100px;
-    text-align: center;
-    font-size: 40px;
-    line-height: 1px;
-}
-header .logo .gif{
-    width: 50%;
-    height: 120%;
-    position: absolute;
+    left: 0;
     top: 0;
-    left: 10%;
-    z-index: -1;
-}
- .logo h2{
+    height: 50px;
+    text-align: center;
+    line-height: 1px;
+    font-size: 20px;
     color: #1cadeb;
+    z-index: 99;
 }
- .logo span:nth-child(1){
-    color: #FFC312;
-}
- .logo span:nth-child(2){
-    color: #C4E538;
-}
- .logo span:nth-child(3){
-    color: #12CBC4;
-}
- .logo span:nth-child(4){
-    color: #FDA7DF;
-}
- .logo span:nth-child(5){
-    color: #0652DD;
-}
- .logo span:nth-child(6){
-    color: #833471;
-}
+
 
 header .timkiem{
     position: absolute;
     width: 30%;
-    height: 80%;
-    
-    left: 35%;
+    height: 100%;
+    left: 50%;
 }
 header .timkiem form{
     position: absolute;
-    top: 30%;
-    height: 40%;
+    top: 20%;
+    height: 80%;
     width: 100%;
-   
+   z-index: 999;
 }
 header .timkiem form .tim{
     height: 80%;
@@ -120,8 +110,8 @@ header .timkiem form:hover .text{
     width: 15%;
     right: 1%;
     top: 5%;
-    line-height: 100px;
-    
+    line-height: 50px;
+    z-index: 99;
 }
 header a{
     color: gray;
@@ -133,75 +123,29 @@ header .tranglogin a:nth-child(1){
 header .tranglogin a:hover{
     color: #1cadeb;
 }
-
-
-header .thanhdatve{
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 60px;
-    background: #1cadeb;
-    z-index: 999;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-}
-@keyframes ra{
-    0%{left: 0;}
-    100%{left: 100%;}
-}
-@keyframes vao{
-    0%{left: 100%;}
-    100%{left: 0%;}
-}
-header .thanhdatve form{
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    left: 10%;
-    top: 10%;
-}
-header .thanhdatve form select{
-    width: 25%;
-    height: 80%;
-    margin-top: 5px;
-    margin-right: 1%;
-    border: none;
-}
-header .thanhdatve form input{
-    width: 10%;
-    height: 80%;
-    background: rgb(0, 0, 0);
-    border: none;
-    color: rgb(255, 255, 255);
-}
-
-
 header nav{
     position: absolute;
     width: 100%;
     height: 50px;
     left: 0;
-    bottom: 0;
-    background: #1cadeb;
+    top: 0;
+    
 }
 header nav ul{
-    width: 80%;
+    width: 40%;
     margin: auto;
+    margin-left:210px;
     line-height: 50px;
     height: 100%;
-  
 }
 header nav ul li{
     float: left;
     list-style: none;
     width: 14%;
-    text-transform: uppercase;
     text-align: center;
     transition: all .3s;
     position: relative;
     transition: all .3s;
-    
 }
 header nav ul li:hover .box_phim{
     transform: scaley(1);
@@ -213,11 +157,12 @@ header nav ul li .box_phim{
     position: absolute;
     left: 0;
     top: 100%;
-    width: 670%;
+    width: 1400%;
     height: 550px;
-    background: rgb(0, 0, 0);
+    background: #333545;
     z-index: 8811;
     transition: all .3s;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
 }
 header nav li .box_phim .phimdangchieu1{
     width: 95%;
@@ -244,12 +189,11 @@ header nav li .box_phim .tieude::after{
     top: 0;
     width: 10%;
     height: 70%;
-    border-bottom:solid 1.5px rgba(240, 98, 145, 0.658);
+    border-bottom:solid 1.5px #1cadeb;
 }
 header nav li .box_phim .phim{
     width: 24%;
     height: 80%;
-    
     float: left;
     margin-right: 1%;
 }
@@ -262,7 +206,7 @@ header nav li .box_phim .phim .anhphim .muave{
     width: 100%;
     position: absolute;
     height: 100%;
-    background: #1cadebb0;
+    background: #000000a4;
     left: 0;
     top: 0;
     transform: scaleY(0);
@@ -278,10 +222,11 @@ header nav li .box_phim .phim .anhphim .muave a{
     padding: 10px 20px;
     color: white;
     line-height: 200px;
-    position: static;
+    position: relative;
     border: solid 1.5px white;
     transition: all .3s;
 }
+
 header nav li .box_phim .phim .anhphim:hover .muave{
     transform: scaleY(1);
 }
@@ -291,53 +236,27 @@ header nav li .box_phim .phim .anhphim .muave a:hover{
 header nav li .box_phim .phim .tenphim{
     width: 100%;
     height: 15%;
-    font-size: 13px;
-    color: white;
-    line-height: 18px;
+    font-size: 15px;
+    color: wheat;
+    line-height: 25px;
     text-align: left;
 }
 header nav ul li a{
-    
-    padding: 10px 20px;
-    color: white;
+    color: black;
     position: relative;
 }
-header nav ul li a::after{
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    width: 0%;
-    height: 3%;
-    background: white;
-    transition: all .3s;
-}
-header nav ul li a::before{
-    position: absolute;
-    content: '';
-    right: 0;
-    bottom: 0;
-    width: 0%;
-    height: 2%;
-    background: white;
-    transition: all .3s;
-}
-
 header nav ul li:hover a{
-    color: white;
+    color: rgb(245, 18, 18);
     
 }
-header nav ul li:hover a::after{
-    width: 100%;
-}
-header nav ul li:hover a::before{
-    width: 100%;
-}
+
 
 .warp{
-   
+   background: #333545;
+   color: whitesmoke;
 }
 .banner{
+    margin-top: 55px;
     width: 100%;
     height: 500px;
     background: rgb(114, 114, 114);
@@ -360,8 +279,8 @@ header nav ul li:hover a::before{
     left: 47%;
 }
 .banner .listbanner span{
-    width: 5%;
-    height: 15%;
+    width: 10%;
+    height: 30%;
     border-radius: 50%;
     border: solid 1px white;
     float: left;
@@ -478,7 +397,7 @@ section .listphim{
     transform: scaleY(0);
     animation-duration: 7s;
     animation-fill-mode: forwards;
-    z-index: -2;
+    z-index: 99;
 }
 @keyframes soc{
     0%{transform: scaleY(0);}
@@ -510,80 +429,122 @@ section .listphim .more{
     height: 50px;
     border: solid 1px #1cadeb;
     text-align: center;
-    color: #1cadeb;
+    color: white;
     line-height: 50px;
     transition: all .3s;
+    z-index: 99;
 }
 section .listphim .more::after{
     position: absolute;
     content: '';
-    width: 0%;
+    width: 5%;
     height: 100%;
     left: -1%;
     top: 0;
     background: #1cadeb;
     transition: all .3s;
+    z-index: -1;
 }
 section .listphim .more:hover{
     color: white;
 }
 section .listphim .more:hover::after{
     width: 102%;
-    z-index: -1;
+
 }
 section .listphim .phim{
     width: 32%;
-    height: 350px;
+    height: 300px;
     float: left;
     margin-right: 1%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     position: relative;
     transition: all .3s;
+    overflow: hidden;
 }
 section .listphim .phim .hinhphim{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80%;
-    transition: all .3s;
+    height: 100%;
+    transition: all .5s;
+}
+section .listphim .phim .hinhphim:hover img{
+    transform: scale(1.3);
+}
+section .listphim .phim .ngaychieu{
+    position: absolute;
+    left: -100%;
+    top: 10%;
+    background: #1cadeb;
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    text-align: center;
+    transition: all .5s;
+}
+section .listphim .phim .hinhphim:hover .ngaychieu{
+    left: 0%;
 }
 section .listphim .phim .tenphim{
     position: absolute;
-    bottom: 0;
+    bottom: -35%;
     left: 0;
     width: 100%;
-    height: 20%;
+    height: 50%;
     font-size: 17px;
-    line-height: 70px;
-    color: #43464b;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.699);
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    overflow: hidden;
+    z-index: 999;
+    transition: all .5s;
+}
+section .listphim .phim .tenphim p{
+    margin-left: 10px;
 }
 section .listphim .phim .hinhphim:hover .muave{
-    transform: scaley(1);
+    top: 0;
+}
+section .listphim .phim .hinhphim:hover .tenphim{
+   bottom: -10%;
 }
 section .listphim .phim .muave{
     position: absolute;
     left: 0;
-    top: 0;
+    top: -100%;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.685);
+    background: rgba(0, 0, 0, 0.699);
     text-align: center;
     line-height: 300px;
-    transform: scaley(0);
-    transition: all .3s;
+    transition: all .6s;
 }
 section .listphim .phim .muave a{
     border: solid 1px rgb(148, 148, 148);
     color: white;
     padding: 15px 30px;
     transition: all .3s;
+    position: relative;
+    z-index: 9;
 }
-section .listphim .phim .muave a:hover{
+section .listphim .phim .muave a::after{
+    position: absolute;
+    content: '';
+    left: -1%;
+    top: 0;
+    height: 100%;
+    width: 5%;
     background: #1cadeb;
-    border: solid 1px #1cadeb;
-    color: white;
-    padding: 15px 30px;
+    transition: all .3s;
+}
+section .listphim .phim .muave a:hover::after{
+    width: 102%;
+    z-index: -1;
 }
 
 .tinkhuyenmai{
@@ -598,7 +559,7 @@ section .listphim .phim .muave a:hover{
     width: 100%;
     height: 100%;
     color: rgba(128, 128, 128, 0.144);
-    font-size: 250px;
+    font-size: 290px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 900px;
 }
@@ -673,6 +634,8 @@ footer{
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
+    
+    
 }
 
 
@@ -684,7 +647,7 @@ footer{
     width: 100%;
     height: 600px;
     position: relative;
-    margin-top:100px;
+    margin-top:120px;
 }
 .logain:hover .formlogin{
     transition: all .5s ease;transform: rotateY(180deg);
@@ -916,19 +879,38 @@ footer{
 }
 
 /*detail*/
+.trailer{
+    position: relative;
+    margin-top: 57px;
+    width: 100%;
+    height: 700px;
+}
+.trailer .box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.trailer video{
+    position: absolute;
+    width: 100%;
+    
+}
 article{
     width: 55%;
     height: 1000px;
     
     margin-left: 9%;
     float: left;
-    margin-top: 80px;
+    margin-top: 300px;
 }
 aside{
     width: 25%;
-    margin-top:80px;
-    
+    margin-top:300px;
     float: left;
+    margin-bottom: 150px;
 }
 aside .tieude{
     width: 100%;
@@ -980,8 +962,9 @@ aside .hinhphim .muave a:hover{
 }
 aside .tenphim{
     width: 100%;
-    color: rgb(0, 0, 0);
+    color: white;
     line-height: 30px;
+    font-size: 18px;
 }
 aside .more{
     width: 30%;
@@ -989,15 +972,15 @@ aside .more{
     padding: 15px 20px;
     margin-left: 220px;
     border: solid 1px #1cadeb;
-    color: #1cadeb;
     margin-bottom: 10px;
     transition: all .3s;
     position: relative;
+    color: white;
 }
 aside .more::after{
     position: absolute;
     content: '';
-    width: 0%;
+    width: 5%;
     height: 100%;
     background: #1cadeb;
     left: -1%;
@@ -1006,7 +989,7 @@ aside .more::after{
     z-index: -1;
 }
 aside .more:hover::after{
-    width: 101%;
+    width: 102%;
 }
 aside .more:hover{
     color: white;
@@ -1026,13 +1009,44 @@ article .thongtinphim{
     font-size: 17px;
 }
 article .thongtinphim span{
-    color: gray;
+    color: rgba(255,255,255,0.38);
 }
 article .thongtinphim .tenphim{
     font-size: 30px;
 }
-article{
-   
+article .danhgiasao{
+    color: gray;
+}
+article .danhgiasao a{
+    color: gray;
+}
+article .danhgiasao i:hover{
+    color: yellow;
+}
+article .danhgiasao .b1:hover ~ i{
+    color: yellow;
+}article .danhgiasao .b2:hover ~ i{
+    color: yellow;
+}
+article .danhgiasao .b3:hover ~ i{
+    color: yellow;
+}article .danhgiasao .b4:hover ~ i{
+    color: yellow;
+}
+article .danhgiasao .b5:hover ~ i{
+    color: yellow;
+}article .danhgiasao .b6:hover ~ i{
+    color: yellow;
+}
+article .danhgiasao .b7:hover ~ i{
+    color: yellow;
+}article .danhgiasao .b8:hover ~ i{
+    color: yellow;
+}
+article .danhgiasao .b9:hover ~ i{
+    color: yellow;
+}article .danhgiasao .b10:hover ~ i{
+    color: yellow;
 }
 article .noidungphim{
     margin-top: 50px;
@@ -1048,7 +1062,9 @@ article .noidungphim .tieude{
     border-bottom: solid 1.5px #1cadeb;
 }
 article .noidungphim p{
-    line-height: 20px;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
 }
 article .tieude2{
     width: 50%;
@@ -1160,14 +1176,18 @@ article .datve form select{
     margin-top: 10px;
     width: 100%;
     height: 50px;
-   background: gray;
+   background: rgba(128, 128, 128, 0.438);
    border: none;
    margin-top: 30px;
    color: white;
 }
+article .datve form select option:checked{
+    background: #1cadeb;
+    color: white;
+}
 article .datve form select option{
     text-align: center;
-    color: black;
+    color: #1cadeb;
     background: white;
 }
 article .datve form input{
@@ -1189,22 +1209,20 @@ article .datve form input{
 /*datve*/
 .phongchieu{
     width: 100%;
-    height: 500px;
-   
-    margin-top: 50px;
+    height: 800px;
+    margin-top: 100px;
 }
 .phongchieu .chuthich{
     width: 10%;
-    height: 70%;
-    margin-top: 20px;
-    float: left;
-    margin-left: 10%;
-   
+    height: 40%;
+   top: 0;
+   left: 0;
+
+    position: fixed;
 }
 .phongchieu .chuthich form{
     width: 100%;
     height: 50px;
-   
     margin-top: 50px;
 }
 .phongchieu .chuthich form input{
@@ -1240,25 +1258,51 @@ article .datve form input{
 }
 .phongchieu .chongoi{
     margin: auto;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    background: rgb(255, 255, 255);
     position: relative;
-    box-shadow: 0 0 10px black;
 }
 .phongchieu .chongoi .manhinh{
-    width: 80%;
-    margin-left: 10%;
-    height: 10%;
-    background: black;
+    width: 100%;
+    height: 30%;    
 }
 .phongchieu .chongoi .ghengoi{
     position: absolute;
-    bottom: 5%;
-    width: 90%;
-    left: 5%;
-    height: 70%;
-  
+    bottom: 0%;
+    width: 100%;
+    height: 60%;
+}
+.phongchieu .chongoi .screen{
+    position: absolute;
+    width: 80%;
+    height: 5%;
+    top: 30%;
+    left: 10%;
+    text-align: center;
+    font-size: 30px;
+    color: gray;
+}
+.phongchieu .chongoi .screen::after{
+    position: absolute;
+    content: '';
+    width: 40%;
+    height: 50%;
+    top: 0%;
+    left: 0%;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: solid 2px gray;
+}
+.phongchieu .chongoi .screen::before{
+    position: absolute;
+    content: '';
+    width: 40%;
+    height: 50%;
+    top: 0%;
+    right: 0%;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: solid 2px gray;
 }
 .phongchieu .chongoi .ghengoi .hangghe1{
     width: 10%;
@@ -1272,17 +1316,16 @@ article .datve form input{
 .hangghe2{
     width: 10%;
     height: 100%;
-    
     position: absolute;
     right: 0;
 }
 .ghengoi .ghe{
-    margin-top: 2px;
+    margin-top: 20px;
     width: 100%;
     height: 30px;
-    background: yellow;
     text-align: center;
     line-height: 30px;
+    
 }
 .ghengoi .vitri{
     width: 80%;
@@ -1290,24 +1333,25 @@ article .datve form input{
     position: absolute;
     left: 10%;
     bottom: 0;
-   
 }
 .ghengoi .vitri .hang{
     margin: auto;
     height: 30px;
-    
-    margin-top: 2px;
+    margin-top: 20px;
 }
 .ghengoi .vitri .hang .box{
-    margin-left: 1.2%;
+    margin-left: 1.4%;
     width: 5%;
     height: 30px;
-    background: wheat;
+    background: none;
+    border: solid 1px gray;
     float: left;
     text-align: center;
     line-height: 30px;
-    color: black;
+    color: gray;
+    position: relative;
 }
+
 
 .ghengoi .vitri .hang .box:hover{
     background: #1cadeb;
@@ -1317,13 +1361,26 @@ article .datve form input{
     background: #1cadeb;
     color: white;
 }
+#hetcho::after{
+    position: absolute;
+    content: 'hết chỗ';
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background: red;
+    left: 0;
+    display: none;
+}
+#hetcho:hover::after{
+    display: block;
+}
 
 
 
 /*danh sach phim*/
 .danhsachphim{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
     position: relative;
     background: red;
 }
@@ -1365,61 +1422,89 @@ article .datve form input{
 .danhsachphim .listphim .phim{
     width: 23%;
     margin-bottom: 20px;
-    height: 450px;
-    
+    height: 430px;
     float: left;
     margin-right: 20px;
+    overflow: hidden;
 }
 .danhsachphim .listphim .anhphim{
     width: 100%;
-    height: 90%;
+    height: 100%;
     position: relative;
-    transition: all .3s;
+    transition: all .5s;
+    overflow: hidden;
 }
-
+.danhsachphim .listphim .anhphim:hover img{
+    transform: scale(1.3);
+}
+.danhsachphim .listphim .anhphim .ngaychieu{
+    position: absolute;
+    left: -100%;
+    top: 10%;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    background: #1cadeb;
+    color: white;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    text-align: center;
+    z-index: 99;
+    transition: all .5s;
+}
+.danhsachphim .listphim .anhphim:hover .ngaychieu{
+    left: 0;
+}
 .danhsachphim .listphim .anhphim .chitiet{
     position: absolute;
     left: 0;
-    top: 0;
+    top: -100%;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.651);
-    z-index: 99;
+    z-index: 1;
     text-align: center;
     line-height: 400px;
-    transform: scalex(0);
-    transition: all .3s;
+    transition: all .6s;
 }
 .danhsachphim .listphim .anhphim:hover .chitiet{
-    transform: scalex(1);
-    transition: all .3s;
+    top: 0;
 }
 .danhsachphim .listphim .anhphim .chitiet a{
-    padding: 15px 20px;
+    padding: 15px 40px;
     border: solid 1px #1cadeb;
     position: relative;
     color: white;
 }
-.danhsachphim .listphim .anhphim .chitiet a::after{
+.danhsachphim .listphim .anhphim .chitiet a::before{
     position: absolute;
     content: '';
-    left: 0;
+    left: -1%;
     top: 0;
-    width: 100%;
-    height: 100%;
     background: #1cadeb;
-    transform: scale(0);
+    width: 5%;
+    height: 100%;
     transition: all .3s;
     z-index: -1;
-    
 }
-.danhsachphim .listphim .anhphim .chitiet a:hover::after{
-    transform: scale(1);
+.danhsachphim .listphim .anhphim .chitiet a:hover::before{
+    width: 102%;
 }
 .danhsachphim .listphim .noidungphim{
+    position: absolute;
+    bottom: -20%;
+    left: 0;
     width: 100%;
-    height: 10%;
-    line-height: 20px;
+    height: 30%;
+    background: rgba(0, 0, 0, 0.664);
+    transition: all .5s;
+    z-index: 2;
+}
+.danhsachphim .listphim .noidungphim p{
+    margin-left: 10px;
+}
+.danhsachphim .listphim .anhphim:hover .noidungphim{
+    bottom: 0;
 }
 
 
@@ -1427,7 +1512,7 @@ article .datve form input{
 .trangtimkiem{
     width: 100%;
     background: black;
-    margin-top: 50px;
+    margin-top: 100px;
     position: relative;
 }
 .trangtimkiem .khungketqua{
@@ -1436,7 +1521,7 @@ article .datve form input{
     left: 10%;
     top: 0;
     margin-bottom: 50px;
-    box-shadow: 0 0 10px;
+    box-shadow: 0 0 10px black;
 }
 .trangtimkiem .khungketqua .ketqua{
     width: 22%;
@@ -1487,14 +1572,14 @@ article .datve form input{
     width: 100%;
     height: 550px;
     position: relative;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 .form_thanhtoan form{
     position: absolute;
     width: 30%;
-    height: 100%;
+    height: 110%;
     left: 35%;
-    box-shadow:0 0 10px #1cadeb;
+    box-shadow:0 0 10px black;
 }
 .form_thanhtoan form .row{
     width: 90%;
@@ -1518,26 +1603,18 @@ article .datve form input{
     bottom: 0;
     height: 48%;
     width: 100%;
-    z-index: -1;
-    box-shadow: 1px 1px 2px #1cadeb;
+    z-index: 9;
+    box-shadow: 1px 1px 2px black;
     border: none;
     font-size: 13px;
     text-align: center;
-}
-.form_thanhtoan form .row input::after{
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    background: rgb(0, 0, 0);
-    width: 100%;
-    height: 100%;
-    z-index: 99;
+    color: rgba(255,255,255,0.38);
+    background: none;
 }
 .form_thanhtoan form .submit{
     width: 30%;
     margin-left: 35%;
-    margin-top: 15px;
+    margin-top: 25px;
     height: 40px;
     background: #1cadeb;
     border: solid 1px #1cadeb;
@@ -1547,7 +1624,7 @@ article .datve form input{
     width: 100%;
     height: 500px;
     position: relative;
-    margin-top: 60px;
+    margin-top: 150px;
    
     z-index: 999;
     text-align: center;

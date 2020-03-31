@@ -27,7 +27,7 @@
                             position: absolute;
                             bottom:0;
                             right:0;
-                            padding:20px 40px;
+                            padding:20px 50px;
                             background: #1cadeb;
                             color: white;
                             border: none;
@@ -85,9 +85,14 @@
                                 <div class="muave">
                                 '.$link.'
                                 </div>
-                            </div>
-                            <div class="tenphim">
-                            '.$name.'
+                                <div class="tenphim">
+                                <p>'.$name.'</p>
+                                <p>'.$phim['daodien'].'</p>
+                                <p>'.$phim['dienvien'].'</p>
+                                </div>
+                                <div class="ngaychieu">
+                                '.$phim['ngaychieu'].'
+                                </div>
                             </div>
                             <div class="muave">
                                 <a href="">MUA VÉ</a>
@@ -121,9 +126,14 @@
                                 <div class="muave">
                               '.$link.'
                                 </div>
-                            </div>
-                            <div class="tenphim">
-                            '.$name.'
+                                <div class="tenphim">
+                            <p>'.$name.'</p>
+                            <p>'.$phim['daodien'].'</p>
+                            <p>'.$phim['dienvien'].'</p>
+                                </div>
+                                <div class="ngaychieu">
+                                '.$phim['ngaychieu'].'
+                                </div>
                             </div>
                             <div class="muave">
                                 <a href="">MUA VÉ</a>
