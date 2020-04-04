@@ -21,6 +21,7 @@ if(isset($_POST["login"])&&$_POST["login"]){
         $_SESSION['id']=$checkinfo['id'];
         $_SESSION['user']=$checkinfo['user'];
         $_SESSION['role']=$checkinfo['role'];
+        $_SESSION['mail']= $checkinfo['email'];
         if($checkinfo['role']==2){
             header('location: admin/admin.php');
         }elseif($checkinfo['role']==1){
