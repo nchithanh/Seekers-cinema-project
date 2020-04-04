@@ -152,7 +152,7 @@
             <?php
 											if(isset($_SESSION['user'])){
 												echo'
-                                                <a style="color:#1cadeb;" href="">
+                                                <a style="color:#1cadeb;" href="admin/admin.php">
                                                 <i class="fa fa-user-secret"></i>
                                                 '.$_SESSION['user'].'
                                             </a>
