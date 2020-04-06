@@ -28,10 +28,10 @@ function getinformation($id){
     $result = $stmt->fetch();
     return $result;
 }
-function update_user($id,$name,$user,$pass,$email){
+function update_user($id,$user,$pass,$email){
     global $conn;
 
-    $sql = "UPDATE user SET name='$name',user='$user',pass='$pass',email='$email' WHERE id=".$id;
+    $sql = "UPDATE user SET user='$user',pass='$pass',email='$email' WHERE id=".$id;
      // Prepare statement
      $stmt = $conn->prepare($sql);
      // execute the query

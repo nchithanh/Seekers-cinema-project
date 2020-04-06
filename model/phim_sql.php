@@ -21,8 +21,18 @@ function loadphimall(){
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $result = $stmt->fetchALL();
     return $result;
-
 }
+
+function loadveall(){
+    global $conn;
+    $sql= "select * from ve where 1 order by id desc";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+}
+
     function showdetail($id){
         global $conn;
         $sql="select * from phim where id = ".$id."";

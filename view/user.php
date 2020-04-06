@@ -9,24 +9,24 @@
         <div class="box" id="qltk">
             <h2>quản lý tài khoản</h2>
             <div class="content">
-                <form action="">
+                <form action="index.php?contro=user" method="POST">
                     <div class="thongtin">
                         <label>Username</label>
-                        <input type="text" required value="Username">
+                        <input type="text" required value="<?php echo $_SESSION['user'] ?>">
                     </div>
                     <div class="thongtin">
                         <label>Userpass</label>
-                        <input type="text" required value="Userpass">
+                        <input type="text" required value="<?php echo $_SESSION['pass'] ?>">
                     </div>
                     <div class="thongtin">
                         <label>email</label>
-                        <input type="email" required value="Username@123.com">
+                        <input type="email" required value="<?php echo $_SESSION['mail'] ?>">
                     </div>
                     <div class="thongtin">
-                        <label>tel:</label>
-                        <input type="number" required value="093113313">
+                        <label>SDT:</label>
+                        <input type="number" required value="<?php echo $_SESSION['sdt'] ?>">
                     </div>
-                    <input type="submit" class="btn" value="update">
+                    <input type="submit" class="btn" value="update" name="update">
                 </form>
             </div>
         </div>
@@ -39,28 +39,28 @@
                         <td>ten rap</td>
                         <td>phong chieu</td>
                         <td>suat chieu</td>
-                        <td>hang ghe</td>
                         <td>ghe</td>
-                        <td>action</td>
                     </tr>
-                    <tr>
-                        <td>ten phim</td>
-                        <td>ten rap</td>
-                        <td>phong chieu</td>
-                        <td>suat chieu</td>
-                        <td>hang ghe</td>
-                        <td>ghe</td>
-                        <td><a href="">xóa</a></td>
-                    </tr>
-                    <tr>
-                        <td>ten phim</td>
-                        <td>ten rap</td>
-                        <td>phong chieu</td>
-                        <td>suat chieu</td>
-                        <td>hang ghe</td>
-                        <td>ghe</td>
-                        <td><a href="">xóa</a></td>
-                    </tr>
+                    <?php 
+                        foreach ($dsve as $ve) {
+                            $tenphim = $ve['tenphim'];
+                            $tenrap = $ve['tenrap'];
+                            $tenphongchieu = $ve['tenphongchieu'];
+                            $suatchieu = $ve['suatchieu']; 
+                            $ghe = $ve['ghe'];
+                            $id = $ve['id'];
+                            echo '
+                            <tr>
+                                <td>'.$tenphim.'</td>
+                                <td>'.$tenrap.'</td>
+                                <td>'.$tenphongchieu.'</td>
+                                <td>'.$suatchieu.'</td>
+                                <td>'.$ghe.'</td>
+                            </tr>
+                            ';
+                        }
+                    
+                    ?>
                     
                 </table>
             </div>
