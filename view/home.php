@@ -52,47 +52,37 @@
 <div class="banner_bottom" id="banner_bottom">
 <div class="ten_box"><p>News Movies</p></div>
     <div class="box_phim">
-        <div class="box">
-            <img src="view/img/anhphim1.jpg" alt="">
-            <a href="">
-                <div class="tenphim"><p>The Dustwalker - Sa Mạc Chết</p></div>
+    <?php
+        foreach ($loadphimmoi as $phim){
+            echo '<div class="box">
+            <img src="view/img/'.$phim['anhphim'].'" alt="">
+            <a href="index.php?contro=detail&idphim='.$phim['id'].'">
+                <div class="tenphim"><p>'.$phim['tenphim'].'</p></div>
             </a>
-        </div>
-        <div class="box">
-            <img src="view/img/anhphim1.jpg" alt="">
-            <a href="">
-                <div class="tenphim"><p>The Dustwalker - Sa Mạc Chết</p></div>
-            </a>
-        </div>
-        <div class="box">
-            <img src="view/img/anhphim1.jpg" alt="">
-            <a href="">
-                <div class="tenphim"><p>The Dustwalker - Sa Mạc Chết</p></div>
-            </a>
-        </div>
-        <div class="box">
-            <img src="view/img/anhphim1.jpg" alt="">
-            <a href="">
-                <div class="tenphim"><p>The Dustwalker - Sa Mạc Chết</p></div>
-            </a>
-        </div>
+        </div>';
+        }
+    ?>
     </div>
 </div>
 
 <div class="banner_bottom banner_bottom2" id="banner_bottom2">
 <div class="ten_box"><p>Best IMDB</p></div>
-    <div class="best_phim">
-        <div class="left">
-            <video autoplay muted loop src="view/video/lat.mp4"></video>
-        </div>
-        <div class="right">
-           <p>The Dustwalker - Sa Mạc Chết</p>
-           <p>Đạo diễn :Sandra Sciberras</p>
-           <p>Diễn viên :Jolene Anderson,Stef Dawson</p>
-           <p>Một loài ký sinh trùng ngoài hành tinh tấn công người dân trên sa mạc và chiếm lấy não của họ. Tuy nhiên mối đe dọa thực sự đến nhân loại lại đến từ một sinh vật khác.</p>
-           <p><a href="">view detail</a></p>
-        </div>
-    </div>
+        <?php
+            foreach ($loadbestphim as $phim){
+                echo '<div class="best_phim">
+                <div class="left">
+                    <video autoplay muted loop src="view/video/'.$phim['trailer'].'"></video>
+                </div>
+                <div class="right">
+                   <p>'.$phim['tenphim'].'</p>
+                   <p>Đạo diễn :'.$phim['daodien'].'</p>
+                   <p>Diễn viên :'.$phim['dienvien'].'</p>
+                   <p>'.$phim['noidung'].'</p>
+                   <p><a href="index.php?contro=detail&idphim='.$phim['id'].'">view detail</a></p>
+                </div>
+            </div>';
+            }
+        ?>
 </div>
 
 <section>

@@ -182,17 +182,17 @@
     <div class="loading"><img src="view/img/loading2.gif" alt=""></div>
     <div class="form_login ani" id="login" style="display:none;">
         <p>YOUR ACCOUNT</p>
-        <form action="">
+        <form action="index.php?contro=home" method="post">
 
             <div class="row">
-            <i class="fa fa-user-secret"></i><input type="text" required placeholder="Username">
+            <i class="fa fa-user-secret"></i><input name="user" type="text" required placeholder="Username">
             </div>
             <div class="row">
-            <i class="fa fa-unlock-alt"></i></i><input type="password" required placeholder="Userpassword">
+            <i class="fa fa-unlock-alt"></i></i><input name="pass" type="password" required placeholder="Userpassword">
             </div>
             <p>Forgot your password?</p>
             <div class="row1">
-                <input class="btn" type="submit" value="Đăng nhập">
+                <input name="login" class="btn" type="submit" value="Đăng nhập">
                 <input class="btn" type="button" value="Đăng ký ngay" onclick="dangky()">
                 <input class="btn" type="button" value="cancel" onclick="huydangnhap()">
                 
@@ -201,22 +201,23 @@
     </div>
     <div class="form_login ani" id="sign" style="display:none;">
         <p>CREATE ACCOUNT</p>
-        <form action="">
+        <form action="index.php?contro=home" method="post">
             <div class="row">
-            <i class="fa fa-user-secret"></i><input type="text" required placeholder="Username">
+            <i class="fa fa-user-secret"></i><input name="user" type="text" required placeholder="Username">
             </div>
             <div class="row">
-            <i class="fa fa-unlock-alt"></i><input type="password" required placeholder="Userpassword">
+            <i class="fa fa-unlock-alt"></i><input name="pass" type="password" required placeholder="Userpassword">
             </div>
             <div class="row">
-            <i class="fa fa-envelope"></i><input type="mail" required placeholder="email">
+            <i class="fa fa-envelope"></i><input name="email" type="mail" required placeholder="email">
             </div>
             <div class="row">
             <i class="fa fa-phone"></i><input type="number" required placeholder="tel">
+            <input name="role" value="1" type="number" placeholder="tel">
             </div>
             <div class="row1">
                 <input class="btn" type="button" value="Đăng nhập" onclick="dangnhap()">
-                <input class="btn" type="submit" value="Đăng ký ngay">
+                <input name="adduser" class="btn" type="submit" value="Đăng ký ngay">
                 <input class="btn" type="button" value="cancel" onclick="huydangnhap()">
             </div>
         </form>

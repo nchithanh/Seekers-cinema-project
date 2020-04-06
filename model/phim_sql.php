@@ -42,4 +42,13 @@ function loadveall(){
         $result = $stmt->fetch();
         return $result;
     }
+function loadbestphim(){
+    global $conn;
+    $sql= "select * from phim where 1 order by rating desc limit 1";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+}    
 ?>
