@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6{
 aside {
     position: sticky;
     min-height: 96vh !important;
-    background: #000000;
+    background: #dde9f1;
     top: 30px;
     z-index: 1;
 }
@@ -180,22 +180,23 @@ aside {
     min-height: 1px;
     display: block;
     padding: 10px 0px;
-    background: #4a4a4a;
+    background: #b1abab;
     margin-right: 5px;
     transition: all 0.35s ease;
 }
 .menu li>a:hover
 {   
-    background: #9e9e9e;
+    background: #898df7;
 }
 /*------------------------------*/
 .home_page{
-    background: #b6deff;
+    background: #dde9f1;
     height: 800px;
 }
 .this_page {
-    border-left: 3px solid #87bcdc;
-    color: #87bcdc !important;
+    background: #92c7ea !important;
+    border-left: 3px solid #000000;
+    color: #000000 !important;
 }
 /**************************/
 .home_page img {
@@ -208,10 +209,10 @@ article h3
     border-radius: 5px;
     margin: 0 auto;
     line-height: 32px;
-    color: #65e3f3;
+    color: #000000;
     text-align: center;
     width: 47%;
-    background: #000;
+    background: #fff;
     margin-top: 30px;
     margin-bottom: 10px;
 }
@@ -441,6 +442,71 @@ footer h2 {
     height: 40px !important;
     color: #fff !important;
     font-size: 14px !important;
+}
+/*.hour {
+    width: 10% !important;
+    text-align: center;
+}
+.minute {
+    width: 10% !important;
+    left: 109px;
+    text-align: center;
+}
+.haicham {
+    left: 16%;
+    outline: none;
+    border: none;
+    font-size: 23px;
+    color: #000;
+}*/
+/*************/
+.suatchieu{
+    position: relative;
+    width: 100%;
+    height: 550px;
+}
+.suatchieu form{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: 5%;
+    height: 90%;
+    box-shadow: 0 0 5px #1cadeb;
+}
+.suatchieu form .thongtin{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    margin-top: 20px;
+    
+}
+.suatchieu form .thongtin label{
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: 90%;
+    left: 5%;
+    line-height: 30px;
+    color: gray;
+}
+.suatchieu form .thongtin select, input{
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    bottom: 0;
+    left: 5%;
+}
+.themsuatchieu {
+    padding: 12px 10px;
+    border-radius: 4px;
+    position: static !important;
+    margin: 0 auto;
+    width: 38%;
+    background: #0fb11c;
+    color: white;
+    border: none;
+    display: block;
+    height: auto !important;
 }
 /******************************************/
 /* section{

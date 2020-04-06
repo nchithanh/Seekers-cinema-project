@@ -4,7 +4,7 @@
         <div class="menu">
             <ul>
                 <li><a href="admin.php?contro=film" class="this_page">Film Manager</a></li>
-                <li><a href="index.php?act=catalog_management">Catalog Manager</a></li>
+                <li><a href="admin.php?contro=suatchieu">Quản lý suất chiếu</a></li>
                 <li><a href="index.php?act=admin_account_management" >Admin Account Manager</a></li>
                 <li><a href="index.php?act=order">Order Management</a></li>
             </ul>
@@ -14,13 +14,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
         $(document).ready(function(){
-
-            $("#rap").change(function (){
-                var idrap = $("#rap").val();
-                $.post("view/ajax.php", {idrap:idrap}, function(data){
-                    $("#phong").html(data);
-                });
-            });
 
             $(".option").click(function() {
                 $(".option").removeClass("mau");

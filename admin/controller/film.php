@@ -1,6 +1,6 @@
 <?php
-	include_once "model/film.php";
-	$quanliphimdc=quanliphim(1);
-	$quanliphimcc=quanliphim(0);
+	require_once "model/getdata.php";
+	$quanliphimdc=LoadFilmByStatus(1);
+	$quanliphimcc=LoadFilmByStatus(0);
 	include_once "view/film.php";
 ?>

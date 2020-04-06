@@ -1,8 +1,9 @@
 <?php
-  include_once "model/film.php";
+  require_once "model/getdata.php";
+  require_once "model/update.php";
 
   if(isset($_GET['idphim'])){
-    $phim = film_detail($_GET['idphim']);
+    $phim = LoadFilmDetailById($_GET['idphim']);
     include "view/film_detail.php";
   }
 
@@ -23,11 +24,11 @@
     $anhphim=$_FILES['anhphim']['name'];
     $noidung=$_POST['noidung'];
     $trangthai=number_format($_POST['trangthai']);
-    $phim = film_detail($idphim);
+    $phim = LoadFilmDetailById($idphim);
     if ($anhphim == null) {
       $anhphim = $phim['anhphim'];
     }
-    film_update($idphim,$tenphim,$tuoi,$theloai,$quocgia,$dienvien,$daodien,$thoiluong,$ngaychieu,$noidung,$anhphim,$trangthai);
+    UpdateFilmInformation($idphim,$tenphim,$tuoi,$theloai,$quocgia,$dienvien,$daodien,$thoiluong,$ngaychieu,$noidung,$anhphim,$trangthai);
     header('location: admin.php?contro=film') ;
   }
 ?>
