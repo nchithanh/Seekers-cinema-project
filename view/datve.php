@@ -1,11 +1,17 @@
-
-        <div class="phongchieu">
+        <div class="toanphong">
+        <div class="thongtinphongchieu">
+            <div class="thongtin">
+                <p><?php echo $loadphim['tenphim']; ?> (<?php echo $loadphim['thoiluong']; ?>p)</p>
+                <p><?php echo $loadrap['tenrap']; ?>, <?php echo $phongchieu['tenphong']; ?>, <?php echo $loadsuatchieu['thoigian']; ?></p>
+            </div>
             <div class="chuthich">
                 <form action="" method="post">
                     <input type="number" name="iduser" value="<?php echo ''.$_SESSION['id'].''; ?>" style="display: none;">
                     <input type="submit" name="chonlai" value="Chọn lại phim">
                 </form>
             </div>
+        </div>
+        <div class="phongchieu">
            
             <div class="chongoi">
                 <div class="manhinh">
@@ -202,3 +208,16 @@
                 </div>
             </div>
         </div>
+
+        </div>
+        <style>
+            body{
+                background:#333545;
+            }
+            .warp{
+                background:#333545;
+            }
+            footer{
+                margin-top:100px;
+            }
+        </style>

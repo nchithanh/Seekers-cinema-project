@@ -1,4 +1,4 @@
-<option value="">chon suat chieu</option>
+<option value="">chọn suất chiếu</option>
 <?php
     include "../model/connect.php";
     function loadsuatchieu($idrap){

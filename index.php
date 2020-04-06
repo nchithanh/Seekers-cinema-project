@@ -72,7 +72,14 @@ ob_start();
             include "controller/datve/thanhtoan.php";
             include "view/thanhtoan.php";
             break;
+        case 'user':
+            include "view/user.php";
+            break;
+            
     }   
+    
+        include "view/footer.php";
+        
 
     
     

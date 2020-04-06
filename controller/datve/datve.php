@@ -1,6 +1,8 @@
 <?php
     include "model/connect.php";
     include_once "model/datve_sql.php";
+    include_once "model/phim_sql.php";
+    include_once "model/thanhtoan_sql.php";
     if(isset($_POST['muave'])&&$_POST['muave']){
         $idrap=$_POST['rap'];
         $idphim=$_POST['phim'];
@@ -9,6 +11,9 @@
         $phongchieu=loadphongchieu($idphongchieu['idphongchieu']);
         addthanhtoan($idphim,$idrap,$idsuatchieu,$_SESSION['id'],$phongchieu['id'],$phongchieu['tenphong']);
         $loadhangghe=loadhangghetheophong($idphongchieu['idphongchieu']);
+        $loadphim=showdetail($idphim);
+        $loadrap=loadtenrap($idrap);
+        $loadsuatchieu=thanhtoan_suatchieu($idsuatchieu);
     }
     if(isset($_POST['chonlai'])&&$_POST['chonlai']){
         $iduser=$_POST['iduser'];

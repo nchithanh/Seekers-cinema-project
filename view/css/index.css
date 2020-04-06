@@ -1,15 +1,55 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     position: relative;
-    background: #333545;
+    background: white;
 }
+
+.boxlen{
+    position: fixed;
+    bottom: 0;
+    right: -10%;
+    width: 60px;
+    height: 60px;
+    background: white;
+    box-shadow: 0 0 5px black;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 999999999;
+}
+@keyframes boxlen_vao{
+    0%{right: -10%;}
+    100%{right: 0;}
+}
+@keyframes boxlen_ra{
+    0%{right: 0%;}
+    100%{right: -10%;}
+}
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    background: white;
+    z-index: 99999999;
+}
+.loading img{
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    width: 50%;
+    height: 60%;
+}
+
 ::-webkit-scrollbar{
     width: 5px;
 }
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(transparent, #1cadeb);
+    background: linear-gradient(transparent, black);
     background-size: 200%;
     border-radius: 6px;
 }
@@ -29,59 +69,234 @@ img{
 }
 .warp{
     position: relative;
+}
+
+
+
+.form_login{
+    position: fixed;
+    left: 0%;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    transform-origin: top;
+    background: rgba(0, 0, 0, 0.747);
+}
+.ani{
+    animation-name: ani;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes ani {
+    0%{top: -100%;}
+    100%{top: 0;}
+}
+.form_login p{
+    letter-spacing: .35em;
+    width: 30%;
+    height: 100px;
+    background: black;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    margin-top: 150px;
+    margin-left: 35%;
+    font-size: 30px;
+    margin-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    box-shadow: 0 0 5px black,0 0 15px black,0 0 25px black;
+}
+.form_login form{
+    margin-top: 0;
+    margin-left: 35%;
+    width: 30%;
+    background: white;
+    position: relative;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 0 5px black,0 0 15px black,0 0 25px black;
+}
+
+.form_login form i{
+    color: black;
+    width: 0;
+}
+.form_login form p{
+    clear: both;
+    margin-top: 50px;
+    line-height: 0;
+    background: red;
+    margin-left: 0;
+    color: black;
+    height: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.form_login form .row{
+    margin: auto;
+    width: 90%;
+    height: 40px;
+    margin-top: 0px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.form_login form .row input{
+    margin:10px auto;
+    width: 80%;
+    height: 100%;
+    transition: all .3s;
+    background: none;
+    border: none;
+    border-bottom: solid 2px black;
+    text-align: center;
     
 }
+.form_login form .row input:focus{
+    width: 100%;
+    border-bottom: solid 2px orangered;
+}
+
+.form_login form .row1{
+    margin: auto;
+    width: 90%;
+    height: 200px;
+    margin-top: 30px;
+    text-align: center;
+}
+.form_login .btn{
+    background: black;
+    color: white;
+    border: none;
+    height: 35px;
+    width: 40%;
+    margin-left: 60%;
+    margin-left: 10px;
+    transition: all .3s;
+    margin-top: 20px;
+    font-size: 13px;
+}
+.form_login .btn:hover{
+    background: orangered;
+}
+.form_login .btn:nth-child(3){
+    background: orangered;
+}
+.form_login .btn:nth-child(3):hover{
+    background: black;
+}
+
+
+
+.thanhdatve{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    background: black;
+    z-index: 9999;
+}
+.thanhdatve form{
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    background: black;
+}
+.thanhdatve form select{
+    width: 25%;
+    margin-right: 10px;
+    height: 80%;
+    margin-top: 4px;
+    background: black;
+    border: none;
+    border-right: solid 2px white;
+    color: white;
+}
+.thanhdatve form input{
+    width: 10%;
+    margin-left: 75px;
+    background: none;
+    border: none;
+    color: white;
+}
+.thanhdatve form select:hover{
+    cursor: pointer;
+}
+.thanhdatve form input:hover{
+    cursor: pointer;
+}
+
+
+
+
+
 header{
     top: 0;
     width: 100%;
-    height: 50px;
+    height: 60px;
     position: fixed;
-    background: white;
+    background: rgb(255, 255, 255);
     z-index: 999999;
-    box-shadow: 0 0 10px black;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    transform-origin: top;
+}
+@keyframes header{
+    0%{transform: scaleY(0);}
+    100%{transform: scaleY(1);}
 }
 
 header .logo{
-    width: 15%;
+    width: 20%;
     position: absolute;
-    left: 0;
+    left: 0%;
     top: 0;
-    height: 50px;
+    height: 60px;
     text-align: center;
-    line-height: 1px;
+    line-height: 15px;
     font-size: 20px;
-    color: #1cadeb;
-    z-index: 99;
+    color: black;
+    z-index: 1;
+    letter-spacing: .15em;
 }
+
 
 
 header .timkiem{
     position: absolute;
-    width: 30%;
+    width: 20%;
     height: 100%;
-    left: 50%;
+    left: 18%;
+    z-index: 1;
 }
 header .timkiem form{
     position: absolute;
-    top: 20%;
-    height: 80%;
+    top: 30%;
+    height: 60%;
     width: 100%;
    z-index: 999;
 }
+
 header .timkiem form .tim{
     height: 80%;
     width: 30%;
     border: none;
-    background: #1cadeb;
+    background: black;
     color: white;
 }
 header .timkiem form .text{
     height: 70%;
     width: 0%;
     border: none;
-    border-bottom: solid 1px #1cadeb;
+    border-bottom: solid 1px black;
     text-align: center;
-    color: #1cadeb;
+    color: black;
     transition: all .3s;
 }
 input:focus{
@@ -92,11 +307,11 @@ select:focus{
 }
 option{
     background: rgb(255, 255, 255);
-    color: #1cadeb;
+    color: black;
     font-size: 18px;
 }
 option:checked{
-    background: #1cadeb;
+    background: black;
     color: white;
 }
 header .timkiem form:hover .text{
@@ -110,8 +325,8 @@ header .timkiem form:hover .text{
     width: 15%;
     right: 1%;
     top: 5%;
-    line-height: 50px;
-    z-index: 99;
+    line-height: 60px;
+    z-index: 1;
 }
 header a{
     color: gray;
@@ -121,31 +336,44 @@ header .tranglogin a:nth-child(1){
     margin-right: 5px;
 }
 header .tranglogin a:hover{
-    color: #1cadeb;
+    color: black;
 }
 header nav{
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: 60px;
     left: 0;
-    top: 0;
-    
+    top: 25%;
 }
 header nav ul{
     width: 40%;
     margin: auto;
-    margin-left:210px;
-    line-height: 50px;
+    margin-left:700px;
+    line-height: 30px;
     height: 100%;
 }
 header nav ul li{
     float: left;
     list-style: none;
-    width: 14%;
+    width: 20%;
     text-align: center;
     transition: all .3s;
     position: relative;
     transition: all .3s;
+    z-index: 2;
+}
+header nav ul li:nth-child(1){
+    border-right: solid 1px black;
+}
+header nav ul li:nth-child(2){
+    margin-left: 15px;
+    font-weight: inherit;
+    font-family: 'GaramondPremrPro-It';
+    text-align: left;
+    z-index: -1;
+}
+header nav ul li i{
+    margin-right: 5px;
 }
 header nav ul li:hover .box_phim{
     transform: scaley(1);
@@ -155,203 +383,374 @@ header nav ul li .box_phim{
     transform: scaley(0);
     transform-origin: top;
     position: absolute;
-    left: 0;
-    top: 100%;
-    width: 1400%;
-    height: 550px;
-    background: #333545;
+    left: -750px;
+    top: -15px;
+    width: 1300%;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.966);
     z-index: 8811;
     transition: all .3s;
-    box-shadow: 0 0 5px rgb(0, 0, 0);
+    box-shadow: 0 5px 5px rgb(0, 0, 0);
 }
-header nav li .box_phim .phimdangchieu1{
-    width: 95%;
-    margin-left: 2.5%;
-    height: 50%;
-   
-}header nav li .box_phim .phimsapchieu1{
-    width: 95%;
-    margin-left: 2.5%;
-    height: 50%;
-    
-}
-header nav li .box_phim .tieude{
-    width: 100%;
-    height: 20%;
-    color: white;
-    text-align: left;
-    position: relative;
-}
-header nav li .box_phim .tieude::after{
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    width: 10%;
-    height: 70%;
-    border-bottom:solid 1.5px #1cadeb;
-}
-header nav li .box_phim .phim{
-    width: 24%;
-    height: 80%;
-    float: left;
-    margin-right: 1%;
-}
-header nav li .box_phim .phim .anhphim{
-    width: 100%;
-    height: 85%;
-    position: relative;
-}
-header nav li .box_phim .phim .anhphim .muave{
-    width: 100%;
-    position: absolute;
+header nav ul li .box_phim .box{
+    width: 20%;
     height: 100%;
-    background: #000000a4;
-    left: 0;
-    top: 0;
-    transform: scaleY(0);
-    transition: all .3s;
-}
-header nav li .box_phim .phim .anhphim .muave a::after{
-    display: none;
-}
-header nav li .box_phim .phim .anhphim .muave a::before{
-    display: none;
-}
-header nav li .box_phim .phim .anhphim .muave a{
-    padding: 10px 20px;
-    color: white;
-    line-height: 200px;
-    position: relative;
-    border: solid 1.5px white;
-    transition: all .3s;
-}
-
-header nav li .box_phim .phim .anhphim:hover .muave{
-    transform: scaleY(1);
-}
-header nav li .box_phim .phim .anhphim .muave a:hover{
-    background: #1cadeb;
-}
-header nav li .box_phim .phim .tenphim{
-    width: 100%;
-    height: 15%;
-    font-size: 15px;
-    color: wheat;
-    line-height: 25px;
-    text-align: left;
-}
-header nav ul li a{
+    margin-left: 2%;
+    float: left;
     color: black;
     position: relative;
 }
-header nav ul li:hover a{
-    color: rgb(245, 18, 18);
-    
+header nav ul li .box_phim .box:nth-child(1){
+    width: 25%;
 }
+header nav ul li .box_phim .box:nth-child(2){
+    text-align: left;
+}
+header nav ul li .box_phim .box:nth-child(3){
+    text-align: left;
+}
+header nav ul li .box_phim .box .box_logo{
+    width: 70%;
+    height: 180px;
+    margin-left: 15%;
+    margin-top: -25px;
+    background: black;
+    color: white;
+}
+header nav ul li .box_phim .box .location{
+    width: 80%;
+    position: absolute;
+    bottom: 10px;
+    left: 14%;
+    font-size: 18px;
+}
+header nav ul li .box_phim .box .location p{
+    text-align: left;
+}
+header nav ul li .box_phim .box .fpt{
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+header nav ul li .box_phim .box .location p:nth-child(2){
+    margin-top: -20px;
+}
+header nav ul li .box_phim .box .box_logo h2 span{
+    font-size: 50px;
+    margin-right: 7px;
+    line-height: 150px;
+    text-transform: uppercase;
+}
+header nav ul li .box_phim .box .box_logo p{
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: -60px;
+}
+header nav ul li .box_phim .box .tieude{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    border-bottom: solid 1px black;
+    text-align: left;
+    line-height: 50px;
+    font-size: 25px;
+}
+header nav ul li .box_phim .box .phim{
+    font-style: italic;
+    font-size: 20px;
+    line-height: 40px;
+    transition: all .3s;
+    position: relative;
+}
+header nav ul li .box_phim .box a:hover .anhphim{
+    display: block;
+    transition: all .3s;
+}
+header nav ul li .box_phim .box .phim .anhphim{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    right: -80%;
+    top: 0;
+    background: red;
+    z-index: 9999999;
+    display: none;
+}
+header nav ul li .box_phim .box .phim:hover{
+    color: orangered;
+}
+header nav ul li .box_phim .box form{
+    width: 80%;
+    height: 50%;
+    margin-top: 13%;
+    margin-left: 10%;
+}
+header nav ul li .box_phim .box form .row{
+    clear: both;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    position: relative;
+}
+header nav ul li .box_phim .box form input{
+    width: 100%;
+}
+header nav ul li .box_phim .box form .row input{
+    width: 90%;
+    height: 100%;
+    background: none;
+    border: none;
+    border-bottom: solid 1px black;
+    transition: all .3s;
+}
+header nav ul li .box_phim .box form .row input:focus{
+    border-bottom: solid 1px orangered;
+    width: 100%;
+}
+header nav ul li .box_phim .box form .btn{
+    width: 40%;
+    height: 40px;
+    background: black;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    transition: all .3s;
+}
+header nav ul li .box_phim .box form .btn:hover{
+    background: orangered;
+    cursor: pointer;
+}
+
+
+
+
+
+
+header nav ul li a{
+    color: black;
+    position: relative;
+    font-size: 20px;
+}
+
 
 
 .warp{
-   background: #333545;
+   background: white;
    color: whitesmoke;
 }
-.banner{
-    margin-top: 55px;
-    width: 100%;
-    height: 500px;
-    background: rgb(114, 114, 114);
+.banner_top{
     position: relative;
-    
-}
-.banner .live{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    
-}
-.banner .listbanner{
-    position: absolute;
-    width: 10%;
-    height: 50px;
-    bottom: 0;
-    left: 47%;
-}
-.banner .listbanner span{
-    width: 10%;
-    height: 30%;
-    border-radius: 50%;
-    border: solid 1px white;
-    float: left;
-    margin-left: 10px;
-    margin-top: 25px;
-    cursor: pointer;
-}
-.maubanner{
-    background: #1cadeb;
-    border: solid 1px #1cadeb;
-}
-.banner .datve{
-    position: absolute;
-    right: 10%;
-    top: 0;
-    width: 25%;
-    height: 500px;
-   
-    z-index: 99;
-}
-.banner .datve form{
-    width: 100%;
-    height: 80%;
-    margin-top: 10%;
-    background: rgba(0, 0, 0, 0.664);
-    position: relative;
-}
-.banner .datve form::after{
-    position: absolute;
-    content: 'MUA VÉ NHANH';
-    width: 50%;
-    height: 50px;
-    left: 0;
-    top: 0;
-    background: #1cadeb;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-    font-size: 17px;
-}
-.banner .datve form select:nth-child(1){
-    width: 90%;
     margin-top: 100px;
+    width: 100%;
+    height: 550px;
 }
-.banner .datve form select{
-    width: 90%;
-    margin-left: 5%;
-    height: 50px;
-    margin-bottom: 20px;
-    background: rgba(128, 128, 128, 0.616);
-    border: none;
-    color: white;
-    font-size: 16px;
+.banner_top .listbanner{
+    position: absolute;
+    left: 40%;
+    bottom: 20px;
+    width: 40%;
+    height: 10px;
 }
-.banner .datve form input{
-    width: 50%;
-    height: 50px;
-    background: #1cadeb;
-    color: white;
-    border: none;
-    margin-left: 190px;
+.banner_top .listbanner span{
+    width: 10%;
+    height: 100%;
+    float: left;
+    margin-right: 2%;
+    background-color: none;
+    border: solid 1px white;
     transition: all .3s;
 }
-.banner .datve form input:hover{
-    background: rgb(238, 127, 63);
+.banner_top .listbanner span:hover{
+    background: white;
+    cursor: pointer;
 }
+.banner_top .box_trailer{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 5%;
+    top: 0;
+    background: blue;
+    overflow: hidden;
+}
+.banner_top .box_trailer img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    animation-name: img;
+    animation-fill-mode: forwards;
+    animation-duration: 15s;
+}
+@keyframes img{
+    0%{transform: scale(1);}
+    100%{transform: scale(1.5);}
+}
+.maubanner{
+    background: white;
+}
+
+
+
+.banner_bottom{
+    width: 100%;
+    height: 550px;
+    position: relative;
+    margin-top: 500px;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+@keyframes banner_bottom{
+    0%{margin-top: 500px;}
+    100%{margin-top: 100px;}
+}
+.banner_bottom .ten_box{
+    width: 80%;
+    height: 10%;
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    text-align: center;
+    font-size: 20px;
+}
+.banner_bottom .ten_box::after{
+    position: absolute;
+    content: '';
+    width: 40%;
+    bottom: 5px;
+    left: 0;
+    height: 50%;
+    border-top: solid 2px black;
+}
+.banner_bottom .ten_box::before{
+    position: absolute;
+    content: '';
+    width: 40%;
+    bottom: 5px;
+    right: 0;
+    height: 50%;
+    border-top: solid 2px black;
+}
+.banner_bottom .ten_box p{
+    background: #eaeaea;
+    width: 15%;
+    height: 30px;
+    line-height: 30px;
+    margin: auto;
+    color: #666666;
+}
+.banner_bottom .box_phim{
+    position: absolute;
+    width: 80%;
+    height: 85%;
+    left: 10%;
+    bottom: 0;
+}
+.banner_bottom .box_phim .box{
+    width: 24.2%;
+    height: 100%;
+    float: left;
+    margin-right: 10px;
+    background: black;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s;
+}
+.banner_bottom .box_phim .box .tenphim{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.493);
+    width: 100%;
+    height: 100%;
+}
+.banner_bottom .box_phim .box .tenphim p{
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    font-size: 20px;
+    width: 100%;
+    height: 10%;  
+}
+.banner_bottom .box_phim .box img{
+    transition: all .3s;
+}
+.banner_bottom .box_phim .box:hover img{
+    transform: scale(1.3);
+}
+/*banner_bottom 2*/
+.banner_bottom2{
+    height: 700px;
+}
+.banner_bottom2 .ten_box{
+    top: 10%;
+}
+.banner_bottom .best_phim{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    left: 0%;
+    background: black;
+}
+.banner_bottom .best_phim .left{
+    position: absolute;
+    width: 50%;
+    left: 0;
+    height: 100%;
+    top: 0;
+    background: black;
+}
+.banner_bottom .best_phim .left video{
+    width: 100%;
+    height: 100%;
+}
+.banner_bottom .best_phim .right{
+    position: absolute;
+    width: 40%;
+    right: 5%;
+    height: 80%;
+    top: 10%;
+    text-align: left;
+
+}
+.banner_bottom .best_phim .right p{
+    font-size: 20px;
+}
+.banner_bottom .best_phim .right a{
+    padding: 15px 40px;
+    border: solid 2px white;
+    color: white;
+    position: relative;
+    letter-spacing: .35em;
+}
+.banner_bottom .best_phim .right a::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 10%;
+    background: white;
+    left: -1%;
+    bottom: 0;
+    transition: all .3s;
+}
+.banner_bottom .best_phim .right a:hover::after{
+    width: 101%;
+}
+.banner_bottom .best_phim .right p:nth-child(1){
+    font-size: 40px;
+}
+.banner_bottom .best_phim .right p:nth-child(4){
+    margin-bottom: 50px;
+}
+
+
+
+
 
 
 
 section{
-    margin-top: 50px;
+    margin-top: 150px;
     width: 100%;
     height: 800px;
     position: relative;
@@ -368,9 +767,10 @@ section .tieude span{
     font-size: 20px;
     margin-right: 10px;
     padding: 14px 10px;
+    color: black;
 }
 .mautieude{
-    border-bottom: solid 3px #1cadeb;
+    border-bottom: solid 3px black;
 }
 section .listphim{
     width: 80%;
@@ -378,7 +778,7 @@ section .listphim{
     position: absolute;
     bottom: -100%;
     left: 10%;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     
 }
@@ -391,7 +791,7 @@ section .listphim{
     position: absolute;
     width: .5%;
     height: 100%;
-    background: #1cadeb;
+    background: black;
     right: 0;
     top: 0;
     transform: scaleY(0);
@@ -425,28 +825,30 @@ section .listphim .more{
     position: absolute;
     bottom: 0;
     right: 2%;
-    width: 20%;
+    width: 15%;
     height: 50px;
-    border: solid 1px #1cadeb;
+    border: solid 2px black;
     text-align: center;
-    color: white;
+    color: black;
     line-height: 50px;
     transition: all .3s;
     z-index: 99;
+    letter-spacing: .35em;
 }
 section .listphim .more::after{
     position: absolute;
     content: '';
-    width: 5%;
-    height: 100%;
+    width: 0%;
+    height: 10%;
     left: -1%;
-    top: 0;
-    background: #1cadeb;
+    bottom: 0;
+    background: black;
     transition: all .3s;
     z-index: -1;
 }
 section .listphim .more:hover{
-    color: white;
+    color: black;
+    line-height: 45px;
 }
 section .listphim .more:hover::after{
     width: 102%;
@@ -470,6 +872,19 @@ section .listphim .phim .hinhphim{
     height: 100%;
     transition: all .5s;
 }
+section .listphim .phim .hinhphim .diemphim{
+    position: absolute;
+    right: 4%;
+    top: 4%;
+    width: 38px;
+    height: 38px;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    line-height: 38px;
+}
 section .listphim .phim .hinhphim:hover img{
     transform: scale(1.3);
 }
@@ -477,7 +892,8 @@ section .listphim .phim .ngaychieu{
     position: absolute;
     left: -100%;
     top: 10%;
-    background: #1cadeb;
+    background: white;
+    color: black;
     width: 20%;
     height: 30px;
     line-height: 30px;
@@ -508,10 +924,10 @@ section .listphim .phim .tenphim p{
     margin-left: 10px;
 }
 section .listphim .phim .hinhphim:hover .muave{
-    top: 0;
+    top: -5%;
 }
 section .listphim .phim .hinhphim:hover .tenphim{
-   bottom: -10%;
+   bottom: -6%;
 }
 section .listphim .phim .muave{
     position: absolute;
@@ -525,22 +941,26 @@ section .listphim .phim .muave{
     transition: all .6s;
 }
 section .listphim .phim .muave a{
-    border: solid 1px rgb(148, 148, 148);
+    border: solid 1px white;
     color: white;
     padding: 15px 30px;
     transition: all .3s;
     position: relative;
     z-index: 9;
+    letter-spacing: .15em;
 }
 section .listphim .phim .muave a::after{
     position: absolute;
     content: '';
     left: -1%;
-    top: 0;
+    bottom: 1%;
     height: 100%;
     width: 5%;
-    background: #1cadeb;
+    background: white;
     transition: all .3s;
+}
+section .listphim .phim .muave a:hover{
+    color: black;
 }
 section .listphim .phim .muave a:hover::after{
     width: 102%;
@@ -600,11 +1020,12 @@ section .listphim .phim .muave a:hover::after{
 }
 .tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai a{
     padding: 10px 25px;
-    border: solid 1px #1cadeb;
+    border: solid 1px white;
     font-size: 15px;
 }
 .tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai a:hover{
-    background: #1cadeb;
+    background: white;
+    color: black;
     font-size: 15px;
 }
 .tinkhuyenmai .boxkhuyenmai .khuyenmai .tenkhuyenmai p{
@@ -623,6 +1044,7 @@ section .listphim .phim .muave a:hover::after{
     left: 10%;
     font-size: 20px;
     line-height: 35px;
+    color: black;
 }
 
 footer{
@@ -687,7 +1109,7 @@ footer{
     transition: all .5s;
     transform: perspective(600px) rotateY(0deg);
     box-shadow: 0px 0px 10px black;
-    background: #1cadeb;
+    background: black;
     overflow: hidden;
 }
 .login .formlogin .dangnhap .left{
@@ -696,7 +1118,7 @@ footer{
     top: 0;
     width: 50%;
     height: 100%;
-    background: #1cadeb;
+    background: black;
     text-align: center;
     border-bottom-right-radius: 400px;
 }
@@ -714,7 +1136,7 @@ footer{
     height: 30px;
     border: none;
     background: rgb(255, 255, 255);
-    color: #1cadeb;
+    color: black;
     border-radius: 50px;
     
 }
@@ -758,7 +1180,7 @@ footer{
     width: 65%;
     height: 35px;
     border: none;
-    background-image: linear-gradient( 135deg, #1cadeb,rgb(142, 68, 173),#1cadeb);
+    background-image: linear-gradient( 135deg, black,rgb(142, 68, 173),black);
     background-size: 200%;
     color: white;
     border-radius: 50px;
@@ -789,7 +1211,7 @@ footer{
     top: 0;
     width: 50%;
     height: 100%;
-    background: #1cadeb;
+    background: black;
     border-bottom-right-radius: 400px;
     border-top-right-radius: 300px;
     text-align: center;
@@ -805,7 +1227,7 @@ footer{
     width: 50%;
     height: 40px;
     border: none;
-    background-image: linear-gradient( 135deg, #1cadeb,rgb(142, 68, 173),#1cadeb);
+    background-image: linear-gradient( 135deg, black,rgb(142, 68, 173),black);
     background-size: 200%;
     color: rgb(255, 255, 255);
     border-radius: 50px;
@@ -854,7 +1276,7 @@ footer{
     height: 30px;
     border: none;
     background: white;
-    color: #1cadeb;
+    color: black;
     border-radius: 50px;
 }
 .login .formlogin .dangky .left form .button::after{
@@ -882,8 +1304,10 @@ footer{
 .trailer{
     position: relative;
     margin-top: 57px;
-    width: 100%;
+    width: 84%;
+    margin-left: 8%;
     height: 700px;
+    background: red;
 }
 .trailer .box{
     width: 100%;
@@ -891,7 +1315,7 @@ footer{
     position: absolute;
     top: 0;
     left: 0;
-    
+    background: red;
 }
 .trailer video{
     position: absolute;
@@ -904,11 +1328,11 @@ article{
     
     margin-left: 9%;
     float: left;
-    margin-top: 300px;
+    margin-top: 200px;
 }
 aside{
     width: 25%;
-    margin-top:300px;
+    margin-top:200px;
     float: left;
     margin-bottom: 150px;
 }
@@ -918,9 +1342,10 @@ aside .tieude{
     text-align: left;
     line-height: 50px;
     margin-bottom: 10px;
+    color: black;
 }
 aside .tieude span{
-    border-bottom: solid 1.5px #1cadeb;
+    border-bottom: solid 1.5px black;
     padding-bottom: 10px ;
     font-size: 20px;
 }
@@ -957,8 +1382,8 @@ aside .hinhphim:hover .muave{
     transform: scaleY(1);
 }
 aside .hinhphim .muave a:hover{
-    background: #1cadeb;
-    border: solid 1px #1cadeb;
+    background: black;
+    border: solid 1px black;
 }
 aside .tenphim{
     width: 100%;
@@ -971,28 +1396,29 @@ aside .more{
     text-align: center;
     padding: 15px 20px;
     margin-left: 220px;
-    border: solid 1px #1cadeb;
+    border: solid 1px black;
     margin-bottom: 10px;
     transition: all .3s;
     position: relative;
-    color: white;
+    color: black;
+    letter-spacing: .15em;
 }
 aside .more::after{
     position: absolute;
     content: '';
-    width: 5%;
-    height: 100%;
-    background: #1cadeb;
-    left: -1%;
-    top: 0;
+    width: 0%;
+    height: 10%;
+    background: black;
+    left: 0%;
+    bottom:  0;
     transition: all .3s;
     z-index: -1;
 }
 aside .more:hover::after{
-    width: 102%;
+    width: 100%;
 }
 aside .more:hover{
-    color: white;
+    color: black;
 }
 
 article .anhphim{
@@ -1007,12 +1433,14 @@ article .thongtinphim{
     float: left;
     line-height: 35px;
     font-size: 17px;
+    color: black;
 }
 article .thongtinphim span{
-    color: rgba(255,255,255,0.38);
+    color: gray;
 }
 article .thongtinphim .tenphim{
     font-size: 30px;
+    color: black;
 }
 article .danhgiasao{
     color: gray;
@@ -1059,14 +1487,15 @@ article .noidungphim .tieude{
     font-size: 20px;
     width: 20%;
     height: 30px;
-    border-bottom: solid 1.5px #1cadeb;
+    border-bottom: solid 1.5px black;
+    color: black;
 }
 article .noidungphim p{
     line-height: 30px;
     font-size: 20px;
-    color: white;
+    color: #737373;
 }
-article .tieude2{
+article .tieude2{color: black;
     width: 50%;
     height: 50px;
     border-bottom: solid 1px gray;
@@ -1089,7 +1518,7 @@ article .binhluan{
 article .binhluan form{
     width: 100%;
     height: 100px;
-    border-bottom: solid 2px #1cadeb;
+    border-bottom: solid 2px black;
     position: relative;
 }
 article .binhluan form input{
@@ -1104,7 +1533,7 @@ article .binhluan form input:nth-child(2){
     right: 0;
     width: 20%;
     height: 30px;
-    background: #1cadeb;
+    background: black;
     color: white;
     border: none;
 }
@@ -1122,7 +1551,7 @@ article .binhluan .hienbinhluan .tenbinhluan{
     width: 100%;
     height: 30px;
     line-height: 30px;
-    color: #1cadeb;
+    color: black;
 }
 article .binhluan .hienbinhluan .tenbinhluan::after{
     position: absolute;
@@ -1132,7 +1561,7 @@ article .binhluan .hienbinhluan .tenbinhluan::after{
     width: 20%;
     height: 100%;
     background: none;
-    border-bottom: solid 1px #1cadeb;
+    border-bottom: solid 1px black;
 }
 article .binhluan .hienbinhluan p{
     position: absolute;
@@ -1141,7 +1570,7 @@ article .binhluan .hienbinhluan p{
     width: 100%;
     height: 30px;
     line-height: 30px;
-    color: rgb(59, 59, 59);
+    color: black;
 }
 article .datve{
    
@@ -1159,7 +1588,7 @@ article .datve::after{
     height: 50px;
     top: 0;
     left: 0;
-    background: #1cadeb;
+    background: black;
     color: white;
     text-align: center;
     line-height: 50px;
@@ -1176,18 +1605,18 @@ article .datve form select{
     margin-top: 10px;
     width: 100%;
     height: 50px;
-   background: rgba(128, 128, 128, 0.438);
+   background: black;
    border: none;
    margin-top: 30px;
    color: white;
 }
 article .datve form select option:checked{
-    background: #1cadeb;
+    background: black;
     color: white;
 }
 article .datve form select option{
     text-align: center;
-    color: #1cadeb;
+    color: black;
     background: white;
 }
 article .datve form input{
@@ -1197,7 +1626,7 @@ article .datve form input{
     height: 50px;
     bottom: 0;
     right: 0;
-    background: #1cadeb;
+    background: black;
     color: white;
     text-align: center;
     line-height: 50px;
@@ -1207,55 +1636,57 @@ article .datve form input{
 
 
 /*datve*/
+.thongtinphongchieu{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-top: 70px;
+    background: #2B2D3D;
+}
+.thongtinphongchieu .thongtin{
+    position: absolute;
+    left: 30%;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    color: gray;
+}
+.thongtinphongchieu .thongtin p{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.thongtinphongchieu .thongtin p:nth-child(2){
+    font-size: 20px;
+    margin-top: -20px;
+}
+.thongtinphongchieu form{
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    height: 30%;
+    width: 10%;
+    background: #ff4444;
+}
+.thongtinphongchieu form input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #ff4444;
+    color: white;
+    cursor: pointer;
+    transition: all .3s;
+}
+.thongtinphongchieu form input:hover{
+    background: black;
+}
 .phongchieu{
     width: 100%;
     height: 800px;
     margin-top: 100px;
 }
-.phongchieu .chuthich{
-    width: 10%;
-    height: 40%;
-   top: 0;
-   left: 0;
 
-    position: fixed;
-}
-.phongchieu .chuthich form{
-    width: 100%;
-    height: 50px;
-    margin-top: 50px;
-}
-.phongchieu .chuthich form input{
-    width: 100%;
-    height: 100%;
-    background: #1cadeb;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-.phongchieu .chuthich .giaithich{
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-   
-    line-height: 50px;
-}
-.phongchieu .chuthich .box1{
-    width: 50px;height: 50px;
-    background: #1cadeb;
-    float: left;
-    margin-right: 4px;
-}
-.phongchieu .chuthich .box2{
-    width: 50px;height: 50px;
-    background: wheat;
-    float: left;
-    margin-right: 4px;
-}
-.phongchieu form{
-   
-    
-}
+
 .phongchieu .chongoi{
     margin: auto;
     width: 100%;
@@ -1354,11 +1785,12 @@ article .datve form input{
 
 
 .ghengoi .vitri .hang .box:hover{
-    background: #1cadeb;
-    color: white;
+    background: white;
+    color: black;
 }
 #hetcho{
-    background: #1cadeb;
+    background: orangered;
+    border: solid 1px orangered;
     color: white;
 }
 #hetcho::after{
@@ -1390,8 +1822,9 @@ article .datve form input{
     width: 80%;
     left: 10%;
     height: 50px;
-    border-bottom: solid 1px gray;
+    border-bottom: solid 2px gray;
     line-height: 50px;
+    color: black;
 }
 .danhsachphim .tieude span{
     font-size: 20px;
@@ -1444,8 +1877,8 @@ article .datve form input{
     width: 30%;
     height: 30px;
     line-height: 30px;
-    background: #1cadeb;
-    color: white;
+    background: white;
+    color: black;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     text-align: center;
@@ -1472,7 +1905,7 @@ article .datve form input{
 }
 .danhsachphim .listphim .anhphim .chitiet a{
     padding: 15px 40px;
-    border: solid 1px #1cadeb;
+    border: solid 1px white;
     position: relative;
     color: white;
 }
@@ -1481,7 +1914,7 @@ article .datve form input{
     content: '';
     left: -1%;
     top: 0;
-    background: #1cadeb;
+    background: white;
     width: 5%;
     height: 100%;
     transition: all .3s;
@@ -1489,6 +1922,10 @@ article .datve form input{
 }
 .danhsachphim .listphim .anhphim .chitiet a:hover::before{
     width: 102%;
+    color: black;
+}
+.danhsachphim .listphim .anhphim .chitiet a:hover{
+    color: black;
 }
 .danhsachphim .listphim .noidungphim{
     position: absolute;
@@ -1555,12 +1992,12 @@ article .datve form input{
 .trangtimkiem .khungketqua .ketqua .hinhphim .chitiet a{
     line-height: 350px;
     padding: 15px 30px;
-    border: solid 1px #1cadeb;
+    border: solid 1px black;
     margin-left: 30%;
     transition: all .3s;
 }
 .trangtimkiem .khungketqua .ketqua .hinhphim .chitiet a:hover{
-    background: #1cadeb;
+    background: black;
 }
 .trangtimkiem .khungketqua .ketqua .hinhphim:hover .chitiet{
     transform: scaley(1);
@@ -1608,7 +2045,7 @@ article .datve form input{
     border: none;
     font-size: 13px;
     text-align: center;
-    color: rgba(255,255,255,0.38);
+    color: black;
     background: none;
 }
 .form_thanhtoan form .submit{
@@ -1616,15 +2053,15 @@ article .datve form input{
     margin-left: 35%;
     margin-top: 25px;
     height: 40px;
-    background: #1cadeb;
-    border: solid 1px #1cadeb;
+    background: black;
+    border: solid 1px black;
     color: white;
 }
 .chuckhach{
     width: 100%;
     height: 500px;
     position: relative;
-    margin-top: 150px;
+    margin-top: 170px;
    
     z-index: 999;
     text-align: center;
@@ -1639,18 +2076,173 @@ article .datve form input{
 .chuckhach .box p{
     font-size: 35px;
     text-align: center;
+    color: black;
 }
 .chuckhach .box i{
     font-size: 100px;
     text-align: center;
-    color: #1cadeb;
+    color: black;
     
 }
 .chuckhach .box a{
     padding: 15px 20px;
-    background: #1cadeb;
+    background: black;
     transition: all .3s;
 }
 .chuckhach .box a:hover{
     background: orangered;
+}
+
+
+
+
+/*user*/
+.box_user{
+    width: 80%;
+    margin-left: 10%;
+    height: 700px;
+    box-shadow: 0 0 5px black;
+    margin-top: 100px;
+    position: relative;
+    background: white;
+    color: black;
+}
+.box_user .left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    background: black;
+    color: white;
+}
+.box_user h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 40px;
+    border-bottom: solid 2px black;
+}
+.box_user .left p{
+    width: 100%;
+    height: 40px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 40px;
+    transition: all .3s;
+    font-size: 20px;
+}
+.box_user .left p:hover{
+    background: white;
+    color: black;
+}
+.user_mau{
+    background: white;
+    color: black;
+}
+.box_user .right{
+    position: absolute;
+    right: 0%;
+    top: 0;
+    width: 80%;
+    height: 100%;
+}
+.box_user .right .box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.box_user .right .box .content{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 600px;
+}
+.box_user .right .box .content form{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+}
+.box_user .right .box .content form .thongtin{
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    bottom: 0;
+    line-height: 0;
+}
+.box_user .right .box .content form .thongtin label{
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    text-align: left;
+    top: 20px;
+    left: 0;
+    line-height: 30px;
+    color: gray;
+}
+.box_user .right .box .content form .thongtin input{
+    position: absolute;
+    height: 30px;
+    width: 80%;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    background: none;
+    border: none;
+    border-bottom: solid 1px black;
+    color: black;
+    transition: all .3s;
+}
+.box_user .right .box .content form .thongtin input:focus{
+    width: 100%;
+    border-bottom: solid 1px orangered;
+}
+.box_user .right .box .content form .btn{
+    height: 30px;
+    width: 20%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 40%;
+    background: black;
+    color: white;
+    border: none;
+    transition: all .3s;
+}
+.box_user .right .box .content form .btn:hover{
+    background: orangered;
+}
+#lsdv{
+    display: none;
+}
+.box_user .right .box .content table{
+    width: 100%;
+}
+.box_user .right .box .content table tr{
+    height: 50px;
+    text-align: center;
+    transition: all .3s;
+    border-bottom: solid 1px black;
+}
+.box_user .right .box .content table tr:nth-child(1){
+    background: black;
+    color: white;
+}
+.box_user .right .box .content table tr td{
+    height: 50px;
+    border: solid 1px black;
+}
+.box_user .right .box .content table tr:hover{
+    background: black;
+    color: white;
+}
+.box_user .right .box .content table tr td a{
+    color: red;
 }

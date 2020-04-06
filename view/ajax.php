@@ -1,4 +1,4 @@
-<option value="">chon rap</option>
+<option value="">chọn rạp</option>
 <?php
     include "../model/connect.php";
     function loadrap($idphim){
@@ -12,7 +12,12 @@
     }
     $idphim=$_POST['idphim'];
     $loadrap=loadrap($idphim);
+    $i=0;
     foreach ($loadrap as $rap){
+        $i++;
         echo '<option value="'.$rap['id_lienket'].'">'.$rap['tenrap'].'</option>';
+    }
+    if($i==0){
+        echo '<option value="">không còn rạp chiếu phim này</option>';
     }
 ?>

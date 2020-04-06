@@ -18,6 +18,15 @@ function loadthanhtoan($iduser){
     $resul = $stmt->fetch();
     return $resul;    
 }
+function loadtenrap($id){
+    global $conn;
+    $sql="select tenrap from rap where id = ".$id."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $resul = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $resul = $stmt->fetch();
+    return $resul;    
+}
 function loadidphongchieu($idsuatchieu){
     global $conn;
     $sql="select idphongchieu from suatchieu where id = ".$idsuatchieu."";

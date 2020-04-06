@@ -38,3 +38,9 @@
                 <input class="submit" name="thanhtoan" type="submit" value="dat ve">
             </form>
         </div>
+        <style>
+
+            footer{
+                margin-top:100px;
+            }
+        </style>

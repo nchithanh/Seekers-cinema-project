@@ -84,12 +84,8 @@
             <div class="datve" id="datve">
             <form action="index.php?contro=datve" method="post">
                     <select required name="phim" id="phim">
-                    <option value="">chon phim</option>
-                        <?php
-                            foreach ($loadphimall as $phim){
-                                echo '<option value="'.$phim['id'].'">'.$phim['tenphim'].'</option>';
-                            }
-                        ?>
+                    <option value="">chọn phim</option>  
+                    <option value="<?php echo $loadphim['id']; ?>"><?php echo $loadphim['tenphim']; ?></option>
                     </select>
                     <select required id="rap">
                         <option value="">chọn rạp</option>  
@@ -132,3 +128,8 @@
                 <div class="more">XEM THÊM</div>
             </a>
         </aside>
+        <style>
+    footer{
+        display:none;
+    }
+</style>

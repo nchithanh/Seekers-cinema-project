@@ -9,7 +9,11 @@
                 <div class="phimsapchieu" style="display:none;">
                 <?php
 						foreach ($loadphimsc as $phim){
-                            
+                            if(isset($_SESSION['user'])){
+                                $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VE</a>';
+                            }else{
+                                $link='<a href="index.php?contro=login">MUA VE</a>';
+                            }
                             $name=$phim['tenphim'];
 							$img="view/img/".$phim['anhphim'];
 						
@@ -17,12 +21,12 @@
                             <div class="anhphim">
                             <img src="'.$img.'" alt="">
                             <div class="chitiet">
-                            <a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VE</a>
+                            '.$link.'
                             </div>  
                             <div class="noidungphim">
                             <p>'.$name.'</p>
-                            <p>'.$phim['daodien'].'</p>
-                            <p>'.$phim['dienvien'].'</p>
+                            <p>Đạo diễn :'.$phim['daodien'].'</p>
+                            <p>Diễn viên :'.$phim['dienvien'].'</p>
                             </div> 
                             <div class="ngaychieu">
                                 '.$phim['ngaychieu'].'
@@ -35,7 +39,12 @@
             <?//day la phan dang chieu//?>
                 <div class="phimdangchieu">
                 <?php
-						foreach ($loadphimdc as $phim){          
+						foreach ($loadphimdc as $phim){       
+                            if(isset($_SESSION['user'])){
+                                $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VE</a>';
+                            }else{
+                                $link='<a href="index.php?contro=login">MUA VE</a>';
+                            }   
                             $name=$phim['tenphim'];
 							$img="view/img/".$phim['anhphim'];
 						
@@ -43,12 +52,12 @@
                             <div class="anhphim">
                             <img src="'.$img.'" alt="">
                             <div class="chitiet">
-                            <a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VE</a>
+                            '.$link.'
                             </div>  
                             <div class="noidungphim">
                             <p>'.$name.'</p>
-                            <p>'.$phim['daodien'].'</p>
-                            <p>'.$phim['dienvien'].'</p>
+                            <p>Đạo diễn :'.$phim['daodien'].'</p>
+                            <p>Diễn viên :'.$phim['dienvien'].'</p>
                             </div> 
                             <div class="ngaychieu">
                                 '.$phim['ngaychieu'].'
@@ -60,3 +69,8 @@
                 </div>
             </div>
         </div>
+<style>
+    footer{
+        display:none;
+    }
+</style>
