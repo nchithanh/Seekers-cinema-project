@@ -73,6 +73,7 @@ ob_start();
             include "view/thanhtoan.php";
             break;
         case 'user':
+            include "controller/user/user.php";
             include "view/user.php";
             break;
             
