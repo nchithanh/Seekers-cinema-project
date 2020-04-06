@@ -3,47 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="view/css/admin.css">
+    <script src="https://kit.fontawesome.com/792cf9d6f3.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-
-            $("#rap").change(function (){
-                var idrap = $("#rap").val();
-                $.post("view/ajax.php", {idrap:idrap}, function(data){
-                    $("#phong").html(data);
-                });
-            });
-
-            $(".option").click(function() {
-                $(".option").removeClass("mau");
-                $(this).addClass("mau");
-            });
-            $("#option_dangchieu").click(function (){
-                $(".phimdangchieu").fadeIn(500);
-                $(".phimsapchieu").fadeOut(500);
-            });
-            $("#option_sapchieu").click(function (){
-                $(".phimsapchieu").fadeIn(500);
-                $(".phimdangchieu").fadeOut(500);
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="view/css/admin.css">
+    <title>ADMIN</title>
 </head>
 <body>
-    <div class="warp">
-        <section>
-            <article>
-                <div class="menu">
-                    <div class="tieude">
-                        welcom admin
-                    </div>
-                    <li><a href="../index.php">Trang chủ</a></li>
-                    <li><a href="admin.php?contro=quanlyphim">quản lý phim</a></li>
-                    <li><a href="admin.php?contro=suatchieu">thêm suất chiếu</a></li>
-                    <li><a href="">quản lý phòng chiếu</a></li>
-                    <li><a href="">quản lý rạp</a></li>
-                    <li><a href="">hủy suất chiếu</a></li>
-                    <li><a href="admin.php?contro=logout&ad=1">Đăng Xuất</a></li>
-                </div>
+    <header class="admin_header col_12">
+        <div class="col_2">
+            <a href="admin.php?contro=home">
+                <img src="view/images/logo.png" alt="">
+                <h4><?php echo $_SESSION['user'] ; ?></h4>
+            </a>
+        </div>
+        <div class="col_10">
+            <div class="avt">
+                <i class="fas fa-user-tie"></i>
+                <?php
+                    echo '<h4 class="username">Username: '.$_SESSION['mail'].'</h4>';
+                ?>
+            </div>
+            <div class="header_menu">
+                <a href="../index.php">Home</a>
+                <a href="admin.php?contro=logout">Logout</a>
+            </div>
+        </div>
+    </header>

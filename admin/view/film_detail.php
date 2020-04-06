@@ -1,14 +1,23 @@
-
-                <aside>
-                    <div class="tieude">
-                        phim aaaaaaaaaaaaa
-                    </div>
-
-                    <div class="chitietphim">
-                        <div class="anhphim">
-                            <img src="../view/img/<?php echo $phim['anhphim']; ?>" alt="">
+<div class="clear"></div>
+<main class="col_12">
+    <aside class="col_2">
+        <div class="menu">
+            <ul>
+                <li><a href="admin.php?contro=film" class="this_page">Film Manager</a></li>
+                <li><a href="index.php?act=catalog_management">Catalog Manager</a></li>
+                <li><a href="index.php?act=admin_account_management" >Admin Account Manager</a></li>
+                <li><a href="index.php?act=order">Order Management</a></li>
+            </ul>
+        </div>
+    </aside>
+    <article class="col_10 ">
+        <div class="admin_acount_manager">
+            <h3> FILM DETAIL </h3>
+            <div class="chitietphim">
+                        <div class="anhphim" style="background-image: url('../view/img/<?php echo $phim['anhphim']; ?>');">
                         </div>
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="admin.php?contro=film_dt&updated=1" method="post" enctype="multipart/form-data">
+                            <input style="display: none;" type="text" name="id" value="<?php echo $phim['id']; ?>">
                             <div class="thongtin">
                                 <label>Tên Phim</label>
                                 <input type="text" name="tenphim" value="<?php echo $phim['tenphim']; ?>"> 
@@ -47,30 +56,30 @@
                             </div>
                             <div class="thongtin">
                                 <label>Trang Thái</label>
-                                <select name="trangthai">
-                                    <?php if($phim['trangthai']>0)
+                                <select class="select_loai_phim" name="trangthai">
+                                    <?php if($phim['trangthai']==1)
                                     {
-                                        echo '<option value="'.$phim['trangthai'].'">phim sap chieu</option>
-                                            <option value="0">phim dang chieu</option>';
-                                    } else{ echo '<option value="'.$phim['trangthai'].'">phim dang chieu</option>
-                                        <option value="1">phim sap chieu</option>';
-                                    } ?>
+                                        echo '<option value="'.$phim['trangthai'].'">Phim sắp chiếu</option>
+                                            <option value="0">Phim đang chiếu</option>';
+                                    } else{ echo '<option value="'.$phim['trangthai'].'">Phim đang chiếu</option>
+                                        <option value="1">Phim sắp chiếu</option>';
+                                    } 
+                                    ?>
                                 </select>
                             </div>
                             <div style="height: 100px;" class="thongtin">
                                 <label>Nội Dung</label>
                                 <input type="text" name="noidung" value="<?php echo $phim['noidung']; ?>">
                             </div>
-                            <div style="top: 10px;" class="thongtin">
+                            <div style="top: 10px;" class="thongtin submit_but">
                                 <input type="submit" name="updatephim" value="update">
                             </div>
                         </form>
                     </div>
                   
-                </aside>
+        </div>
+    </article>
+</main>
 
 
-
-
-
-            
+    
