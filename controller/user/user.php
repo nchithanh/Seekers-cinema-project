@@ -8,7 +8,7 @@ if(isset($_POST['update']) && $_POST['update']) {
     $pass=$_POST['pass'];
     $email=$_POST['email'];
     $sdt=$_POST['sdt'];
-    update_user($_SESSION['id'],$user,$pass,$email);
+    update_user($_SESSION['id'],$user,$pass,$email,$sdt);
 } 
 $loadusertheoid=loadusertheoid($_SESSION['id']);
 $dsve = loadveall();

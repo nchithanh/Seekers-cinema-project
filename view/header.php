@@ -213,7 +213,7 @@
             </div>
             <div class="row">
             <i class="fa fa-phone"></i><input type="number" required placeholder="tel">
-            <input name="role" value="1" type="number" placeholder="tel">
+            <input name="role" value="1" type="number" placeholder="tel" style="display:none;">
             </div>
             <div class="row1">
                 <input class="btn" type="button" value="Đăng nhập" onclick="dangnhap()">

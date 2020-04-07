@@ -17,7 +17,6 @@ function loadusertheoid($id){
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $result = $stmt->fetch();
     return $result;
-
 }
 function add_user($user,$pass,$email,$role){
     global $conn;
@@ -38,10 +37,10 @@ function getinformation($id){
     $result = $stmt->fetch();
     return $result;
 }
-function update_user($id,$user,$pass,$email){
+function update_user($id,$user,$pass,$email,$sdt){
     global $conn;
 
-    $sql = "UPDATE user SET user='$user',pass='$pass',email='$email' WHERE id=".$id;
+    $sql = "UPDATE user SET user='$user',pass='$pass',email='$email',sdt='$sdt' WHERE id=".$id;
      // Prepare statement
      $stmt = $conn->prepare($sql);
      // execute the query

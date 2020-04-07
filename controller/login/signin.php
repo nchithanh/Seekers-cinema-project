@@ -10,6 +10,16 @@ if(isset($_POST['adduser'])&&$_POST['adduser']){
     if($trung == 0) {
         unset($_SESSION['trung']);
         add_user($user,$pass,$email,$role); 
+        // dang ky xong tu dong dang nhap lun
+        $loaduser=checkuser($user,$pass);
+        $_SESSION['id']=$loaduser['id'];
+        $_SESSION['user']=$loaduser['user'];
+        $_SESSION['pass']=$loaduser['pass'];
+        $_SESSION['role']=$loaduser['role'];
+        $_SESSION['sdt']=$loaduser['sdt'];
+        $_SESSION['mail']= $loaduser['email'];
+        header('location: index.php');
+        // dang ky xong tu dong dang nhap lun
     } else if($trung == 1) {
         $_SESSION['trung'] = 1;
         header('location: index.php?contro=login');

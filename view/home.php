@@ -53,12 +53,20 @@
 <div class="ten_box"><p>News Movies</p></div>
     <div class="box_phim">
     <?php
+        $link='';
+        if(isset($_SESSION['user'])){
+            $link=' <a href="index.php?contro=detail&idphim='.$phim['id'].'">
+                    <div class="tenphim"><p>'.$phim['tenphim'].'</p></div>
+                    </a>';
+        }else{
+            $link=' <a onclick="dangnhap()">
+                    <div class="tenphim"><p>'.$phim['tenphim'].'</p></div>
+                    </a>';
+            }       
         foreach ($loadphimmoi as $phim){
             echo '<div class="box">
             <img src="view/img/'.$phim['anhphim'].'" alt="">
-            <a href="index.php?contro=detail&idphim='.$phim['id'].'">
-                <div class="tenphim"><p>'.$phim['tenphim'].'</p></div>
-            </a>
+            '.$link.'
         </div>';
         }
     ?>
@@ -68,6 +76,12 @@
 <div class="banner_bottom banner_bottom2" id="banner_bottom2">
 <div class="ten_box"><p>Best IMDB</p></div>
         <?php
+            $link='';
+            if(isset($_SESSION['user'])){
+                $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">view detail</a>';
+            }else{
+                $link='<a onclick="dangnhap()">view detail</a>';
+            }
             foreach ($loadbestphim as $phim){
                 echo '<div class="best_phim">
                 <div class="left">
@@ -78,7 +92,7 @@
                    <p>Đạo diễn :'.$phim['daodien'].'</p>
                    <p>Diễn viên :'.$phim['dienvien'].'</p>
                    <p>'.$phim['noidung'].'</p>
-                   <p><a href="index.php?contro=detail&idphim='.$phim['id'].'">view detail</a></p>
+                   <p>'.$link.'</p>
                 </div>
             </div>';
             }
@@ -104,7 +118,7 @@
                             if(isset($_SESSION["user"])){
                                 $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>';
                             }else{
-                                $link='<a href="index.php?contro=login">MUA VÉ</a>';
+                                $link='<a onclick="dangnhap()">MUA VÉ</a>';
                             }
                             $name=$phim['tenphim'];
 							$img="view/img/".$phim['banner'];
@@ -146,7 +160,7 @@
                             if(isset($_SESSION["user"])){
                                 $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>';
                             }else{
-                                $link='<a href="index.php?contro=login">MUA VÉ</a>';
+                                $link='<a onclick="dangnhap()">MUA VÉ</a>';
                             }
                             $name=$phim['tenphim'];
 							$img="view/img/".$phim['banner'];
