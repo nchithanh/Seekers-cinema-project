@@ -9,6 +9,16 @@ function loaduser(){
     return $result;
 
 }
+function loadusertheoid($id){
+    global $conn;
+    $sql= "select * from user where id = ".$id."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+
+}
 function add_user($user,$pass,$email,$role){
     global $conn;
     $sql= "INSERT INTO user (user,pass,email,role) VALUES ('$user','$pass','$email','$role')";

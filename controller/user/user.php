@@ -4,7 +4,12 @@ include "model/connect.php";
 include_once "model/user.php";
 include_once "model/phim_sql.php";
 if(isset($_POST['update']) && $_POST['update']) {
-    update_user($_SESSION['id'],$_SESSION['user'],$_SESSION['pass'],$_SESSION['mail']);
+    $user=$_POST['user'];
+    $pass=$_POST['pass'];
+    $email=$_POST['email'];
+    $sdt=$_POST['sdt'];
+    update_user($_SESSION['id'],$user,$pass,$email);
 } 
+$loadusertheoid=loadusertheoid($_SESSION['id']);
 $dsve = loadveall();
 ?>

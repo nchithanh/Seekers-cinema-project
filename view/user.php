@@ -12,19 +12,19 @@
                 <form action="index.php?contro=user" method="POST">
                     <div class="thongtin">
                         <label>Username</label>
-                        <input type="text" required value="<?php echo $_SESSION['user'] ?>">
+                        <input type="text" name="user" required value="<?php echo $loadusertheoid['user'] ?>">
                     </div>
                     <div class="thongtin">
                         <label>Userpass</label>
-                        <input type="text" required value="<?php echo $_SESSION['pass'] ?>">
+                        <input type="text" name="pass" required value="<?php echo $loadusertheoid['pass'] ?>">
                     </div>
                     <div class="thongtin">
                         <label>email</label>
-                        <input type="email" required value="<?php echo $_SESSION['mail'] ?>">
+                        <input type="email" name="email" required value="<?php echo $loadusertheoid['email'] ?>">
                     </div>
                     <div class="thongtin">
                         <label>SDT:</label>
-                        <input type="number" required value="<?php echo $_SESSION['sdt'] ?>">
+                        <input type="number" name="sdt" required value="<?php echo $loadusertheoid['sdt'] ?>">
                     </div>
                     <input type="submit" class="btn" value="update" name="update">
                 </form>
