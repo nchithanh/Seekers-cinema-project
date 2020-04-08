@@ -28,6 +28,7 @@ body{
     0%{right: 0%;}
     100%{right: -10%;}
 }
+
 .loading{
     position: fixed;
     top: 0;
@@ -96,7 +97,7 @@ img{
     letter-spacing: .35em;
     width: 30%;
     height: 100px;
-    background: black;
+    background: orangered;
     color: white;
     text-align: center;
     line-height: 100px;
@@ -107,7 +108,7 @@ img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     
-    box-shadow: 0 0 5px black,0 0 15px black,0 0 25px black;
+    
 }
 .form_login form{
     margin-top: 0;
@@ -117,7 +118,6 @@ img{
     position: relative;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    box-shadow: 0 0 5px black,0 0 15px black,0 0 25px black;
 }
 
 .form_login form i{
@@ -257,10 +257,10 @@ header .logo{
     position: absolute;
     left: 0%;
     top: 0;
-    height: 60px;
+    height: 100%;
+    line-height: 20px;
     text-align: center;
-    line-height: 15px;
-    font-size: 20px;
+    font-size: 1.5em;
     color: black;
     z-index: 1;
     letter-spacing: .15em;
@@ -324,12 +324,13 @@ header .timkiem form:hover .text{
     height: 100%;
     width: 15%;
     right: 1%;
-    top: 5%;
+    top: 0%;
     line-height: 60px;
     z-index: 1;
 }
 header a{
     color: gray;
+    font-size: 1em;
 }
 header .tranglogin a:nth-child(1){
     border-right: solid 2px gray;
@@ -337,18 +338,19 @@ header .tranglogin a:nth-child(1){
 }
 header .tranglogin a:hover{
     color: black;
+    cursor: pointer;
 }
 header nav{
     position: absolute;
     width: 100%;
     height: 60px;
     left: 0;
-    top: 25%;
+    top: 0%;
 }
 header nav ul{
     width: 40%;
-    margin: auto;
-    margin-left:700px;
+    margin:20px auto;
+    margin-left:40%;
     line-height: 30px;
     height: 100%;
 }
@@ -383,10 +385,10 @@ header nav ul li .box_phim{
     transform: scaley(0);
     transform-origin: top;
     position: absolute;
-    left: -750px;
+    left: -680px;
     top: -15px;
     width: 1300%;
-    height: 450px;
+    height: 600px;
     background: rgba(255, 255, 255, 0.966);
     z-index: 8811;
     transition: all .3s;
@@ -400,13 +402,18 @@ header nav ul li .box_phim .box{
     color: black;
     position: relative;
 }
+header nav ul li .box_phim .box .muc_logo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 40%;
+}
 header nav ul li .box_phim .box:nth-child(1){
     width: 25%;
 }
 header nav ul li .box_phim .box:nth-child(2){
-    text-align: left;
-}
-header nav ul li .box_phim .box:nth-child(3){
+    width: 65%;
     text-align: left;
 }
 header nav ul li .box_phim .box .box_logo{
@@ -420,9 +427,9 @@ header nav ul li .box_phim .box .box_logo{
 header nav ul li .box_phim .box .location{
     width: 80%;
     position: absolute;
-    bottom: 10px;
+    bottom: 200px;
     left: 14%;
-    font-size: 18px;
+    font-size: .8em;
 }
 header nav ul li .box_phim .box .location p{
     text-align: left;
@@ -430,7 +437,7 @@ header nav ul li .box_phim .box .location p{
 header nav ul li .box_phim .box .fpt{
     margin-top: 50px;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: .8em;
 }
 header nav ul li .box_phim .box .location p:nth-child(2){
     margin-top: -20px;
@@ -443,83 +450,88 @@ header nav ul li .box_phim .box .box_logo h2 span{
 }
 header nav ul li .box_phim .box .box_logo p{
     text-transform: uppercase;
-    font-size: 15px;
     margin-top: -60px;
 }
-header nav ul li .box_phim .box .tieude{
-    width: 100%;
-    height: 50px;
-    margin-top: 30px;
-    border-bottom: solid 1px black;
-    text-align: left;
-    line-height: 50px;
-    font-size: 25px;
-}
-header nav ul li .box_phim .box .phim{
-    font-style: italic;
-    font-size: 20px;
-    line-height: 40px;
-    transition: all .3s;
-    position: relative;
-}
-header nav ul li .box_phim .box a:hover .anhphim{
-    display: block;
-    transition: all .3s;
-}
-header nav ul li .box_phim .box .phim .anhphim{
+header nav ul li .box_phim .box .boxphim{
     position: absolute;
-    width: 300px;
-    height: 200px;
-    right: -80%;
-    top: 0;
-    background: red;
-    z-index: 9999999;
-    display: none;
-}
-header nav ul li .box_phim .box .phim:hover{
-    color: orangered;
-}
-header nav ul li .box_phim .box form{
-    width: 80%;
+    left: 0;
+    width: 100%;
     height: 50%;
-    margin-top: 13%;
-    margin-left: 10%;
 }
-header nav ul li .box_phim .box form .row{
-    clear: both;
+header nav ul li .box_phim .box .boxphim:nth-child(1){
+    top: 1%;
+}
+header nav ul li .box_phim .box .boxphim:nth-child(2){
+    bottom: 1%;
+}
+header nav ul li .box_phim .box .boxphim .tieude{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
     width: 100%;
-    height: 30px;
-    margin-bottom: 10px;
+    line-height: 40px;
+}
+header nav ul li .box_phim .box .boxphim .phim{
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+    height: 83%;
+}
+header nav ul li .box_phim .box .boxphim .phim .muc{
+    position: absolute;
+    right: -30%;
+    bottom: 0;
+    width: 50%;
+    height: 170%;
+    z-index: -1;
+}
+header nav ul li .box_phim .box .boxphim .phim .phim_box{
+    width: 30%;
+    height: 92%;
+    float: left;
+    margin-right: 3%;
+}
+header nav ul li .box_phim .box .boxphim .phim .phim_box .anh{
+    width: 100%;
+    height: 90%;
     position: relative;
-}
-header nav ul li .box_phim .box form input{
-    width: 100%;
-}
-header nav ul li .box_phim .box form .row input{
-    width: 90%;
-    height: 100%;
-    background: none;
-    border: none;
-    border-bottom: solid 1px black;
     transition: all .3s;
 }
-header nav ul li .box_phim .box form .row input:focus{
-    border-bottom: solid 1px orangered;
-    width: 100%;
-}
-header nav ul li .box_phim .box form .btn{
+
+header nav ul li .box_phim .box .boxphim .phim .phim_box .anh a{
+    position: absolute;
+    left: 30%;
+    top: 40%;
     width: 40%;
-    height: 40px;
+    height: 20%;
+    border: solid 2px white;
     background: black;
     color: white;
-    border: none;
-    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: .15em;
     transition: all .3s;
+    transform: scaleX(0);
+    transform-origin: center;
 }
-header nav ul li .box_phim .box form .btn:hover{
-    background: orangered;
-    cursor: pointer;
+header nav ul li .box_phim .box .boxphim .phim .phim_box .anh a:hover{
+    width: 50%;
+    left: 25%;
 }
+header nav ul li .box_phim .box .boxphim .phim .phim_box .anh:hover{
+    filter: grayscale(1);
+}
+header nav ul li .box_phim .box .boxphim .phim .phim_box .anh:hover a{
+    transform: scaleX(1);
+}
+header nav ul li .box_phim .box .boxphim .phim .phim_box .ten{
+    width: 100%;
+    line-height: 30px;
+}
+
+
 
 
 
@@ -600,6 +612,20 @@ header nav ul li a{
     animation-fill-mode: forwards;
     animation-duration: 2s;
 }
+.banner_bottom .muc{
+    width: 20%;
+    height: 50%;
+    position: absolute;
+    right: -0%;
+    top: -5%;
+    transform: scale(0);
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+}
+@keyframes muc{
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+}
 @keyframes banner_bottom{
     0%{margin-top: 500px;}
     100%{margin-top: 100px;}
@@ -647,10 +673,10 @@ header nav ul li a{
     bottom: 0;
 }
 .banner_bottom .box_phim .box{
-    width: 24.2%;
+    width: 24%;
     height: 100%;
     float: left;
-    margin-right: 10px;
+    margin-right: 1%;
     background: black;
     position: relative;
     overflow: hidden;
@@ -759,19 +785,36 @@ section{
 section .tieude{
     position: absolute;
     left: 10%;
-    width: 50%;
+    width: 30%;
     height: 50px;
-    border-bottom: solid 1px rgb(167, 167, 167);
     line-height: 50px;
+    background:black;
+    color: white;
+}
+section .tieude::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background: black;
 }
 section .tieude span{
-    font-size: 20px;
+    font-size: 1em;
     margin-right: 10px;
-    padding: 14px 10px;
+    padding: 8px 10px;
+    letter-spacing: .15em;
+    transition: all .3s;
+}
+section .tieude span:hover{
+    cursor: pointer;
+    background: white;
     color: black;
 }
 .mautieude{
-    border-bottom: solid 3px black;
+    background: white;
+    color: black;
 }
 section .listphim{
     width: 80%;
@@ -781,7 +824,15 @@ section .listphim{
     left: 10%;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    
+}
+section .listphim .muc{
+    position: absolute;
+    right: -10%;
+    top: -30%;
+    width: 60%;
+    height: 100%;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
 }
 
 @keyframes len{
@@ -993,7 +1044,7 @@ section .listphim .phim .muave a:hover::after{
     width: 100%;
     height: 100%;
     color: black;
-    font-size: 290px;
+    font-size: 15em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 900px;
 }
@@ -2020,14 +2071,26 @@ article .datve form input{
     width: 100%;
     height: 550px;
     position: relative;
-    margin-top: 150px;
+    margin-top: 110px;
 }
 .form_thanhtoan form{
     position: absolute;
     width: 30%;
     height: 110%;
     left: 35%;
-    box-shadow:0 0 10px black;
+    background: black;
+    box-shadow: 0px 0px 10px black,0px 0px 20px wheat;
+    z-index: 1;
+}
+.form_thanhtoan::after{
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 150%;
+    top: -26%;
+    left: 25%;
+    background: url(../img/muc.png);
+    background-size: cover;
 }
 .form_thanhtoan form .row{
     width: 90%;
@@ -2043,7 +2106,7 @@ article .datve form input{
     left: 0;
     width: 100%;
     height: 50%;
-    color: gray;
+    color: wheat;
 }
 .form_thanhtoan form .row input{
     position: absolute;
@@ -2054,9 +2117,10 @@ article .datve form input{
     z-index: 9;
     box-shadow: 1px 1px 2px black;
     border: none;
+    border-bottom: solid 1px wheat;
     font-size: 13px;
     text-align: center;
-    color: black;
+    color: wheat;
     background: none;
 }
 .form_thanhtoan form .submit{
@@ -2064,30 +2128,59 @@ article .datve form input{
     margin-left: 35%;
     margin-top: 25px;
     height: 40px;
-    background: black;
+    background: white;
     border: solid 1px black;
-    color: white;
+    color: black;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: all .3s;
+}
+.form_thanhtoan form .submit:hover{
+    transform: scaleX(1.3);
 }
 .chuckhach{
     width: 100%;
-    height: 500px;
+    height: 700px;
     position: relative;
     margin-top: 170px;
-   
     z-index: 999;
     text-align: center;
+    animation-name: chuckhach;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 99;
+    background: white;
+    
+}
+@keyframes chuckhach{
+    0%{margin-top: 170px;}
+    100%{margin-top:-530px;}
 }
 .chuckhach .box{
     width: 50%;
     position: absolute;
     height: 100%;
     left: 25%;
-    
+    box-shadow: 0px 0px 10px black;
+    overflow: hidden;
 }
 .chuckhach .box p{
     font-size: 35px;
     text-align: center;
     color: black;
+    transform: rotatez(145deg);
+    animation-name: chuckhach_p;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes chuckhach_p{
+    0%{transform: rotatez(145deg);}
+    100%{transform: rotatez(0deg);}
+}
+.chuckhach .box p:nth-child(1){
+    margin-top: 150px;
 }
 .chuckhach .box i{
     font-size: 100px;

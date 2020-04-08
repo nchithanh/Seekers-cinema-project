@@ -50,20 +50,22 @@
 
 
 <div class="banner_bottom" id="banner_bottom">
+    <div class="muc" id="muc1">
+        <img src="view/img/muc.png" alt="">
+    </div>
 <div class="ten_box"><p>News Movies</p></div>
     <div class="box_phim">
-    <?php
-        $link='';
-        if(isset($_SESSION['user'])){
-            $link=' <a href="index.php?contro=detail&idphim='.$phim['id'].'">
-                    <div class="tenphim"><p>'.$phim['tenphim'].'</p></div>
-                    </a>';
-        }else{
-            $link=' <a onclick="dangnhap()">
-                    <div class="tenphim"><p>'.$phim['tenphim'].'</p></div>
-                    </a>';
-            }       
+    <?php     
         foreach ($loadphimmoi as $phim){
+            if(isset($_SESSION['user'])){
+                $link=' <a href="index.php?contro=detail&idphim='.$phim['id'].'">
+                        <div class="tenphim"><p>'.$phim['tenphim'].'</p></div>
+                        </a>';
+            }else{
+                $link=' <a onclick="dangnhap()">
+                        <div class="tenphim"><p>'.$phim['tenphim'].'</p></div>
+                        </a>';
+                }  
             echo '<div class="box">
             <img src="view/img/'.$phim['anhphim'].'" alt="">
             '.$link.'
@@ -76,13 +78,12 @@
 <div class="banner_bottom banner_bottom2" id="banner_bottom2">
 <div class="ten_box"><p>Best IMDB</p></div>
         <?php
-            $link='';
-            if(isset($_SESSION['user'])){
-                $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">view detail</a>';
-            }else{
-                $link='<a onclick="dangnhap()">view detail</a>';
-            }
             foreach ($loadbestphim as $phim){
+                if(isset($_SESSION['user'])){
+                    $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">view detail</a>';
+                }else{
+                    $link='<a onclick="dangnhap()">view detail</a>';
+                }
                 echo '<div class="best_phim">
                 <div class="left">
                     <video autoplay muted loop src="view/video/'.$phim['trailer'].'"></video>
@@ -105,6 +106,9 @@
         <span id="phimsapchieu" class="listtieude">PHIM SẮP CHIẾU</span>
     </div>
     <div id="listphim" class="listphim">
+        <div class="muc" id="muc2">
+            <img src="view/img/muc.png" alt="">
+        </div>
         <div id="soc" class="soc"></div>
         <?//cho nay la phim sap chieu//?>
         <div class="phimsapchieu">
@@ -195,7 +199,7 @@
 <section class="tinkhuyenmai">
     <div class="texthide">KHUYẾN MÃI</div>
     <div class="tieude">
-        <span class="mautieude">TIN KHUYẾN MÃI</span>
+        <span>TIN KHUYẾN MÃI</span>
     </div>
     <?//cho nay la khuyen mai//?>
     <div class="boxkhuyenmai" id="boxkhuyenmai">
@@ -226,7 +230,7 @@
 </section>
 <section>
     <div class="tieude">
-        <span class="mautieude">CORONA VIRUS</span>
+        <span>CORONA VIRUS</span>
     </div>
     <div class="thongtin">
         CORONA VIRUS là một trong những công ty tư nhân đầu tiên về điện ảnh được thành lập từ năm 2003, đã
