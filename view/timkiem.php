@@ -24,3 +24,8 @@
                 ?>
             </div>
         </div>
+        <style>
+    footer{
+        display:none;
+    }
+</style>

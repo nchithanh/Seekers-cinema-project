@@ -11,5 +11,5 @@ if(isset($_POST['update']) && $_POST['update']) {
     update_user($_SESSION['id'],$user,$pass,$email,$sdt);
 } 
 $loadusertheoid=loadusertheoid($_SESSION['id']);
-$dsve = loadveall();
+$dsve = loadveall($_SESSION['id']);
 ?>
