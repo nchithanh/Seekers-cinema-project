@@ -5,7 +5,7 @@
             <ul>
                 <li><a href="admin.php?contro=film">Quản lý phim</a></li>
                 <li><a href="admin.php?contro=suatchieu">Quản lý suất chiếu</a></li>
-                <li><a href="index.php?act=admin_account_management">Admin Acount Manager</a></li>
+                <li><a href="admin.php?contro=addphim">Add Phim</a></li>
                 <li><a href="index.php?act=order">Order Management</a></li>
             </ul>
         </div>

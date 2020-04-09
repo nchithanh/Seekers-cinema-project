@@ -27,6 +27,9 @@ if($_SESSION['role']!=2){
         case 'suatchieu':
             include "controller/suatchieu.php";
             break;
+        case 'addphim':
+            include "controller/addphim.php";
+            break;    
         // case 'logout':
     
         //     include "controller/logout.php";
