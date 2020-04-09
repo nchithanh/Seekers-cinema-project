@@ -23,9 +23,9 @@ function loadphimall(){
     return $result;
 }
 
-function loadveall(){
+function loadveall($id){
     global $conn;
-    $sql= "select * from ve where 1 order by id desc";
+    $sql= "select * from ve where iduser =".$id."";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
