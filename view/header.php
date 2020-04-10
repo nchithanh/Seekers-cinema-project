@@ -129,27 +129,25 @@
                                         PHIM ĐANG CHIẾU
                                     </div>
                                     <div class="phim">
-                                        <div class="phim_box">
-                                            <div class="anh">
-                                                <a href="">MUA VÉ</a>
-                                                <img src="view/img/phim1.jpg" alt="">
-                                            </div>
-                                            <div class="ten">cinema project</div>
+                                    <?php
+                                    foreach ($loadphimdc as $phim){
+                                        if(isset($_SESSION["user"])){
+                                            $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>';
+                                        }else{
+                                            $link='<a onclick="dangnhap()">MUA VÉ</a>';
+                                        }
+                                        $name=$phim['tenphim'];
+                                        $img="view/img/".$phim['banner']; 
+                                        echo ' <div class="phim_box">
+                                        <div class="anh">
+                                            <a href="">'.$link.'</a>
+                                            <img src="'.$img.'" alt="">
                                         </div>
-                                        <div class="phim_box">
-                                            <div class="anh">
-                                                <a href="">MUA VÉ</a>
-                                                <img src="view/img/phim1.jpg" alt="">
-                                            </div>
-                                            <div class="ten">cinema project</div>
-                                        </div>
-                                        <div class="phim_box">
-                                            <div class="anh">
-                                                <a href="">MUA VÉ</a>
-                                                <img src="view/img/phim1.jpg" alt="">
-                                            </div>
-                                            <div class="ten">cinema project</div>
-                                        </div>
+                                        <div class="ten">'.$name.'</div>
+                                    </div>';
+                                    }
+				
+                               ?>
                                     </div>
                                 </div>
                                 <div class="boxphim">
@@ -157,28 +155,25 @@
                                     PHIM SẮP CHIẾU
                                     </div>
                                     <div class="phim">
-                                     
-                                        <div class="phim_box">
-                                            <div class="anh">
-                                                <a href="">MUA VÉ</a>
-                                                <img src="view/img/phim1.jpg" alt="">
-                                            </div>
-                                            <div class="ten">cinema project</div>
+                                    <?php
+                                    foreach ($loadphimsc as $phim){
+                                        if(isset($_SESSION["user"])){
+                                            $link='<a href="index.php?contro=detail&idphim='.$phim['id'].'">MUA VÉ</a>';
+                                        }else{
+                                            $link='<a onclick="dangnhap()">MUA VÉ</a>';
+                                        }
+                                        $name=$phim['tenphim'];
+                                        $img="view/img/".$phim['banner']; 
+                                        echo ' <div class="phim_box">
+                                        <div class="anh">
+                                            <a href="">'.$link.'</a>
+                                            <img src="'.$img.'" alt="">
                                         </div>
-                                        <div class="phim_box">
-                                            <div class="anh">
-                                                <a href="">MUA VÉ</a>
-                                                <img src="view/img/phim1.jpg" alt="">
-                                            </div>
-                                            <div class="ten">cinema project</div>
-                                        </div>
-                                        <div class="phim_box">
-                                            <div class="anh">
-                                                <a href="">MUA VÉ</a>
-                                                <img src="view/img/phim1.jpg" alt="">
-                                            </div>
-                                            <div class="ten">cinema project</div>
-                                        </div>
+                                        <div class="ten">'.$name.'</div>
+                                    </div>';
+                                    }
+				
+                               ?>
                                     </div>
                                 </div>
                             </div>
