@@ -1,10 +1,37 @@
 
-<div class="thanhdatve">
-<form action="index.php?contro=datve" method="post">
+<div class="box_hien">
+    <?php 
+        if(isset($_SESSION['user'])){
+            echo ' <p onclick="datve()">BOOKING TICKET</p>
+            <p onclick="datve()"><i class="fa fa-sort-up"></i></p>
+            <p onclick="datve()"><i class="fa fa-spinner fa-spin"></i></p>';
+        }else{
+            echo ' <p onclick="dangnhap()">BOOKING TICKET</p>
+            <p onclick="dangnhap()"><i class="fa fa-sort-up"></i></p>
+            <p onclick="datve()"><i class="fa fa-spinner fa-spin"></i></p>';
+        }
+    ?>
+</div>
+<div class="thanhdatve" id="thanhdatve">
+    <div class="box_datve">
+        <div class="head_box">
+            <div class="box">
+                <span onclick="datve_ve()">CLOSE</span>
+                <i onclick="datve_ve()" class="fa fa-sort-down"></i>
+            </div>
+        </div>
+        <div class="head_box">
+            <div class="box">
+                <p id="box_form">BOOKING TICKET</p>
+            </div>
+        </div>
+        <div class="head_box">
+            <div class="box">
+            <form action="index.php?contro=datve" method="post">
             <select name="phim" id="phim">
                 <option value="">chọn phim</option>
                 <?php
-                            foreach ($loadphimall as $phim){
+                            foreach ($loadphim_datve as $phim){
                                 echo '<option value="'.$phim['id'].'">'.$phim['tenphim'].'</option>';
                             }
                         ?>
@@ -17,16 +44,19 @@
             <select name="suatchieu" required id="suatchieu">
                 <option value="">chọn suất chiếu</option>
             </select>
-
+            <input style="display:none;" type="number" id="iduser" value="<?php echo $_SESSION['id']; ?>">
             <?php
                         if(isset($_SESSION['user'])){
-                            echo '<input name="muave" type="submit" value="MUA VÉ">';
+                            echo '<input id="btn_muave" name="muave" type="button" value="MUA VÉ">';
                         }else{
                             echo ' <a onclick="dangnhap()"><input type="submit" value="MUA VÉ"></a>';
                         }
                     ?>
 
         </form>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="banner_top">
     <?php
@@ -50,9 +80,7 @@
 
 
 <div class="banner_bottom" id="banner_bottom">
-    <div class="muc" id="muc1">
-        <img src="view/img/muc.png" alt="">
-    </div>
+
 <div class="ten_box"><p>News Movies</p></div>
     <div class="box_phim">
     <?php     
@@ -106,9 +134,7 @@
         <span id="phimsapchieu" class="listtieude">PHIM SẮP CHIẾU</span>
     </div>
     <div id="listphim" class="listphim">
-        <div class="muc" id="muc2">
-            <img src="view/img/muc.png" alt="">
-        </div>
+
         <div id="soc" class="soc"></div>
         <?//cho nay la phim sap chieu//?>
         <div class="phimsapchieu">
@@ -259,3 +285,7 @@
         của thế giới và Việt Nam nhanh chóng và sớm nhất.
     </div>
 </section>
+
+<div class="box_ajax" id="ajax">
+   
+</div>

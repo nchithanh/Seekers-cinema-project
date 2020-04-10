@@ -1,14 +1,25 @@
 function dangnhap(){
     document.getElementById('login').style.display='block'
     document.getElementById('sign').style.display='none'
+    document.getElementById('fullmanhinh').style.display='block'
 };
 function dangky(){
     document.getElementById('login').style.display='none'
     document.getElementById('sign').style.display='block'
+    document.getElementById('fullmanhinh').style.display='block'
 };
 function huydangnhap(){
     document.getElementById('login').style.display='none'
     document.getElementById('sign').style.display='none'
+    document.getElementById('fullmanhinh').style.display='none'
+};
+function datve(){
+    document.getElementById('thanhdatve').style.animationName='thanhdatve'
+    document.getElementById('box_form').style.animationName='box_form'
+    document.getElementById('fullmanhinh').style.display='block'
+}function datve_ve(){
+    document.getElementById('thanhdatve').style.animationName='thanhdatve_ve'
+    document.getElementById('fullmanhinh').style.display='none'
 };
 
 
@@ -23,7 +34,6 @@ function scrollFunction() {
     }
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         document.getElementById("banner_bottom").style.animationName = "banner_bottom";
-        document.getElementById("muc1").style.animationName = "muc";
     }
     else {
         document.getElementById("boxlen").style.animationName = "boxlen_ra";
@@ -37,7 +47,6 @@ function scrollFunction() {
     if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
         document.getElementById("listphim").style.animationName = "len";
         document.getElementById("soc").style.animationName = "soc";
-        document.getElementById("muc2").style.animationName = "muc";
     }
     else {
         document.getElementById("soc").style.animationName = "soc1";
@@ -70,6 +79,21 @@ $(document).ready(function () {
         var idrap = $("#rap").val();
         $.post("controller/ajax/ajax1.php", { idrap: idrap }, function (data) {
             $("#suatchieu").html(data);
+        });
+    });
+    $("#btn_muave").click(function () {
+        var idrap = $("#rap_giatri").val();
+        var idphim = $("#phim").val();
+        var idsuatchieu = $("#suatchieu").val();
+        var iduser = $("#iduser").val();
+        $.post("controller/ajax/ajax4.php", { idrap: idrap,idphim: idphim,idsuatchieu: idsuatchieu,iduser: iduser }, function (data) {
+            $("#ajax").html(data);
+        });
+    });
+    $("#caighe").click(function(){
+        var idghe = $(this).attr("maghe");
+        $.get("controller/ajax/ajax5.php", {idghe:idghe}, function(data){
+           $("#ajax").html(data);
         });
     });
     $("#textthanhtoan").click(function () {

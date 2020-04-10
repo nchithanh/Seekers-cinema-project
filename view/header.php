@@ -64,6 +64,7 @@
             </div>
         </form>
     </div>
+    <div class="alert_login"></div>
     <div class="warp" id="warp">
         <!-- <a href="#">
             <div class="boxlen" id="boxlen">
@@ -120,9 +121,7 @@
                                         Chí Minh</p>
                                     <p>Điện thoại: 113 114 115 116 911</p>
                                 </div>
-                                <div class="muc_logo">
-                                    <img src="view/img/muclogo.png" alt="">
-                                </div>
+                                
                             </div>
                             <div class="box">
                                 <div class="boxphim">
@@ -158,9 +157,7 @@
                                     PHIM SẮP CHIẾU
                                     </div>
                                     <div class="phim">
-                                        <div class="muc">
-                                            <img src="view/img/muc.png" alt="">
-                                        </div>
+                                     
                                         <div class="phim_box">
                                             <div class="anh">
                                                 <a href="">MUA VÉ</a>
@@ -200,3 +197,6 @@
                 </ul>
             </nav>
         </header>
+        <div class="fullmanhinh" id="fullmanhinh">
+
+</div>

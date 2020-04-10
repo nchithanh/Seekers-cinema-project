@@ -34,18 +34,7 @@
                             echo'';
                     }
                 ?>
-                <div class="danhgiasao">
-                 <i class="fa fa-star b10"></i>
-                  <i class="fa fa-star b9"></i>
-                  <i class="fa fa-star b8"></i>
-                  <i class="fa fa-star b7"></i>
-                   <i class="fa fa-star b6"></i>
-                  <i class="fa fa-star b5"></i>
-                   <i class="fa fa-star b4"></i>
-                   <i class="fa fa-star b3"></i>
-                   <i class="fa fa-star b2"></i>
-                   <i class="fa fa-star b1"></i>
-                </div>
+
             </div>
             <div class="noidungphim">
                 <div class="tieude">Nội dung phim</div>
