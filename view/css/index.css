@@ -7,7 +7,17 @@ body{
     position: relative;
     background: white;
 }
-
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bk5.png);
+    background-size: cover;
+    filter: grayscale(1);
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
 .boxlen{
     position: fixed;
     bottom: 0;
@@ -207,10 +217,10 @@ img{
     bottom: 0%;
     width: 60%;
     left: 20%;
-    background: #3498db;
+    background: white;
     z-index: 9999;
     height: 70px;
-    color: white;
+    color: black;
 }
 .box_hien p:hover{
     color: black;
@@ -590,14 +600,6 @@ header nav ul li .box_phim .box .boxphim .phim{
     width: 100%;
     height: 83%;
 }
-header nav ul li .box_phim .box .boxphim .phim .muc{
-    position: absolute;
-    right: -30%;
-    bottom: 0;
-    width: 50%;
-    height: 170%;
-    z-index: -1;
-}
 header nav ul li .box_phim .box .boxphim .phim .phim_box{
     width: 30%;
     height: 92%;
@@ -632,7 +634,7 @@ header nav ul li .box_phim .box .boxphim .phim .phim_box .anh a:hover{
     left: 25%;
 }
 header nav ul li .box_phim .box .boxphim .phim .phim_box .anh:hover{
-    filter: grayscale(1);
+    filter: grayscale(.5);
 }
 header nav ul li .box_phim .box .boxphim .phim .phim_box .anh:hover a{
     transform: scaleX(1);
@@ -658,8 +660,9 @@ header nav ul li a{
 
 
 .warp{
-   background: white;
+   background: none;
    color: whitesmoke;
+   z-index: 2;
 }
 .banner_top{
     position: relative;
@@ -681,7 +684,7 @@ header nav ul li a{
     margin-right: 2%;
     background-color: none;
     border-radius: 50%;
-    border: solid 2px black;
+    border: solid 2px white;
     transition: all .3s;
 }
 .banner_top .listbanner span:hover{
@@ -710,7 +713,7 @@ header nav ul li a{
     100%{transform: scale(1.5);}
 }
 .maubanner{
-    background: black;
+    background: white;
 }
 
 
@@ -723,20 +726,6 @@ header nav ul li a{
     margin-bottom: 100px;
     animation-fill-mode: forwards;
     animation-duration: 2s;
-}
-.banner_bottom .muc{
-    width: 20%;
-    height: 50%;
-    position: absolute;
-    right: -0%;
-    top: -5%;
-    transform: scale(0);
-    animation-fill-mode: forwards;
-    animation-duration: 5s;
-}
-@keyframes muc{
-    0%{transform: scale(0);}
-    100%{transform: scale(1);}
 }
 @keyframes banner_bottom{
     0%{margin-top: 500px;}
@@ -755,19 +744,19 @@ header nav ul li a{
     position: absolute;
     content: '';
     width: 40%;
-    bottom: 5px;
+    bottom: 10px;
     left: 0;
     height: 50%;
-    border-top: solid 2px black;
+    border-top: solid 2px white;
 }
 .banner_bottom .ten_box::before{
     position: absolute;
     content: '';
     width: 40%;
-    bottom: 5px;
+    bottom: 10px;
     right: 0;
     height: 50%;
-    border-top: solid 2px black;
+    border-top: solid 2px white;
 }
 .banner_bottom .ten_box p{
     background: #eaeaea;
@@ -775,7 +764,8 @@ header nav ul li a{
     height: 30px;
     line-height: 30px;
     margin: auto;
-    color: #666666;
+    color: black;
+    letter-spacing: .15em;
 }
 .banner_bottom .box_phim{
     position: absolute;
@@ -829,7 +819,8 @@ header nav ul li a{
     height: 80%;
     bottom: 0;
     left: 0%;
-    background: black;
+    background: white;
+    color: black;
 }
 .banner_bottom .best_phim .left{
     position: absolute;
@@ -837,7 +828,7 @@ header nav ul li a{
     left: 0;
     height: 100%;
     top: 0;
-    background: black;
+    background: white;
 }
 .banner_bottom .best_phim .left video{
     width: 100%;
@@ -850,15 +841,15 @@ header nav ul li a{
     height: 80%;
     top: 10%;
     text-align: left;
-
 }
 .banner_bottom .best_phim .right p{
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 30px;
 }
 .banner_bottom .best_phim .right a{
     padding: 15px 40px;
-    border: solid 2px white;
-    color: white;
+    border: solid 2px black;
+    color: black;
     position: relative;
     letter-spacing: .35em;
 }
@@ -867,8 +858,8 @@ header nav ul li a{
     content: '';
     width: 0;
     height: 10%;
-    background: white;
-    left: -1%;
+    background: black;
+    left: 0%;
     bottom: 0;
     transition: all .3s;
 }
@@ -900,8 +891,8 @@ section .tieude{
     width: 30%;
     height: 50px;
     line-height: 50px;
-    background:black;
-    color: white;
+    background:white;
+    color: black;
 }
 section .tieude::after{
     position: absolute;
@@ -910,7 +901,7 @@ section .tieude::after{
     height: 100%;
     left: -100%;
     top: 0;
-    background: black;
+    background: white;
 }
 section .tieude span{
     font-size: 1em;
@@ -921,12 +912,12 @@ section .tieude span{
 }
 section .tieude span:hover{
     cursor: pointer;
-    background: white;
-    color: black;
+    background: black;
+    color: white;
 }
 .mautieude{
-    background: white;
-    color: black;
+    background: black;
+    color: white;
 }
 section .listphim{
     width: 80%;
@@ -937,15 +928,6 @@ section .listphim{
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
-section .listphim .muc{
-    position: absolute;
-    right: -10%;
-    top: -30%;
-    width: 60%;
-    height: 100%;
-    animation-fill-mode: forwards;
-    animation-duration: 5s;
-}
 
 @keyframes len{
     0%{bottom: -100%;}
@@ -955,7 +937,7 @@ section .listphim .muc{
     position: absolute;
     width: .5%;
     height: 100%;
-    background: black;
+    background: white;
     right: 0;
     top: 0;
     transform: scaleY(0);
@@ -991,9 +973,9 @@ section .listphim .more{
     right: 2%;
     width: 15%;
     height: 50px;
-    border: solid 2px black;
+    border: solid 2px white;
     text-align: center;
-    color: black;
+    color: white;
     line-height: 50px;
     transition: all .3s;
     z-index: 99;
@@ -1004,9 +986,9 @@ section .listphim .more::before{
     content: '';
     width: 101%;
     height: 10%;
-    left: -1%;
+    left: 0%;
     top: 0;
-    background: black;
+    background: white;
     transition: all .3s;
     z-index: -1;
 }
@@ -1017,12 +999,12 @@ section .listphim .more::after{
     height: 10%;
     left: -1%;
     bottom: 0;
-    background: black;
+    background: white;
     transition: all .3s;
     z-index: -1;
 }
 section .listphim .more:hover{
-    color: black;
+    color: white;
     line-height: 45px;
 }
 section .listphim .more:hover::after{
@@ -1149,17 +1131,6 @@ section .listphim .phim .muave a:hover::after{
     height: 800px;
     margin-bottom: 200px;
 }
-.tinkhuyenmai .texthide{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    color: black;
-    font-size: 15em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 900px;
-}
 .tinkhuyenmai .boxkhuyenmai{
     width: 80%;
     height: 850px;
@@ -1221,7 +1192,7 @@ section .listphim .phim .muave a:hover::after{
     left: 10%;
     font-size: 20px;
     line-height: 35px;
-    color: black;
+    color: white;
 }
 
 footer{
@@ -1516,10 +1487,10 @@ aside .tieude{
     text-align: left;
     line-height: 50px;
     margin-bottom: 10px;
-    color: black;
+    color: white;
 }
 aside .tieude span{
-    border-bottom: solid 1.5px black;
+    border-bottom: solid 1.5px white;
     padding-bottom: 10px ;
     font-size: 20px;
 }
@@ -1570,11 +1541,11 @@ aside .more{
     text-align: center;
     padding: 15px 20px;
     margin-left: 220px;
-    border: solid 1px black;
+    border: solid 1px white;
     margin-bottom: 10px;
     transition: all .3s;
     position: relative;
-    color: black;
+    color: white;
     letter-spacing: .15em;
 }
 aside .more::after{
@@ -1582,7 +1553,7 @@ aside .more::after{
     content: '';
     width: 0%;
     height: 10%;
-    background: black;
+    background: white;
     left: 0%;
     bottom:  0;
     transition: all .3s;
@@ -1592,7 +1563,7 @@ aside .more:hover::after{
     width: 100%;
 }
 aside .more:hover{
-    color: black;
+    color: white;
 }
 
 article .anhphim{
@@ -1607,14 +1578,14 @@ article .thongtinphim{
     float: left;
     line-height: 35px;
     font-size: 17px;
-    color: black;
+    color: white;
 }
 article .thongtinphim span{
-    color: gray;
+    color: wheat;
 }
 article .thongtinphim .tenphim{
     font-size: 30px;
-    color: black;
+    color: white;
 }
 
 article .noidungphim{
@@ -1628,15 +1599,15 @@ article .noidungphim .tieude{
     font-size: 20px;
     width: 20%;
     height: 30px;
-    border-bottom: solid 1.5px black;
-    color: black;
+    border-bottom: solid 1.5px white;
+    color: white;
 }
 article .noidungphim p{
     line-height: 30px;
     font-size: 20px;
-    color: #737373;
+    color: white;
 }
-article .tieude2{color: black;
+article .tieude2{
     width: 50%;
     height: 50px;
     border-bottom: solid 1px gray;
@@ -1651,7 +1622,6 @@ article .tieude2 span{
 }
 article .binhluan{
     width: 90%;
-    
     float: left;
     position: relative;
     display: none;
@@ -1659,7 +1629,7 @@ article .binhluan{
 article .binhluan form{
     width: 100%;
     height: 100px;
-    border-bottom: solid 2px black;
+    border-bottom: solid 2px white;
     position: relative;
 }
 article .binhluan form input{
@@ -1674,8 +1644,8 @@ article .binhluan form input:nth-child(2){
     right: 0;
     width: 20%;
     height: 30px;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     border: none;
 }
 article .binhluan .hienbinhluan{
@@ -1692,7 +1662,7 @@ article .binhluan .hienbinhluan .tenbinhluan{
     width: 100%;
     height: 30px;
     line-height: 30px;
-    color: black;
+    color: wheat;
 }
 article .binhluan .hienbinhluan .tenbinhluan::after{
     position: absolute;
@@ -1702,7 +1672,7 @@ article .binhluan .hienbinhluan .tenbinhluan::after{
     width: 20%;
     height: 100%;
     background: none;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px white;
 }
 article .binhluan .hienbinhluan p{
     position: absolute;
@@ -1711,7 +1681,7 @@ article .binhluan .hienbinhluan p{
     width: 100%;
     height: 30px;
     line-height: 30px;
-    color: black;
+    color: white;
 }
 article .datve{
    
@@ -1729,8 +1699,8 @@ article .datve::after{
     height: 50px;
     top: 0;
     left: 0;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     text-align: center;
     line-height: 50px;
     font-size: 17px;
@@ -1746,10 +1716,10 @@ article .datve form select{
     margin-top: 10px;
     width: 100%;
     height: 50px;
-   background: black;
+   background: white;
+   color: black;
    border: none;
    margin-top: 30px;
-   color: white;
 }
 article .datve form select option:checked{
     background: black;
@@ -1767,8 +1737,8 @@ article .datve form input{
     height: 50px;
     bottom: 0;
     right: 0;
-    background: black;
-    color: white;
+    background: white;
+   color: black;
     text-align: center;
     line-height: 50px;
     font-size: 17px;

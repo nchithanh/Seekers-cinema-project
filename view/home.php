@@ -223,7 +223,6 @@
 
 
 <section class="tinkhuyenmai">
-    <div class="texthide">KHUYẾN MÃI</div>
     <div class="tieude">
         <span>TIN KHUYẾN MÃI</span>
     </div>

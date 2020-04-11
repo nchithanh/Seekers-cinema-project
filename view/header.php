@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <div class="background"></div>
     <div class="loading"><img src="view/img/loading2.gif" alt=""></div>
     <div class="form_login ani" id="login" style="display:none;">
         <p>YOUR ACCOUNT</p>

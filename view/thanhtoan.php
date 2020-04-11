@@ -39,4 +39,7 @@
             footer{
                 display:none;
             }
+            .background{
+                display:none;
+            }
         </style>
