@@ -5,11 +5,12 @@ if(isset($_POST['adduser'])&&$_POST['adduser']){
     $user=htmlspecialchars($_POST['user'],ENT_QUOTES);
     $pass=htmlspecialchars($_POST['pass'],ENT_QUOTES);
     $email=htmlspecialchars($_POST['email'],ENT_QUOTES);
+    $sdt=htmlspecialchars($_POST['sdt'],ENT_QUOTES);
     $role=$_POST['role'];
     $trung = (checkUserTrung($user) == $user) ? 1 : 0;  
     if($trung == 0) {
         unset($_SESSION['trung']);
-        add_user($user,$pass,$email,$role); 
+        add_user($user,$pass,$email,$sdt,$role); 
         // dang ky xong tu dong dang nhap lun
         $loaduser=checkuser($user,$pass);
         $_SESSION['id']=$loaduser['id'];

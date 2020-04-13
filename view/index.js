@@ -17,9 +17,11 @@ function datve(){
     document.getElementById('thanhdatve').style.animationName='thanhdatve'
     document.getElementById('box_form').style.animationName='box_form'
     document.getElementById('fullmanhinh').style.display='block'
+    document.getElementById('header').style.display='none'
 }function datve_ve(){
     document.getElementById('thanhdatve').style.animationName='thanhdatve_ve'
     document.getElementById('fullmanhinh').style.display='none'
+    document.getElementById('header').style.display='block'
 };
 
 

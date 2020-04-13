@@ -11,7 +11,7 @@ body{
     position: fixed;
     width: 100%;
     height: 100%;
-    background: url(../img/bk5.png);
+    background: url(../img/bk6.gif);
     background-size: cover;
     filter: grayscale(1);
     z-index: 1;
@@ -668,7 +668,7 @@ header nav ul li a{
     position: relative;
     margin-top: 100px;
     width: 100%;
-    height: 550px;
+    height: 500px;
 }
 .banner_top .listbanner{
     position: absolute;
@@ -720,7 +720,7 @@ header nav ul li a{
 
 .banner_bottom{
     width: 100%;
-    height: 550px;
+    height: 500px;
     position: relative;
     margin-top: 500px;
     margin-bottom: 100px;
@@ -808,7 +808,7 @@ header nav ul li a{
 }
 /*banner_bottom 2*/
 .banner_bottom2{
-    height: 700px;
+    height: 600px;
 }
 .banner_bottom2 .ten_box{
     top: 10%;
@@ -844,7 +844,7 @@ header nav ul li a{
 }
 .banner_bottom .best_phim .right p{
     font-size: 18px;
-    line-height: 30px;
+    line-height: 25px;
 }
 .banner_bottom .best_phim .right a{
     padding: 15px 40px;
@@ -1488,6 +1488,7 @@ aside .tieude{
     line-height: 50px;
     margin-bottom: 10px;
     color: white;
+    letter-spacing: .15em;
 }
 aside .tieude span{
     border-bottom: solid 1.5px white;
@@ -1610,15 +1611,33 @@ article .noidungphim p{
 article .tieude2{
     width: 50%;
     height: 50px;
-    border-bottom: solid 1px gray;
     float: left;
     margin-bottom: 50px;
     line-height: 50px;
+    background: white;
+    color: black;
+    position: relative;
+}
+article .tieude2::after{
+    position: absolute;
+    content: '';
+    left: -100%;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    background: white;
 }
 article .tieude2 span{
     margin-right: 50px;
     font-size: 20px;
-    padding-bottom: 14px;
+    padding: 10px 20px;
+    letter-spacing: .15em;
+    transition: all .3s;
+}
+article .tieude2 span:hover{
+    background: black;
+    color: white;
+    cursor: pointer;
 }
 article .binhluan{
     width: 90%;
@@ -1647,6 +1666,12 @@ article .binhluan form input:nth-child(2){
     background: white;
     color: black;
     border: none;
+    letter-spacing: .15em;
+}
+article .binhluan form input:nth-child(2):hover{
+    background: black;
+    color: white;
+    cursor: pointer;
 }
 article .binhluan .hienbinhluan{
     position: relative;
@@ -1933,14 +1958,30 @@ article .datve form input{
     width: 80%;
     left: 10%;
     height: 50px;
-    border-bottom: solid 2px gray;
     line-height: 50px;
     color: black;
 }
+.danhsachphim .tieude::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background: white;
+    z-index: -1;
+}
 .danhsachphim .tieude span{
     font-size: 20px;
-    padding-bottom: 15px;
+    padding: 10px 20px;
     margin-right: 30px;
+    letter-spacing: .15em;
+    transition: all .3s;
+}
+.danhsachphim .tieude span:hover{
+    cursor: pointer;
+    background: black;
+    color: white;
 }
 .danhsachphim .listphim{
     width: 80%;
@@ -2445,6 +2486,7 @@ article .datve form input{
     left: 25%;
     height: 100%;
     text-align: center;
+    color: black;
 }
 .ajax .ajax_datve .ajax_thongtin .thongtin p:nth-child(1){
     font-size: 25px;

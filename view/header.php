@@ -27,11 +27,11 @@
         <p>YOUR ACCOUNT</p>
         <form action="index.php?contro=home" method="post">
 
-            <div class="row">
-            <i class="fa fa-user-secret"></i><input id="user" name="user" type="text" required placeholder="Username">
+        <div class="row">
+            <i class="fa fa-user-secret"></i><input name="user" type="text" pattern="[a-z,0-9]{6,30}" title="6-30 ký tự,không viết hoa,không ký tự đặt biệt" required placeholder="Username">
             </div>
             <div class="row">
-            <i class="fa fa-unlock-alt"></i></i><input id="pass" name="pass" type="password" required placeholder="Userpassword">
+            <i class="fa fa-unlock-alt"></i><input name="pass" type="password" pattern="[a-z,0-9]{6,30}" title="6-30 ký tự,không viết hoa,không ký tự đặt biệt" required placeholder="Userpassword">
             </div>
             <p>Forgot your password?</p>
             <div class="row1">
@@ -46,17 +46,17 @@
         <p>CREATE ACCOUNT</p>
         <form action="index.php?contro=home" method="post">
             <div class="row">
-            <i class="fa fa-user-secret"></i><input name="user" type="text" required placeholder="Username">
+            <i class="fa fa-user-secret"></i><input name="user" type="text" pattern="[a-z,0-9]{6,30}" title="6-30 ký tự,không viết hoa,không ký tự đặt biệt" required placeholder="Username">
             </div>
             <div class="row">
-            <i class="fa fa-unlock-alt"></i><input name="pass" type="password" required placeholder="Userpassword">
+            <i class="fa fa-unlock-alt"></i><input name="pass" type="password" pattern="[a-z,0-9]{6,30}" title="6-30 ký tự,không viết hoa,không ký tự đặt biệt" required placeholder="Userpassword">
             </div>
             <div class="row">
-            <i class="fa fa-envelope"></i><input name="email" type="mail" required placeholder="email">
+            <i class="fa fa-envelope"></i><input name="email"  type="mail" required placeholder="email">
             </div>
             <div class="row">
-            <i class="fa fa-phone"></i><input type="number" required placeholder="tel">
-            <input name="role" value="1" type="number" placeholder="tel" style="display:none;">
+            <i class="fa fa-phone"></i><input name="sdt" type="tel" pattern="[0]{1}[0-9]{9}" title="số điện thoại không hợp lệ" required placeholder="tel">
+            <input name="role" value="1" type="number" style="display:none;">
             </div>
             <div class="row1">
                 <input class="btn" type="button" value="Đăng nhập" onclick="dangnhap()">
@@ -81,7 +81,7 @@
             <div class="timkiem">
                 <form action="index.php?contro=timkiem" method="post" enctype="multipart/form-data">
                     <input class="tim" type="submit" value="search" name="tim">
-                    <input class="text" type="text" placeholder="Tên phim" name="noidung">
+                    <input class="text" type="search" placeholder="Tên phim" name="noidung">
                 </form>
             </div>
             <div class="tranglogin">

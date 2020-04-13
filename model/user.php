@@ -18,9 +18,9 @@ function loadusertheoid($id){
     $result = $stmt->fetch();
     return $result;
 }
-function add_user($user,$pass,$email,$role){
+function add_user($user,$pass,$email,$sdt,$role){
     global $conn;
-    $sql= "INSERT INTO user (user,pass,email,role) VALUES ('$user','$pass','$email','$role')";
+    $sql= "INSERT INTO user (user,pass,email,sdt,role) VALUES ('$user','$pass','$email','$sdt','$role')";
     $conn->exec($sql);
 }
 function del_user($id){
