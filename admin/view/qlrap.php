@@ -73,7 +73,7 @@
                         <td>'.$rap['diachi'].'</td>
                         <td>'.$rap['tentinhthanh'].'</td>
                         <td>
-                            <a href="admin.php?contro=qlrap&xoarap='.$rap['id'].'">Xóa phòng chiếu</a>
+                            <a href="admin.php?contro=qlrap&xoarap='.$rap['id'].'">Xóa rạp</a>
                         </td>
                     </tr>';
                     }
