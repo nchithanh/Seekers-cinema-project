@@ -723,3 +723,83 @@ td a:hover{
     color: whitesmoke;
     border: none;
 } */
+
+
+* {
+    box-sizing: border-box;
+    
+  }
+  
+  .container {
+    font-family: sans-serif;
+    border: 1px dashed #ccc;
+    padding: 30px;
+    font-size: 14px;
+    margin: 30px;
+  }
+  .container div {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .container div:last-child {
+    margin: 0;
+  }
+  .container label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  .container button {
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 16px;
+    padding: 12px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .container button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .container input {
+    font-size: inherit;
+    font-family: inherit;
+    border: 2px solid #999;
+    display: block;
+    width: 350px;
+    padding: 10px;
+    margin-left: 100px;
+  }
+  .chon {
+    font-size: inherit;
+    font-family: inherit;
+    border: 2px solid #999;
+    display: block;
+    width: 350px;
+    padding: 10px;
+    margin-left: 100px;
+  }
+  
+  .container input:read-only {
+    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.07);
+    cursor: not-allowed;
+  }
+  .container input:required:valid + .validate-icon {
+    opacity: 1;
+  }
+  
+  .container.form-focussed input:invalid {
+    border: 2px solid red;
+  }
+  
+  .validate-icon {
+    position: absolute;
+    right: 10px;
+    opacity: 0;
+  }
+  h1 {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }

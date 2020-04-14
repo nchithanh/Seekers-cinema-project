@@ -54,4 +54,33 @@ function LoadIdConnectFilmRap($idphim,$idrap){
     $result = $stmt->fetch();
     return $result;
 }
+//load phòng chiếu
+function loadphongchieu(){
+    global $conn;
+    $sql="SELECT phongchieu.id, phongchieu.tenphong, rap.tenrap FROM phongchieu INNER JOIN rap ON phongchieu.idrap = rap.id";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $resul = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $resul = $stmt->fetchAll();
+    return $resul;    
+}
+function raptheotinh(){
+	global $conn;
+    $sql= "select * from tinhthanh";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+}
+// load rạp theo tỉnh thành
+function loadprap(){
+    global $conn;
+    $sql="SELECT rap.id, rap.tenrap, rap.diachi, tinhthanh.tentinhthanh FROM rap INNER JOIN tinhthanh ON rap.idtinhthanh = tinhthanh.id";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $resul = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $resul = $stmt->fetchAll();
+    return $resul;    
+}
 ?>

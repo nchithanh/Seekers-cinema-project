@@ -6,7 +6,8 @@
                 <li><a href="admin.php?contro=film">Quản lý phim</a></li>
                 <li><a href="admin.php?contro=suatchieu">Quản lý suất chiếu</a></li>
                 <li><a href="admin.php?contro=addphim">Add Phim</a></li>
-                <li><a href="index.php?act=order">Order Management</a></li>
+                <li><a href="admin.php?contro=phongchieu">Quản Lí Phòng</a></li>
+                <li><a href="admin.php?contro=qlrap">Quản Lí Rạp</a></li>
             </ul>
         </div>
     </aside>

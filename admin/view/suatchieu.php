@@ -1,11 +1,12 @@
 <main>
     <aside class="col_2">
         <div class="menu">
-            <ul>
+        <ul>
                 <li><a href="admin.php?contro=film">Quản lý phim</a></li>
-                <li><a href="admin.php?contro=suatchieu" class="this_page">Quản lý suất chiếu</a></li>
-                <li><a href="index.php?act=admin_account_management" >Admin Account Manager</a></li>
-                <li><a href="index.php?act=order">Order Management</a></li>
+                <li><a href="admin.php?contro=suatchieu">Quản lý suất chiếu</a></li>
+                <li><a href="admin.php?contro=addphim">Add Phim</a></li>
+                <li><a href="admin.php?contro=phongchieu">Quản Lí Phòng</a></li>
+                <li><a href="admin.php?contro=qlrap">Quản Lí rạp</a></li>
             </ul>
         </div>
     </aside>
