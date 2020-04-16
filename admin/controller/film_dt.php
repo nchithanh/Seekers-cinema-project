@@ -31,4 +31,5 @@
     UpdateFilmInformation($idphim,$tenphim,$tuoi,$theloai,$quocgia,$dienvien,$daodien,$thoiluong,$ngaychieu,$noidung,$anhphim,$trangthai);
     header('location: admin.php?contro=film') ;
   }
+
 ?>

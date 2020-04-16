@@ -44,7 +44,7 @@ function LoadAllRap(){
     return $result;
 }
 
-    // Get ID data
+    // Get ID Connect PHIMRAP
 function LoadIdConnectFilmRap($idphim,$idrap){
     global $conn;
     $sql= "select * from phim_rap where idphim = ".$idphim." and idrap =".$idrap." ";
@@ -73,8 +73,8 @@ function raptheotinh(){
     $result = $stmt->fetchALL();
     return $result;
 }
-// load rạp theo tỉnh thành
-function loadprap(){
+// load rạp và tên tỉnh thành đi kèm
+function LoadRapWithTenTinhThanh(){
     global $conn;
     $sql="SELECT rap.id, rap.tenrap, rap.diachi, tinhthanh.tentinhthanh FROM rap INNER JOIN tinhthanh ON rap.idtinhthanh = tinhthanh.id";
     $stmt = $conn->prepare($sql);
@@ -82,5 +82,34 @@ function loadprap(){
     $resul = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $resul = $stmt->fetchAll();
     return $resul;    
+}
+
+// Load tên tỉnh thành bởi id rạp
+function LoadTenTinhByIdRap($id){
+    global $conn;
+    $sql= "select tinhthanh.tentinhthanh,rap.idtinhthanh from rap,tinhthanh where rap.idtinhthanh = tinhthanh.id and rap.id =".$id."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+function LoadAllTinh(){
+    global $conn;
+    $sql= "select * from tinhthanh";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+}
+function LoadRapById($id){
+    global $conn;
+    $sql= "select * from rap where id =".$id." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
 }
 ?>

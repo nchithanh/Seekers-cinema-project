@@ -1,234 +1,509 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css?family=Nunito|Comfortaa|Roboto+Slab&display=swap');
+* {
     font-weight: normal;
     margin: 0px;
     box-sizing: border-box;
-    font-family: 'Comfortaa',serif;
+    font-family: 'Comfortaa', serif;
     font-size: 13.5px;
 }
+
 html {
     scroll-behavior: smooth;
 }
-.col_12{
+
+.foot_font {
+    font-family: 'Roboto Slab', serif;
+}
+
+.col_12 {
     min-height: 1px;
     width: 100%;
-    float:left;
-}
-.col_10{
-    min-height: 1px;
-    width: 83.33333333%;
-    float:left;
-}
-.col_9{
-    min-height: 1px;
-    width: 75%;
-    float:left;
-}
-.col_8{
-    min-height: 1px;
-    width:66.666666%;
     float: left;
 }
-.col_7{
-    float:left;
+
+.col_11 {
+    min-height: 1px;
+    width: 91.6666666666666%;
+    float: left;
+}
+
+.col_10 {
+    min-height: 1px;
+    width: 83.33333333%;
+    float: left;
+}
+
+.col_9 {
+    min-height: 1px;
+    width: 75%;
+    float: left;
+}
+
+.col_8 {
+    min-height: 1px;
+    width: 66.666666%;
+    float: left;
+}
+
+.col_7 {
+    float: left;
     min-height: 1px;
     width: 58.33333333%;
 }
-.col_6{
-    float:left;
+
+.col_6 {
+    float: left;
     min-height: 1px;
     width: 50%;
 }
-.col_5{
-    float:left;
+
+.col_5 {
+    float: left;
     min-height: 1px;
     width: 41.66666666%;
 }
-.col_4{
-    float:left;
+
+.col_4 {
+    float: left;
     min-height: 1px;
     width: 33.33333333%;
 }
-.col_3{
-    float:left;
+
+.col_3 {
+    float: left;
     min-height: 1px;
     width: 25%;
 }
-.col_2{
-    float:left;
+
+.col_2 {
+    float: left;
     min-height: 1px;
-    width:16.6666666666%;
+    width: 16.6666666666%;
 }
-.col_1{
-    float:left;
+
+.col_1 {
+    float: left;
     min-height: 1px;
-    width:8.33333333333333%;
+    width: 8.33333333333333%;
 }
-div, header, main, footer{
+
+div,
+header,
+main,
+footer {
     box-sizing: border-box;
     position: relative;
 }
-h1, h2, h3, h4, h5, h6{
-    margin:0px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
     padding: 0px;
 }
-.under_line
-{
+
+li {
+    height: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.under_line {
     border-bottom: 1px solid black;
     width: 100%;
     margin: 0px auto;
-    padding: 10px 0 0 0 ;
+    padding: 0px;
     clear: both;
 }
-.clear
-{
-    clear: both;
-}
-/*-------------------------------------------------------------------------*/
 
-.center_box
-{
-    display: block;
-    width: 1080px;
-    margin: 0px auto;
+.vl {
+    width: 0px;
+    border-left: 1px solid #000;
+    height: 1000px;
 }
-.admin_header {
-    top: 0;
+
+.clear {
+    clear: both;
+    height: 0px;
+}
+
+
+/******** Sroll ********/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+}
+
+
+/************ HEADER ***************/
+
+header {
+    background-color: #fff;
+    height: 64px;
+}
+
+.avt_admin {
+    float: right !important;
+}
+
+.avt_admin h3 {
+    width: 40%;
+    text-align: center;
+    padding: 0px 20px 0px 5px;
+    float: right;
+    line-height: 64px;
+    font-size: 17px;
+    height: 64px;
+}
+
+.avt_img {
+    border: 1px #233242 solid;
+    background-size: cover;
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    margin: 7px;
+    float: right;
+}
+
+.avt_admin .vl {
+    padding-right: 22px;
+    float: right;
+    border-color: #d8d6d6;
+    height: 64px;
+}
+
+.logout {
+    width: 50px;
+    height: 64px;
+    float: right;
+}
+
+.logout i {
+    text-align: center;
+    color: #858e96;
+    line-height: 64px;
+    font-size: 19px;
+    width: 100%;
+}
+
+.logout i:hover {
+    color: #000;
+}
+
+.back_index {
+    float: right;
+    height: 64px;
+    width: 50px;
+}
+
+.back_index i {
+    color: #636363;
+    line-height: 64px;
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+}
+
+.back_index i:hover {
+    color: #000;
+}
+
+.form_search_all {
+    width: 62%;
+    float: right;
+}
+
+.form_search_all i {
+    background-color: #dbf7f4;
+    float: left;
+    font-size: 15px;
+    line-height: 64px;
+    color: #7f7c7c;
+    text-align: center;
+    width: 77px;
+}
+
+#search_all {
+    background-color: #dbf7f4;
+    padding-left: 30px;
+    outline: none;
+    height: 64px;
+    width: 52%;
+    float: left;
+    border: none;
+}
+
+.form_search_all button {
+    border: none;
+    padding: 0px;
+    outline: none;
+}
+
+
+/************ MAIN ***************/
+
+
+/************ ASIDE **************/
+
+aside {
+    width: 5% !important;
+}
+
+
+/****** Menu *****/
+
+.menu_aside {
+    width: 100%;
+    position: fixed;
     z-index: 1;
-    position: sticky;
-    min-height: 30px;
-    background-color: #000000;
+    height: 100vh;
+    background-color: #233242;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 5%;
+    max-height: 100vh;
+    transition: width 0.4s, max-width 0.4s;
 }
-.admin_header img
-{
+
+
+/******** Sroll ********/
+
+.menu_aside::-webkit-scrollbar {
+    width: 10px;
+}
+
+.menu_aside::-webkit-scrollbar-track {
+    background-color: #233242;
+}
+
+.menu_aside::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.menu_aside::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+
+.menu_aside:hover {
+    width: 273px !important;
+    max-width: 274px!important;
+    overflow-x: hidden;
+}
+
+.menu_aside:hover .display_menu_aside {
+    opacity: 1 !important;
+}
+
+.menu_aside:hover .li_aside>a>span {
     float: left;
-    padding-left: 7px;
-    width: 16%;
-    margin-left: 20px;
 }
-.admin_header h4 
-{
-    text-align: center;
+
+.menu_aside:hover .logo_admin img {
+    margin-left: 0px;
+    width: 30px;
+    float: left;
+    margin-top: 0px;
+}
+
+.menu_aside .under_line {
+    display: none;
+}
+
+.menu_aside ul {
+    padding-left: 0px;
+}
+
+
+/*******logo*******/
+
+.logo_admin {
+    overflow: hidden;
+    width: 300px;
+    height: 64px;
+    padding: 17px 50px;
+}
+
+.logo_admin img {
+    margin-left: -32px;
     display: block;
-    line-height: 30px;
-    color: #b1d7f9;
-    margin-left: 79px;
+    float: left;
+    width: 34px;
+    margin-top: -10px;
+    transition: width 0.5s;
 }
-.admin_header  a
-{
+
+.logo_admin h5 {
+    float: left;
+    line-height: 31px;
     color: #fff;
-    text-decoration: none;
-    float: left;
-    line-height: 30px;
-    padding-right: 24px;
-}
-.avt i 
-{
-    margin-left: 50%;
-    float: left;
-    color: #88bddd;
-    font-size: 20px;
-    text-align: center;
-    line-height: 30px;
-}
-.avt h4
-{
-    float: left;
-    line-height: 30px;
     margin-left: 10px;
 }
-.header_menu
-{
-    margin-left: 10%;
-    color: #fff;
-    text-decoration: none;
-    float: left;
-    line-height: 30px;
-    padding-right: 24px;
+
+
+/**** Menu ***/
+
+.li_aside {
+    width: 300px;
+    overflow: hidden;
+    height: 40px;
+    list-style: none;
+    padding-left: 2px;
+    transition: color 0.3s linear;
 }
 
-/*------------------------------*/
-aside {
-    position: sticky;
-    min-height: 96vh !important;
-    background: #dde9f1;
-    top: 30px;
-    z-index: 1;
-}
-.menu {
-    z-index: 1;
-    position: sticky;
-    top: 30px;
-}
-.menu ul
-{
-        padding: 0;
-        background: none;
-}
-.menu li 
-{
-    list-style: none;
-}
-.menu li> a {
-    margin-left: 5px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    font-weight: 700;
-    color: #000;
-    text-align: center;
+.li_aside a {
+    padding: 12px 15px;
     text-decoration: none;
-    min-height: 1px;
+    color: #858e96;
     display: block;
-    padding: 10px 0px;
-    background: #b1abab;
-    margin-right: 5px;
-    transition: all 0.35s ease;
 }
-.menu li>a:hover
-{   
-    background: #898df7;
+
+.li_aside>a>i {
+    padding: 0px 10px;
+    float: left;
 }
-/*------------------------------*/
-.home_page{
-    background: #dde9f1;
-    height: 800px;
+
+.li_aside>span {
+    padding: 0px 10px;
 }
-.this_page {
-    background: #92c7ea !important;
-    border-left: 3px solid #000000;
-    color: #000000 !important;
+
+.li_aside:hover {
+    border-left: 2px solid #0065df;
+    padding-left: 0px;
 }
-/**************************/
-.home_page img {
-    display: block;
-    margin: 0 auto;
-    margin-top: 100px;
+
+.li_aside:hover>a {
+    color: #fff;
 }
-article h3 
-{
-    border-radius: 5px;
-    margin: 0 auto;
-    line-height: 32px;
+
+.display_menu_aside {
+    transition: opacity 0.4s ease-out;
+    opacity: 0;
+}
+
+
+/********* ARTICLE ********/
+
+article {
+    margin-left: 5%;
+    width: 95% !important;
+    background: #f2f4f5;
+    min-height: 100vh;
+    float: right !important;
+}
+
+.head {
+    height: 160px;
+}
+
+.name_action {
+    height: 60px;
+}
+
+.name_action h1 {
+    line-height: 60px;
+    padding: 0px 20px;
+    font-size: 21px;
+}
+
+.map_action {
+    height: 60px;
+}
+
+.map_action a {
+    line-height: 60px;
+    float: left;
+    height: 60px;
+    text-decoration: none;
+}
+
+.map_action h1 {
+    font-size: 12px;
+    color: #2962ff;
+}
+
+.map_action i {
+    float: left;
+    line-height: 60px;
+    padding: 0px 5px;
     color: #000000;
-    text-align: center;
-    width: 47%;
-    background: #fff;
-    margin-top: 30px;
-    margin-bottom: 10px;
 }
-/**************************/
-.luachon{
+
+.map_action h3 {
+    font-size: 12px;
+    color: #4e4b4b;
+}
+
+
+/***** SEARCH FOR TABLE *****/
+
+.search_table {
+    height: 80px;
+    width: 97%;
+    margin: 0px auto;
+    background: #fff;
+}
+
+.add_data a {
+    margin-top: 20px;
+    border-radius: 4px;
+    background: #137eff;
+    padding: 0px 50px;
+    float: right;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    line-height: 40px;
+}
+
+#search_table {
+    outline: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    line-height: 30px;
+    padding-left: 11px;
+}
+
+
+/******* TABLE *********/
+
+.content {
+    margin-top: 20px;
+    min-height: 800px;
+    width: 97%;
+    margin: 0px auto;
+    background: #fff;
+}
+
+
+/*************** FILM ***************************************/
+
+.luachon {
     width: 100%;
     height: 48px;
     color: black;
     text-align: center;
     line-height: 50px;
     font-size: 20px;
-    border-bottom: solid 2px #654949;
+    border-bottom: solid 1px #654949;
     padding-left: 5%;
     padding-bottom: 50px;
-    margin-top: 41px;
 }
+
 .luachon p {
     height: 50px;
     padding: 0px 16px;
@@ -237,22 +512,273 @@ article h3
     margin-right: 20px;
     font-size: 15px;
 }
+
 .mau {
-    background-color: #b0e6ff;
-    border-top: solid 2px #1cadeb;
+    color: #fff;
+    background-color: #137eff;
 }
-.phimdangchieu{
+
+.phimdangchieu {
     position: relative;
     width: 100%;
     height: 520px;
 }
-.phimsapchieu{
+
+.phimsapchieu {
     position: relative;
     width: 100%;
     height: 520px;
     display: none;
 }
-.phimdangchieu table{
+
+
+/*****table****/
+
+.data_table table {
+    border-collapse: collapse;
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.data_table tr:nth-child(odd) {
+    background: #bdc7ca55;
+}
+
+.data_table thead tr {
+    height: 60px;
+    background: #fff !important;
+}
+
+.data_table thead tr th {
+    font-family: Nunito, serif;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.data_table tr td {
+    padding: 6px 0px;
+    border-bottom: 1px dashed #bdacac;
+    text-align: center;
+}
+
+.data_table td {
+    text-align: center;
+    overflow: hidden;
+}
+
+.del_all_but {
+    color: #fa5838;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.del_all_but span {
+    font-size: 16px;
+    font-family: Nunito, serif;
+    font-weight: bold;
+}
+
+.checkbox_table {
+    width: 20px;
+    height: 20px;
+}
+
+.data_table .detail_but {
+    line-height: 60px;
+    float: left;
+}
+
+.tools_data_table {
+    width: 105px;
+    height: 60px;
+    margin: 0px auto;
+}
+
+.tools_data_table p {
+    padding: 0px 8px;
+    float: left;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.tools_data_table .del_but {
+    line-height: 60px;
+    float: left;
+}
+
+.tools_data_table .del_but i {
+    color: #f00;
+}
+
+.tools_data_table .detail_but span {
+    color: #137eff;
+    font-weight: bold;
+}
+
+.tools_data_table button {
+    padding: 0px;
+    float: left;
+    margin: 0;
+    background: no-repeat;
+    outline: none;
+    border: none;
+}
+
+
+/******************** RAP **********************/
+
+
+/********* ADD RAP *********/
+
+.add_data button {
+    background: #137eff;
+    padding: 0px 50px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    height: 40px;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+}
+
+.rap_data .data_table tr:nth-child(even) {
+    background: #bdc7ca55;
+}
+
+.rap_data .data_table tr:nth-child(odd) {
+    background: #fff;
+}
+
+.rap_data th .del_all_but {
+    outline: none;
+    background: no-repeat;
+    color: #fa5838;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+}
+
+.edit_but i {
+    float: left;
+    color: #2853a2;
+    line-height: 60px;
+}
+
+.form_add_rap {
+    display: none;
+    background-color: #00000073;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
+}
+
+.form_add_rap form {
+    margin-top: 11px;
+    width: 480px;
+    margin: 0 auto;
+    background: #fff;
+    height: 270px;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.head_add_form {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #54a1ff;
+    height: 45px;
+}
+
+.form_add_rap table {
+    padding-top: 15px;
+    width: 96%;
+    margin: 0px auto;
+}
+
+.form_add_rap table tr {
+    height: 30px;
+}
+
+.form_add_rap tr td {
+    padding: 5px 5px;
+}
+
+.form_add_rap input {
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+.form_add_rap select {
+    width: 100%;
+    height: 30px;
+    padding: 0px 15px;
+}
+
+.form_add_rap .title_add {
+    text-transform: uppercase;
+    color: #fff;
+    float: left;
+    width: 80%;
+    line-height: 40px;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.form_add_rap .exit_add_rap_but {
+    background: none;
+    outline: none;
+    border: none;
+    height: 45px;
+    float: right;
+    padding-right: 15px;
+}
+
+.exit_add_rap_but i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.form_add_rap .submit_add_rap {
+    color: #fff;
+    background: #2cb31c;
+    float: right;
+    margin-top: 70px;
+    margin-right: 20px;
+    border: 1px solid #000000;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.form_add_rap .discard_add_rap {
+    border-radius: 5px;
+    border: 1px solid #6b4444;
+    color: #fff;
+    padding: 10px 20px;
+    background: #f95050;
+    float: right;
+    margin-top: 70px;
+    margin-right: 20px;
+}
+
+
+/********* EDIT RAP ***********/
+
+.old_option {
+    color: #ff5656;
+}
+
+
+/******** Film *******/
+
+
+/* .phimdangchieu table{
     position: absolute;
     left: 0;
     top: 0;
@@ -266,12 +792,10 @@ article h3
     width: 100%;
     height: 100%;
 }
-table td{
-    text-align: center;
-    overflow: hidden;
-}
+
 td a{
-    background: #5e74a5;
+    border-radius: 5px;
+    background: #137eff;
     color: #ffffff;
     padding: 15px 20px;
     text-decoration: none;
@@ -287,45 +811,29 @@ td a:hover{
     background: #1cadeb;
     color: white;
     padding: 15px 20px;
-}
+} */
 
 
 /**************************/
-table 
-{
-    width: 95%;
-    margin: 0 auto;
-    padding-top: 15px;
-    padding-bottom: 30px;
-}
-thead tr td {
-    border-bottom: 1px solid #8a8080;
-    font-family: monospace;
-    font-size: 20px;
-}
-thead tr td a{
-    text-decoration: none;
-}
-tr td {
-    padding: 6px 0px;
-    border-bottom: 1px dashed #bdacac;
-    text-align: center;
-}
+
 a.delete {
     color: #f00;
     text-decoration: none;
     margin-right: 9px;
     font-weight: bold;
 }
+
 a.edit {
     margin-right: 10px;
     text-decoration: none;
     color: #22bf1f;
     font-weight: 900;
 }
+
 .add_row {
     margin-left: 60px;
 }
+
 .add_row a {
     text-decoration: none;
     color: #ffffff;
@@ -334,6 +842,7 @@ a.edit {
     border-radius: 7px;
     margin: 5px 0px;
 }
+
 .add_button {
     border: 1px solid #000;
     border-radius: 8px;
@@ -341,48 +850,60 @@ a.edit {
     padding: 5px 20px;
     background: #00d02d;
 }
+
 .conntent {
     height: 90px;
     overflow: hidden;
 }
-.product_img img
-{
+
+.product_img img {
     width: 50px;
 }
+
+
 /**************************/
+
 footer {
+    float: right;
+    margin-left: 5%;
+    width: 95% !important;
     background: #000;
     height: 25px;
 }
+
 footer h2 {
     text-align: center;
     font-size: 15px;
     color: #dcf326;
     line-height: 25px;
 }
-.infor
-{
+
+.infor {
     float: right !important;
 }
 
+
 /******************************************/
+
+
 /* Film detail */
-.chitietphim{
-    margin-top: 4%;
-    position: relative;
+
+.chitietphim {
+    padding-top: 35px;
     width: 100%;
     height: 550px;
-   
 }
-.chitietphim form{
+
+.chitietphim form {
+    margin-top: 40px;
     width: 50%;
     height: 100%;
-   
     position: absolute;
     right: 15%;
     top: 0;
 }
-.chitietphim form .thongtin{
+
+.chitietphim form .thongtin {
     position: relative;
     width: 90%;
     height: 30px;
@@ -390,14 +911,16 @@ footer h2 {
     text-align: center;
     line-height: 30px;
 }
-.chitietphim form label{
+
+.chitietphim form label {
     position: absolute;
     width: 20%;
     height: 100%;
     left: 0;
     top: 0;
 }
-.chitietphim form input{
+
+.chitietphim form input {
     outline: none;
     position: absolute;
     width: 70%;
@@ -406,9 +929,10 @@ footer h2 {
     top: 0;
     background: none;
     border: none;
-    box-shadow: 0 0 5px #b30000;
+    box-shadow: 0 0 5px #0d6692;
     text-align: center;
 }
+
 .select_loai_phim {
     padding: 0px 115px;
     outline: none;
@@ -419,9 +943,10 @@ footer h2 {
     top: 0;
     background: none;
     border: none;
-    box-shadow: 0 0 5px #b30000;
+    box-shadow: 0 0 5px #0d6692;
     text-align: center;
 }
+
 .anhphim {
     background-repeat: no-repeat;
     height: 450px;
@@ -429,9 +954,11 @@ footer h2 {
     margin-left: 7%;
     background-size: contain;
 }
+
 .anhphim img {
     width: 108px;
 }
+
 .submit_but input[type="submit"] {
     border: 1px solid #000 !important;
     border-radius: 6px;
@@ -443,6 +970,8 @@ footer h2 {
     color: #fff !important;
     font-size: 14px !important;
 }
+
+
 /*.hour {
     width: 10% !important;
     text-align: center;
@@ -459,13 +988,17 @@ footer h2 {
     font-size: 23px;
     color: #000;
 }*/
-/*************/
-.suatchieu{
+
+
+/****** *******/
+
+.suatchieu {
     position: relative;
     width: 100%;
     height: 550px;
 }
-.suatchieu form{
+
+.suatchieu form {
     position: absolute;
     width: 50%;
     left: 25%;
@@ -473,14 +1006,15 @@ footer h2 {
     height: 90%;
     box-shadow: 0 0 5px #1cadeb;
 }
-.suatchieu form .thongtin{
+
+.suatchieu form .thongtin {
     width: 100%;
     height: 60px;
     position: relative;
     margin-top: 20px;
-    
 }
-.suatchieu form .thongtin label{
+
+.suatchieu form .thongtin label {
     position: absolute;
     top: 0;
     height: 50%;
@@ -489,13 +1023,16 @@ footer h2 {
     line-height: 30px;
     color: gray;
 }
-.suatchieu form .thongtin select, input{
+
+
+/* .suatchieu form .thongtin select, input{
     position: absolute;
     width: 90%;
     height: 50%;
     bottom: 0;
     left: 5%;
-}
+} */
+
 .themsuatchieu {
     padding: 12px 10px;
     border-radius: 4px;
@@ -508,248 +1045,35 @@ footer h2 {
     display: block;
     height: auto !important;
 }
-/******************************************/
-/* section{
-    width: 100%;
-    position: relative;
-    height: 750px;
-    margin-top: 30px;
-}
-section article{
-    position: absolute;
-    width: 95%;
-    height: 90%;
-    left: 2.5%;
-    top: 5%;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 0 5px #1cadeb;
-}
-section article .menu{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 20%;
-    height: 100%;
-    background: #1cadeb;
-}
-    .tieude{
-    width: 100%;
-    height: 50px;
-    color: whitesmoke;
-    text-align: center;
-    line-height: 50px;
-    font-size: 20px;
-    border-bottom: solid 2px whitesmoke;
-    background: #1cadeb;
-}
-article .menu li{
-    width: 100%;
-    height: 50px;
-    list-style: none;
-    text-align: center;
-    line-height: 50px;
-    border-bottom: solid 1px whitesmoke;
-}
-.menu li:hover{
-    background: white;
-    color: #1cadeb;
-}
-.menu li:hover a{
-    color: #1cadeb;
-}
-a{
-    text-decoration: none;
-    color: whitesmoke;
-}
-section article aside{
-    position: absolute;
-    width: 77%;
-    height: 100%;
-    right: 0;
-    top: 0;
-}
-.luachon{
-    width: 100%;
-    height: 50px;
-    color: black;
-    text-align: center;
-    line-height: 50px;
-    font-size: 20px;
-    border-bottom: solid 2px whitesmoke;
-    border-bottom: solid 2px gray
-}
-.luachon p{
-    float: left;
-    margin-top: 0;
-    margin-right: 20px;
-    font-size: 17px;
-}
-.mau{
-    border-bottom: solid 2px #1cadeb;
-}
-.phimdangchieu{
-    position: relative;
-    width: 100%;
-    height: 520px;
-}
-.phimsapchieu{
-    position: relative;
-    width: 100%;
-    height: 520px;
-    display: none;
-}
-.phimdangchieu table{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-.phimsapchieu table{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-table td{
-    border: solid 1px #1cadeb;
-    text-align: center;
-    overflow: hidden;
-}
-td a{
-    background: red;
-    color: #ffffff;
-    padding: 15px 20px;
-}
-td a:nth-child(2){
-    background: rgb(123, 255, 0);
-    color: #ffffff;
-    padding: 15px 20px;
-}
-td a:hover{
-    background: #1cadeb;
-    color: white;
-    padding: 15px 20px;
-}
- */
-
-/*tranf chitiet*/
-/* .chitietphim{
-    position: relative;
-    width: 100%;
-    height: 550px;
-   
-}
-.chitietphim form{
-    width: 50%;
-    height: 100%;
-   
-    position: absolute;
-    right: 15%;
-    top: 0;
-}
-.chitietphim form .thongtin{
-    position: relative;
-    width: 90%;
-    height: 30px;
-    margin-bottom: 10px;
-    text-align: center;
-    line-height: 30px;
-}
-.chitietphim form label{
-    position: absolute;
-    width: 20%;
-    height: 100%;
-    left: 0;
-    top: 0;
-}
-.chitietphim form input{
-    position: absolute;
-    width: 70%;
-    height: 100%;
-    left: 20%;
-    top: 0;
-    list-style: 30px;
-    background: none;
-    border: none;
-    box-shadow: 0 0 5px #1cadeb;
-    text-align: center;
-} */
-
-
-
-/*suat chieu*/
-/* .suatchieu{
-    position: relative;
-    width: 100%;
-    height: 550px;
-}
-.suatchieu form{
-    position: absolute;
-    width: 50%;
-    left: 25%;
-    top: 5%;
-    height: 90%;
-    box-shadow: 0 0 5px #1cadeb;
-}
-.suatchieu form .thongtin{
-    width: 100%;
-    height: 60px;
-    position: relative;
-    margin-top: 20px;
-    
-}
-.suatchieu form .thongtin label{
-    position: absolute;
-    top: 0;
-    height: 50%;
-    width: 90%;
-    left: 5%;
-    line-height: 30px;
-    color: gray;
-}
-.suatchieu form .thongtin select, input{
-    position: absolute;
-    width: 90%;
-    height: 50%;
-    bottom: 0;
-    left: 5%;
-}
-.themsuatchieu{
-    width: 20%;
-    left: 40%;
-    background: #1cadeb;
-    color: whitesmoke;
-    border: none;
-} */
-
 
 * {
     box-sizing: border-box;
-    
-  }
-  
-  .container {
+}
+
+.container {
     font-family: sans-serif;
     border: 1px dashed #ccc;
     padding: 30px;
     font-size: 14px;
     margin: 30px;
-  }
-  .container div {
+}
+
+.container div {
     margin-bottom: 20px;
     position: relative;
-  }
-  .container div:last-child {
+}
+
+.container div:last-child {
     margin: 0;
-  }
-  .container label {
+}
+
+.container label {
     display: block;
     font-size: 13px;
     margin-bottom: 5px;
-  }
-  .container button {
+}
+
+.container button {
     border: 1px solid rgba(0, 0, 0, 0.9);
     color: #fff;
     background-color: rgba(0, 0, 0, 0.9);
@@ -757,11 +1081,13 @@ td a:hover{
     padding: 12px;
     line-height: 1;
     cursor: pointer;
-  }
-  .container button:hover {
+}
+
+.container button:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
-  .container input {
+}
+
+.container input {
     font-size: inherit;
     font-family: inherit;
     border: 2px solid #999;
@@ -769,8 +1095,9 @@ td a:hover{
     width: 350px;
     padding: 10px;
     margin-left: 100px;
-  }
-  .chon {
+}
+
+.chon {
     font-size: inherit;
     font-family: inherit;
     border: 2px solid #999;
@@ -778,28 +1105,31 @@ td a:hover{
     width: 350px;
     padding: 10px;
     margin-left: 100px;
-  }
-  
-  .container input:read-only {
+}
+
+.container input:read-only {
     opacity: 0.8;
     background: rgba(0, 0, 0, 0.07);
     cursor: not-allowed;
-  }
-  .container input:required:valid + .validate-icon {
+}
+
+.container input:required:valid+.validate-icon {
     opacity: 1;
-  }
-  
-  .container.form-focussed input:invalid {
+}
+
+.container.form-focussed input:invalid {
     border: 2px solid red;
-  }
-  
-  .validate-icon {
+}
+
+.validate-icon {
     position: absolute;
     right: 10px;
     opacity: 0;
-  }
-  h1 {
+}
+
+
+/* h1 {
     font-size: 20px;
     margin-top: 24px;
     margin-bottom: 24px;
-  }
+  } */

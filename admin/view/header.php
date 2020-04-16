@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/792cf9d6f3.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="view/css/admin.css">
-    <title>ADMIN</title>
+	<meta charset="UTF-8">
+	<title>TEST</title>
+	<link rel="stylesheet" href="view/css/admin.css">
+	<script src="https://kit.fontawesome.com/792cf9d6f3.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <header class="admin_header col_12">
-        <div class="col_2">
-            <a href="admin.php?contro=home">
-                <img src="view/images/logo.png" alt="">
-                <h4><?php echo $_SESSION['user'] ; ?></h4>
-            </a>
-        </div>
-        <div class="col_10">
-            <div class="avt">
-                <i class="fas fa-user-tie"></i>
-                <?php
-                    echo '<h4 class="username">Username: '.$_SESSION['mail'].'</h4>';
-                ?>
-            </div>
-            <div class="header_menu">
-                <a href="../index.php">Home</a>
-                <a href="admin.php?contro=logout">Logout</a>
-            </div>
-        </div>
-    </header>
+	<header class="col_12">
+		<div class="avt_admin col_4">
+			<h3><?php echo $_SESSION['user']; ?></h3>
+			<div class="avt_img" style="background-image: url('view/images/avt1.jpg');"></div>
+			<div class="vl"></div>
+			<div class="logout">
+				<a href="admin.php?contro=logout">
+					<i class="fas fa-sign-out-alt"></i>
+				</a>
+			</div>
+			<div class="back_index">
+			<a href="../index.php">
+				<i class="fas fa-home"></i>
+			</a>
+		</div>
+		</div>
+		<form action="#" method="post" class="form_search_all" id="form_search_all">
+			<input type="text" placeholder="Search..." id="search_all" onclick="enter_to_submit('search_all','myBtn')" required>
+			<button type="submit" id="myBtn" onclick="javascript:alert('Bạn vừa submit form')">
+				<i class="fas fa-search"></i>
+			</button>
+		</form>
+	</header>

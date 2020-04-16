@@ -1,100 +1,162 @@
-<div class="clear"></div>
-<main class="col_12">
-    <aside class="col_2">
-        <div class="menu">
-        <ul>
-                <li><a href="admin.php?contro=film">Quản lý phim</a></li>
-                <li><a href="admin.php?contro=suatchieu">Quản lý suất chiếu</a></li>
-                <li><a href="admin.php?contro=addphim">Add Phim</a></li>
-                <li><a href="admin.php?contro=phongchieu">Quản Lí Phòng</a></li>
-                <li><a href="admin.php?contro=qlrap">Quản Lí rạp</a></li>
-            </ul>
-        </div>
-    </aside>
-    <article class="col_10 ">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
+<main>
+    <?php
+    require_once "view/sidebar.php";
+    ?>
+<article class="col_11">
+		<div class="head col_12">
+			<div class="name_action col_10">
+				<h1 class="foot_font">Quản lý Phim</h1>
+			</div>
+			<div class="map_action col_2">
+				<a href="admin.php?contro=home">
+					<h1>Trang chủ</h1>
+				</a>
+				<i class="fas fa-chevron-right"></i>
+				<a href="admin.php?contro=film">
+					<h3>Quản lý phim</h3>
+				</a>	
+			</div>
+			<div class="col_12">
+				<div class="search_table">
+					<div class="col_6">
+						<form action="#" method="post">
+						<input type="text" name="seach_table" id="search_table" class="col_6" placeholder="Tìm kiếm tên phim">
+						<input type="submit" id="submit_search_table" onclick="javascript:alert('Bạn vừa submit form')" style="display: none;">
+						</form>
+						<!-- <script>
+						var search_table = document.getElementById("search_table");
+						search_table.addEventListener("keyup", function(event) {
+						  if (event.keyCode === 13) {
+						   event.preventDefault();
+						   document.getElementById("submit_search_table").click();
+						  }
+						});
+						</script> -->
+					</div>
+					<div class="add_data col_6">
+						<a href="admin.php?contro=addphim">
+							<i class="fas fa-plus"></i>
+							<span>Add Film</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col_12">
+			<div class="content">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script>
+                $(document).ready(function(){
 
-            $(".option").click(function() {
-                $(".option").removeClass("mau");
-                $(this).addClass("mau");
-            });
-            $("#option_dangchieu").click(function (){
-                $(".phimdangchieu").fadeIn(500);
-                $(".phimsapchieu").fadeOut(500);
-            });
-            $("#option_sapchieu").click(function (){
-                $(".phimsapchieu").fadeIn(500);
-                $(".phimdangchieu").fadeOut(500);
-            });
-        });
-    </script>
-    <div class="admin_acount_manager">
-            <h3> FILM MANAGEMENT </h3>
+                    $(".option").click(function() {
+                        $(".option").removeClass("mau");
+                        $(this).addClass("mau");
+                    });
+                    $("#option_dangchieu").click(function (){
+                        $(".phimdangchieu").fadeIn(500);
+                        $(".phimsapchieu").fadeOut(500);
+                    });
+                    $("#option_sapchieu").click(function (){
+                        $(".phimsapchieu").fadeIn(500);
+                        $(".phimdangchieu").fadeOut(500);
+                    });
+                });
+            </script>
+        <div class="admin_acount_manager">
                     <div class="luachon">
                         <p class="option mau" id="option_dangchieu">phim đang chiếu</p>
                         <p class="option" id="option_sapchieu">phim sắp chiếu</p>
                     </div>
                     <div class="phimdangchieu">
-                    
-
-                        <table>
-                            <tr>
-                                <td>Tên phim</td>
-                                <td>Ngày Chiếu</td>
-                                <td>
-                                    action
-                                </td>
-                            </tr>
-                            <?php
-                    foreach ($quanliphimcc as $phim){
-                        $name=$phim['tenphim'];
-                        $date=$phim['ngaychieu'];
-                        $id=$phim['id'];
-
-                        echo '<tr>
-                        <td>'.$name.'</td>
-                        <td>'.$date.'</td>
-                        <td>
-                            <a href="index.php?contro=film_del&quanliphim='.$id.'">xoa phim</a>
-                            <a class="detail_but" href="admin.php?contro=film_dt&idphim='.$id.'">chitiet</a>
-                        </td>
-                    </tr>';
-                    }
-
-                    ?>
-                        </table>
+                        <div class="data_table">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <input class="checkbox_table" type="checkbox" name="check_all" onclick="check_all()">
+                                    </th>
+                                    <th>Tên phim</th>
+                                    <th>Ngày chiếu</th>
+                                    <th>
+                                    <a href="#" class="del_all_but">
+                                        <i class="fas fa-trash"></i>
+                                        <span>Multiple Delete</span>
+                                    </a>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <?php
+                                    foreach ($quanliphimcc as $phim){
+                                        echo '<tr>
+                                        <td>
+					                        <input type="checkbox" class="checkbox_table" name="check_list_film[]" id="idphim_'.$phim['id'].'" value="'.$phim['id'].'">
+				                        </td>
+                                        <td>'.$phim['tenphim'].'</td>
+                                        <td>'.$phim['ngaychieu'].'</td>
+                                        <td>
+                                            <div class="tools_data_table">
+                                                <a class="detail_but" href="admin.php?contro=film_dt&idphim='.$phim['id'].'">
+                                                    <span>Details</span>
+                                                </a>
+                                                <p>/</p>
+                                                <a class="del_but" href="index.php?contro=film_del&idphim='.$phim['id'].'">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>';
+                                    }
+                                ?>
+                            </table>
+                        </div>
                     </div>
                     <div class="phimsapchieu">
-                        <table>
-                            <tr>
-                                <td>Tên phim</td>
-                                <td>Ngày chiếu</td>
-                                <td>
-                                    action
-                                </td>
-                            </tr>
-                            <?php
-                    foreach ($quanliphimdc as $phim){
-                        $name=$phim['tenphim'];
-                        $date=$phim['ngaychieu'];
-                        $id=$phim['id'];
-
-                        echo '<tr>
-                        <td>'.$name.'</td>
-                        <td>'.$date.'</td>
-                        <td>
-                            <a class="detail_but" href="admin.php?contro=film_dt&idphim='.$id.'">chitiet</a>
-                        </td>
-                    </tr>';
-                    }
-
-                    ?>
-                        </table>
+                    <div class="data_table">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <input class="checkbox_table" type="checkbox" name="check_all" onclick="check_all()">
+                                    </th>
+                                    <th>Tên phim</th>
+                                    <th>Ngày chiếu</th>
+                                    <th>
+                                    <a href="#" class="del_all_but">
+                                        <i class="fas fa-trash"></i>
+                                        <span>Multiple Delete</span>
+                                    </a>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <?php
+                                    foreach ($quanliphimdc as $phim){
+                                        echo '<tr>
+                                        <td>
+					                        <input type="checkbox" class="checkbox_table" name="check_list_film[]" id="idphim_'.$phim['id'].'" value="'.$phim['id'].'">
+				                        </td>
+                                        <td>'.$phim['tenphim'].'</td>
+                                        <td>'.$phim['ngaychieu'].'</td>
+                                        <td>
+                                            <div class="tools_data_table">
+                                                <a class="detail_but" href="admin.php?contro=film_dt&idphim='.$phim['id'].'">
+                                                    <span>Details</span>
+                                                </a>
+                                                <p>/</p>
+                                                <a class="del_but" href="index.php?contro=film_del&idphim='.$phim['id'].'">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>';
+                                    }
+                                ?>
+                            </table>
+                        </div>
                     </div>
                 </div>
-    </article>
+            </div>
+		</div>
+	</article>
 </main>
 
 
