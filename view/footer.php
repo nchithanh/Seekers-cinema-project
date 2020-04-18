@@ -1,4 +1,4 @@
-</div>
+<!-- </div>
 <footer>
             <div class="logo">
                 <p>created by SEEKERS</p>
@@ -6,4 +6,4 @@
         </footer>
 </body>
 
-</html>
+</html> -->

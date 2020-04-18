@@ -23,6 +23,12 @@ function datve(){
     document.getElementById('fullmanhinh').style.display='none'
     document.getElementById('header').style.display='block'
 };
+function close_thanhcongbox(){
+    document.getElementById('thanhcong').style.display='none';
+};
+function close_datvebox(){
+    document.getElementById('box_ajax_back').style.display='none';
+};
 
 
 window.onscroll = function () { scrollFunction() };
@@ -115,7 +121,6 @@ $(document).ready(function () {
         });
     });
 
-    
     $(".list").click(function () {
         $(".list").removeClass("maubanner");
         $(this).addClass("maubanner");

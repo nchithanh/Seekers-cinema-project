@@ -84,7 +84,8 @@
                     <select required name="suatchieu" id="suatchieu">
                         <option value="">chọn suất chiếu</option>
                     </select>
-                    <input type="submit" name="muave" value="MUA VÉ">
+                    <input style="display:none;" type="number" id="iduser" value="<?php echo $_SESSION['id']; ?>">
+                    <input id="btn_muave" name="muave" type="button" value="MUA VÉ">
                 </form>
             </div>
         </article>
@@ -122,3 +123,6 @@
         display:none;
     }
 </style>
+<div class="box_ajax" id="ajax">
+   
+</div>

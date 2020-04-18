@@ -2,26 +2,39 @@
     include "model/connect.php";
     include_once "model/thanhtoan_sql.php";
     include_once "model/datve_sql.php";
-    if(isset($_GET['phim'])){
-        $loadrap=thanhtoan_rap($_GET['idrap']);
-        $loadphim=thanhtoan_phim($_GET['phim']);
-        $loadsuatchieu=thanhtoan_suatchieu($_GET['idsuatchieu']);
-        $loadphongchieu=thanhtoan_phongchieu($_GET['phongchieu']);
-        $loadghe=thanhtoan_ghe($_GET['idghe']);
-        $loadhangghe=thanhtoan_hangghe($loadghe['idhangghe']);
-    }
+        // $loadrap=thanhtoan_rap($_GET['idrap']);
+        // $loadphim=thanhtoan_phim($_GET['phim']);
+        // $loadsuatchieu=thanhtoan_suatchieu($_GET['idsuatchieu']);
+        // $loadphongchieu=thanhtoan_phongchieu($_GET['phongchieu']);
+        // $loadhangghe=thanhtoan_hangghe($loadghe['idhangghe']);
     if(isset($_POST['thanhtoan'])&&$_POST['thanhtoan']){
         $tenphim=$_POST['phim'];
         $tenrap=$_POST['rap'];
         $tenphongchieu=$_POST['phongchieu'];
         $suatchieu=$_POST['suatchieu'];
-        $ghe=$_POST['ghe'];
         $iduser=$_SESSION['id'];
-        add_ve($tenphim,$tenrap,$tenphongchieu,$suatchieu,$ghe,$iduser);
-        $idghe=$_POST['idghe'];
-        $trangthaighe=$_POST['trangthaighe'];
-        updateghe($idghe,$trangthaighe);
+        $arr_idghe=$_POST['ghe'];
+        // $trangthaighe=$_POST['trangthaighe'];
+        $chuoi='';
+        foreach ($arr_idghe as $g){
+            updateghe($g,1);
+            $loadghe=thanhtoan_ghe($g);
+            $tenhangghe=thanhtoan_hangghe($loadghe['idhangghe']);
+            $chuoi.=''.$tenhangghe['tenhangghe'].''.$loadghe['ghe'].'.';
+        }
+        add_ve($tenphim,$tenrap,$tenphongchieu,$suatchieu,$chuoi,$iduser);
         deletethanhtoan($iduser);
-        header('locotion: index.php?contro=thanhtoan&thanhcong=1');
+     
+        echo '<div id="thanhcong">
+        <div class="top">
+            <p><i class="fa fa-check-circle"></i></p>
+            <p>Thành công</p>
+            <p>Cảm ơn bạn đã tin tưởng chúng tôi</p>
+        </div>
+        <div class="bottom">
+        <span></span>
+        <button onclick="close_thanhcongbox()">Cancel</button>
+        </div>
+    </div>';
     }
 ?>

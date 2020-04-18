@@ -22,6 +22,7 @@ ob_start();
             include "controller/home/listphim_home.php";
             //incluce controller xu ly khuyen mai
             include "controller/home/khuyenmai_home.php";
+            include "controller/datve/thanhtoan.php";
             include "controller/login/login.php";
             include "controller/login/signin.php";
             include "view/home.php";

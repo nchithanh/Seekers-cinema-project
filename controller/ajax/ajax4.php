@@ -1,4 +1,3 @@
-
 <?php
     include "../../model/connect.php";
     include_once "../../model/datve_sql.php";
@@ -31,192 +30,339 @@
     $ghe11=loadghetheohangghe(11,$idsuatchieu);
 
 ?>
-<div class="ajax">
+<div class="ajax" id="box_ajax_back">
     <div class="ajax_datve">
-         <div class="ajax_thongtin">
-                     <div class="thongtin">
-                     <p><?php echo $loadphim['tenphim']; ?> (<?php echo $loadphim['thoiluong']; ?>p)</p>
-                     <p><?php echo $loadrap['tenrap']; ?>, <?php echo $phongchieu['tenphong']; ?>, <?php echo $loadsuatchieu['thoigian']; ?></p>
-                     </div>
-         </div>
-         <div class="ajax_sodo">
-             <div class="manhinh">
-                 SCREEN
-             </div>
-             <div class="chongoi">
-                 <div class="hangghe">
-                     <?php
-                        foreach ($loadhangghe as $hangghe){
-                            echo '<div class="box">'.$hangghe['tenhangghe'].'</div>';
-                        }
-                     ?>
+        <div onclick="close_datvebox()" id="ajax_back">
+          back
+        </div>
+         <form action="index.php" method="post">
+         <div class="box left">
+             <div class="head">
+                 <div class="manhinh">
+                     screen
                  </div>
+             </div>
+             <div class="body">
                  <div class="hangghe">
                     <?php
-                        foreach ($loadhangghe as $hangghe){
-                            echo '<div class="box">'.$hangghe['tenhangghe'].'</div>';
+                        foreach ($loadhangghe as $hg){
+                            echo ' <div class="tenhang">'.$hg['tenhangghe'].'</div>';
                         }
-                     ?>
+                    ?>
+                     
                  </div>
                  <div class="ghe">
-                     <form action="">
-                     <div class="dayghe">
-                         <?php
-                           foreach ($ghe1 as $ghe){
-                            if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe1">
+                     <?php
+                                foreach ($ghe1 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     <div class="dayghe">
-                         <?php
-                            foreach ($ghe2 as $ghe){
-                                if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe2">
+                     <?php
+                                foreach ($ghe2 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     <div class="dayghe">
-                         <?php
-                            foreach ($ghe3 as $ghe){
-                                if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe3">
+                     <?php
+                                foreach ($ghe3 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     <div class="dayghe">
-                         <?php
-                            foreach ($ghe4 as $ghe){
-                                if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe4">
+                     <?php
+                                foreach ($ghe4 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     <div class="dayghe">
-                         <?php
-                            foreach ($ghe5 as $ghe){
-                                if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe5">
+                     <?php
+                                foreach ($ghe5 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     <div class="dayghe">
-                         <?php
-                            foreach ($ghe6 as $ghe){
-                                if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe6">
+                     <?php
+                                foreach ($ghe6 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     <div class="dayghe">
-                         <?php
-                            foreach ($ghe7 as $ghe){
-                                if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe7">
+                     <?php
+                                foreach ($ghe7 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     <div class="dayghe">
-                         <?php
-                            foreach ($ghe8 as $ghe){
-                                if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe8">
+                     <?php
+                                foreach ($ghe8 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     <div class="dayghe">
-                         <?php
-                            foreach ($ghe8 as $ghe){
-                                if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe9">
+                     <?php
+                                foreach ($ghe9 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     <div class="dayghe">
-                         <?php
-                            foreach ($ghe10 as $ghe){
-                                if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe10">
+                     <?php
+                                foreach ($ghe10 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     <div class="dayghe">
-                         <?php
-                            foreach ($ghe11 as $ghe){
-                                if($ghe['trangthai']==1){
-                                $trangthai="hetcho";
-                                $link="";
-                            }else{
-                                $trangthai='';
-                                $link='href="index.php?contro=thanhtoan&idrap='.$loadthanhtoan['idrap'].'&phongchieu='.$phongchieu['id'].'&phim='.$loadthanhtoan['idphim'].'&idsuatchieu='.$loadthanhtoan['idsuatchieu'].'&idghe='.$ghe['id'].'"';
-                            }
-                            echo '<a '.$link.'><div maghe="'.$ghe['ghe'].'" class="box '.$trangthai.'">'.$ghe['ghe'].'</div></a>';
-                        }
-                         ?>
+                     <div class="dayghe dayghe11">
+                     <?php
+                                foreach ($ghe11 as $g){
+                                    switch ($g['trangthai']) {
+                                        case '0':
+                                            echo '<div class="vitri">
+                                            <label>
+                                                <input type="checkbox" name="ghe[]" value="'.$g['id'].'">
+                                                <span class="hetcho"><i class="fa fa-check"></i></span>
+                                            </label>
+                                       </div>';
+                                            break;
+                                        
+                                        case '1':
+                                            echo '<div class="vitri">
+                                            <label>  
+                                                <span class="dadat"><i class="fa fa-lock"></i></span>
+                                            </label>
+                                        </div>';
+                                            break;
+                                    }
+                                }
+                            ?>
+                         
                      </div>
-                     </form>
+
+
                  </div>
              </div>
          </div>
+         <div class="box right">
+            <div class="head">
+                    <div class="tenphim"><p><?php
+                        
+                            echo $loadphim['tenphim'];
+                        
+                    ?></p></div>
+            </div>
+            <div class="body">
+                   <div class="box_thongtin">
+                        <div style="display:none;"><input name="phim" readonly type="text" value="<?php echo $loadphim['tenphim']; ?>"></div>
+                       <div class="box_tenthongtin">rạp</div>
+                       <div class="box_noidung"><input name="rap" readonly type="text" value="<?php echo $loadrap['tenrap']; ?>"></div>
+                   </div>
+                   <div class="box_thongtin">
+                       <div class="box_tenthongtin">suất chiếu</div>
+                       <div class="box_noidung"><input name="suatchieu" readonly type="text" value="<?php echo $loadsuatchieu['thoigian']; ?>"></div>
+                   </div>
+                   <div class="box_thongtin">
+                       <div class="box_tenthongtin">phòng chiếu</div>
+                       <div class="box_noidung"><input name="phongchieu" readonly type="text" value="<?php echo $phongchieu['tenphong']; ?>"></div>
+                   </div>
+                   <div class="box_thongtin">
+                       <div class="box_tenthongtin">giá vé</div>
+                       <div class="box_noidung"><input readonly type="text" value="85 nghin VND"></div>
+                   </div>
+                   <div class="box_thongtin">
+                       <input type="submit" value="Thanh toán" name="thanhtoan">
+                   </div>
+            </div>
+         </div>
+         </form>
     </div>
 </div>

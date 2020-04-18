@@ -23,6 +23,7 @@
 <body>
     <div class="background"></div>
     <div class="loading"><img src="view/img/loading2.gif" alt=""></div>
+    <!-- <a href="#"><div class="boxlen"><i class="fa fa-sort-up"></i></div></a> -->
     <div class="form_login ani" id="login" style="display:none;">
         <p>YOUR ACCOUNT</p>
         <form action="index.php?contro=home" method="post">

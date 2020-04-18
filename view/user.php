@@ -1,8 +1,8 @@
 <div class="box_user">
     <div class="left">
         <h2>welcom user</h2>
-        <p class="btn qltk user_mau">quản lý tài khoản</p>
-        <p class="btn lsdt">lịch sử đặt vé</p>
+        <p class="btn qltk">quản lý tài khoản</p>
+        <p class="btn lsdt user_mau">lịch sử đặt vé</p>
         <p></p>
     </div>
     <div class="right">

@@ -224,7 +224,7 @@
 
 <section class="tinkhuyenmai">
     <div class="tieude">
-        <span>TIN KHUYẾN MÃI</span>
+        <span class="mautieude">TIN KHUYẾN MÃI</span>
     </div>
     <?//cho nay la khuyen mai//?>
     <div class="boxkhuyenmai" id="boxkhuyenmai">
@@ -255,12 +255,12 @@
 </section>
 <section>
     <div class="tieude">
-        <span>CORONA VIRUS</span>
+        <span class="mautieude">SEEKERS CINEMA</span>
     </div>
     <div class="thongtin">
-        CORONA VIRUS là một trong những công ty tư nhân đầu tiên về điện ảnh được thành lập từ năm 2003, đã
+        SEEKERS CINEMA là một trong những công ty tư nhân đầu tiên về điện ảnh được thành lập từ năm 2003, đã
         khẳng định thương hiệu là 1 trong 10 địa điểm vui chơi giải trí được yêu thích nhất. Ngoài hệ thống rạp
-        chiếu phim hiện đại, thu hút hàng triệu lượt người đến xem, CORONA VIRUS còn hấp dẫn khán giả bởi không
+        chiếu phim hiện đại, thu hút hàng triệu lượt người đến xem, SEEKERS CINEMA còn hấp dẫn khán giả bởi không
         khí thân thiện cũng như chất lượng dịch vụ hàng đầu. Đến website galaxycine.vn, quý khách sẽ được cập
         nhật nhanh chóng các phim hay nhất phim mới nhất đang chiếu hoặc sắp chiếu. Lịch chiếu tại mọi hệ thống
         rạp chiếu phim của Galaxy Cinema cũng được cập nhật đầy đủ hàng ngày hàng giờ trên trang chủ. Đặt vé tại
