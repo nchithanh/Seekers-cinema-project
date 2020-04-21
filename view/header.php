@@ -24,7 +24,13 @@
     <div class="background"></div>
     <div class="loading"><img src="view/img/loading1.gif" alt=""></div>
     <!-- <a href="#"><div class="boxlen"><i class="fa fa-sort-up"></i></div></a> -->
-    <div class="form_login ani" id="login" style="display:none;">
+    <div class="form_login ani" id="login" style="<?php 
+        if(isset($_GET['loidangnhap'])){
+        echo 'display:block;';
+    }else{
+        echo 'display:none;';
+    }
+    ?>">
         <p>YOUR ACCOUNT</p>
         <form action="index.php?contro=home" method="post">
 
@@ -34,6 +40,11 @@
             <div class="row">
             <i class="fa fa-unlock-alt"></i><input name="pass" type="password" pattern="[a-z,0-9]{6,30}" title="6-30 ký tự,không viết hoa,không ký tự đặt biệt" required placeholder="Userpassword">
             </div>
+            <?php
+            if(isset($_GET['loidangnhap'])){
+                echo '<p style="color:red;">Sai Mật Khẩu hoặc tài khoản</p>';
+            }
+            ?>
             <p>Forgot your password?</p>
             <div class="row1">
                 <input name="login" class="btn" type="submit" value="Đăng nhập">
@@ -59,6 +70,7 @@
             <i class="fa fa-phone"></i><input name="sdt" type="tel" pattern="[0]{1}[0-9]{9}" title="số điện thoại không hợp lệ" required placeholder="tel">
             <input name="role" value="1" type="number" style="display:none;">
             </div>
+            
             <div class="row1">
                 <input class="btn" type="button" value="Đăng nhập" onclick="dangnhap()">
                 <input name="adduser" class="btn" type="submit" value="Đăng ký ngay">

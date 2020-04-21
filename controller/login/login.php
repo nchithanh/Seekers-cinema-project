@@ -19,7 +19,7 @@ if(isset($_POST["login"])&&$_POST["login"]){
     }elseif($checkinfo['role']==1){
         header('location: index.php') ;
     }else{
-        header('location: index.php?contro=login&loidangnhap=1') ;
+        header('location: index.php?loidangnhap=1') ;
 
     }
         
