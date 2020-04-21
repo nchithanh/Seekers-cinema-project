@@ -7,6 +7,28 @@
         // $loadsuatchieu=thanhtoan_suatchieu($_GET['idsuatchieu']);
         // $loadphongchieu=thanhtoan_phongchieu($_GET['phongchieu']);
         // $loadhangghe=thanhtoan_hangghe($loadghe['idhangghe']);
+         $thanhcong='<div id="thanhcong">
+         <div class="top">
+             <p><i class="fa fa-check-circle"></i></p>
+             <p>Thành công</p>
+             <p>Cảm ơn bạn đã tin tưởng chúng tôi</p>
+         </div>
+         <div class="bottom">
+         <span></span>
+         <button onclick="close_thanhcongbox()">Cancel</button>
+         </div>
+ </div>';
+        $thatbai='<div id="thanhcong">
+        <div class="top">
+            <p><i class="fa fa-check-circle"></i></p>
+            <p>Thất bại</p>
+            <p>Vui lòng chọn lại</p>
+        </div>
+        <div class="bottom">
+        <span></span>
+        <button onclick="close_thanhcongbox()">Cancel</button>
+        </div>
+</div>';
     if(isset($_POST['thanhtoan'])&&$_POST['thanhtoan']){
         $tenphim=$_POST['phim'];
         $tenrap=$_POST['rap'];
@@ -26,18 +48,9 @@
         }
         add_ve($tenphim,$tenrap,$tenphongchieu,$ngaychieu,$suatchieu,$chuoi,$iduser);
         deletethanhtoan($iduser);
-     
-        echo '<div id="thanhcong">
-        <div class="top">
-            <p><i class="fa fa-check-circle"></i></p>
-            <p>Thành công</p>
-            <p>Cảm ơn bạn đã tin tưởng chúng tôi</p>
-        </div>
-        <div class="bottom">
-        <span></span>
-        <button onclick="close_thanhcongbox()">Cancel</button>
-        </div>
-    </div>';
+        echo $thanhcong;
+    }else{
+        echo $thatbai;
     }
         }
 ?>

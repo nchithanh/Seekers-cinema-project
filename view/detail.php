@@ -72,7 +72,7 @@
         <?//day la show binh luan//?>
     </div>
     <div class="datve" id="datve">
-        <form action="index.php?contro=datve" method="post">
+        <form action="" method="post">
             <select required name="phim" id="phim">
                 <option value="">chọn phim</option>
                 <option value="<?php echo $loadphim['id']; ?>"><?php echo $loadphim['tenphim']; ?></option>

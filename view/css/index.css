@@ -111,7 +111,7 @@ video:focus{
     top: -100%;
     width: 100%;
     height: 100%;
-    z-index: 9999999;
+    z-index: 999;
     transform-origin: top;
 }
 .ani{
@@ -232,7 +232,7 @@ video:focus{
     bottom: 0;
     left: 0;
     display: none;
-    z-index: 9999;
+    z-index: 99999;
 }
 .box_hien{
     position: fixed;
@@ -273,7 +273,7 @@ video:focus{
     left: 0%;
     height: 100%;
     width: 100%;
-    z-index: 9999;
+    z-index: 99999;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
@@ -2775,7 +2775,7 @@ article .boxcanhbao .btn_nhanthongbao:hover{
 }
 #thanhcong .top p:nth-child(3){
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
     
     letter-spacing: .15em;
     
