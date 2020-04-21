@@ -23,7 +23,7 @@ if(isset($_POST['adduser'])&&$_POST['adduser']){
         // dang ky xong tu dong dang nhap lun
     } else if($trung == 1) {
         $_SESSION['trung'] = 1;
-        header('location: index.php?contro=login');
+        header('location: index.php');
     } else {
         header('location: index.php');
     }

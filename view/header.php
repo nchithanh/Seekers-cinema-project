@@ -54,7 +54,13 @@
             </div>
         </form>
     </div>
-    <div class="form_login ani" id="sign" style="display:none;">
+    <div class="form_login ani" id="sign" style="<?php 
+        if(isset($_SESSION['trung']) > 0){
+        echo 'display:block;';
+    }else{
+        echo 'display:none;';
+    }
+    ?>">
         <p>CREATE ACCOUNT</p>
         <form action="index.php?contro=home" method="post">
             <div class="row">
@@ -70,7 +76,11 @@
             <i class="fa fa-phone"></i><input name="sdt" type="tel" pattern="[0]{1}[0-9]{9}" title="số điện thoại không hợp lệ" required placeholder="tel">
             <input name="role" value="1" type="number" style="display:none;">
             </div>
-            
+            <?php 
+                            if(isset($_SESSION['trung']) > 0) {
+                                echo '<p style="color:red;">Tài khoản đã tồn tại</p>';
+                            } 
+                            ?>
             <div class="row1">
                 <input class="btn" type="button" value="Đăng nhập" onclick="dangnhap()">
                 <input name="adduser" class="btn" type="submit" value="Đăng ký ngay">
