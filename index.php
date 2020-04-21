@@ -49,7 +49,7 @@ ob_start();
         break;
 
         case 'detail':
-            
+            include "controller/mail.php";
             //incluce controller xu ly thong tin phim 
 
             //incluce controller xu ly sidebar (phim dang chieu,phim sap chieu)

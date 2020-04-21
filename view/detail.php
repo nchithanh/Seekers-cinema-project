@@ -95,9 +95,10 @@
     <?php
         if($detail["trangthai"]>0){
            echo '<div class="boxcanhbao">
-           <form action="">
+           <form action="" method="post" >
                <input style="display:none;" type="text" value="'.$_SESSION['id'].'" name="iduser" id="">
-               <input class="btn_nhanthongbao" type="submit" value="Nhận thông báo khi có phim">
+               <input style="display:none;" type="text" value="'.$detail['id'].'" name="idphim" id="">
+               <input class="btn_nhanthongbao" type="submit" value="Nhận thông báo khi có phim " name="thongbaophim">
            </form>
          </div>';
         }

@@ -53,7 +53,7 @@
                         <form action="index.php?contro=signin" method="post" >
                             Create Account
                             <input type="text" required placeholder="Nhập Tài Khoản" name="user" pattern="[a-z,0-9]{6,30}" title="6-30 ký tự,không viết hoa,không ký tự đặt biệt">
-                            <input type="password" required placeholder="Nhập Password" name="pass" pattern="[a-z,0-9]{6,30}" title="6-30 ký tự,không viết hoa,không ký tự đặt biệt">
+                            <input type="password" required placeholder="Nhập Password" name="pass" pattern="{6,30}" title="6-30 ký tự">
                             <input type="email" required placeholder="Nhập Email (mail của goggle)" name="email">
                             <input name="sdt" type="tel" pattern="[0]{1}[0-9]{9}" required placeholder="tel">
                             <input type="number" name="role" value="1" style="display:none">
