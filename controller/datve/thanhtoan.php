@@ -14,7 +14,8 @@
         $suatchieu=$_POST['suatchieu'];
         $ngaychieu=$_POST['ngaychieu'];
         $iduser=$_SESSION['id'];
-        $arr_idghe=$_POST['ghe'];
+        if(isset($_POST['ghe'])){
+            $arr_idghe=$_POST['ghe'];
         // $trangthaighe=$_POST['trangthaighe'];
         $chuoi='';
         foreach ($arr_idghe as $g){
@@ -38,4 +39,5 @@
         </div>
     </div>';
     }
+        }
 ?>

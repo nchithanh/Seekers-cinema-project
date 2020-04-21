@@ -92,6 +92,16 @@
             <input id="btn_muave" name="muave" type="button" value="MUA VÉ">
         </form>
     </div>
+    <?php
+        if($detail["trangthai"]>0){
+           echo '<div class="boxcanhbao">
+           <form action="">
+               <input style="display:none;" type="text" value="'.$_SESSION['id'].'" name="iduser" id="">
+               <input class="btn_nhanthongbao" type="submit" value="Nhận thông báo khi có phim">
+           </form>
+         </div>';
+        }
+      ?>
 </article>
 <aside>
     <div class="tieude">
