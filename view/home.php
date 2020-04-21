@@ -41,6 +41,9 @@
             </select>
             <select name="rap" required id="rap_giatri" style="display:none">
             </select>
+            <select name="ngaychieu" required id="ngaychieu">
+                <option value="">chọn ngày chiếu</option>
+            </select>
             <select name="suatchieu" required id="suatchieu">
                 <option value="">chọn suất chiếu</option>
             </select>
@@ -114,7 +117,7 @@
                 }
                 echo '<div class="best_phim">
                 <div class="left">
-                    <video autoplay muted loop src="view/video/'.$phim['trailer'].'"></video>
+                <iframe width="100%" height="100%" src="'.$phim['trailer'].'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="right">
                    <p>'.$phim['tenphim'].'</p>

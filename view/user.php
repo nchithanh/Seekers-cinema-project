@@ -46,6 +46,7 @@
                             $tenphim = $ve['tenphim'];
                             $tenrap = $ve['tenrap'];
                             $tenphongchieu = $ve['tenphongchieu'];
+                            $ngaychieu = $ve['ngaychieu']; 
                             $suatchieu = $ve['suatchieu']; 
                             $ghe = $ve['ghe'];
                             $id = $ve['id'];
@@ -54,7 +55,7 @@
                                 <td>'.$tenphim.'</td>
                                 <td>'.$tenrap.'</td>
                                 <td>'.$tenphongchieu.'</td>
-                                <td>'.$suatchieu.'</td>
+                                <td>'.$suatchieu.'('.$ngaychieu.')</td>
                                 <td>'.$ghe.'</td>
                             </tr>
                             ';

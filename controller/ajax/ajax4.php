@@ -347,6 +347,10 @@
                        <div class="box_noidung"><input name="rap" readonly type="text" value="<?php echo $loadrap['tenrap']; ?>"></div>
                    </div>
                    <div class="box_thongtin">
+                       <div class="box_tenthongtin">ngày chiếu</div>
+                       <div class="box_noidung"><input name="ngaychieu" readonly type="text" value="<?php echo $loadsuatchieu['ngaychieu']; ?>"></div>
+                   </div>
+                   <div class="box_thongtin">
                        <div class="box_tenthongtin">suất chiếu</div>
                        <div class="box_noidung"><input name="suatchieu" readonly type="text" value="<?php echo $loadsuatchieu['thoigian']; ?>"></div>
                    </div>

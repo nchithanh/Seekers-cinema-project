@@ -19,7 +19,7 @@ function thanhtoan_rap($id){
 }
 function thanhtoan_suatchieu($id){
     global $conn;
-    $sql= "select thoigian from suatchieu where id = ".$id."";
+    $sql= "select thoigian,ngaychieu from suatchieu where id = ".$id."";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -53,10 +53,10 @@ function thanhtoan_hangghe($idghe){
     $result = $stmt->fetch();
     return $result;
 }
-function add_ve($tenphim,$tenrap,$tenphongchieu,$suatchieu,$ghe,$iduser){
+function add_ve($tenphim,$tenrap,$tenphongchieu,$ngaychieu,$suatchieu,$ghe,$iduser){
     global $conn;
-    $sql= "INSERT INTO ve (tenphim,tenrap,tenphongchieu,suatchieu,ghe,iduser) VALUES";
-    $sql.=" ('$tenphim','$tenrap','$tenphongchieu','$suatchieu','$ghe','$iduser')";
+    $sql= "INSERT INTO ve (tenphim,tenrap,tenphongchieu,ngaychieu,suatchieu,ghe,iduser) VALUES";
+    $sql.=" ('$tenphim','$tenrap','$tenphongchieu','$ngaychieu','$suatchieu','$ghe','$iduser')";
     $conn->exec($sql);
 }
 function updateghe($id,$trangthai){

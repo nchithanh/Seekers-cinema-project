@@ -12,6 +12,7 @@
         $tenrap=$_POST['rap'];
         $tenphongchieu=$_POST['phongchieu'];
         $suatchieu=$_POST['suatchieu'];
+        $ngaychieu=$_POST['ngaychieu'];
         $iduser=$_SESSION['id'];
         $arr_idghe=$_POST['ghe'];
         // $trangthaighe=$_POST['trangthaighe'];
@@ -22,7 +23,7 @@
             $tenhangghe=thanhtoan_hangghe($loadghe['idhangghe']);
             $chuoi.=''.$tenhangghe['tenhangghe'].''.$loadghe['ghe'].'.';
         }
-        add_ve($tenphim,$tenrap,$tenphongchieu,$suatchieu,$chuoi,$iduser);
+        add_ve($tenphim,$tenrap,$tenphongchieu,$ngaychieu,$suatchieu,$chuoi,$iduser);
         deletethanhtoan($iduser);
      
         echo '<div id="thanhcong">

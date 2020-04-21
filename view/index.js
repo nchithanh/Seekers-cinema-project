@@ -86,6 +86,12 @@ $(document).ready(function () {
     $("#rap").change(function () {
         var idrap = $("#rap").val();
         $.post("controller/ajax/ajax1.php", { idrap: idrap }, function (data) {
+            $("#ngaychieu").html(data);
+        });
+    });
+    $("#ngaychieu").change(function () {
+        var idngaychieu = $("#ngaychieu").val();
+        $.post("controller/ajax/ajax5.php", { idngaychieu: idngaychieu }, function (data) {
             $("#suatchieu").html(data);
         });
     });
