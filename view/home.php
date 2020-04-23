@@ -226,9 +226,7 @@
 
 
 <section class="tinkhuyenmai">
-    <div class="tieude">
-        <span class="mautieude">TIN KHUYẾN MÃI</span>
-    </div>
+<div class="ten_box foo"><p>News Movies</p></div>
     <?//cho nay la khuyen mai//?>
     <div class="boxkhuyenmai" id="boxkhuyenmai">
 
@@ -257,9 +255,7 @@
     <?//cho nay la khuyen mai//?>
 </section>
 <section>
-    <div class="tieude">
-        <span class="mautieude">SEEKERS CINEMA</span>
-    </div>
+<div class="ten_box foo"><p>News Movies</p></div>
     <div class="thongtin">
         SEEKERS CINEMA là một trong những công ty tư nhân đầu tiên về điện ảnh được thành lập từ năm 2003, đã
         khẳng định thương hiệu là 1 trong 10 địa điểm vui chơi giải trí được yêu thích nhất. Ngoài hệ thống rạp

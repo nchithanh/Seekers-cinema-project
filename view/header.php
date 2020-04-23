@@ -17,6 +17,9 @@
         .none {
             display: none;
         }
+        b{
+            display: none;
+        }
     </style>
 </head>
 
@@ -110,7 +113,7 @@
             <div class="tranglogin">
                 <?php
                     if(isset($_SESSION['user'])){
-                        echo '<a style="color:#fd79a8;" href="index.php?contro=user"><i class="fa fa-user-secret"></i>
+                        echo '<a style="color:#00d2d3;" href="index.php?contro=user"><i class="fa fa-user-secret"></i>
                         '.$_SESSION['user'].'
                     </a>
                     <a href="index.php?contro=logout">

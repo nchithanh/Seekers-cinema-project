@@ -59,6 +59,15 @@ function loadhangghetheophong($idphong){
     $resul = $stmt->fetchALL();
     return $resul;    
 }
+function load_index_idhangghe($idphong,$index){
+    global $conn;
+    $sql="SELECT * FROM `hangghe` WHERE idphongchieu = ".$idphong." LIMIT ".$index.",1";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $resul = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $resul = $stmt->fetch();
+    return $resul;    
+}
 function loadghetheohangghe($idhangghe,$idsuatchieu){
     global $conn;
     $sql="select * from trangthai_ghe where idhangghe = ".$idhangghe." and idsuatchieu = ".$idsuatchieu." order by id asc";
@@ -68,4 +77,5 @@ function loadghetheohangghe($idhangghe,$idsuatchieu){
     $resul = $stmt->fetchALL();
     return $resul;    
 }
+
 ?>

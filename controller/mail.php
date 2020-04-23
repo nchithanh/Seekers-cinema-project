@@ -57,7 +57,7 @@
                     </div>
                 </div>';
                 }
-                include '../view/mail.php';
+                // include '../view/mail.php';
              }
             
            ?> 

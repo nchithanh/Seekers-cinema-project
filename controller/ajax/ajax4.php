@@ -17,19 +17,114 @@
 
         $loadthanhtoan=loadthanhtoan($iduser);
 
-    $ghe1=loadghetheohangghe(1,$idsuatchieu);
-    $ghe2=loadghetheohangghe(2,$idsuatchieu);
-    $ghe3=loadghetheohangghe(3,$idsuatchieu);
-    $ghe4=loadghetheohangghe(4,$idsuatchieu);
-    $ghe5=loadghetheohangghe(5,$idsuatchieu);
-    $ghe6=loadghetheohangghe(6,$idsuatchieu);
-    $ghe7=loadghetheohangghe(7,$idsuatchieu);
-    $ghe8=loadghetheohangghe(8,$idsuatchieu);
-    $ghe9=loadghetheohangghe(9,$idsuatchieu);
-    $ghe10=loadghetheohangghe(10,$idsuatchieu);
-    $ghe11=loadghetheohangghe(11,$idsuatchieu);
+
+        
+        $index1=load_index_idhangghe($idphongchieu['idphongchieu'],0);
+        $index2=load_index_idhangghe($idphongchieu['idphongchieu'],1);
+        $index3=load_index_idhangghe($idphongchieu['idphongchieu'],2);
+        $index4=load_index_idhangghe($idphongchieu['idphongchieu'],3);
+        $index5=load_index_idhangghe($idphongchieu['idphongchieu'],4);
+        $index6=load_index_idhangghe($idphongchieu['idphongchieu'],5);
+        $index7=load_index_idhangghe($idphongchieu['idphongchieu'],6);
+        $index8=load_index_idhangghe($idphongchieu['idphongchieu'],7);
+        $index9=load_index_idhangghe($idphongchieu['idphongchieu'],8);
+        $index10=load_index_idhangghe($idphongchieu['idphongchieu'],9);
+        $index11=load_index_idhangghe($idphongchieu['idphongchieu'],10);
+
+
+        if($index1){
+            if(is_null($index1['id'])){
+                $ghe1=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe1=loadghetheohangghe($index1['id'],$idsuatchieu);
+            }
+        }
+        if($index2){
+            if(is_null($index2['id'])){
+                $ghe2=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe2=loadghetheohangghe($index2['id'],$idsuatchieu);
+            }
+        }
+        if($index3){
+            if(is_null($index3['id'])){
+                $ghe3=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe3=loadghetheohangghe($index3['id'],$idsuatchieu);
+            }
+        }
+        if($index4){
+            if(is_null($index4['id'])){
+                $ghe4=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe4=loadghetheohangghe($index4['id'],$idsuatchieu);
+            }
+        }
+        if($index5){
+            if(is_null($index5['id'])){
+                $ghe5=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe5=loadghetheohangghe($index5['id'],$idsuatchieu);
+            }
+        }
+        if($index6){
+            if(is_null($index6['id'])){
+                $ghe6=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe6=loadghetheohangghe($index6['id'],$idsuatchieu);
+            }
+        }
+        if($index7){
+            if(is_null($index7['id'])){
+                $ghe7=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe7=loadghetheohangghe($index7['id'],$idsuatchieu);
+            }
+        }
+        if($index8){
+            if(is_null($index8['id'])){
+                $ghe8=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe8=loadghetheohangghe($index8['id'],$idsuatchieu);
+            }
+        }
+        if($index9){
+            if(is_null($index9['id'])){
+                $ghe9=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe9=loadghetheohangghe($index9['id'],$idsuatchieu);
+            }
+        }
+        if($index10){
+            if(is_null($index10['id'])){
+                $ghe10=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe10=loadghetheohangghe($index10['id'],$idsuatchieu);
+            }
+        }
+        if($index11){
+            if(is_null($index11['id'])){
+                $ghe11=loadghetheohangghe(100,$idsuatchieu);
+            }else{
+                $ghe11=loadghetheohangghe($index11['id'],$idsuatchieu);
+            }
+        }
+        // $ghe1=loadghetheohangghe($index['id'],$idsuatchieu);
+        // $ghe2=loadghetheohangghe($index2['id'],$idsuatchieu);
+        // $ghe3=loadghetheohangghe($index3['id'],$idsuatchieu);
+        // $ghe4=loadghetheohangghe($index4['id'],$idsuatchieu);
+        // $ghe5=loadghetheohangghe($index5['id'],$idsuatchieu);
+        // $ghe6=loadghetheohangghe($index6['id'],$idsuatchieu);
+        // $ghe7=loadghetheohangghe($index7['id'],$idsuatchieu);
+        // $ghe8=loadghetheohangghe($index8['id'],$idsuatchieu);
+        // $ghe9=loadghetheohangghe(91,$idsuatchieu);
+        // $ghe10=loadghetheohangghe(101,$idsuatchieu);
+        // $ghe11=loadghetheohangghe(111,$idsuatchieu);
+       
+
 
 ?>
+
 <div class="ajax" id="box_ajax_back">
     <div class="ajax_datve">
         <div onclick="close_datvebox()" id="ajax_back">
@@ -40,6 +135,9 @@
              <div class="head">
                  <div class="manhinh">
                      screen
+                    <?php
+                       
+                    ?>
                  </div>
              </div>
              <div class="body">

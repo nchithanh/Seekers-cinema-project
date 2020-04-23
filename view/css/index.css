@@ -11,7 +11,7 @@ body{
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #ffffff;
+    background: #00d2d3;
     background-size: cover;
     z-index: 1;
     top: 0;
@@ -25,7 +25,7 @@ body{
     background: white;
     color: whitesmoke;
     z-index: 2;
-    box-shadow: 0 0 5px #79aefdb8;
+    box-shadow: 0 0 5px #00d2d3;
     overflow: hidden;
 }
 .background::after{
@@ -77,10 +77,10 @@ body{
 }
 
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 6px;
 }
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(transparent, #79aefdb8);
+    background: linear-gradient(transparent, #00d2d3);
     background-size: 200%;
     border-radius: 6px;
 }
@@ -127,7 +127,7 @@ video:focus{
     letter-spacing: .35em;
     width: 30%;
     height: 100px;
-    background: #79aefd;
+    background: #00d2d3;
     color: white;
     text-align: center;
     line-height: 100px;
@@ -152,7 +152,7 @@ video:focus{
 }
 
 .form_login form i{
-    color: #79aefdb8;
+    color: #00d2d3;
     width: 0;
 }
 .form_login form p{
@@ -183,7 +183,7 @@ video:focus{
     transition: all .3s;
     background: none;
     border: none;
-    border-bottom: solid 1.5px #79aefdb8;
+    border-bottom: solid 1.5px #00d2d3;
     text-align: center;
     
 }
@@ -200,7 +200,7 @@ video:focus{
     text-align: center;
 }
 .form_login .btn{
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
     border: none;
     height: 35px;
@@ -239,9 +239,9 @@ video:focus{
     bottom: 0%;
     width: 60%;
     left: 20%;
-    background: #79aefdb8;
+    background: #00d2d3;
     z-index: 9999;
-    height: 55px;
+    height: 70px;
     color: white;
 }
 .box_hien p:hover{
@@ -249,7 +249,7 @@ video:focus{
     cursor: pointer;
 }
 .box_hien p{
-    margin-top: 15px;
+    margin-top: 30px;
     margin-left: 30px;
     letter-spacing: .35em;
     font-size: 1em;
@@ -261,7 +261,7 @@ video:focus{
 }
 .box_hien p:nth-child(3){
     margin-left: 40%;
-    margin-top: 15px;
+    margin-top: 30px;
     font-size: 1em;
 }
 .box_hien i{
@@ -430,7 +430,7 @@ header .timkiem form .tim{
     height: 80%;
     width: 40%;
     border: none;
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
     letter-spacing: .15em;
 }
@@ -438,9 +438,9 @@ header .timkiem form .text{
     height: 70%;
     width: 0%;
     border: none;
-    border-bottom: solid 1px #79aefdb8;
+    border-bottom: solid 1px #00d2d3;
     text-align: center;
-    color: #79aefdb8;
+    color: #00d2d3;
     transition: all .3s;
 }
 input:focus{
@@ -481,7 +481,7 @@ header .tranglogin a:nth-child(1){
     margin-right: 5px;
 }
 header .tranglogin a:hover{
-    color: black;
+    color: #00d2d3;
     cursor: pointer;
 }
 header nav{
@@ -559,7 +559,7 @@ header nav ul li .box_phim .box .box_logo{
     height: 180px;
     margin-left: 10%;
     margin-top: -30px;
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
 }
 header nav ul li .box_phim .box .location{
@@ -640,7 +640,7 @@ header nav ul li .box_phim .box .boxphim .phim .phim_box .anh a{
     width: 40%;
     height: 20%;
     border: solid 2px white;
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
     text-align: center;
     line-height: 35px;
@@ -691,23 +691,22 @@ header nav ul li a{
 }
 .banner_top .listbanner{
     position: absolute;
-    left: 47%;
-    bottom: -25px;
+    left: 41%;
+    bottom: 15px;
     width: 40%;
     height: 10px;
 }
 .banner_top .listbanner span{
-    width: 10px;
+    width: 10%;
     height: 10px;
     float: left;
     margin-right: 2%;
     background-color: none;
-    border-radius: 50%;
-    border: solid 2px #79aefdb8;
+    border: solid 1.5px #00d2d3;
     transition: all .3s;
 }
 .banner_top .listbanner span:hover{
-    background: #79aefdb8;
+    background: #00d2d3;
     cursor: pointer;
 }
 .banner_top .box_trailer{
@@ -732,7 +731,7 @@ header nav ul li a{
     100%{transform: scale(1.5);}
 }
 .maubanner{
-    background: #79aefdb8;
+    background: #00d2d3;
 }
 
 
@@ -766,7 +765,7 @@ header nav ul li a{
     bottom: 10px;
     left: 0;
     height: 50%;
-    border-top: solid 2px #79aefdb8;
+    border-top: solid 2px #00d2d3;
 }
 .banner_bottom .ten_box::before{
     position: absolute;
@@ -775,10 +774,10 @@ header nav ul li a{
     bottom: 10px;
     right: 0;
     height: 50%;
-    border-top: solid 2px #79aefdb8;
+    border-top: solid 2px #00d2d3;
 }
 .banner_bottom .ten_box p{
-    background: #79aefdb8;
+    background: #00d2d3;
     width: 15%;
     height: 30px;
     line-height: 30px;
@@ -867,7 +866,7 @@ header nav ul li a{
 }
 .banner_bottom .best_phim .right a{
     padding: 15px 40px;
-    border: solid 2px #79aefdb8;
+    border: solid 2px #00d2d3;
     color: black;
     position: relative;
     letter-spacing: .35em;
@@ -878,7 +877,7 @@ header nav ul li a{
     content: '';
     width: 3%;
     height: 100%;
-    background: #79aefdb8;
+    background: #00d2d3;
     left: 0%;
     bottom: 0;
     transition: all .3s;
@@ -913,11 +912,11 @@ section{
 section .tieude{
     position: absolute;
     left: 10%;
-    width: 100%;
+    width: 35%;
     height: 50px;
     line-height: 50px;
-    background:#79aefdb8;
-    color: black;
+    background:#00d2d3;
+    color: white;
 }
 section .tieude::after{
     position: absolute;
@@ -926,7 +925,7 @@ section .tieude::after{
     height: 100%;
     left: -100%;
     top: 0;
-    background: #79aefdb8;
+    background: #00d2d3;
 }
 section .tieude span{
     font-size: 1em;
@@ -962,7 +961,7 @@ section .listphim{
     position: absolute;
     width: .5%;
     height: 100%;
-    background: #79aefdb8;
+    background: #00d2d3;
     right: 0;
     top: 0;
     transform: scaleY(0);
@@ -998,7 +997,7 @@ section .listphim .more{
     right: 2%;
     width: 17%;
     height: 50px;
-    border: solid 2px #79aefdb8;
+    border: solid 2px #00d2d3;
     text-align: center;
     color: black;
     line-height: 50px;
@@ -1014,7 +1013,7 @@ section .listphim .more::after{
     height: 100%;
     left: -1%;
     bottom: 0;
-    background: #79aefdb8;
+    background: #00d2d3;
     transition: all .3s;
     z-index: -1;
 }
@@ -1195,6 +1194,42 @@ section .listphim .phim .muave a:hover::after{
 }
 .tinkhuyenmai .boxkhuyenmai .khuyenmai:hover .tenkhuyenmai{
     transform: scaleY(1);
+}
+.foo{
+    width: 80%;
+    height: 10%;
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    text-align: center;
+    font-size: 20px;
+}
+ .foo::after{
+    position: absolute;
+    content: '';
+    width: 40%;
+    bottom: 30%;
+    left: 0;
+    height: 50%;
+    border-top: solid 2px #00d2d3;
+}
+.foo::before{
+    position: absolute;
+    content: '';
+    width: 40%;
+    bottom: 30%;
+    right: 0;
+    height: 50%;
+    border-top: solid 2px #00d2d3;
+}
+.foo p{
+    background: #00d2d3;
+    width: 15%;
+    height: 30px;
+    line-height: 30px;
+    margin: auto;
+    color: white;
+    letter-spacing: .15em;
 }
 
 
@@ -1510,7 +1545,7 @@ aside .tieude{
     letter-spacing: .15em;
 }
 aside .tieude span{
-    border-bottom: solid 1.5px #79aefdb8;
+    border-bottom: solid 1.5px #00d2d3;
     padding-bottom: 10px ;
     font-size: 20px;
 }
@@ -1547,8 +1582,8 @@ aside .hinhphim:hover .muave{
     transform: scaleY(1);
 }
 aside .hinhphim .muave a:hover{
-    background: #79aefdb8;
-    border: solid 1px #79aefdb8;
+    background: #00d2d3;
+    border: solid 1px #00d2d3;
 }
 aside .tenphim{
     width: 100%;
@@ -1561,11 +1596,11 @@ aside .more{
     text-align: center;
     padding: 15px 30px;
     margin-left: 190px;
-    border: solid 1.5px #79aefdb8;
+    border: solid 1.5px #00d2d3;
     margin-bottom: 10px;
     transition: all .3s;
     position: relative;
-    color: #79aefdb8;
+    color: #00d2d3;
     letter-spacing: .15em;
 }
 aside .more::after{
@@ -1573,7 +1608,7 @@ aside .more::after{
     content: '';
     width: 0%;
     height: 100%;
-    background: #79aefdb8;
+    background: #00d2d3;
     left: 0%;
     bottom:  0;
     transition: all .3s;
@@ -1601,7 +1636,7 @@ article .thongtinphim{
     color: black;
 }
 article .thongtinphim span{
-    color: #79aefdb8;
+    color: #00d2d3;
 }
 article .thongtinphim .tenphim{
     font-size: 30px;
@@ -1619,7 +1654,7 @@ article .noidungphim .tieude{
     font-size: 20px;
     width: 20%;
     height: 30px;
-    border-bottom: solid 1.5px #79aefdb8;
+    border-bottom: solid 1.5px #00d2d3;
     color: black;
 }
 article .noidungphim p{
@@ -1633,7 +1668,7 @@ article .tieude2{
     float: left;
     margin-bottom: 50px;
     line-height: 50px;
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
     position: relative;
 }
@@ -1644,7 +1679,7 @@ article .tieude2::after{
     height: 100%;
     top: 0;
     width: 100%;
-    background: #79aefdb8;
+    background: #00d2d3;
 }
 article .tieude2 span{
     margin-right: 50px;
@@ -1667,7 +1702,7 @@ article .binhluan{
 article .binhluan form{
     width: 100%;
     height: 100px;
-    border-bottom: solid 2px #79aefdb8;
+    border-bottom: solid 2px #00d2d3;
     position: relative;
 }
 article .binhluan form input{
@@ -1682,7 +1717,7 @@ article .binhluan form input:nth-child(2){
     right: 0;
     width: 20%;
     height: 30px;
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
     border: none;
     letter-spacing: .15em;
@@ -1706,7 +1741,7 @@ article .binhluan .hienbinhluan .tenbinhluan{
     width: 100%;
     height: 30px;
     line-height: 30px;
-    color: #79aefdb8;
+    color: #00d2d3;
 }
 article .binhluan .hienbinhluan .tenbinhluan::after{
     position: absolute;
@@ -1716,7 +1751,7 @@ article .binhluan .hienbinhluan .tenbinhluan::after{
     width: 20%;
     height: 100%;
     background: none;
-    border-bottom: solid 1px #79aefdb8;
+    border-bottom: solid 1px #00d2d3;
 }
 article .binhluan .hienbinhluan p{
     position: absolute;
@@ -1743,7 +1778,7 @@ article .datve::after{
     height: 50px;
     top: 0;
     left: 0;
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
     text-align: center;
     line-height: 50px;
@@ -1760,18 +1795,18 @@ article .datve form select{
     margin-top: 10px;
     width: 100%;
     height: 50px;
-   background: #79aefdb8;
+   background: #00d2d3;
    color: white;
    border: none;
    margin-top: 30px;
 }
 article .datve form select option:checked{
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
 }
 article .datve form select option{
     text-align: center;
-    color: #79aefdb8;
+    color: #00d2d3;
     background: white;
 }
 article .datve form input{
@@ -1780,7 +1815,7 @@ article .datve form input{
     height: 50px;
     bottom: -15%;
     right: 0;
-    background: #79aefdb8;
+    background: #00d2d3;
    color: white;
     text-align: center;
     line-height: 50px;
@@ -1798,7 +1833,7 @@ article .boxcanhbao{
     left: -20%;
 }
 article .boxcanhbao .btn_nhanthongbao{
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
     width: 50%;
     height: 40px;
@@ -2013,7 +2048,7 @@ article .boxcanhbao .btn_nhanthongbao:hover{
     height: 100%;
     top: 0;
     left: -50%;
-    background: #79aefdb8;
+    background: #00d2d3;
     z-index: -1;
 }
 .danhsachphim .tieude span{
@@ -2195,7 +2230,7 @@ article .boxcanhbao .btn_nhanthongbao:hover{
     transition: all .3s;
 }
 .trangtimkiem .khungketqua .ketqua .hinhphim .chitiet a:hover{
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
 }
 .trangtimkiem .khungketqua .ketqua .hinhphim:hover .chitiet{
@@ -2764,7 +2799,7 @@ article .boxcanhbao .btn_nhanthongbao:hover{
 #thanhcong .top p:nth-child(1){
     font-size: 80px;
     margin-top: 10px;
-    color: #79aefdb8;
+    color: #00d2d3;
 }
 #thanhcong .top p:nth-child(2){
     font-size: 30px;
@@ -2795,7 +2830,7 @@ article .boxcanhbao .btn_nhanthongbao:hover{
     left: 0;
     width: 100%;
     height: 40%;
-    background: #79aefdb8;
+    background: #00d2d3;
     overflow: hidden;
     text-align: center;
 }
@@ -2816,7 +2851,7 @@ article .boxcanhbao .btn_nhanthongbao:hover{
     line-height: 30px;
     letter-spacing: .15em;
     text-transform: uppercase;
-    background: #79aefdb8;
+    background: #00d2d3;
     color: white;
     text-align: center;
     z-index: 9999;

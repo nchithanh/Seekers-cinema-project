@@ -10,9 +10,18 @@
         $resul = $stmt->fetchAll();
         return $resul;    
     }
+
     $idrap=$_POST['idrap'];
     $loadsuatchieu=loadsuatchieu($idrap);
+
+    $check='';
     foreach ($loadsuatchieu as $suatchieu){
+        if($suatchieu['ngaychieu']==$check){
+           
+        }else {
             echo '<option value="'.$suatchieu['id'].'">'.$suatchieu['ngaychieu'].'</option>';
+            $check=$suatchieu['ngaychieu'];
+        }
+            
     }
 ?>
