@@ -1,6 +1,13 @@
 <main>
     <?php
     require_once "view/sidebar.php";
+    echo '
+    <style>
+        .li_film a{
+            color: #fff;
+        }
+    </style>
+    ';
     ?>
 <article class="col_11">
 		<div class="head col_12">
@@ -34,7 +41,7 @@
 						</script> -->
 					</div>
 					<div class="add_data col_6">
-						<a href="admin.php?contro=addphim">
+						<a href="admin.php?contro=film&addfilm">
 							<i class="fas fa-plus"></i>
 							<span>Add Film</span>
 						</a>
@@ -95,11 +102,11 @@
                                         <td>'.$phim['ngaychieu'].'</td>
                                         <td>
                                             <div class="tools_data_table">
-                                                <a class="detail_but" href="admin.php?contro=film_dt&idphim='.$phim['id'].'">
+                                                <a class="detail_but" href="admin.php?contro=film&film_dt='.$phim['id'].'">
                                                     <span>Details</span>
                                                 </a>
                                                 <p>/</p>
-                                                <a class="del_but" href="index.php?contro=film_del&idphim='.$phim['id'].'">
+                                                <a class="del_but" href="admin.php?contro=film&film_del='.$phim['id'].'">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </div>
@@ -138,7 +145,7 @@
                                         <td>'.$phim['ngaychieu'].'</td>
                                         <td>
                                             <div class="tools_data_table">
-                                                <a class="detail_but" href="admin.php?contro=film_dt&idphim='.$phim['id'].'">
+                                                <a class="detail_but" href="admin.php?contro=film&film_dt='.$phim['id'].'">
                                                     <span>Details</span>
                                                 </a>
                                                 <p>/</p>

@@ -1,6 +1,6 @@
 <option value="">Chọn phòng chiếu</option>
 <?php
-    require_once "connect.php";
+    require_once "../model/connect.php";
     function loadphong($idrap){
         global $conn;
         $sql="SELECT * FROM phongchieu WHERE idrap = ".$idrap."";

@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="view/css/admin.css">
 	<script src="https://kit.fontawesome.com/792cf9d6f3.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
 	<header class="col_12">

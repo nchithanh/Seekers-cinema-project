@@ -7,6 +7,13 @@
 <main>
     <?php
     require_once "view/sidebar.php";
+    echo '
+    <style>
+        .li_film{
+            color: #fff;
+        }
+    </style>
+    ';
     ?>
 <article class="col_11">
 		<div class="head col_12">
@@ -54,7 +61,7 @@
             <div class="chitietphim">
                         <div class="anhphim" style="background-image: url('../view/img/<?php echo $phim['anhphim']; ?>');">
                         </div>
-                        <form action="admin.php?contro=film_dt&updated=1" method="post" enctype="multipart/form-data">
+                        <form action="admin.php?contro=film&updated=1" method="post" enctype="multipart/form-data">
                             <input style="display: none;" type="text" name="id" value="<?php echo $phim['id']; ?>">
                             <div class="thongtin">
                                 <label>Tên Phim</label>
@@ -109,7 +116,7 @@
                                 <label>Nội Dung</label>
                                 <input type="text" name="noidung" value="<?php echo $phim['noidung']; ?>">
                             </div>
-                            <div style="top: 10px;" class="thongtin submit_but">
+                            <div style="top: 10px;" class="thongtin submit_editfilm">
                                 <input type="submit" name="updatephim" value="update">
                             </div>
                         </form>

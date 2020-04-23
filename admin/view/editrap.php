@@ -1,15 +1,15 @@
-        <form action="admin.php?contro=qlrap&edit=<?php echo $_POST['idrap_for_edit']?>" method="post" id="edit_rap_form">
+        <form action="admin.php?contro=rap&edit=<?php echo $_POST['idrap_for_edit']?>" method="post" id="edit_rap_form">
             <div class="head_add_form">
                 <h3 class="title_add">Edit rạp</h3>
-                <button type="button" onclick="hide_form_edit_rap()" class="exit_add_rap_but">
+                <button type="button" onclick="hide_form_edit_rap()" class="exit_add_but">
                     <i class="fas fa-times-circle"></i>
                 </button>
             </div>
             <table>
                 <tr>
                     <?php
-                        require_once "connect.php";
-                        require_once "getdata.php";
+                        require_once "../model/connect.php";
+                        require_once "../model/getdata.php";
                         
                         $RapById = LoadRapById($_POST['idrap_for_edit']);
                         echo '
@@ -38,11 +38,11 @@
                     </td>
                 </tr>
             </table>
-            <button type="submit" form="edit_rap_form" name="submit_edit_rap" class="submit_add_rap">
+            <button type="submit" form="edit_rap_form" name="submit_edit_rap" class="submit_add">
                 <i class="fas fa-tools"></i>
                 <span>Edit</span>
             </button>
-            <button type="button" onclick="hide_form_edit_rap()" class="discard_add_rap">
+            <button type="button" onclick="hide_form_edit_rap()" class="discard_add">
                 <i class="far fa-trash-alt"></i>
                 <span>Discard</span>
             </button>

@@ -42,9 +42,5 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col_12">
-			<div class="content"></div>
-		</div>
 	</article>
 </main>

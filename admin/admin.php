@@ -21,25 +21,15 @@ if($_SESSION['role']!=2){
         case 'film':
             include "controller/film.php";
             break ;
-        case 'film_dt':
-            include "controller/film_dt.php";
-            break ;
         case 'suatchieu':
             include "controller/suatchieu.php";
-            break;
-        case 'addphim':
-            include "controller/addphim.php";
             break;
         case 'phongchieu':
             include "controller/phongchieu.php";
             break; 
-        case 'qlrap':
-            include "controller/qlrap.php";
+        case 'rap':
+            include "controller/rap.php";
             break;            
-        // case 'logout':
-    
-        //     include "controller/logout.php";
-        //     break;
     }   
     include "view/footer.php";
     
