@@ -10,7 +10,7 @@ if(isset($_GET['mul_del'])){
 			xoarap($selected);
 		}
     }
-    header('location: admin.php?contro=qlrap') ;
+    header('location: admin.php?contro=rap') ;
 }
 if(isset($_GET['addrap']))
     if (isset($_POST['submit_add_rap'])) {
@@ -19,7 +19,7 @@ if(isset($_GET['addrap']))
         $idtinhthanh=$_POST['tinhthanh'];
         addrap($tenrap,$diachi,$idtinhthanh);
 
-        header('location: admin.php?contro=qlrap') ;
+        header('location: admin.php?contro=rap') ;
     }
 if(isset($_GET['edit'])){
     $id= $_GET['edit'];
@@ -28,13 +28,13 @@ if(isset($_GET['edit'])){
     $idtinhthanh =$_POST['tinhthanh'];
     UpdateRapInformation($id,$tenrap,$diachi,$idtinhthanh);
 
-    header('location: admin.php?contro=qlrap') ;
+    header('location: admin.php?contro=rap') ;
 }
 if(isset($_GET['xoarap']))
     {
         $id = $_GET['xoarap'];
         xoarap($id);
-        header('location: admin.php?contro=qlrap') ;
+        header('location: admin.php?contro=rap') ;
     }
 $allrap=LoadRapWithTenTinhThanh();
-include "view/qlrap.php";
+include "view/rap.php";

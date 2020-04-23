@@ -1,9 +1,9 @@
 <main>
     <div class="form_add_rap" id="form_add_rap">
-        <form action="admin.php?contro=qlrap&addrap" method="post" id="add_rap_form">
+        <form action="admin.php?contro=rap&addrap" method="post" id="add_rap_form">
             <div class="head_add_form">
                 <h3 class="title_add">Add rạp</h3>
-                <button type="button" onclick="hide_form_add_rap();reset_input_addrap();" class="exit_add_rap_but">
+                <button type="button" onclick="hide_form_add_rap();reset_input_addrap();" class="exit_add_but">
                     <i class="fas fa-times-circle"></i>
                 </button>
             </div>
@@ -29,11 +29,11 @@
                     </td>
                 </tr>
             </table>
-            <button type="submit" form="add_rap_form" name="submit_add_rap" class="submit_add_rap">
+            <button type="submit" form="add_rap_form" name="submit_add_rap" class="submit_add">
                 <i class="fas fa-plus"></i>
                 <span>Add</span>
             </button>
-            <button onclick="hide_form_add_rap();reset_input_addrap();" class="discard_add_rap">
+            <button type="button" onclick="hide_form_add_rap();reset_input_addrap();" class="discard_add">
                 <i class="far fa-trash-alt"></i>
                 <span>Discard</span>
             </button>
@@ -48,6 +48,13 @@
     <!-- ADD MENU -->
     <?php
     require_once "view/sidebar.php";
+    echo '
+    <style>
+        .li_rap{
+            color: #fff;
+        }
+    </style>
+    ';
     ?>
 <article class="col_11">
 		<div class="head col_12">
@@ -59,7 +66,7 @@
 					<h1>Trang chủ</h1>
 				</a>
 				<i class="fas fa-chevron-right"></i>
-				<a href="admin.php?contro=qlrap">
+				<a href="admin.php?contro=rap">
 					<h3>Quản lý rạp</h3>
 				</a>	
 			</div>
@@ -103,7 +110,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <form action="admin.php?contro=qlrap&mul_del" method="post" id="del_mul_rap_form">
+                <form action="admin.php?contro=rap&mul_del" method="post" id="del_mul_rap_form">
                     <?php
                     foreach ($allrap as $rap){
                     echo '
@@ -121,7 +128,7 @@
                             <i class="fas fa-wrench"></i>
                             </button>
                             <p>/</p>
-                            <a class="del_but" href="admin.php?contro=qlrap&xoarap='.$rap['id'].'">
+                            <a class="del_but" href="admin.php?contro=rap&xoarap='.$rap['id'].'">
                             <i class="fas fa-trash"></i>
                             </a>
                             </div>
@@ -141,7 +148,7 @@
                             echo'
                                 $("#edit_rap_but'.$ifRap['id'].'").click(function (){
                                     var idrap_for_edit'.$ifRap['id'].' = $("#edit_rap_but'.$ifRap['id'].'").val();
-                                    $.post("model/ajax2.php", {idrap_for_edit:idrap_for_edit'.$ifRap['id'].'}, function(data){
+                                    $.post("view/editrap.php", {idrap_for_edit:idrap_for_edit'.$ifRap['id'].'}, function(data){
                                         $("#form_edit_rap").html(data);
                                     });
                                     show_form_edit_rap();
@@ -188,5 +195,5 @@
             </div>
             </div>
 		</div>
-	</article>
+    </article>
 </main>

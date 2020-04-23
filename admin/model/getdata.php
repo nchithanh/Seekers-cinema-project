@@ -24,7 +24,6 @@ function LoadFilmByStatus($trangthai){
 function LoadFilmDetailById($id){
     global $conn;
     $sql= "select * from phim where id = ".$id."";
-    $sql.=" order by id desc";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -54,16 +53,44 @@ function LoadIdConnectFilmRap($idphim,$idrap){
     $result = $stmt->fetch();
     return $result;
 }
-//load phòng chiếu
-function loadphongchieu(){
+function LoadConnectphimrapById($id){
     global $conn;
-    $sql="SELECT phongchieu.id, phongchieu.tenphong, rap.tenrap FROM phongchieu INNER JOIN rap ON phongchieu.idrap = rap.id";
+    $sql= "select * from phim_rap where id_lienket = ".$id."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+// LOAD PHONG CHIEU
+function LoadAllPhongchieu(){
+    global $conn;
+    $sql="select * from phongchieu";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $resul = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $resul = $stmt->fetchAll();
     return $resul;    
 }
+function LoadPhongChieuById($id){
+    global $conn;
+    $sql= "select * from phongchieu where id = ".$id."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+function LoadIDPhongchieu($ten,$idrap){
+    global $conn;
+    $sql= "select * from phongchieu where tenphong ='".$ten."' and idrap = ".$idrap."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+
 function raptheotinh(){
 	global $conn;
     $sql= "select * from tinhthanh";
@@ -112,4 +139,139 @@ function LoadRapById($id){
     $result = $stmt->fetch();
     return $result;
 }
+
+/******** SUAT CHIEU *************/
+function LoadAllSuatChieu(){
+    global $conn;
+    $sql= "select * from suatchieu";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+}
+function LoadIdSuatchieu($ngaychieu,$thoigian,$idphim_rap,$idphongchieu){
+    global $conn;
+    $sql= "select * from suatchieu where ngaychieu = '".$ngaychieu."' and thoigian= '".$thoigian."' and idphim_rap = ".$idphim_rap." and idphongchieu = ".$idphongchieu." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+// function LoadAllSuatChieu(){
+//     global $conn;
+//     $sql= "select * from suatchieu";
+//     $stmt = $conn->prepare($sql);
+//     $stmt->execute();
+//     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+//     $result = $stmt->fetchALL();
+//     return $result;
+// }
+
+
+/*********** TRANG THAI GHE ***************/
+function LoadAllTrangthaighe(){
+    global $conn;
+    $sql= "select * from trangthai_ghe";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+}
+function LoadTrangthaigheById($id){
+    global $conn;
+    $sql= "select * from trangthai_ghe where id =".$id." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+function CountAvailableBySuatchieuId($id){
+    global $conn;
+    $sql= "select count(trangthai) as 'count' from trangthai_ghe where trangthai=0 and idsuatchieu =".$id." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+function CountBookedBySuatchieuId($id){
+    global $conn;
+    $sql= "select count(trangthai) as 'count' from trangthai_ghe where trangthai=1 and idsuatchieu =".$id." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+/*********** GHE************/
+function LoadAllGhe(){
+    global $conn;
+    $sql= "select * from ghe";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+}
+function LoadGheById($id){
+    global $conn;
+    $sql= "select * from ghe where id =".$id." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+function CountGheByIdPhong($id){
+    global $conn;
+    $sql= "select count(id) from ghe where idphong = ".$id."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+function LoadGheByIdPhong($id){
+    global $conn ;
+    $sql= "select * from ghe where idphong =".$id." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll();
+    return $result;
+}
+/*********** LOAI PHONG ************/
+function LoadLoaiphongById($id){
+    global $conn;
+    $sql= "select * from loaiphong where id =".$id." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+/*********** LOAD HANG GHE */
+function LoadIdHangghe($tenhangghe,$idphongchieu){
+    global $conn;
+    $sql= "select * from hangghe where tenhangghe ='".$tenhangghe."' and idphongchieu=".$idphongchieu." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+function LoadHanggheByIdphong($id){
+    global $conn;
+    $sql= "select * from hangghe where idphongchieu= ".$id." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll();
+    return $result;
+}
 ?>
+
