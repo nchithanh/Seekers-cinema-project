@@ -1,4 +1,4 @@
-<option value="">chọn rạp</option>
+
 <?php
     include "../../model/connect.php";
     function loadrap($idphim){
@@ -15,6 +15,7 @@
     $i=0;
     foreach ($loadrap as $rap){
         $i++;
+        echo '<option value="">chọn rạp</option>';
         echo '<option value="'.$rap['id_lienket'].'">'.$rap['tenrap'].'</option>';
     }
     if($i==0){

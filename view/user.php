@@ -16,7 +16,7 @@
                     </div>
                     <div class="thongtin">
                         <label>Userpass</label>
-                        <input type="text" name="pass" required value="<?php echo $loadusertheoid['pass'] ?>">
+                        <input type="text" name="pass" required value="" placeholder="new password">
                     </div>
                     <div class="thongtin">
                         <label>email</label>

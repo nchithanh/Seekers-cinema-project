@@ -35,10 +35,10 @@ window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        document.getElementById("header").style.animationName = "header";
+        
     }
     else {
-
+        
     }
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         document.getElementById("banner_bottom").style.animationName = "banner_bottom";

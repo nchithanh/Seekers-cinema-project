@@ -8,6 +8,9 @@ if(isset($_POST['update']) && $_POST['update']) {
     $pass=$_POST['pass'];
     $email=$_POST['email'];
     $sdt=$_POST['sdt'];
+    //ma hoa//
+    $pass = sha1($pass.$user.$pass);
+    //ma hoa//
     update_user($_SESSION['id'],$user,$pass,$email,$sdt);
 } 
 $loadusertheoid=loadusertheoid($_SESSION['id']);

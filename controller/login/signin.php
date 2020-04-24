@@ -7,6 +7,9 @@ if(isset($_POST['adduser'])&&$_POST['adduser']){
     $email=htmlspecialchars($_POST['email'],ENT_QUOTES);
     $sdt=htmlspecialchars($_POST['sdt'],ENT_QUOTES);
     $role=$_POST['role'];
+    //ma hoa//
+        $pass = sha1($pass.$user.$pass);    
+    //ma hoa//
     $trung = (checkUserTrung($user) == $user) ? 1 : 0;  
     if($trung == 0) {
         unset($_SESSION['trung']);

@@ -25,7 +25,7 @@ body{
     background: white;
     color: whitesmoke;
     z-index: 2;
-    box-shadow: 0 0 5px #00d2d3;
+    box-shadow: 0 0 3px #00d2d3;
     overflow: hidden;
 }
 .background::after{
@@ -380,20 +380,18 @@ video:focus{
 
 
 header{
+    position: relative;
     top: 0;
     width: 100%;
     height: 60px;
-    position: relative;
     background: rgb(255, 255, 255);
-    z-index: 999;
     animation-fill-mode: forwards;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     transform-origin: top;
+    z-index: 9999;
 }
-@keyframes header{
-    0%{transform: scaleY(0);}
-    100%{transform: scaleY(1);}
-}
+
+
 
 header .logo{
     width: 20%;
@@ -536,7 +534,7 @@ header nav ul li .box_phim{
     background: rgba(255, 255, 255, 0.966);
     z-index: 8811;
     transition: all .3s;
-    box-shadow: 0 5px 5px rgb(0, 0, 0);
+    box-shadow: 0 1px 1px gray;
 }
 header nav ul li .box_phim .box{
     width: 20%;
