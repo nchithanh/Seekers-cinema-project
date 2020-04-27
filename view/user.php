@@ -1,6 +1,7 @@
 <div class="box_user">
     <div class="left">
         <h2>welcom user</h2>
+        <a href="index.php"><p class="btn qltk">Trang chủ</p></a>
         <p class="btn qltk">quản lý tài khoản</p>
         <p class="btn lsdt user_mau">lịch sử đặt vé</p>
         <p></p>
@@ -68,3 +69,8 @@
         </div>
     </div>
 </div>
+<style>
+    .warp{
+        box-shadow: 0 0 5px gray;
+    }
+</style>

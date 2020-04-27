@@ -3,7 +3,7 @@
     include "../../model/connect.php";
     function loadsuatchieu($id,$ngaychieu){
         global $conn;
-        $sql="SELECT * FROM suatchieu where idphim_rap = ".$id." and ngaychieu = '".$ngaychieu."'";
+        $sql="SELECT * FROM suatchieu where idphim_rap = ".$id." and ngaychieu = '".$ngaychieu."' order by thoigian asc";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $resul = $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -46,7 +46,7 @@
         if($trangthaiphong['id']==0){
             echo '<option disabled style="color:red;" value="'.$suatchieu['id'].'">'.$suatchieu['thoigian'].'( hết chỗ )</option>';
         }else{
-            echo '<option value="'.$suatchieu['id'].'">'.$suatchieu['thoigian'].' ('.$loadphong['tenphong'].')</option>';
+            echo '<option value="'.$suatchieu['id'].'">'.$suatchieu['thoigian'].'</option>';
         }
     }
 ?>
