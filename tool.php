@@ -201,7 +201,6 @@ catch(PDOException $e)
         $conn->exec($sql);
     }
     $br="</br>";
-    $chucai = array("A","B","C","D","E");
     $chucai1 = array("A","B","C","D","E","F","G","H","L");
     $chucai2 = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
     if(isset($_POST['tool'])&&$_POST['tool']){
@@ -209,22 +208,22 @@ catch(PDOException $e)
         $sl_phong=$_POST['sl_phong'];
         $sl_hangghe=$_POST['sl_hangghe'];
         $sl_ghe=$_POST['sl_ghe'];
-        for ($i=0;$i<=$sl_rap;$i++){
+        for ($i=0;$i<$sl_rap;$i++){
             $tenrap="nguyễn văn ";
-            $chuoitenrap=$tenrap.=$chucai[$i];
+            $chuoitenrap=$tenrap.=$chucai1[$i];
             addrap($chuoitenrap);
     }
         $loadrap=loadrap();
         foreach ($loadrap as $r){
-            for ($i=0; $i <= $sl_phong; $i++) { 
+            for ($i=0; $i < $sl_phong; $i++) { 
                 $tenphong="phòng ";
-                $chuoitenrap=$tenphong.=$chucai[$i];
+                $chuoitenrap=$tenphong.=$chucai1[$i];
                 addphong($chuoitenrap,$r['id']);
         }
             }
                 $loadphong=loadphong(0);
                 foreach ($loadphong as $p){
-                    for ($i=0; $i <= $sl_hangghe; $i++) { 
+                    for ($i=0; $i < $sl_hangghe; $i++) { 
                         $chuoitenrap=$chucai1[$i];
                         addhangghe($chuoitenrap,$p['id']);
                 }
