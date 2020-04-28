@@ -2,6 +2,7 @@
 	require_once "model/delete_data.php";
 	require_once "model/getdata.php";
 	require_once "model/update.php";
+	require_once "model/add.php";
 	
 	if(isset($_GET['film_dt']) && $_GET['film_dt']){
 		$phim = LoadFilmDetailById($_GET['film_dt']);
@@ -9,6 +10,7 @@
 		exit();
 	}
 	
+
 	if(isset($_GET['updated']) && $_GET['updated']){
 		$idphim = $_POST['id'];
 		$tenphim = htmlspecialchars(($_POST['tenphim']), ENT_QUOTES);
@@ -32,6 +34,10 @@
 		}
 		UpdateFilmInformation($idphim,$tenphim,$tuoi,$theloai,$quocgia,$dienvien,$daodien,$thoiluong,$ngaychieu,$noidung,$anhphim,$trangthai);
 		header('location: admin.php?contro=film') ;
+	}
+	if(isset($_GET['addfilm_form'])){
+		include_once "view/addphim.php";
+		exit ();
 	}
 
 	if(isset($_GET['addfilm'])){
@@ -57,18 +63,53 @@
 			move_uploaded_file($_FILES['banner']['tmp_name'],$path);
 			$banner=$_FILES['banner']['name'];
 			addphim($tenphim,$tuoi,$theloai,$quocgia,$dienvien,$daodien,$thoiluong,$noidung,$trangthai,$anhphim,$trailer,$banner,$ngaychieu,$rating);
+		
 		}
-	include_once "view/addphim.php";
-	exit();
 	}
 
 	if(isset($_GET['film_del']) && $_GET['film_del']){
-		echo ' CHUA LAM AHIHI';
-		echo "ID PHIM :".$_GET['film_del'];
-	// 	$idphim = $_GET['idphim'];
-	// 	DeleteFilmById($idphim);
-	// 	include_once "view/film.php";
-	   }
+		$id = $_GET['film_del'];
+
+        $Connect = LoadConnectFilmRapByIdPhim($id);
+        $Count_suatchieu = 0;
+        $id_Suat_out= "";
+        if($Connect == null){
+			$Danhgiaphim = LoadDanhgiaphimByIDPhim($id);
+			foreach ($Danhgiaphim as $DG) {
+				DeleteDanhgiaphim($DG['id']);
+			}
+			DeleteFilmById($id);
+            
+        }else{
+            foreach ($Connect as $ID) {
+                $Suatchieu_Phim = LoadSuatchieuByIdConnect($ID['id_lienket']);
+                if($Suatchieu_Phim == null){
+                    DeleteConnect($ID['id_lienket']);
+                }else{
+                    foreach ($Suatchieu_Phim as $SCRAP) {
+                        $id_Suat_out = $id_Suat_out.' , '.$SCRAP['id'] ;
+                    }
+                }
+
+            }
+            if ($id_Suat_out == "") {
+				$Danhgiaphim = LoadDanhgiaphimByIDPhim($id);
+				foreach ($Danhgiaphim as $DG) {
+					DeleteDanhgiaphim($DG['id']);
+				}
+			DeleteFilmById($id);
+            }else{
+                echo '
+                <script>
+                        alert(\'Phim chứa suất chiếu, Xóa suất chiếu : ID : '.$id_Suat_out.' trước khi xóa Phim này \');
+                </script>
+                '; 
+            }
+
+        }
+        
+        
+}
 
 	$quanliphimdc=LoadFilmByStatus(1);
 	$quanliphimcc=LoadFilmByStatus(0);

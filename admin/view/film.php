@@ -41,7 +41,7 @@
 						</script> -->
 					</div>
 					<div class="add_data col_6">
-						<a href="admin.php?contro=film&addfilm">
+						<a href="admin.php?contro=film&addfilm_form">
 							<i class="fas fa-plus"></i>
 							<span>Add Film</span>
 						</a>
@@ -51,7 +51,6 @@
 		</div>
 		<div class="col_12">
 			<div class="content">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script>
                 $(document).ready(function(){
 
@@ -69,7 +68,7 @@
                     });
                 });
             </script>
-        <div class="admin_acount_manager">
+        <div class="phim_data">
                     <div class="luachon">
                         <p class="option mau" id="option_dangchieu">phim đang chiếu</p>
                         <p class="option" id="option_sapchieu">phim sắp chiếu</p>
@@ -86,8 +85,8 @@
                                     <th>Ngày chiếu</th>
                                     <th>
                                     <a href="#" class="del_all_but">
-                                        <i class="fas fa-trash"></i>
-                                        <span>Multiple Delete</span>
+                                        <!-- <i class="fas fa-trash"></i> -->
+                                        <span>ACTIONs</span>
                                     </a>
                                     </th>
                                 </tr>
@@ -105,9 +104,10 @@
                                                 <a class="detail_but" href="admin.php?contro=film&film_dt='.$phim['id'].'">
                                                     <span>Details</span>
                                                 </a>
-                                                <p>/</p>
+                                                <p class="slash">/</p>
                                                 <a class="del_but" href="admin.php?contro=film&film_del='.$phim['id'].'">
                                                     <i class="fas fa-trash"></i>
+                                                    <p>Delete</p>
                                                 </a>
                                             </div>
                                         </td>
@@ -148,9 +148,10 @@
                                                 <a class="detail_but" href="admin.php?contro=film&film_dt='.$phim['id'].'">
                                                     <span>Details</span>
                                                 </a>
-                                                <p>/</p>
+                                                <p class="slash">/</p>
                                                 <a class="del_but" href="index.php?contro=film_del&idphim='.$phim['id'].'">
                                                     <i class="fas fa-trash"></i>
+                                                    <p>Delete</p>
                                                 </a>
                                             </div>
                                         </td>

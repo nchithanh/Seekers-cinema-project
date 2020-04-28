@@ -11,4 +11,10 @@ function UpdateRapInformation($id,$tenrap,$diachi,$idtinhthanh){
 	$sql="update rap set tenrap='".$tenrap."' ,diachi ='".$diachi."' ,idtinhthanh= '".$idtinhthanh."' where id = ".$id."";
 	$conn->exec($sql);
 }
+// rap update
+function UpdateSuatchieuInformation($id,$ngaychieu,$thoigian,$idphim_rap,$idphongchieu){
+	global $conn;
+	$sql="update suatchieu set ngaychieu='".$ngaychieu."' ,thoigian ='".$thoigian."' ,idphim_rap= ".$idphim_rap." , idphongchieu =".$idphongchieu." where id = ".$id."";
+	$conn->exec($sql);
+}
 ?>

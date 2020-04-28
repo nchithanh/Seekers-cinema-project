@@ -55,7 +55,7 @@
             <div class="chitietphim">
                         <div class="anhphim" style="background-image: url('../view/img/anhphim10.jpg')">
                         </div>
-                        <form action="admin.php?contro=film" method="post" enctype="multipart/form-data">
+                        <form action="admin.php?contro=film&addfilm" method="post" enctype="multipart/form-data">
                             <div class="thongtin">
                                 <label>Tên Phim</label>
                                 <input type="text" name="tenphim" value=""> 

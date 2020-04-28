@@ -53,6 +53,24 @@ function LoadIdConnectFilmRap($idphim,$idrap){
     $result = $stmt->fetch();
     return $result;
 }
+function LoadConnectFilmRapByIdRap($idrap){
+    global $conn;
+    $sql= "select * from phim_rap where idrap =".$idrap." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll();
+    return $result;
+}
+function LoadConnectFilmRapByIdPhim($id){
+    global $conn;
+    $sql= "select * from phim_rap where idphim =".$id." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll();
+    return $result;
+}
 function LoadConnectphimrapById($id){
     global $conn;
     $sql= "select * from phim_rap where id_lienket = ".$id."";
@@ -79,6 +97,15 @@ function LoadPhongChieuById($id){
     $stmt->execute();
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $result = $stmt->fetch();
+    return $result;
+}
+function LoadPhongchieuByIdRap($id){
+    global $conn;
+    $sql= "select * from phongchieu where idrap = ".$id."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll();
     return $result;
 }
 function LoadIDPhongchieu($ten,$idrap){
@@ -150,6 +177,33 @@ function LoadAllSuatChieu(){
     $result = $stmt->fetchALL();
     return $result;
 }
+function LoadSuatchieuByIdConnect($id){
+    global $conn;
+    $sql= "select * from suatchieu where idphim_rap =".$id."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+}
+function LoadSuatchieuByIdPhong($id){
+    global $conn;
+    $sql= "select * from suatchieu where idphongchieu =".$id."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+}
+function LoadSuatchieuById($id){
+    global $conn;
+    $sql= "select * from suatchieu where id =".$id."";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
 function LoadIdSuatchieu($ngaychieu,$thoigian,$idphim_rap,$idphongchieu){
     global $conn;
     $sql= "select * from suatchieu where ngaychieu = '".$ngaychieu."' and thoigian= '".$thoigian."' and idphim_rap = ".$idphim_rap." and idphongchieu = ".$idphongchieu." ";
@@ -174,6 +228,15 @@ function LoadIdSuatchieu($ngaychieu,$thoigian,$idphim_rap,$idphongchieu){
 function LoadAllTrangthaighe(){
     global $conn;
     $sql= "select * from trangthai_ghe";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchALL();
+    return $result;
+}
+function LoadTrangthaigheBySuatchieuId($id){
+    global $conn;
+    $sql= "select * from trangthai_ghe where idsuatchieu = ".$id." ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -244,6 +307,16 @@ function LoadGheByIdPhong($id){
     $result = $stmt->fetchAll();
     return $result;
 }
+function LoadLastGheInHangghe($id){
+    global $conn ;
+    $sql= "select * from ghe WHERE idhangghe = ".$id." order by ghe DESC LIMIT 1";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch();
+    return $result;
+}
+
 /*********** LOAI PHONG ************/
 function LoadLoaiphongById($id){
     global $conn;
@@ -267,6 +340,15 @@ function LoadIdHangghe($tenhangghe,$idphongchieu){
 function LoadHanggheByIdphong($id){
     global $conn;
     $sql= "select * from hangghe where idphongchieu= ".$id." ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll();
+    return $result;
+}
+function LoadDanhgiaphimByIDPhim($id){
+    global $conn;
+    $sql= "select * from danhgiaphim where idphim = ".$id." ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);

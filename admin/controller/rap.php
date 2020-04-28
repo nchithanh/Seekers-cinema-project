@@ -30,11 +30,64 @@ if(isset($_GET['edit'])){
 
     header('location: admin.php?contro=rap') ;
 }
-if(isset($_GET['xoarap']))
-    {
+if(isset($_GET['xoarap'])){
         $id = $_GET['xoarap'];
-        xoarap($id);
-        header('location: admin.php?contro=rap') ;
+
+        $Connect = LoadConnectFilmRapByIdRap($id);
+        $Count_suatchieu = 0;
+        $id_Suat_out= "";
+        if($Connect == null){
+            $Phongchieu= LoadPhongchieuByIdRap($id);
+            if ($Phongchieu == null) {
+                xoarap($id);
+            }else {
+                $STR_p = "";
+                foreach ($Phongchieu as $Phog_Ch) {
+                    $STR_p = $STR_p.' '.$Phog_Ch['id'];
+                }
+                echo '
+                <script>
+                    alert(\'Rạp chứa phòng chiếu, Xóa phòng chiếu : ID : '.$STR_p.' trước khi xóa rạp này \');
+                </script>                ';
+            }
+            
+        }else{
+            foreach ($Connect as $ID) {
+                $Suatchieu_Rap = LoadSuatchieuByIdConnect($ID['id_lienket']);
+                if($Suatchieu_Rap == null){
+                    DeleteConnect($ID['id_lienket']);
+                }else{
+                    foreach ($Suatchieu_Rap as $SCRAP) {
+                        $id_Suat_out = $id_Suat_out.' , '.$SCRAP['id'] ;
+                    }
+                }
+
+            }
+            if ($id_Suat_out == "") {
+                $Phongchieu= LoadPhongchieuByIdRap($id);
+                if ($Phongchieu == null) {
+                    xoarap($id);
+                }else {
+                    $STR_p = "";
+                    foreach ($Phongchieu as $Phog_Ch) {
+                        $STR_p = $STR_p.' '.$Phog_Ch['id'];
+                    }
+                    echo '
+                    <script>
+                        alert(\'Rạp chứa phòng chiếu, Xóa phòng chiếu : ID : '.$STR_p.' trước khi xóa rạp này \');
+                    </script>                ';
+                }
+            }else{
+                echo '
+                <script>
+                        alert(\'Rạp chứa suất chiếu, Xóa suất chiếu : ID : '.$id_Suat_out.' trước khi xóa rạp này \');
+                </script>
+                '; 
+            }
+
+        }
+        
+        
     }
 $allrap=LoadRapWithTenTinhThanh();
 include "view/rap.php";

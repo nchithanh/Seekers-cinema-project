@@ -43,6 +43,7 @@
                     </select></td>
                 </tr>
                     <td><select name="idphong_addsuatchieu" id="idphong_addsuatchieu">
+                        <option value=""> CHỌN PHÒNG </option>
                     </select></td>
             </table>
             <script>
@@ -67,6 +68,32 @@
             </button>
         </form>
     </div>
+
+    <!-- EDIT SUAT CHIEU -->
+
+    <div class="form_edit_suatchieu" id="form_edit_suatchieu">
+        
+    </div>
+    <!-- open form EDIT -->
+    <script>
+        $(document).ready(function() {
+            <?php
+                foreach ($AllSuatchieu as $S_chieu) {
+                    echo'
+                    $("#edit_suat_'.$S_chieu['id'].'").click(function (){
+                        var id_suat_'.$S_chieu['id'].' = $("#edit_suat_'.$S_chieu['id'].'").val();
+                        $.post("view/edit_suatchieu.php", {edit_suat:id_suat_'.$S_chieu['id'].'}, function(data){
+                        $("#form_edit_suatchieu").html(data);
+                        });
+                    });
+                    ';
+                }
+            ?>
+                
+        });
+                    </script>
+<!-- END EDIT -->
+
     <?php
     require_once "view/sidebar.php";
     echo '
@@ -109,7 +136,7 @@
 						</script>
 					</div>
 					<div class="add_data col_6">
-						<button type="button" onclick="show_form_add_suatchieu()">
+						<button type="button" onclick="show_form_add_suatchieu()" id="open_edit_suatchieu" value="1">
 							<i class="fas fa-plus"></i>
 							<span>Add Suất chiếu</span>
 						</a>
@@ -169,20 +196,17 @@
                                 </td>
                                 <td>
                                     <div class="edit">
-                                        <button type="button"><i class="fas fa-edit"></i> Edit</button>
+                                        <button type="button" onclick="show_form_edit_suatchieu()" value="'.$Sch['id'].'" id="edit_suat_'.$Sch['id'].'"><i class="fas fa-edit"></i> Edit</button>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="delete">
-                                        <button><i class="fas fa-trash"></i> Delete</button>
+                                    <form action="admin.php?contro=suatchieu&del='.$Sch['id'].'" method="post" id="del_suatchieu_form">
+                                        <button type="submit" form="del_suatchieu_form"><i class="fas fa-trash" '.$Sch['id'].'></i> Delete</button>
+                                        </form?>
                                     </div>
                                 </td>
-                                <td>
-                                    <div class="map">
-                                        <button>
-                                        <i class="fas fa-table"></i> Seat map</button>
-                                    </div>
-                                </td>
+                                
                             </tr>
                             <tr>
                                 <td>
@@ -233,122 +257,8 @@
                     }
                 ?>
             </div>
-            
-            <!-- <script>
-                $(document).ready(function(){
-
-                    $("#rap").change(function (){
-                        var idrap = $("#rap").val();
-                        $.post("model/ajax.php", {idrap:idrap}, function(data){
-                            $("#phong").html(data);
-                    });
-            });
-
-                });
-            </script>
-            <div class="suatchieu">
-                <form action="admin.php?contro=suatchieu&add" method="post">
-                    <div class="thongtin">
-                        <label for="">
-                            Chọn phim
-                        </label>
-                        <select name="phim" id="phim" required>
-                            <option value="">Chọn phim</option>
-                            <?php
-                            // foreach ($AllFilm as $Af) {
-                            //     echo'
-                            //     <option value="'.$Af['id'].'">'.$Af['tenphim'].'</option>
-                            //     ';
-                            // }
-                            ?>
-                        </select>
-                    </div>
-                    <div class="thongtin">
-                        <label for="">
-                            chọn rạp
-                        </label>
-                        <select name="rap" id="rap" required>
-                            <option value="">Chọn rạp</option>
-                            <?php
-                            // foreach ($AllRap as $Ar) {
-                            //     echo'
-                            //     <option value="'.$Ar['id'].'">'.$Ar['tenrap'].'</option>
-                            //     ';
-                            // }
-                            ?>
-                        </select>
-                    </div>
-                    <div class="thongtin">
-                        <label for="">
-                            Chọn phòng chiếu
-                        </label>
-                        <select name="phong" id="phong" required>
-                            <option value="">Chọn phòng chiếu</option>
-                        </select>
-                    </div>
-                    <div class="thongtin">
-                        <input type="time" name="time" placeholder="00:00 CH">    
-                    </div>
-                    <div class="thongtin">
-                        <input class="themsuatchieu" type="submit" value="THÊM SUẤT CHIẾU">
-                    </div>
-                </form>
-            </div>
-            </div> -->
+           
         </div>
-        <!-- <div class="col_12">
-        <script>
-        $(document).ready(function(e) {
-            $(".tab1").show();
-            $(".tab2").hide();  
-            $(".tab3").hide();  
-            $("#t1").css({"color" : "back" , "background-color" : "#f4a9f5"});    
-            $("#t2").css({"color" : "back" , "background-color" : "white"});            
-            $("#t3").css({"color" : "back" , "background-color" : "white"});
-            
-            $("#t1").click(function(){
-            $(".tab1").show();
-            $(".tab2").hide();  
-            $(".tab3").hide();  
-            $("#t1").css({"color" : "back" , "background-color" : "#f4a9f5"});    
-            $("#t2").css({"color" : "back" , "background-color" : "white"});            
-            $("#t3").css({"color" : "back" , "background-color" : "white"});            
-                
-
-            })
-            $("#t2").click(function(){
-            $(".tab2").show();
-            $(".tab1").hide();  
-            $(".tab3").hide();
-            $("#t2").css({"color" : "back" , "background-color" : "#f4a9f5"});    
-            $("#t1").css({"color" : "back" , "background-color" : "white"});            
-            $("#t3").css({"color" : "back" , "background-color" : "white"});    
-            })
-            
-            $("#t3").click(function(){
-            $(".tab3").show();
-            $(".tab1").hide();  
-            $(".tab2").hide();
-            $("#t3").css({"color" : "back" , "background-color" : "#f4a9f5"});    
-            $("#t2").css({"color" : "back" , "background-color" : "white"});            
-            $("#t1").css({"color" : "back" , "background-color" : "white"});    
-            
-            })
-
-        });
-        </script>
-        <div class="tab_button">
-        <button id="t1" style="background-color: #f4a9f5;">TP HCM</button>
-        <button id="t2" style="background-color: #f4a9f5;">HÀ NỘI</button>
-        <button id="t3" style="background-color: #f4a9f5;">ĐÀ NẴNG</button>
-        </div>
-        <div class="tab_content" style="width: 100%;height: 500px;">
-            <div class="tab1" style="width:100%;background-size:100%;background-image: url('images/ccc.jpg');height:100%;border:1px solid #000">
-            </div>
-            <div class="tab2" style="width:100%;background-size:100%;background-image: url('images/ddd.jpg');height:100%;border:1px solid #000">
-            </div>
-            <div class="tab3" style="width:100%;background-size:100%;background-image: url('images/sss.jpg');height:100%;border:1px solid #000">
-            </div>-->
         </div>
         </div>
 	</article>

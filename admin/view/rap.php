@@ -102,9 +102,9 @@
                     <th>Địa chỉ</th>
                     <th>Tỉnh Thành</th>
                     <th>
-                        <button form="del_mul_rap_form" class="del_all_but">
-                            <i class="fas fa-trash"></i>
-                            <span>Multiple Delete</span>
+                        <button form="" class="del_all_but">
+                            <!-- <i class="fas fa-trash"></i> -->
+                            <span>ACTIONs</span>
                         </button>
                     </th>
                 </tr>
@@ -126,10 +126,12 @@
                             <div class="tools_data_table">
                             <button type="button" class="edit_but" id="edit_rap_but'.$rap['id'].'" value="'.$rap['id'].'">
                             <i class="fas fa-wrench"></i>
+                            <p>Edit</p>
                             </button>
-                            <p>/</p>
+                            <p class="slash" >/</p>
                             <a class="del_but" href="admin.php?contro=rap&xoarap='.$rap['id'].'">
                             <i class="fas fa-trash"></i>
+                            <p>Delete</p>
                             </a>
                             </div>
                         </td>

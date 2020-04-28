@@ -97,15 +97,15 @@ function uncheck(id) {
 }
 
 // ADD PHOG CHIEU
-function discard_add() {
-    var i, j;
-    for (i = 1; i <= 10; i++) {
-        for (j = 0; j <= 25; j++) {
-            document.getElementById("radio_ghe" + i + "_" + j + "").checked = false;
-        }
+// function discard_add() {
+//     var i, j;
+//     for (i = 1; i <= 12; i++) {
+//         for (j = 0; j <= 20; j++) {
+//             document.getElementById("radio_ghe" + i + "_" + j + "").checked = false;
+//         }
 
-    }
-}
+//     }
+// }
 
 function esc_to_close(id_enter, id_close) {
     var element = document.getElementById(id_enter);
