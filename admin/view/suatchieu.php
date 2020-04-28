@@ -165,6 +165,10 @@
                         echo'
                         <h3>
                         <div class="name">
+                            <i> ID :</i>
+                            <p>'.$Sch['id'].'</p>
+                        </div>
+                        <div class="name">
                             <i class="fas fa-film"></i>
                             <p>'.$Suatchieu_Film['tenphim'].'</p>
                         </div>
